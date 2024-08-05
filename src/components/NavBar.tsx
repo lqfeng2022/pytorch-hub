@@ -1,11 +1,9 @@
-import { HStack, Image, Text } from '@chakra-ui/react';
-import logo from '../assets/nn_logo.png';
+import { HStack, Text } from '@chakra-ui/react';
 
 const NavBar = () => {
   return (
     <HStack>
-      <Image src={logo} boxSize='50px' />
-      <Text>NavBar</Text>
+      <Text>DEEP LEARNING with PyTorch</Text>
     </HStack>
   );
 };
