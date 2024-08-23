@@ -10,8 +10,8 @@ const ChapterCover = () => {
   return (
     <Stack py={5}>
       <Image src={chatgpt} />
-      <Text as='b'>{cover.head}</Text>
-      <Text fontSize='sm' as='i'>{cover.content}</Text>
+      <Text as='b' fontSize='sm'>{cover.head}</Text>
+      <Text as='i' fontSize='sm'>{cover.content}</Text>
     </Stack>
   )
 }

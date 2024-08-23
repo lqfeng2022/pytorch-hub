@@ -23,12 +23,20 @@ const ChapterList = () => {
   return (
     <Box>
       {/* Chapter content lists */}
-      <SimpleGrid p={6} my={3} spacing={4} columns={{ sm: 1, md: 2 }} bg='red.50'>
+      <SimpleGrid 
+        minH='350px' 
+        p={6} 
+        my={3} 
+        spacing={4} 
+        columns={{ sm: 1, md: 2 }} 
+        bg='red.50' 
+        alignItems='center' // Ensures the content of each grid column(lists) is centered vertically.
+      >
         <List spacing={4}>
           {lists.slice(0, 4).map((list) => <ListItem key={list.id}>
             <Flex align='center'>
               <Icon boxSize='25px' mr={3} as={FaCircle} color='red.300' />
-              <Text as='b' fontSize='lg'>{list.name}</Text>
+              <Text as='b' fontSize='xl'>{list.name}</Text>
             </Flex>
           </ListItem>)}
         </List>
@@ -36,7 +44,7 @@ const ChapterList = () => {
           {lists.slice(-4).map((list) => <ListItem key={list.id}>
             <Flex align='center'>
               <Icon boxSize='25px' mr={3} as={FaCircle} color='red.300' />
-              <Text as='b' fontSize='lg'>{list.name}</Text>
+              <Text as='b' fontSize='xl'>{list.name}</Text>
             </Flex>
           </ListItem>)}
         </List>
