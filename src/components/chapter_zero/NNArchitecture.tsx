@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import nnmodel from '../assets/nnmodel.jpeg'
+import nnmodel from '../../assets/nnmodel.jpeg'
 
 const NNArchitecture = () => {
   const nnArchitecture = {

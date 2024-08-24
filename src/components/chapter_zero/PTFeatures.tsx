@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import ptfeatures_img from '../assets/ptfeatures_img.jpeg'
+import ptfeatures_img from '../../assets/ptfeatures_img.jpeg'
 
 const PTFeatures = () => {
   const ptFeatures = {

@@ -1,7 +1,7 @@
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react'
-import dlcat from '../assets/dlcat.jpeg'
-import mlcat from '../assets/mlcat.jpeg'
-import mldl from '../assets/mldl.jpeg'
+import dlcat from '../../assets/dlcat.jpeg'
+import mlcat from '../../assets/mlcat.jpeg'
+import mldl from '../../assets/mldl.jpeg'
 
 
 const DLComparing = () => {

@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import takecourse_img from '../assets/takecourse_img.jpeg'
+import takecourse_img from '../../assets/takecourse_img.jpeg'
 
 const TakeCourse = () => {
   const takeCourse = {

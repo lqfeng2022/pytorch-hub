@@ -1,5 +1,5 @@
 import { Box, SimpleGrid, Stack, Flex, Text, Image } from '@chakra-ui/react'
-import relationships from '../assets/relationships.jpeg'
+import relationships from '../../assets/relationships.jpeg'
 
 const DLRelationship = () => {
   const comparing = {

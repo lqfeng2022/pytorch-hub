@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import pttrends from '../assets/pytorchtrends.jpeg'
+import pttrends from '../../assets/pytorchtrends.jpeg'
 
 const PTTrends = () => {
   const trends = {

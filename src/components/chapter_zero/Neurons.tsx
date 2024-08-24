@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import neurons from '../assets/neurons.jpeg'
+import neurons from '../../assets/neurons.jpeg'
 
 const Neurons = () => {
   const nnArchitecture = {

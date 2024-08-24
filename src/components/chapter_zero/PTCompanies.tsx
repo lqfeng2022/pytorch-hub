@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import ptcompanies from '../assets/companies.jpeg'
+import ptcompanies from '../../assets/companies.jpeg'
 
 const PTCompanies = () => {
   const companies = {

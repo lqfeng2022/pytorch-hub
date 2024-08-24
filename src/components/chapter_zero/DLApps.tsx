@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import dlapps from '../assets/dlapps.jpeg'
+import dlapps from '../../assets/dlapps.jpeg'
 
 const DLApps = () => {
   const comparing = {

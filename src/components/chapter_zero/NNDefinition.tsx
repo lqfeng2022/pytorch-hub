@@ -1,5 +1,5 @@
 import { Center, Box, Stack, Text } from '@chakra-ui/react'
-import defintions from '../data/definitions'
+import defintions from '../../data/definitions'
 
 const NNDefinition = () => {
   const NNDefinition = defintions[3]

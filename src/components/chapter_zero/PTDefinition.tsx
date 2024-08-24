@@ -1,5 +1,5 @@
 import { Center, Box, Stack, Text } from '@chakra-ui/react'
-import definitions from '../data/definitions'
+import definitions from '../../data/definitions'
 
 const PTDefinition = () => {
   const ptdefinition = definitions[4]
