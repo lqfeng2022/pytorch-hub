@@ -1,10 +1,10 @@
 import { Box, Image, Stack, Text } from '@chakra-ui/react';
-import whyai from '../assets/whyai.jpeg';
+import aiwhy_img from '../assets/aiwhy_img.jpeg';
 
-const WhyAI = () => {
+const AIWhy = () => {
   const topic = {
-    name: "Why we should know about AI?",
-    image: whyai,
+    name: "1.1 Why we should know about AI?",
+    image: aiwhy_img,
     values: [
       { id: 0, 
         title: "1) ChatGPT.", 
@@ -27,7 +27,7 @@ const WhyAI = () => {
 
   return (
     <Box py={5}>
-      <Text as='b' fontSize='lg'>- {topic.name}</Text>
+      <Text as='b' fontSize='lg'>{topic.name}</Text>
       <Image py={5} src={topic.image}/>
       <Stack spacing={4}>
         {topic.values.map((p) => 
@@ -41,4 +41,4 @@ const WhyAI = () => {
   )
 }
 
-export default WhyAI
+export default AIWhy

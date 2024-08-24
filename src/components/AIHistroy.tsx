@@ -8,7 +8,7 @@ import openai from '../assets/openai.jpeg'
 import aihistory from '../assets/aihistory.jpeg'
 
 
-const HistroyAI = () => {
+const AIHistroy = () => {
   const contents = [
     { id: 1, 
       name: "1) Turning Test", 
@@ -65,7 +65,7 @@ const HistroyAI = () => {
 
   return (
     <Box py={5}>
-      <Text as='b' fontSize='lg'>-- The History of AI?</Text>
+      <Text as='b' fontSize='lg'>1.2 The History of AI</Text>
       <Image py={5} src={aihistory}/>
       {/* 1)Turning Test */}
       <SimpleGrid columns={[1, null, 2]} spacing='20px' py={3}>
@@ -143,4 +143,4 @@ const HistroyAI = () => {
   )
 }
 
-export default HistroyAI
+export default AIHistroy
