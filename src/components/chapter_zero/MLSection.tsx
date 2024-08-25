@@ -15,12 +15,12 @@ const MLSection = () => {
   return (
     <>
       <Box pb={5}>
-        <Text as='b' fontSize='xl'>2. Machine Learning</Text>
+        <Text as='b' fontSize='xl' color='gray.600'>2. Machine Learning</Text>
         <Definition definition={mlDefinition}/>
       </Box>
       <BaseGrid section={comparing}/>
       <Box py={5}>
-        <Text as='b' fontSize='lg'>{models.title}</Text>
+        <Text as='b' fontSize='lg' color='gray.600'>{models.title}</Text>
         <Text py={3} fontSize='lg'>{models.value}</Text>
         <BaseGrid section={svms}/>
         <RightGrid section={decisionTree}/>

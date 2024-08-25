@@ -5,7 +5,7 @@ const Lists = ({ name }: { name: string }) => {
   return (
     <Flex align='center'>
       <Icon boxSize='25px' mr={3} as={FaCircle} color='red.300' />
-      <Text as='b' fontSize='xl'>{name}</Text>
+      <Text as='b' fontSize='xl' color='gray.600'>{name}</Text>
     </Flex>
   )
 }

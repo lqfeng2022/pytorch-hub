@@ -8,7 +8,7 @@ interface Props {
 const RightGridTwo = ({ section }: Props) => {
   return (
     <Box py={3}>
-      <Text as='b'>{section.name}</Text>
+      <Text as='b' color='gray.600'>{section.name}</Text>
       <SimpleGrid columns={[2, null, 2]} spacing='20px' py={3}>
         <Stack my={2} spacing={2}>
           {section.content.map((p) => <Text key={p.value}>{p.value}</Text>)}

@@ -16,12 +16,12 @@ const AISection = () => {
   return (
     <>
       <Box py={5}>
-        <Text as='b' fontSize='xl'>1. Artificial Intelligence</Text>
+        <Text as='b' fontSize='xl' color='gray.600'>1. Artificial Intelligence</Text>
         <Definition definition={whats}/>
       </Box>
       <BaseGrid section={reason}/>
       <Box py={5}>
-        <Text as='b' fontSize='lg'>1.2 The History of AI</Text>
+        <Text as='b' fontSize='lg' color='gray.600'>1.2 The History of AI</Text>
         <Image py={5} src={aihistory}/>
         <LeftGrid section={turningTest}/>
         <RightGridTwo section={expertSystem}/>

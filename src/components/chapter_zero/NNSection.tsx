@@ -9,7 +9,7 @@ const NNSection = () => {
   return (
     <>
       <Box py={5}>
-        <Text as='b' fontSize='xl'>4. Neural Network</Text>
+        <Text as='b' fontSize='xl' color='gray.600'>4. Neural Network</Text>
         <Definition definition={definition}/>
       </Box>
       <BaseGrid section={model}/>

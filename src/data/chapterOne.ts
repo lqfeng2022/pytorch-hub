@@ -56,7 +56,7 @@ export default [
           },
           { id: 2, 
             title: "",
-            value: "The typical way to understand the Turing test is this: there are 3 players—A, B, and C. Player C is the interrogator, and his job is to figure out which of the other two, A or B, is a computer and which one is a human. The tricky part? The interrogator can only ask written questions to make that decision."
+            value: "The typical way to understand the Turing test is this: there are 3 players - A, B, and C. Player C is the interrogator, and his job is to figure out which of the other two, A or B, is a computer and which one is a human. The tricky part? The interrogator can only ask written questions to make that decision."
           }
         ]
       },
@@ -78,7 +78,7 @@ export default [
         content: [
           { id: 1, 
             title: "",
-            value: "A few years later, one of the biggest breakthroughs was the revival of CONNECTIONISM, led by Geoffrey Hinton and others, which brought neural network research back into the spotlight — it's all about simulating how the brain's neural networks work."
+            value: "A few years later, one of the biggest breakthroughs was the revival of CONNECTIONISM, led by Geoffrey Hinton and others, which brought neural network research back into the spotlight - it's all about simulating how the brain's neural networks work."
           },
           { id: 2, 
             title: "",
@@ -119,7 +119,7 @@ export default [
         content: [
           { id: 1, 
             title: "",
-            value: "Fast forward to the end of 2022, and OpenAI released GPT-3, a large language model that can generate text that feels like it was written by a human."
+            value: "Fast forward to the end of 2022, and OpenAI released GPT-3.5, a large language model that can generate text that feels like it was written by a human."
           }
         ]
       },
@@ -144,7 +144,7 @@ export default [
           },
           { id: 3,
             title: "",
-            value: "Now, imagine I asked you to extend this program to recognize three kinds of animals—cats, dogs, and horses. Once again, you'd have to rewrite all those rules. That's just not practical. This is where Machine Learning comes in."
+            value: "Now, imagine I asked you to extend this program to recognize three kinds of animals - cats, dogs, and horses. Once again, you'd have to rewrite all those rules. That's just not practical. This is where Machine Learning comes in."
           },
           { id: 4,
             title: "",

@@ -12,7 +12,7 @@ import ChapterList from './chapter_zero/ChapterList';
 
 const ChapterGrid = () => {
   return (
-    <Box p={3} maxW='900px'>
+    <Box maxW='1024px'>
       <Header/>
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='brand' w="30%" mx="auto"/>

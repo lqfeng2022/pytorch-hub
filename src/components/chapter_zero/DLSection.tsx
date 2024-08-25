@@ -11,12 +11,12 @@ const DLSection = () => {
   return (
     <>
       <Box py={5}>
-        <Text as='b' fontSize='xl'>3. Deep Learning</Text>
+        <Text as='b' fontSize='xl' color='gray.600'>3. Deep Learning</Text>
         <Definition definition={definition}/>
       </Box>
       <BaseGrid section={comparing}/>
       <Box py={5}>
-        <Text as='b' fontSize='lg'>3.2 Deep Learing V.S. Machine Learing</Text>
+        <Text as='b' fontSize='lg' color='gray.600'>3.2 Deep Learing V.S. Machine Learing</Text>
         <BaseGrid section={mlmodel}/>
         <BaseGrid section={dlmodel}/>
         <BaseGrid section={mldl}/>

@@ -9,7 +9,7 @@ const PTSection = () => {
   return (
     <>
       <Box py={5}>
-        <Text as='b' fontSize='xl'>6. PyTorch</Text>
+        <Text as='b' fontSize='xl' color='gray.600'>6. PyTorch</Text>
         <Definition definition={definition}/>
       </Box>
       <BaseGrid section={features}/>

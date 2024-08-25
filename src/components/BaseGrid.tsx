@@ -10,7 +10,7 @@ const BaseGrid = ({ section }: Props) => {
   return (
     <Box py={3}>
       <Stack spacing={3}>
-        <Text as='b' fontSize='lg'>{section.name}</Text>
+        <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>
         {section.value && <Text as='i' fontSize='lg'>{section.value}</Text>}
       </Stack>
       <Image py={5} src={section.image}/>

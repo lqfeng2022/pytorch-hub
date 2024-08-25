@@ -6,7 +6,7 @@ const Prerequisites = () => {
   const preres = chapterOne[6].sections
   return (
     <Box py={5}>
-      <Text as='b' fontSize='xl'>7. Prerequisites</Text>
+      <Text as='b' fontSize='xl' color='gray.600'>7. Prerequisites</Text>
       <Image py={3} src={prere_img}/>
       <Stack spacing={4}>
         {preres.map((p) => 
