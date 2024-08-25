@@ -1,40 +1,31 @@
-import { Box, Center, Stack, Text, Image } from '@chakra-ui/react';
-import MLModels from './MLModels'
-import ml from '../../data/ml'
+import { Box, Text } from '@chakra-ui/react';
+import BaseGrid from '../BaseGrid';
+import Definition from '../Definition';
+import LeftGrid from '../LeftGrid';
+import RightGrid from '../RightGrid';
+import chapterOne from '../../data/chapterOne';
 
 const MLSection = () => {
-  const mlDefinition = ml[0]
-  const comparing = ml[1]
+  const models = {
+    title: "2.2 Models in Machine Learning",
+    value: "A machine learning model is basically a mathematical model that can make predictions or classifications on new data after it's been TRAINED on a dataset. There are many different types of models used in machine learning. Here, I'm gonna briefly introduce three of them for reference."
+  }
+  const [mlDefinition, comparing, svms, decisionTree, anns] = chapterOne[1].sections
 
   return (
     <>
-      {/* 2. Machine Learning */}
-      <Text as='b' fontSize='xl'>2. Machine Learning</Text>
-      {/* ML definition */}
-      <Box>
-        <Center my={5} minH='250px' bg='red.50'>
-          <Box maxW='500px'>
-            <Text textAlign='center' fontSize='2xl' color='tomato'>{mlDefinition.value}</Text>
-          </Box>
-        </Center>
-        <Stack spacing={4}>
-          {mlDefinition.content.map((p) => <Text key={p.id}>{p.value}</Text>)}
-        </Stack>
+      <Box pb={5}>
+        <Text as='b' fontSize='xl'>2. Machine Learning</Text>
+        <Definition definition={mlDefinition}/>
       </Box>
-      {/* 2.1 Machine Learing V.S. Traditinal Programming */}
+      <BaseGrid section={comparing}/>
       <Box py={5}>
-        <Text as='b' fontSize='lg'>{comparing.name}</Text>
-        <Image py={5} src={comparing.image!}/>
-        <Stack spacing={4}>
-          {comparing.content.map((p) => 
-            <div key={p.id}>
-              <Text as='b'>{p.title}</Text>
-              <Text>{p.value}</Text>
-            </div>
-          )}
-        </Stack>
+        <Text as='b' fontSize='lg'>{models.title}</Text>
+        <Text py={3} fontSize='lg'>{models.value}</Text>
+        <BaseGrid section={svms}/>
+        <RightGrid section={decisionTree}/>
+        <LeftGrid section={anns}/>
       </Box>
-      <MLModels/>
     </>
   )
 }

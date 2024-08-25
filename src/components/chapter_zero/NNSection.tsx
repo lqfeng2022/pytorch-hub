@@ -1,16 +1,19 @@
-import { Text } from '@chakra-ui/react'
-import Neurons from './Neurons'
-import NNArchitecture from './NNArchitecture'
-import NNDefinition from './NNDefinition'
+import { Box, Text } from '@chakra-ui/react'
+import BaseGrid from '../BaseGrid'
+import Definition from '../Definition'
+import chapterOne from '../../data/chapterOne'
 
 const NNSection = () => {
+  const [ definition, model, neurons ] = chapterOne[3].sections
+  
   return (
     <>
-      {/* 4. Neural Network */}
-      <Text as='b' fontSize='xl'>4. Neural Network</Text>
-      <NNDefinition/>
-      <NNArchitecture/>
-      <Neurons/>
+      <Box py={5}>
+        <Text as='b' fontSize='xl'>4. Neural Network</Text>
+        <Definition definition={definition}/>
+      </Box>
+      <BaseGrid section={model}/>
+      <BaseGrid section={neurons}/>
     </>
   )
 }

@@ -1,18 +1,27 @@
-import { Text } from '@chakra-ui/react'
-import DLApps from './DLApps'
-import DLComparing from './DLComparing'
-import DLDefinition from './DLDefinition'
-import DLRelationship from './DLRelationship'
+import { Box, Text } from '@chakra-ui/react'
+import Definition from '../Definition'
+import BaseGrid from '../BaseGrid'
+import chapterOne from '../../data/chapterOne'
 
 const DLSection = () => {
+  const [
+    definition, comparing, mlmodel, dlmodel, mldl, dlapps
+  ] = chapterOne[2].sections
+  
   return (
     <>
-      {/* 3. Deep Learning */}
-      <Text as='b' fontSize='xl'>3. Deep Learning</Text>
-      <DLDefinition/>
-      <DLRelationship/>
-      <DLComparing/>
-      <DLApps/>
+      <Box py={5}>
+        <Text as='b' fontSize='xl'>3. Deep Learning</Text>
+        <Definition definition={definition}/>
+      </Box>
+      <BaseGrid section={comparing}/>
+      <Box py={5}>
+        <Text as='b' fontSize='lg'>3.2 Deep Learing V.S. Machine Learing</Text>
+        <BaseGrid section={mlmodel}/>
+        <BaseGrid section={dlmodel}/>
+        <BaseGrid section={mldl}/>
+      </Box>
+      <BaseGrid section={dlapps}/>
     </>
   )
 }
