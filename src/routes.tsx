@@ -1,12 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from './pages/layout'
 import HomePage from './HomePage'
-import ChapterZero from './components/ChapterZero'
+import ChapterZero from './pages/ChapterZero'
+import ErrorPage from './pages/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout/>,
+    errorElement: <ErrorPage/>,
     children: [
       { index: true, element: <HomePage/> },
       { path: 'artificial-intelligence', element: <ChapterZero/> }
