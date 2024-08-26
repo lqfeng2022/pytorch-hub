@@ -59,7 +59,7 @@ const ChapterList = () => {
           <AccordionPanel pb={4}>
             <List spacing={3}>
               {list.items?.map((item) => (
-                <ListItem key={item.id}>
+                <ListItem pl='22px' key={item.id}>
                   <Text fontSize='sm'>{item.name}</Text>
                 </ListItem>
               ))}
