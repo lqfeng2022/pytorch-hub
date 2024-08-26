@@ -1,4 +1,4 @@
-import { HStack, List, ListItem, Stack, Text } from '@chakra-ui/react'
+import { HStack, List, ListItem, Text } from '@chakra-ui/react'
 
 const ChapterList = () => {
   const lists = [
@@ -15,33 +15,15 @@ const ChapterList = () => {
         { id: 8, name: "How to take this Course" }
       ]
     },
-    { id: 1, 
-      name: "TENSORs",
-    },
-    { id: 2, 
-      name: "A Straight Line Model",
-    },
-    { id: 3,
-      name: "A Binary Classification Model"
-    },
-    { id: 4, 
-      name: "A Convolutional Neural Network Model"
-    },
-    { id: 5, 
-      name: "A Vision Transformer Model"
-    },
-    { id: 6,
-      name: "A Language Translation Model"
-    },
-    { id: 7, 
-      name: "A Speech Recognition Model"
-    },
-    { id: 8, 
-      name: "A Speech Generation Model"
-    },
-    { id: 9, 
-      name: "A Recommendation System Model"
-    }
+    { id: 1, name: "TENSORs" },
+    { id: 2, name: "A Straight Line Model" },
+    { id: 3, name: "A Binary Classification Model" },
+    { id: 4, name: "A Convolutional Neural Network Model" },
+    { id: 5, name: "A Vision Transformer Model" },
+    { id: 6, name: "A Language Translation Model" },
+    { id: 7, name: "A Speech Recognition Model" },
+    { id: 8, name: "A Speech Generation Model" },
+    { id: 9, name: "A Recommendation System Model" }
   ]
   return (
     <List>
