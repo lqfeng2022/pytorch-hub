@@ -20,8 +20,9 @@ function App() {
           gap={4}
           >
           <Show above='lg'>
-            <GridItem area='aside' px={3} bg='gray.100' >
+            <GridItem area='aside' px={3} py={1} bg='gray.100' >
               <Box
+                pt={3}
                 position='sticky'
                 top='72px'
                 maxH='calc(100vh - 72px)' // Limit the max height based on viewport
@@ -31,7 +32,9 @@ function App() {
               </Box>
             </GridItem>
           </Show>
-          <GridItem area='main'><ChapterGrid/></GridItem>
+          <GridItem area='main'>
+            <ChapterGrid/>
+          </GridItem>
         </Grid>
       </Container>
     </Box>
