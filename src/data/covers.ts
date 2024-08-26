@@ -4,7 +4,7 @@ export default [
       title: "Chapter 0: Artificial Intelligence",
       quote: "A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.", 
       author: "Alan Turing wrote in 1950",
-      image: "src/assets/chatgpt.webp",
+      image: "src/assets/cover_0.webp",
       name: "Here's the ChatGPT introduction from OpenAI homepage.", 
       descript: "When ChatGPT-3.5 came out on November 30, 2022, it was the first time that AI impressed us by its human-like text. It can help with answering questions, writing essays, creating content, tutoring in various subjects, and even having casual conversations. Each version has improved in terms of understanding context, handling more complex queries, and generating more accurate and relevant responses. In short, ChatGPT is like having a smart, versatile assistant right at your fingertips."
     },

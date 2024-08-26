@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import libraries from '../../assets/libraries.jpeg'
+import libraries from '../../assets/chapter_zero/libraries.jpeg'
 import chapterOne from '../../data/chapterOne'
 
 const Libraries = () => {

@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image, HStack } from '@chakra-ui/react'
-import prere_img from '../../assets/prerequisites.jpeg'
+import prere_img from '../../assets/chapter_zero/prerequisites.jpeg'
 import chapterOne from '../../data/chapterOne'
 
 const Prerequisites = () => {

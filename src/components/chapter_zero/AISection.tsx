@@ -1,5 +1,5 @@
 import { Box, Image, Text } from '@chakra-ui/react';
-import aihistory from '../../assets/aihistory.jpeg';
+import aihistory from '../../assets/chapter_zero/aihistory.jpeg';
 import BaseGrid from '../BaseGrid';
 import Definition from '../Definition';
 import LeftGrid from '../LeftGrid';

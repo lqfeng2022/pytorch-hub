@@ -25,7 +25,7 @@ export default [
       { id: 2, 
         name: "1.1 Why we should know about AI?",
         value: "",
-        image: "src/assets/aiwhy_img.jpeg",
+        image: "src/assets/chapter_zero/aiwhy.jpeg",
         content: [
           { id: 1, 
             title: "ChatGPT", 
@@ -36,7 +36,7 @@ export default [
             value: "Is all around us. Even now, as you're watching this video. You can see it when you look at the camera or when you pick up your iPhone. You can feel it when you go to work,  when you go to restaurant, when you go to shop, when you chat with your friends. It's the world that has been pulled over your eyes, to blind you from the truth. The truth is that the AI is watching you! It knows where you go, what you eat, what you bought, and even what you talked with your friends.."
           },
           { id: 3,
-            title: "BOOST your productivity at wor.",
+            title: "BOOST your productivity at work",
             value: "AI is awesome, especially when we wanna handle the repetitive tasks like data entry, managing schedules, summarizing information, and even analyzing papers. With AI, taking care of those boring tasks, we can focus more on higher-value tasks, like strategy analysis, employee engagement."
           },
           { id: 4,
@@ -48,7 +48,7 @@ export default [
       { id: 3,
         name: "1) Turning Test", 
         value: "",
-        image: "src/assets/TuringTest.png",
+        image: "src/assets/chapter_zero/turingtest.png",
         content: [
           { id: 1, 
             title: "",
@@ -63,7 +63,7 @@ export default [
       { id: 4, 
         name: "2) Expert System", 
         value: "",
-        image: "src/assets/expertSystem.jpeg",
+        image: "src/assets/chapter_zero/expertsystem.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -74,7 +74,7 @@ export default [
       { id: 5, 
         name: "3) Connectionism + Neural Network", 
         value: "",
-        image: "src/assets/Connectionism.jpeg",
+        image: "src/assets/chapter_zero/connectionism.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -89,7 +89,7 @@ export default [
       { id: 6, 
         name: "4) Convolutional Neural Network", 
         value: "",
-        image: "src/assets/cnn.jpeg",
+        image: "src/assets/chapter_zero/cnn.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -100,7 +100,7 @@ export default [
       { id: 7, 
         name: "5) AlphaGo", 
         value: "",
-        image: "src/assets/alphago.jpeg",
+        image: "src/assets/chapter_zero/alphago.jpeg",
         content: [
           { id: 1,
             title: "",
@@ -115,7 +115,7 @@ export default [
       { id: 8, 
         name: "6) ChatGPT", 
         value: "",
-        image: "src/assets/openai.jpeg",
+        image: "src/assets/chapter_zero/openai.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -155,7 +155,7 @@ export default [
       { id: 2,
         name: "2.1 Machine Learing V.S. Traditinal Programming",
         value: "",
-        image: "src/assets/mlcomparing.jpeg",
+        image: "src/assets/chapter_zero/mlcomparing.jpeg",
         content: [
           { id: 1, 
             title: "Traditional Programming", 
@@ -170,7 +170,7 @@ export default [
       { id: 3, 
         name: "1) Support-vector machines (SVMs)", 
         value: "",
-        image: "src/assets/svms.jpeg",
+        image: "src/assets/chapter_zero/svms.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -184,7 +184,7 @@ export default [
       { id: 4, 
         name: "2) Decision Tree",
         value: "",
-        image: "src/assets/decisionTree.jpeg",
+        image: "src/assets/chapter_zero/decisiontree.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -194,7 +194,7 @@ export default [
       { id: 5, 
         name: "3) Artificial Neural Networks (ANNs)", 
         value: "",
-        image: "src/assets/ann.jpeg",
+        image: "src/assets/chapter_zero/anns.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -245,7 +245,7 @@ export default [
       { id: 2, 
         name: "3.1 Deep Learing < Machine Learing < Artificial Intelligence",
         value: "In summary,  AI is the overall goal of creating intelligent systems. ML is a way to achieve AI by enabling machines to learn from data. DL is a more advanced technique within ML that uses layered neural networks to learn from large amounts of data.",
-        image: "src/assets/relationships.jpeg",
+        image: "src/assets/chapter_zero/relationships.jpeg",
         content: [
           { id: 1, 
             title: "Artificial Intelligence (AI)", 
@@ -264,45 +264,45 @@ export default [
       { id: 3, 
         name: "1) Machine Learning Model (Decision Tree)",
         value: "",
-        image: "src/assets/mlcat.jpeg",
+        image: "src/assets/chapter_zero/mlcat.jpeg",
         content: [
           { id: 1, 
             title: "",
-            value: "Here the input data must be structured, so we need to extract features from the image manually or use another algorithm to do, like color histograms, edge detection."
+            value: "In this process, the input data must be structured, meaning we need to manually extract features from the image, or we can use another algorithms to automate this task.s"
           },
           { id: 2, 
             title: "",
-            value: "Then go through a decision tree model, the decision tree learns by splitting the data based on these input features.  It creates branches based on conditions (e.g., “if the image has a certain texture, go left, otherwise, go right”). The tree continues to split the data until it reaches a decision point, where it classifies the image as “cat” or “not a cat”."
+            value: "The decision tree model then comes into play by learning to split the data based on these input features. It creates branches according to certain conditions (e.g., “if the image has a certain texture, go left; otherwise, go right”). The tree keeps splitting the data until it reaches a decision point, ultimately classifying the image as either a “cat” or “not a cat”."
           },
           { id: 3, 
             title: "",
-            value: "For a new image, we gotta extract the same features and pass them through the decision tree, boring."
+            value: "When presented with a new image, the same features must be extracted and passed through the decision tree. While this process is straightforward, it can sometimes feel a bit repetitive."
           },
         ]
       },
       { id: 4, 
         name: "2) Deep Learning Model (Neural Network)",
         value: "",
-        image: "src/assets/dlcat.jpeg",
+        image: "src/assets/chapter_zero/dlcat.jpeg",
         content: [
-          { id: 0, 
-            title: "",
-            value: "Here the input data is a raw image, an unstructured data, and no need for converting it to a structured data. Then go through a neural network, the neural network automatically extracts features, such as edges, textures, and patterns from the image, which in the initial layers. These features are then combined in deeper layers to detect more complex structures like fur patterns, eyes, and ears."
-          },
           { id: 1, 
             title: "",
-            value: "The neural network learns through backpropagation, adjusting its parameters based on the errors it makes during training on a labeled dataset (images labeled as “cat” or “not a cat”). The model gets better over time at identifying the features that distinguish a cat from other objects."
+            value: "Here, the input data is a raw image, which is unstructured and doesn't need to be converted into structured data like in traditional machine learning. The neural network automatically extracts features, such as edges, textures, and patterns from the image in the initial layers. These features are then combined in deeper layers to detect more complex structures like fur patterns, eyes, and ears."
           },
           { id: 2, 
             title: "",
-            value: "Once trained, the neural network can take a new image, process it through the layers, and output a probability score. Indicating whether the image is of a cat or not."
+            value: "The neural network learns through backpropagation, adjusting its parameters based on the errors it makes during training on a labeled dataset (images labeled as “cat” or “not a cat”). The model gets better over time at identifying the features that distinguish a cat from other objects."
+          },
+          { id: 3, 
+            title: "",
+            value: "Once trained, the neural network can process a new image through its layers and output a probability score, indicating the likelihood that the image contains a cat. Based on this score, the model can classify the image as “cat” or “not cat”."
           },
         ]
       },
       { id: 5, 
         name: "3) Differences between Machine Learnig and Deep Learning",
         value: "",
-        image: "src/assets/mldl.jpeg",
+        image: "src/assets/chapter_zero/mldl.jpeg",
         content: [
           { id: 1, 
             title: "Structure Data",
@@ -333,7 +333,7 @@ export default [
       { id: 6,
         name: "3.3 Deep Learning Applications",
         value: "",
-        image: "src/assets/dlapps.jpeg",
+        image: "src/assets/chapter_zero/dlapps.jpeg",
         content: [
           { id: 1, 
             title: "Image Recognition",
@@ -378,7 +378,7 @@ export default [
           },
           { id: 4, 
             title: "",
-            value: "Neural networks can also generalize from the data they’ve been trained on, meaning they can make accurate predictions or decisions even when faced with new, unseen data. This generalization is what allows them to be so effective in real-world applications, where the exact conditions of the training data are rarely met."
+            value: "Neural networks can also generalize from the data they've been trained on, meaning they can make accurate predictions or decisions even when faced with new, unseen data. This generalization is what allows them to be so effective in real-world applications, where the exact conditions of the training data are rarely met."
           },
           { id: 5, 
             title: "",
@@ -389,7 +389,7 @@ export default [
       { id: 2,
         name: "4.1 Neural Network Architecture",
         value: "A neural network consists of layers of interconnected units called neurons or nodes. Here's a breakdown of its basic components:",
-        image: "src/assets/nnmodel.jpeg",
+        image: "src/assets/chapter_zero/nnmodel.jpeg",
         content: [
           { id: 1, 
             title: "Neurons",
@@ -416,7 +416,7 @@ export default [
       { id: 3,
         name: "4.2 What is Neurons in the Brain?",
         value: "",
-        image: "src/assets/neurons.jpeg",
+        image: "src/assets/chapter_zero/neurons.jpeg",
         content: [
           { id: 1, 
             title: "Neurons",
@@ -541,7 +541,7 @@ export default [
       { id: 2,
         name: "6.1 PyTorch Features",
         value: "",
-        image: "src/assets/ptfeatures_img.jpeg",
+        image: "src/assets/chapter_zero/ptfeatures.jpeg",
         content: [
           { id: 1, 
             title: "Dynamic Computational Graphs",
@@ -569,11 +569,11 @@ export default [
       { id: 3,
         name: "6.2 Trends",
         value: "",
-        image: "src/assets/pytorchtrends.jpeg",
+        image: "src/assets/chapter_zero/pttrends.jpeg",
         content: [
           { id: 1, 
             title: "",
-            value: "This graph shows the trends in the usage of different machine learning frameworks based on the share of paper implementations from March 2020 to June 2024. These frameworks are marked with different color, and PyTorch is the most attractive one."
+            value: "This graph shows the trends in the usage of different machine learning frameworks based on the share of paper implementations from June 2020 to June 2024. These frameworks are marked with different color, and PyTorch is the most attractive one."
           },
           { id: 2, 
             title: "",
@@ -584,11 +584,11 @@ export default [
       { id: 4,
         name: "6.3 Companies with PyTorch",
         value: "PyTorch has become one of the most popular deep learning frameworks, and many leading companies across various industries are using it for their AI and machine learning applications. Here are some well-known companies that use PyTorch:",
-        image: "src/assets/companies.jpeg",
+        image: "src/assets/chapter_zero/ptcompanies.jpeg",
         content: [
           { id: 1, 
             title: "Tesla",
-            value: "Tesla use PyTorch for various AI and deep learning tasks, particularly in the development of its Autopilot system and other autonomous driving technologies."
+            value: "Tesla utilizes PyTorch for a range of AI and deep learning tasks, particularly in the development of its Autopilot system and other autonomous driving technologies, such as the Full Self-Driving (FSD) system."
           },
           { 
             id: 2, 
@@ -623,7 +623,7 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "PyTorch is a Python-based framework, so if you wanna learn PyTorch, first of all, you gotta know a bit of Python programming language, like variables, functions, classes, data-type, data-structure. Python is pretty simple, if you're familiar with other programming language like Java or JavaScript, you can mast it quickly."
+            value: "To learn PyTorch, it's important to have a basic understanding of Python. This includes concepts like variables, functions, classes, data types, and data structures. Python is relatively simple and intuitive, so if you're already familiar with other programming languages like Java or JavaScript, you should be able to pick it up quickly."
           },
         ],
       },
@@ -634,16 +634,16 @@ export default [
         content: [
           { id: 1, 
             title: "Linear Algebra",
-            value: "Understanding vectors, matrices, and operations like matrix multiplication is crucial since neural networks and other ML algorithms rely heavily on these concepts. I will cover it in the next chapter, called Tensors."
+            value: "A solid understanding of vectors, matrices, and operations like matrix multiplication is essential, as these concepts are fundamental to neural networks and many other machine learning algorithms. We'll explore these further in the next chapter, which focuses on Tensors."
           },
           { 
             id: 2, 
             title: "Calculus",
-            value: "Be familiar with derivative and integral is pretty useful, especially for understanding how backpropagation and gradient descent work in training process of neural networks."
+            value: "Familiarity with derivatives and integrals is crucial, especially when it comes to understanding how backpropagation and gradient descent optimize neural networks during training."
           },
           { id: 3, 
             title: "Probability and Statistics",
-            value: "Be familiar with probability, random variables, probability distribution and normal distribution. It will help you understand concepts like loss functions, activation functions, and the overall behavior of models."
+            value: "A good grasp of probability, random variables, and probability distributions (including the normal distribution) is important for understanding loss functions, activation functions, and the overall behavior of models."
           },
         ],
       },
@@ -655,25 +655,25 @@ export default [
     sections: [
       { id: 1, 
         name: "8. How to take this course?",
-        value: "What should we do before this trainig course, first of all, you should know Python programming languages. Then you gotta know some mathematic knowledges, like Matrix computation, calculus, probability and statistics.",
-        image: "src/assets/takecourse_img.jpeg",
+        value: "Before starting this training course, it's important to have a basic understanding of Python programming. You'll also need some foundational knowledge in mathematics, including matrix computation, calculus, probability, and statistics.",
+        image: "src/assets/chapter_zero/takecourse.jpeg",
         content: [
           { id: 1, 
             title: "Watch all lessons from A to Z",
-            value: "First and for most, I want you to watch this entire course all the way from beginning to the end, even you're familiar with PyTorch. Cus along the way, I am gonna share lots of tips and tricks for understanding, and I don't want you to miss out on any of them. And in this course, I am not gonna wast your time on repetitive and useless stuff. So make sure to watch all lessons."
+            value: "First and foremost, I recommend watching the entire course from beginning to end, even if you're already familiar with PyTorch. Throughout the course, I'll be sharing numerous tips and tricks to deepen your understanding, and I don't want you to miss out on any of them. I've designed the course to be concise and focused, so you won't waste time on repetitive or irrelevant content. Make sure to watch every lesson."
           },
           { 
             id: 2, 
             title: "Take notes",
-            value: "Now while watching the lesson, I want you to take notes. You can just write down some keywords on your paper, if you don't wanna take lots of notes. I strongly believed that writing things down will help you remember new things that you've learned. Then after each lesson, go through your notes and repeat the same steps I showed to you. This is exactly how I personally learn new things."
+            value: "While watching the lessons, I encourage you to take notes. Even if you prefer not to write extensively, jotting down key concepts and ideas can be very helpful. I strongly believe that writing things down aids in retaining new information. After each lesson, review your notes and practice the steps I demonstrated. This is the same approach I use to learn new material."
           },
           { id: 3, 
             title: "Complete all exercises",
-            value: "Also, I've carefully designed some exercises that help you understand and remember what we learned. So make sure to do all the practices. Cus the more you practice, the better you will be in machine learning field in general."
+            value: "I've carefully designed exercises to reinforce the concepts covered in each lesson. Completing these exercises is crucial for understanding and retaining what you've learned. The more you practice, the more proficient you'll become in the field of machine learning."
           },
           { id: 4, 
             title: "Share your work",
-            value: "The more you share, the more you get. If you wanna a deeper comprehension about this course, the best  way is building your own project with your personal understanding, then share it.  When you share your work, the more people will get to know you and give you feedback on your work. So be open to feedback, listen to it with an open mind. It can help you improve your skills and create better work in the future. I believe you can do better than me."
+            value: "The more you share, the more you learn. To gain a deeper understanding of this course, try building your own project based on what you've learned and share it with others. Sharing your work allows others to provide feedback, which can be invaluable for improving your skills and creating better projects in the future. Be open to constructive criticism, as it will help you grow. Remember, I believe you can do even better than I have!"
           },
         ],
       },
