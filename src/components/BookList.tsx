@@ -13,14 +13,14 @@ import {
 import { Link } from 'react-router-dom';
 import lists from '../data/chapterList'
 
-const ChapterList = () => {
+const BookList = () => {
   const backMatter = [
     { id: 1, name: "Dedication", link: 'dedication' },
     { id: 2, name: "Additional Resources", link: 'additional-resources' },
     { id: 3, name: "Credits", link: 'credits' }
   ]
   return (
-    <Accordion allowToggle>
+    <Accordion allowToggle >
       <List spacing={3} p='8px 16px'>
         <ListItem>
           <Link to={'introduction'}>
@@ -63,4 +63,4 @@ const ChapterList = () => {
   );
 };
 
-export default ChapterList;
+export default BookList;

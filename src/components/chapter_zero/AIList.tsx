@@ -2,7 +2,7 @@ import { Box, List, ListItem, SimpleGrid, Stack, Text } from '@chakra-ui/react'
 import covers from '../../data/covers'
 import Lists from '../Lists'
 
-const ChapterList = () => {
+const AIList = () => {
   const { content: lists, description: descript } = covers[0].list
 
   return (
@@ -33,4 +33,4 @@ const ChapterList = () => {
   )
 }
 
-export default ChapterList
+export default AIList

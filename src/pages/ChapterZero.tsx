@@ -8,7 +8,7 @@ import NNSection from '../components/chapter_zero/NNSection';
 import Prerequisites from '../components/chapter_zero/Prerequisites';
 import PTSection from '../components/chapter_zero/PTSection';
 import TakeCourse from '../components/chapter_zero/TakeCourse';
-import ChapterList from '../components/chapter_zero/ChapterList';
+import AIList from '../components/chapter_zero/AIList';
 
 const ChapterZero = () => {
   return (
@@ -17,7 +17,7 @@ const ChapterZero = () => {
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='brand' w="30%" mx="auto"/>
       </Flex>
-      <ChapterList/>
+      <AIList/>
       <AISection/>
       <MLSection/>
       <DLSection/>
