@@ -5,13 +5,13 @@ import Definition from '../Definition';
 import LeftGrid from '../LeftGrid';
 import RightGrid from '../RightGrid';
 import RightGridTwo from '../RightGridTwo';
-import chapterOne from '../../data/chapterOne';
+import chapterZero from '../../data/chapterZero';
 
 
 const AISection = () => {
   const [
     whats, reason, turningTest, expertSystem, connectionism, cnn, alphago, openai
-  ] =  chapterOne[0].sections
+  ] =  chapterZero[0].sections
 
   return (
     <>

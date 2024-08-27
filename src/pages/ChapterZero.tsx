@@ -8,11 +8,11 @@ import NNSection from '../components/chapter_zero/NNSection';
 import Prerequisites from '../components/chapter_zero/Prerequisites';
 import PTSection from '../components/chapter_zero/PTSection';
 import TakeCourse from '../components/chapter_zero/TakeCourse';
-import ChapterList from '../components/ChapterList';
+import ChapterList from '../components/chapter_zero/ChapterList';
 
-const ChapterGrid = () => {
+const ChapterZero = () => {
   return (
-    <Container maxW='1200px' px='10px' mt='72px'>
+    <Container maxW='1200px' px='10px'>
       <Header/>
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='brand' w="30%" mx="auto"/>
@@ -30,4 +30,4 @@ const ChapterGrid = () => {
   )
 }
 
-export default ChapterGrid
+export default ChapterZero

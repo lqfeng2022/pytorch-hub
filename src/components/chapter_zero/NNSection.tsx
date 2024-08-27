@@ -1,10 +1,10 @@
 import { Box, Text } from '@chakra-ui/react'
 import BaseGrid from '../BaseGrid'
 import Definition from '../Definition'
-import chapterOne from '../../data/chapterOne'
+import chapterZero from '../../data/chapterZero'
 
 const NNSection = () => {
-  const [ definition, model, neurons ] = chapterOne[3].sections
+  const [ definition, model, neurons ] = chapterZero[3].sections
   
   return (
     <>

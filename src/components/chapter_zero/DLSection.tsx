@@ -1,12 +1,12 @@
 import { Box, Text } from '@chakra-ui/react'
 import Definition from '../Definition'
 import BaseGrid from '../BaseGrid'
-import chapterOne from '../../data/chapterOne'
+import chapterZero from '../../data/chapterZero'
 
 const DLSection = () => {
   const [
     definition, comparing, mlmodel, dlmodel, mldl, dlapps
-  ] = chapterOne[2].sections
+  ] = chapterZero[2].sections
   
   return (
     <>
