@@ -12,7 +12,7 @@ const Libraries = () => {
         {libs.map((p) => 
           <div key={p.id}>
             <Text as='b'>{p.name}</Text>
-            {p.content.map((t) => <Text py={1}>{t.value}</Text>) }
+            {p.content.map((t) => <Text py={1} key={t.id}>{t.value}</Text>) }
           </div>
         )}
       </Stack>

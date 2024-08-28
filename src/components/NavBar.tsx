@@ -15,9 +15,17 @@ const NavBar = () => {
       bg='white' // Ensure the background is white or your desired color
     >
       <HStack justifyContent='space-between' py='10px' my={2} spacing={3}>
-        <Text as='b' whiteSpace='nowrap' fontSize='2xl' color='tomato'>
-          <Link to={'/'}>AI &nbsp;WITH &nbsp;PYTORCH</Link>
-        </Text>
+        <Link to={'/'}>
+          <Text 
+            as='b' 
+            whiteSpace='nowrap' 
+            fontSize='2xl' 
+            color='tomato'
+            _hover={{ color: '#E53E3E' }}
+          >
+            AI &nbsp;WITH &nbsp;PYTORCH
+          </Text>
+        </Link>
         <Icon boxSize='25px' as={HiLanguage} />
       </HStack>
     </Container>

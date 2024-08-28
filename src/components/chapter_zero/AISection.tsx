@@ -7,7 +7,6 @@ import RightGrid from '../RightGrid';
 import RightGridTwo from '../RightGridTwo';
 import chapterZero from '../../data/chapterZero';
 
-
 const AISection = () => {
   const [
     whats, reason, turningTest, expertSystem, connectionism, cnn, alphago, openai

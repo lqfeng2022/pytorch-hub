@@ -11,20 +11,19 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import lists from '../data/chapterList'
+import chapterList from '../data/chapterList';
 
 const BookList = () => {
-  const backMatter = [
-    { id: 1, name: "Dedication", link: 'dedication' },
-    { id: 2, name: "Additional Resources", link: 'additional-resources' },
-    { id: 3, name: "Credits", link: 'credits' }
-  ]
+  const [ frontMatter ] = chapterList.slice(0, 1)
+  const lists = chapterList.slice(1, 12)
+  const backMatter = chapterList.slice(-3)
+
   return (
     <Accordion allowToggle >
       <List spacing={3} p='8px 16px'>
         <ListItem>
-          <Link to={'introduction'}>
-            <Text fontSize='md'>Introduction</Text>
+          <Link to={frontMatter.link}>
+            <Text fontSize='md' _hover={{color: 'tomato'}}>{frontMatter.name}</Text>
           </Link>
         </ListItem>
       </List>
@@ -33,7 +32,7 @@ const BookList = () => {
           <AccordionButton>
             <Box flex='1' textAlign='left'>
               <Link to={list.link!}>
-                <HStack spacing={3}>
+                <HStack spacing={3} _hover={{color: 'tomato'}}>
                   <Text>{list.id}</Text>
                   <Text fontSize='md'>{list.name}</Text>
                 </HStack>
@@ -55,7 +54,7 @@ const BookList = () => {
         <List spacing={3} p='8px 16px'>
           {backMatter.map((m) => <ListItem key={m.id}>
             <Link to={m.link}>
-              <Text fontSize='md'>{m.name}</Text>
+              <Text fontSize='md' _hover={{color: 'tomato'}}>{m.name}</Text>
             </Link>
           </ListItem>)}
         </List>

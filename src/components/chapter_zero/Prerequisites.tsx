@@ -14,11 +14,16 @@ const Prerequisites = () => {
             <Text as='b'>{p.name}</Text>
             {p.content.map((t) => 
               <div key={t.id}>
-                {t.title && <HStack>
-                  <Text>{t.id}</Text>
-                  <Text as='b'>{t.title}</Text>
-                </HStack>}
-                <Text py={1}>{t.value}</Text>
+                {t.title && 
+                  <div>
+                    <HStack>
+                      <Text>{t.id}</Text>
+                      <Text as='b'>{t.title}</Text>
+                    </HStack>
+                    <Text py={1} pl={4}>{t.value}</Text>
+                  </div>
+                }
+                {!t.title && <Text py={1}>{t.value}</Text>}
               </div>
             )}
           </Stack>

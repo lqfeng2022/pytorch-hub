@@ -18,11 +18,15 @@ const BaseGrid = ({ section }: Props) => {
         {section.content.map((p) => 
           <div key={p.id}>
             {p.title && 
-              <HStack>
-                <Text>{p.id}</Text>
-                <Text as='b'>{p.title}</Text>
-              </HStack>}
-            <Text>{p.value}</Text>
+              <>
+                <HStack>
+                  <Text>{p.id}</Text>
+                  <Text as='b'>{p.title}</Text>
+                </HStack>
+                <Text pl={4}>{p.value}</Text>
+             </>
+            }
+            {!p.title && <Text>{p.value}</Text>}
           </div>
         )}
       </Stack>

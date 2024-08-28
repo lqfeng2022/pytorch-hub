@@ -18,25 +18,26 @@ function HomePage() {
     base: book_img, lg: book_img_2 
   });
 
+  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
+  const showContent = isLargeScreen || !show;
+
   const handleShow = () => { setShow(true)}
   const handleHide = () => { setShow(false)}
-
-    // Determine if content should be visible based on screen size and state
-  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
-  const shouldShowContent = isLargeScreen || !show;
   
   return (
     <Center>
       <Stack spacing={5} pb={5}>
-        { shouldShowContent && <>
+        { showContent && <>
           <Image src={bookImage} alt='Book Cover'/>
           <Text>Hi! Hello! I built this web for this book. You can read the whole contents here. This book is a beginners' guider for anyone interested in Artificial Intelligence. If this book brings you inspiration and joy, and you want to dive deeper, feel free to visit my YouTube channel, where I'm gonna talk more details about <Text as='b'>Artificial Intelligence</Text> and <Text as='b'>Developments</Text>.</Text>
           {!isLargeScreen && 
             <Button 
-              colorScheme='pink' 
+              bg='tomato'
+              color='white'
               w='100px' 
               h='35px' 
               onClick={handleShow}
+              _hover={{ bg: '#E53E3E' }}
             >
               SHALL WE
             </Button>
