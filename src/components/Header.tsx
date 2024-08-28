@@ -1,10 +1,7 @@
-import { Center, Heading, Image, Stack, Text } from '@chakra-ui/react'
-import covers from '../../data/covers'
+import { Heading, Center, Stack, Text, Image } from '@chakra-ui/react'
+import Cover from '../entities/Cover'
 
-const Header = () => {
-  const cover = covers[0].cover
-  const quoteText = `"${cover.quote}"`
-  const authorText = `-- ${cover.author}`
+const Header = ({ cover }: { cover: Cover }) => {
 
   return (
     <>
@@ -13,8 +10,8 @@ const Header = () => {
       </Heading>
       <Center py={3}>
         <Stack maxW='300px'>
-          <Text as='i' textAlign='center' pb={3}>{quoteText}</Text>
-          <Text as='i' textAlign='center'>{authorText}</Text>
+          <Text as='i' textAlign='center' pb={3}>{`"${cover.quote}"`}</Text>
+          <Text as='i' textAlign='center'>{`-- ${cover.author}`}</Text>
         </Stack>
       </Center>
       <Stack py={5}>

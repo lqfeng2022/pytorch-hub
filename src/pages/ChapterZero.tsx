@@ -1,24 +1,40 @@
 import { Container, Divider, Flex } from '@chakra-ui/react';
-import AIList from '../components/chapter_zero/AIList';
 import AISection from '../components/chapter_zero/AISection';
 import DLSection from '../components/chapter_zero/DLSection';
-import Header from '../components/chapter_zero/Header';
 import Libraries from '../components/chapter_zero/Libraries';
 import MLSection from '../components/chapter_zero/MLSection';
 import NNSection from '../components/chapter_zero/NNSection';
 import Prerequisites from '../components/chapter_zero/Prerequisites';
 import PTSection from '../components/chapter_zero/PTSection';
-import TakeCourse from '../components/chapter_zero/TakeCourse';
 import FootLinks from '../components/FootLinks';
+import covers from '../data/covers';
+import Header from '../components/Header';
+import chapterList from '../data/chapterList';
+import ChapterList from '../components/ChapterList';
+import chapterZero from '../data/chapterZero';
+import BaseGrid from '../components/BaseGrid';
 
 const ChapterZero = () => {
+  const cover = covers[0].cover
+
+  const description = chapterList[1].description!
+  const lists = chapterList[1].items!
+  const leftItems = lists.slice(0, 4)
+  const rightItems = lists.slice(-4)
+  
+  const [ takeCourse ] = chapterZero[7].sections
+
   return (
     <Container maxW='1200px' px='0'>
-      <Header/>
+      <Header cover={cover}/>
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='brand' w="30%" mx="auto"/>
       </Flex>
-      <AIList/>
+      <ChapterList 
+        leftItems={leftItems} 
+        rightItems={rightItems} 
+        description={description} 
+      />
       <AISection/>
       <MLSection/>
       <DLSection/>
@@ -26,11 +42,16 @@ const ChapterZero = () => {
       <Libraries/>
       <PTSection/>
       <Prerequisites/>
-      <TakeCourse/>
+      <BaseGrid section={takeCourse}/>
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
-      <FootLinks leftLink={'introduction'} rightLink={'1. TENSORs'}/>
+      <FootLinks 
+        left={'Introduction'}
+        leftLink={'/introduction'} 
+        right={'0. TENSORs'}
+        rightLink={'/tensors'}
+      />
     </Container>
   )
 }

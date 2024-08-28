@@ -13,12 +13,30 @@ export default [
       { id: 7, name: "Prerequisites", link: "prerequisites" },
       { id: 8, name: "How to take this Course", link: "how-to-take-course" },
     ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: "In this chapter, we're gonna dive into some fundamental concepts of Artificial Intelligence and explore a few key AI frameworks and libraries."
+      },
+      { id: 2, 
+        title: "",
+        value: "First off, we gotta get what AI, Machine Learning, Deep Learning, and Neural Networks really are. After that, I'll introduce you to some of the most useful Machine Learning frameworks and libraries. For beginners, PyTorch stands out as a powerful and user-friendly framework, so we'll be using PyTorch to build our next projects."
+      },
+      { id: 3, 
+        title: "",
+        value: "Before we get started, it's helpful to have a basic understanding of Python, such as knowing about variables, functions, classes, data types, and so on. But don't worry if you're not up to speed on Python yet, I've got another course that covers it, and it's pretty straightforward. I'm confident you'll pick it up quickly."
+      },
+      { id: 4, 
+        title: "",
+        value: "As for the math involved, in the upcoming chapters, when we start building models, we'll touch on some mathematical concepts. If you're not familiar with them, or if you've never learned them before, don't stress, I'll break things down visually to make them easier to understand as we go."
+      }
+    ]
   },
   { id: 1, 
     name: "TENSORs", 
     link: "tensors",
     items: [
-      { id: 1, name: "scaler, Vector, MATRIX, TENSOR", link: "" },
+      { id: 1, name: "TENSOR", link: "" },
       { id: 2, name: "Create Tensor", link: "" },
       { id: 3, name: "Tensor's Attributes", link: "" },
       { id: 4, name: "Tensor Operation", link: "" },
@@ -28,6 +46,24 @@ export default [
       { id: 8, name: "Tensor vs. NumPy Array", link: "" },
       { id: 9, name: "Tensor Reproducibility", link: "" },
       { id: 10, name: "Tensor on GPUs", link: "" }
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: "In this chapter, we’re gonna talk about the TENSOR, which is the most basic and crucial concept in Machine learning."
+      },
+      { id: 2, 
+        title: "",
+        value: "Fist of all, you gotta know what is TENSOR and why tensor is so crucial. There is one thing you should always remember, just one thing - “Computer love data” - , and we use TENSOR to convert everything around our into DATA, whether it’s letters, words, articles, or even voices, images and videos. Next, we’re gonna cover how to create a tensor and go over its 4 key attributes: shape, dimensions, data type and device. Then we’ll move on to tensor operations, adding, subtracting, dividing, and multiplying - just like regular math. We’ll also tackle matrix multiplication, which is a bit tricky for beginners, but super important."
+      },
+      { id: 3, 
+        title: "",
+        value: "After that, you’ll learn how to manipulate tensors, we’re gonna talk about aggregating, reshaping, squeezing, unsqueezing, permuting a tensor, changing data types, and even how to concatenate or stack tensors.Knowing how to transpose a tensor is another crucial skill, especially for fixing shape errors during matrix multiplication."
+      },
+      { id: 4, 
+        title: "",
+        value: "And once you get the hang of tensor indexing, you’ll be able to confidently access specific elements - whether it’s a single number, row, rows, column, columns, or a block of numbers. We’re gonna also touch on the concept of reproducibility in machine learning, which is super important since models usually starts with random data. Understanding reproducibility and how to ensure it is a big deal. Actually it’s quite simple, you’ll learn about it. Finally, we’ll wrap up by talking about GPUs, the engine of machine learning. We need it."
+      }
     ]
    },
   { id: 2, 

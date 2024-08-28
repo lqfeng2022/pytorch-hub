@@ -1,9 +1,16 @@
 import { Box, List, ListItem, SimpleGrid, Stack, Text } from '@chakra-ui/react'
-import covers from '../../data/covers'
-import Lists from '../Lists'
+import Lists from './Lists'
+import Content from '../entities/Content'
+import ChapterItem from '../entities/ChapterItem'
 
-const AIList = () => {
-  const { content: lists, description: descript } = covers[0].list
+
+interface Props {
+  leftItems: ChapterItem[],
+  rightItems: ChapterItem[],
+  description: Content[]
+}
+
+const AIList = ({ leftItems, rightItems, description }: Props) => {
 
   return (
     <Box>
@@ -16,18 +23,18 @@ const AIList = () => {
         bg='red.50' alignItems='center' // Ensure centered vertically
       >
         <List spacing={4}>
-          {lists.slice(0, 4).map((list) => <ListItem key={list.id}> 
+          {leftItems.map((list) => <ListItem key={list.id}> 
             <Lists name={list.name}/>
           </ListItem>)}
         </List>
         <List spacing={4}>
-          {lists.slice(-4).map((list) => <ListItem key={list.id}>
+          {rightItems.map((list) => <ListItem key={list.id}>
             <Lists name={list.name}/>
           </ListItem>)}
         </List>
       </SimpleGrid>
       <Stack my={5} spacing={4}>
-        {descript.map((p) => <Text key={p.id}>{p.value}</Text>)}
+        {description.map((p) => <Text key={p.id}>{p.value}</Text>)}
       </Stack>
     </Box>
   )
