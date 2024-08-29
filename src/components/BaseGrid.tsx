@@ -1,14 +1,10 @@
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react'
 import Section from '../entities/Section'
 
-interface Props {
-  section: Section
-}
-
-const BaseGrid = ({ section }: Props) => {
+const BaseGrid = ({ section }: { section: Section }) => {
 
   return (
-    <Box py={3}>
+    <Box pt={3} pb={5}>
       <Stack spacing={3}>
         <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>
         {section.value && <Text as='i' fontSize='lg'>{section.value}</Text>}

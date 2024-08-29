@@ -11,7 +11,7 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import chapterList from '../data/chapterList';
+import chapterList from '../data/sectionList';
 
 const BookList = () => {
   const [ frontMatter ] = chapterList.slice(0, 1)

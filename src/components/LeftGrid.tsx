@@ -1,11 +1,7 @@
 import { Box, Image, SimpleGrid, Stack, Text, Flex } from '@chakra-ui/react'
 import Section from '../entities/Section'
 
-interface Props {
-  section: Section
-}
-
-const LeftGrid = ({ section }: Props) => {
+const LeftGrid = ({ section }: { section: Section }) => {
   return (
     <Box py={3}>
       <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>

@@ -9,16 +9,16 @@ import PTSection from '../components/chapter_zero/PTSection';
 import FootLinks from '../components/FootLinks';
 import covers from '../data/covers';
 import Header from '../components/Header';
-import chapterList from '../data/chapterList';
+import sectionList from '../data/sectionList';
 import ChapterList from '../components/ChapterList';
 import chapterZero from '../data/chapterZero';
 import BaseGrid from '../components/BaseGrid';
 
 const ChapterZero = () => {
-  const cover = covers[0].cover
+  const cover = covers[0]
 
-  const description = chapterList[1].description!
-  const lists = chapterList[1].items!
+  const description = sectionList[1].description!
+  const lists = sectionList[1].items!
   const leftItems = lists.slice(0, 4)
   const rightItems = lists.slice(-4)
   

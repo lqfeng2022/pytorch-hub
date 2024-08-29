@@ -1,16 +1,16 @@
 import { Box, List, ListItem, SimpleGrid, Stack, Text } from '@chakra-ui/react'
 import Lists from './Lists'
 import Content from '../entities/Content'
-import ChapterItem from '../entities/ChapterItem'
+import SectionItem from '../entities/SectionItem'
 
 
 interface Props {
-  leftItems: ChapterItem[],
-  rightItems: ChapterItem[],
+  leftItems: SectionItem[],
+  rightItems: SectionItem[],
   description: Content[]
 }
 
-const AIList = ({ leftItems, rightItems, description }: Props) => {
+const ChapterList = ({ leftItems, rightItems, description }: Props) => {
 
   return (
     <Box>
@@ -40,4 +40,4 @@ const AIList = ({ leftItems, rightItems, description }: Props) => {
   )
 }
 
-export default AIList
+export default ChapterList

@@ -1,4 +1,4 @@
-export default interface ChapterItem {
+export default interface SectionItem {
   id: number,
   name: string,
   link: string
