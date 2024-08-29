@@ -6,6 +6,12 @@ const thick = defineStyle({
   borderColor: "orange.300",
 })
 
+const middle = defineStyle({
+  borderWidth: '3px',
+  borderStyle: 'dashed', 
+  borderColor: "gray.500",
+})
+
 const brandPrimary = defineStyle({
   borderWidth: '5px',
   borderStyle: 'dashed',
@@ -13,5 +19,5 @@ const brandPrimary = defineStyle({
 })
 
 export const dividerTheme = defineStyleConfig({
-  variants: { thick, brand: brandPrimary },
+  variants: { thick, middle, brand: brandPrimary },
 })

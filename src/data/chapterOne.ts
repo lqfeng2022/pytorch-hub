@@ -378,13 +378,9 @@ export default [
     sections: [
       { id: 0,
         name: "6. TENSOR Transpose", 
-        value: "",
+        value: "Transposing a tensor in PyTorch involves swapping two of its dimensions. This operation is commonly used in mathematical computations, especially in linear algebra, where you need to switch the rows and columns of matrices (which are 2D tensors).",
         image: "src/assets/chapter_one/transpose.jpeg",
         content: [
-          { id: 0, 
-            title: "",
-            value: "Transposing a tensor in PyTorch involves swapping two of its dimensions. This operation is commonly used in mathematical computations, especially in linear algebra, where you need to switch the rows and columns of matrices (which are 2D tensors)."
-          },
           { id: 1, 
             title: "",
             value: "And this operation is not limited to 2D tensors, you can transpose any 2 dimensions in tensors with more dimensions. Like in a 2D tensors, you can use it to swap any pair of dimensions."
@@ -405,4 +401,338 @@ export default [
       },
     ]
   },
+  { id: 7, 
+    name: "7. TENSOR Indexing",
+    description: "Tensor indexing in PyTorch refers to accessing specific elements, rows, columns, or subarrays within a tensor using various indexing techniques. This is similar to how you would index lists or arrays in Python but is more powerful and flexible due to PyTorch's support for multi-dimensional tensors.",
+    sections: [
+      { id: 1,
+        name: "7.1 Basic Indexing", 
+        value: "",
+        image: "src/assets/chapter_one/indexing_one.jpeg",
+        content: [
+          { id: 1, 
+            title: "Single Element",
+            value: "You can access single element of a tensor using indices."
+          },
+          { id: 2, 
+            title: "Row or Column",
+            value: "You can access entire rows or columns by specifying the index for one dimension and using “:” for the other."
+          },
+        ]
+      },
+      { id: 2,
+        name: "7.2 Slicing and Boolean Indexing", 
+        value: "",
+        image: "src/assets/chapter_one/indexing_two.jpeg",
+        content: [
+          { id: 1, 
+            title: "Slicing Indexing",
+            value: "You can extract a range of elements from a tensor using slicing, and you can also specify a step value in the slice."
+          },
+          { id: 2, 
+            title: "Boolean Indexing",
+            value: "You can use a condition to index a tensor, which will return elements that meet the condition."
+          },
+        ]
+      },
+    ]
+  },
+  { id: 8, 
+    name: "TENSOR vs. NumPy Array",
+    description: "",
+    sections: [
+      { id: 1,
+        name: "8. TENSOR vs. NumPy Array", 
+        value: "PyTorch tensors can easily interact with NumPy arrays, allowing you to convert between the two data types seamlessly. This interoperability is useful when you want to leverage the strengths of both PyTorch and NumPy in your workflow. Here's how you can implement this interaction",
+        image: "src/assets/chapter_one/tensor_numpy.jpeg",
+        content: [
+          { id: 1, 
+            title: "PyTorch Tensor -> NumPy Array",
+            value: "You can convert a PyTorch tensor to a NumPy array using the .numpy() method. This method creates a view of the tensor data, meaning the NumPy array and the PyTorch tensor share the same underlying data. Any changes made to one will affect the other."
+          },
+          { id: 2, 
+            title: "NumPy Array -> PyTorch Tensor",
+            value: "To convert a NumPy array to a PyTorch tensor, you can use the torch.from_numpy() function. Like the .numpy() method, this conversion creates a tensor that shares the same data with the NumPy array"
+          },
+          { id: 3, 
+            title: "Summary",
+            value: "Use .numpy() to convert a PyTorch tensor to a NumPy array and torch.from_numpy() to go the other way. Conversions share the same data, so changes in one will reflect in the other. Move tensors to the CPU before converting to NumPy if they're on a GPU."
+          },
+        ]
+      },
+    ]
+  },
+  { id: 9,
+    name: "TENSOR Reproducibility",
+    description: "",
+    sections: [
+      { id: 0, 
+        name: "9. TENSOR Reproducibility",
+        value: "You can get the Same Results on your computer (different platform, PyTorch version, CPU/GPUs) while running the Same Code as I get on mine.",
+        image: "",
+        content: [
+          { id: 1, 
+            title: "",
+            value: "Tensor reproducibility refers to the ability to consistently produce the same results when performing operations involving tensors in PyTorch, even across different runs of the same code. This is important in machine learning, especially during model training, where you want to ensure that the results are reliable and not due to random variations."
+          }, 
+          { id: 2, 
+            title: "",
+            value: "Machine learning algorithms often involve some degree of randomness. For example, when you initialize weights in a neural network, split data into training and test sets, or shuffle data during training, these processes typically involve generating random numbers."
+          },
+          { id: 3, 
+            title: "",
+            value: "So how can we achieve tensor reproducibility in PyTorch. The most common approach is to set random seeds."
+          }
+        ]
+      }, 
+      { id: 1, 
+        name: "9.1 Randomness",
+        value: "A real Randomness that each possible outcome is equally likely, and there is no way to predict the next result based on previous ones.",
+        image: "", 
+        content: [
+          { id: 1, 
+            title: "", 
+            value: "Randomness refers to the lack of any predictable pattern or order in a sequence of events or outcomes. In a truly random process, each possible outcome is equally likely, and there is no way to predict the next result based on previous ones."
+          }, 
+          { id: 2, 
+            title: "",
+            value: "For example, flipping a fair coin results in a 50% chance of landing on heads or tails, but each individual flip's result is inherently unpredictable."
+          }
+        ]
+      },
+      { id: 2, 
+        name: "Randomness in PyTorch",
+        value: "",
+        image: "src/assets/chapter_one/randpy.jpeg", 
+        content: [
+          { id: 1, 
+            title: "", 
+            value: "In PyTorch, randomness is a fundamental part of many operations, and functions like torch.rand() are used to introduce random elements into tensors."
+          }, 
+          { id: 2, 
+            title: "", 
+            value: "torch.rand() is a PyTorch function that generates a tensor filled with random numbers drawn from a uniform distribution on the interval [0, 1)."
+          }, 
+          { id: 3, 
+            title: "", 
+            value: "Understanding how these functions work and how to control randomness in PyTorch is important for tasks like initializing model parameters, augmenting data, or performing stochastic operations."
+          }, 
+        ]
+      },
+      { id: 3, 
+        name: "Randomness Features",
+        value: "",
+        image: "src/assets/chapter_one/randfeat.jpeg", 
+        content: [
+          { id: 1, 
+            title: "Unpredictability", 
+            value: "In a random process, future outcomes cannot be determined based on past events. For example, when flipping a fair coin, each flip is independent, and there's a 50% chance of getting heads or tails each time, regardless of previous results."
+          }, 
+          { id: 2, 
+            title: "True Randomness",
+            value: "True randomness is typically derived from natural processes, like radioactive decay, thermal noise, or other phenomena that are inherently unpredictable."
+          },
+          { id: 3, 
+            title: "Randomness vs. Pseudorandomness",
+            value: "Unlike pseudorandomness, which is generated by algorithms and can be reproduced if the seed is known, true randomness has no underlying deterministic pattern and cannot be precisely reproduced."
+          }
+        ]
+      },
+      { id: 4, 
+        name: "9.2 PSEUDORANDOMNESS",
+        value: "There is no real Randomness, cus the Randomness is Simulated by Computer, is designed, so each step is predictable.",
+        image: "", 
+        content: [
+          { id: 1, 
+            title: "", 
+            value: "Pseudorandomness refers to sequences of numbers or data that appear random but are generated by a deterministic process. These sequences are created using algorithms known as pseudorandom number generators (PRNGs), which rely on an initial value called a seed."
+          }, 
+        ]
+      },
+      { id: 5, 
+        name: "PSEUDORANDOMNESS Features",
+        value: "",
+        image: "src/assets/chapter_one/pseudorandf.jpeg", 
+        content: [
+          { id: 1, 
+            title: "Deterministic", 
+            value: "Although pseudorandom sequences look random, they are produced by a specific, repeatable algorithm. If you know the seed and the algorithm, you can predict or replicate the sequence exactly."
+          }, 
+          { id: 2, 
+            title: "Reproducibility", 
+            value: "Pseudorandomness allows for reproducibility in computational tasks. By using the same seed, you can generate the same sequence of “random” numbers, which is crucial for debugging, testing, and scientific research."
+          }, 
+          { id: 3, 
+            title: "Not Truly Random", 
+            value: "Since pseudorandom numbers are generated by an algorithm, they are not truly random in the sense that they have an underlying pattern or structure, even if that pattern is not immediately apparent. True randomness, on the other hand, would be completely unpredictable and without any deterministic pattern."
+          }, 
+        ]
+      },
+      { id: 6, 
+        name: "9.3 RANDOM SEED",
+        value: "For Performing Repeatable Experiments, to Reduce the Randomness in Neural Network of PyTorch.",
+        image: "", 
+        content: [
+          { id: 1, 
+            title: "", 
+            value: "So how can we achieve tensor reproducibility in PyTorch. The most common approach is to set random seeds."
+          }, 
+          { id: 2, 
+            title: "", 
+            value: "To ensure that the random number generators produce the same sequence of numbers each time you run the code, you should set the seed for PyTorch, NumPy, and Python's random module."
+          }, 
+          { id: 3, 
+            title: "", 
+            value: "Setting a random seed ensures that these random processes produce the same results every time you run your code. This is essential for debugging, sharing your work with others, or simply verifying that your model behaves consistently."
+          }, 
+        ]
+      },
+      { id: 7, 
+        name: "RANDOM SEED in PyTorch",
+        value: "",
+        image: "src/assets/chapter_one/randseedpy.jpeg", 
+        content: [
+          { id: 1, 
+            title: "Set Random Seeds to 42", 
+            value: "The number 42 was popularized by Douglas Adams' science fiction series The Hitchhiker's Guide to the Galaxy, where it is humorously described as “the Answer to the Ultimate Question of Life, the Universe, and Everything.” This has made 42 a geeky, tongue-in-cheek choice among programmers."
+          }, 
+          { id: 2, 
+            title: "42 - No Special Significance", 
+            value: "Mathematically, 42 is just like any other number when used as a seed. It doesn't have any inherent properties that make it better or worse for generating random numbers. However, its quirky cultural reference has made it a fun and popular choice."
+          }, 
+          { id: 3, 
+            title: "Can You Use Other Numbers?", 
+            value: "Absolutely! You can set the seed to any integer. The choice of 42 is purely conventional and has no impact on the quality of the random numbers generated. What matters is that the seed is set, ensuring reproducibility, not the specific number used."
+          }, 
+        ]
+      },
+    ]
+  },
+  { id: 10, 
+    name: "TENSOR on GPU",
+    description: "", 
+    sections: [
+      { id: 0, 
+        name: "10. Run TENSOR on GPU",
+        value: "Run tensor on GPU, which can significantly speed up computation, especially for large tensors and deep learning models.",
+        image: "", 
+        content: [
+          { id: 1, 
+            title: "", 
+            value: "Running tensors on GPUs in PyTorch involves moving the tensor data to the GPU and then performing operations on it using GPU acceleration. This can significantly speed up computation, especially for large tensors and deep learning models."
+          }
+        ]
+      }, 
+      { id: 1, 
+        name: "10.1 GPU",
+        value: "GPU short from Graphics Processing Unit, is pretty faster on Tensor Computation as compared to the CPU.",
+        image: "",
+        content: [
+          { id: 1, 
+            title: "", 
+            value: "A GPU, or Graphics Processing Unit, is a specialized type of processor designed primarily for rendering graphics and performing complex calculations in parallel. Originally developed to handle the heavy computational demands of rendering images and video for gaming and multimedia, GPUs have since become essential in many other fields, including scientific computing, artificial intelligence (AI), and machine learning."
+          }
+        ]
+      },
+      { id: 2, 
+        name: "GPU Features",
+        value: "A GPU, or Graphics Processing Unit, is a specialized type of processor designed primarily for rendering graphics and performing complex calculations in parallel. Originally developed to handle the heavy computational demands of rendering images and video for gaming and multimedia, GPUs have since become essential in many other fields, including scientific computing, artificial intelligence (AI), and machine learning.",
+        image: "src/assets/chapter_one/gpuf.jpeg", 
+        content: [
+          { id: 1, 
+            title: "Parallel Processing", 
+            value: "GPUs are designed to handle thousands of tasks simultaneously, making them ideal for operations that can be parallelized, such as image processing, simulations, and neural network training.",
+          }, 
+          { id: 2, 
+            title: "Core Structure",
+            value: "Unlike a CPU (Central Processing Unit), which typically has a few powerful cores optimized for sequential processing, a GPU has thousands of smaller cores that can work together on multiple tasks at once. This parallelism makes GPUs much faster than CPUs for certain types of computations.",
+          },
+          { id: 3, 
+            title: "Energy Efficiency",
+            value: "While GPUs are powerful, they also consume a lot of power, especially when running intensive tasks like gaming or AI model training. However, their ability to perform massive parallel computations makes them more energy-efficient than CPUs for certain tasks.",
+          },
+          { id: 4, 
+            title: "Applications",
+            value: "GPUs render high-quality graphics in real-time, making them crucial for modern video games. GPUs accelerate the training of neural networks by processing large datasets in parallel, significantly speeding up the learning process. GPUs are used in simulations, molecular modeling, weather forecasting, and other tasks that require handling large amounts of data quickly.",
+          },
+        ]
+      }, 
+      { id: 3, 
+        name: "10.2 CUDA",
+        value: "CUDA is A Parallel Computing Platform and API that allows Software to Use Certain Type of GPUs, created by NVIDIA.",
+        image: "src/assets/chapter_one/cuda.jpg", 
+        content: [
+          { id: 1, 
+            title: "", 
+            value: "CUDA, or Compute Unified Device Architecture, is a parallel computing platform and programming model developed by NVIDIA. It allows developers to harness the power of NVIDIA GPUs (Graphics Processing Units) for general-purpose computing, going beyond their traditional use in graphics rendering."
+          }
+        ]
+      },
+      { id: 4, 
+        name: "CUDA Features",
+        value: "", 
+        image: "src/assets/chapter_one/cudaf.jpeg", 
+        content: [
+          { id: 1, 
+            title: "Parallel Computing Framework", 
+            value: "CUDA enables developers to write programs that can run on NVIDIA GPUs, taking advantage of their massive parallel processing capabilities. This makes it possible to perform computations much faster than on a CPU, especially for tasks that can be parallelized, such as matrix operations, simulations, and neural network training."
+          },
+          { id: 2, 
+            title: "Programming Model", 
+            value: "CUDA extends standard programming languages like C, C++, and Python with the addition of keywords and functions that allow for parallel execution on the GPU. Developers can write code that runs on both the CPU (host) and the GPU (device), with the GPU handling the parallelizable parts of the computation.",
+          }, 
+          { id: 3, 
+            title: "Architecture",
+            value: "In CUDA, the GPU is viewed as a compute device that operates as a coprocessor to the main CPU. A typical CUDA program involves dividing a problem into smaller subproblems that can be solved concurrently by thousands of lightweight threads running on the GPU cores."
+          },
+          { id: 4, 
+            title: "Benefits",
+            value: "CUDA significantly speeds up computation-intensive tasks by leveraging the parallel nature of GPUs. CUDA programs can scale across multiple GPUs, allowing for even greater computational power. CUDA is supported by a rich ecosystem of tools, libraries, and frameworks, including cuDNN (for deep learning) and cuBLAS (for linear algebra), which further simplify development."
+          },
+        ]
+      }, 
+      { id: 5, 
+        name: "10.3 How to get GPU?",
+        value: "",
+        image: "src/assets/chapter_one/cudaget.jpeg", 
+        content: [
+          { id: 1, 
+            title: "Check if Your Local Machine Has a GPU", 
+            value: "If you have a modern computer, especially a gaming or workstation PC, you might already have a GPU that you can use. If you don't know how to access it, just ask chatGPT or do some Internet survey, you'll get more details. And when you have a GPU, make sure to install the necessary drivers and CUDA toolkit (for NVIDIA GPUs)."
+          }, 
+          { id: 2, 
+            title: "Buy a GPU", 
+            value: "If your machine doesn't have a GPU, you can purchase one. The right GPU for you depends on your budget and the tasks you plan to perform."
+          }, 
+          { id: 3, 
+            title: "Use Cloud Services", 
+            value: "If you don't have a local GPU or need more powerful GPUs, cloud services offer flexible options, like Amazon Web Services(AWS), NVIDIA GPU Cloud(NGC), Azure - a Microsoft's cloud platform and so on. Here we'll use Google Colab, which you can free to use with access to GPUs (like NVIDIA K80, T4, P100), and you can upgrade to Colab Pro for faster GPUs and longer runtimes. "
+          }
+        ]
+      }, 
+      { id: 6, 
+        name: "10.4 How to run TENSOR on GPUs?", 
+        value: "Running tensors on GPUs in PyTorch involves moving the tensor data to the GPU and then performing operations on it using GPU acceleration. This can significantly speed up computation, especially for large tensors and deep learning models.", 
+        image: "src/assets/chapter_one/tensorrun.jpeg", 
+        content: [
+          { id: 1, 
+            title: "Check if GPU is Available", 
+            value: "Before moving a tensor to the GPU, you need to check if a GPU is available on your machine."
+          },
+          { id: 2, 
+            title: "Set Device-agnostic code", 
+            value: "Device-agnostic code in PyTorch ensures that your code can run seamlessly on both CPUs and GPUs without needing to modify the code. This is particularly useful when you want your code to be flexible and able to utilize GPU acceleration if available, but still run on a CPU if a GPU isn’t present."
+          },
+          { id: 3, 
+            title: "Moving a Tensor to the GPU", 
+            value: "Once you’ve confirmed that a GPU is available, you can move a tensor to the GPU using the .to(device) method."
+          },
+          { id: 4, 
+            title: "Moving Tensors Back to CPU", 
+            value: "If you need to move the tensor back to the CPU (for example, before converting it to a NumPy array)."
+          },
+        ]
+      }
+    ]
+  }
 ]

@@ -12,7 +12,7 @@ export default [
   { id: 2,
     cover: {
       title: "Chapter 1: TENSORs",
-      quote: "Maxwell's equations… originally consisted of eight equations. These equations are not 'eautiful'. They do not possess much symmetry. In their original form, they are ugly… However, when rewritten using time as the fourth dimension, this rather awkward set of eight equations collapses into a single tensor equation. This is what a physicist calls 'beauty'.", 
+      quote: "Maxwell's equations… when rewritten using time as the fourth dimension, this rather awkward set of eight equations collapses into a single tensor equation. This is what a physicist calls 'beauty'.", 
       author: "Michio Kaku",
       image: "src/assets/tesseract.jpg",
       name: "Model of A Tesseract, or hypercube, in an otherworldly setting | Robert Brook/Science Photo Library Art", 

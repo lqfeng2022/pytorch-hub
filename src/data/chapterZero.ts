@@ -48,7 +48,7 @@ export default [
       { id: 3,
         name: "1) Turning Test", 
         value: "",
-        image: "src/assets/chapter_zero/turingtest.png",
+        image: "src/assets/chapter_zero/turingtest.jpeg",
         content: [
           { id: 1, 
             title: "",

@@ -8,7 +8,7 @@ interface Props {
 const LeftGrid = ({ section }: Props) => {
   return (
     <Box py={3}>
-      <Text as='b' color='gray.600'>{section.name}</Text>
+      <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>
       <SimpleGrid columns={[1, null, 2]} spacing='20px' pt={3}>
         <Flex alignItems='center' justifyContent='center'>
           <Image src={section.image}/>

@@ -15,7 +15,7 @@ import chapterList from '../data/chapterList';
 
 const BookList = () => {
   const [ frontMatter ] = chapterList.slice(0, 1)
-  const lists = chapterList.slice(1, 12)
+  const lists = chapterList.slice(1, 13)
   const backMatter = chapterList.slice(-3)
 
   return (
