@@ -28,7 +28,8 @@ const ChapterOne = () => {
   const [ tanspose ] = chapterOne[5].sections
   const [tensor_numpy] = chapterOne[7].sections
 
-  const codes = pythonCode[0].code
+  const tensorCode = pythonCode[0].code
+  const attributesCode = pythonCode[5].code
 
   return (
     <Container maxW='1200px' px='0'>
@@ -42,9 +43,10 @@ const ChapterOne = () => {
         description={description} 
       />
       <TensorSection/>
-      <CodeDisplay codes={codes}/>
+      <CodeDisplay codes={tensorCode}/>
       <CreateTensorSection/>
       <TensorAttributs/>
+      <CodeDisplay codes={attributesCode}/>
       <TensorOperations/>
       <TensorManipulate/>
       <BaseGrid section={tanspose}/>

@@ -7,7 +7,7 @@ const thick = defineStyle({
 })
 
 const middle = defineStyle({
-  borderWidth: '3px',
+  borderWidth: '2px',
   borderStyle: 'dashed', 
   borderColor: "gray.500",
 })

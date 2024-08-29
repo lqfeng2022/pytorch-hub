@@ -1,9 +1,10 @@
-import { Container } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
+import HorizontalScrollBox from '../components/HorizontalScrollBox'
 
 const ChapterTwo = () => {
   return (
     <Container maxW='1200px' px='10px'>
-      <div>ChapterTwo</div>
+      <div>Chapter Two</div>
     </Container>
   )
 }

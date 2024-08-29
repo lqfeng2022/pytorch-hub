@@ -11,7 +11,7 @@ const FootLinks = ({ left, leftLink, right, rightLink }: Props) => {
   const hoverStyle = { color: 'tomato', textDecoration: 'underline' }
 
   return (
-    <HStack justifyContent='space-between' pb={5}>
+    <HStack justifyContent='space-between' pb={10}>
       <Box>
         <Link to={leftLink}>
           <Text color='gray'>Previous Chapter</Text>

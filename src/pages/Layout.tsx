@@ -26,7 +26,7 @@ const Layout = () => {
               </Box>
             </GridItem>
           </Show>
-          <GridItem area='main'>
+          <GridItem area='main' minWidth="0">
             <Outlet/>
           </GridItem>
         </Grid>
@@ -36,3 +36,6 @@ const Layout = () => {
 }
 
 export default Layout
+
+// minWidth="0":
+// to ensure it doesn’t force the content to expand beyond the screen width.

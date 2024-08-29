@@ -1,12 +1,7 @@
 import { Box, Divider, Flex, Stack, Text } from '@chakra-ui/react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
-interface Code {
-  id: number,
-  input: string, 
-  output: string,
-}
+import Code from '../entities/code';
 
 function CodeDisplay({ codes }: { codes: Code[] }) {
   return (
@@ -14,13 +9,19 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
       <Flex align='center' justifyContent='center' h='50px'>
         <Divider variant='middle'/>
       </Flex>
-      <Box bg='gray.50'>
-        {codes.map((code: Code) => <Stack py={3}>
+      <Box bg='gray.50' minWidth='0'>
+        {codes.map((code: Code) => <Stack key={code.id} py={3}>
           <Flex>
-            <Text pt='6.5px' pr={2} color='gray.500' fontSize='13px' fontFamily='Menlo, monospace'>
-              In [<Text color='tomato' display='inline'>{code.id}</Text>]:
+            <Text 
+              pt='6.5px' 
+              pr={2} 
+              color='gray.500' 
+              fontSize='13px' 
+              fontFamily='Menlo, monospace'
+            >
+              In [<span style={{ color: 'tomato' }}>{code.id}</span>]:
             </Text>
-            <Box flex='1'>
+            <Box flex='1' overflowX='auto'>
               <SyntaxHighlighter
                 language='python'
                 style={docco}
@@ -29,22 +30,33 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
                   fontFamily: 'Menlo, monospace',
                   fontSize: '13px',
                   borderWidth: '1px',
-                  borderColor: 'gray'
-                }}>{code.input}</SyntaxHighlighter>
+                  borderColor: 'gray',
+                }}>
+                {code.input}
+              </SyntaxHighlighter>
             </Box>
           </Flex>
           <Flex>
-            <Text pt='6.5px' pr={2} color='gray.500' fontSize='13px' fontFamily='Menlo, monospace'>
+            <Text 
+              pt='6.5px' 
+              pr={2} 
+              color='gray.500' 
+              fontSize='13px' 
+              fontFamily='Menlo, monospace'
+            >
               Out []:
             </Text>
-            <Box flex='1'>
+            <Box flex='1' overflowX='auto'>
               <SyntaxHighlighter
                 language='python'
                 style={docco}
                 customStyle={{
-                  fontFamily: 'Menlo, monospace',
+                  fontFamily: 'Menlo, monospace', 
                   fontSize: '13px',
-                }}>{code.output}</SyntaxHighlighter>
+                }}
+              >
+                {code.output}
+              </SyntaxHighlighter>
             </Box>
           </Flex>
         </Stack>)}
@@ -57,3 +69,6 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
 }
 
 export default CodeDisplay;
+
+// minWidth="0": 
+// to ensure it doesn’t force the content to expand beyond the screen width.
