@@ -17,12 +17,19 @@ import BaseGrid from '../components/BaseGrid';
 const ChapterZero = () => {
   const cover = covers[0]
 
-  const description = sectionList[1].description!
+  const descrip = sectionList[1].description!
   const lists = sectionList[1].items!
-  const leftItems = lists.slice(0, 4)
-  const rightItems = lists.slice(-4)
+  const litems = lists.slice(0, 4)
+  const ritems = lists.slice(-4)
   
   const [ takeCourse ] = chapterZero[7].sections
+
+  const footer = {
+    l: "Introduction",
+    r: "0. TENSORs",
+    ll: "/introduction",
+    rl: "/tensors"
+  }
 
   return (
     <Container maxW='1200px' px='0'>
@@ -31,9 +38,9 @@ const ChapterZero = () => {
         <Divider variant='brand' w="30%" mx="auto"/>
       </Flex>
       <ChapterList 
-        leftItems={leftItems} 
-        rightItems={rightItems} 
-        description={description} 
+        litems={litems} 
+        ritems={ritems} 
+        descrip={descrip} 
       />
       <AISection/>
       <MLSection/>
@@ -47,10 +54,10 @@ const ChapterZero = () => {
         <Divider variant='thick'/>
       </Flex>
       <FootLinks 
-        left={'Introduction'}
-        leftLink={'/introduction'} 
-        right={'0. TENSORs'}
-        rightLink={'/tensors'}
+        l={footer.l} 
+        ll={footer.ll} 
+        r={footer.r} 
+        rl={footer.rl}
       />
     </Container>
   )

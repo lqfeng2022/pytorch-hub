@@ -1,9 +1,9 @@
 export default [
   { id: 1, 
-    name: "What's a Tensor",
+    name: "TENSORs ?",
     description: "",
     sections: [
-      { id: 1,
+      { id: 0,
         name: "What's a Tensor", 
         value: "A TENSOR is a multi-dimensional array with a single data type.",
         image: "",
@@ -18,7 +18,7 @@ export default [
           },
         ]
       },
-      { id: 2,
+      { id: 1,
         name: ":: scalar, vector, MATRIX, TENSOR", 
         value: "",
         image: "src/assets/chapter_one/tensors.jpeg",
@@ -44,11 +44,11 @@ export default [
     ]
   },
   { id: 2, 
-    name: "Creating Tensors",
+    name: "Tensor Creating",
     description: "",
     sections: [
       { id: 0,
-        name: "2. Creating Tensors", 
+        name: "2. Tensor Creating", 
         value: "",
         image: "src/assets/chapter_one/tensorcreate.jpeg",
         content: [
@@ -78,7 +78,7 @@ export default [
         ]
       },
       { id: 2,
-        name: "2.2 Zeros & Ones Tensors", 
+        name: "2.2 Zeros Tensor & Ones Tensor", 
         value: "",
         image: "src/assets/chapter_one/zerosOnes.jpeg",
         content: [
@@ -97,7 +97,7 @@ export default [
         ]
       },
       { id: 3,
-        name: "2.3 A Range Tensor", 
+        name: "2.3 Range Tensor", 
         value: "",
         image: "src/assets/chapter_one/rangetensor.jpeg",
         content: [
@@ -132,13 +132,13 @@ export default [
     name: "Tensor Attributes",
     description: "",
     sections: [
-      { id: 1,
+      { id: 0,
         name: "3. Tensor Attributes", 
         value: "In PyTorch, a tensor comes with several important attributes that give you information about their structure, data type, and where they are stored (CPU or GPU). The main attributes you'll often work with are 'shape', 'ndim', 'dtype', and 'device'. Here's a brief overview of each:",
         image: "src/assets/chapter_one/attributes.jpeg",
         content: [
           { id: 1, 
-            title: "Shape",
+            title: "shape",
             value: "The 'shape' attribute tells you the size of each dimension of a tensor. It's a tuple of integers where each integer represents the size of the tensor along a specific dimension. Knowing the shape of a tensor is crucial because it defines the structure of the data you're working with. It tells you how many elements are in each dimension."
           },
           { id: 2, 
@@ -155,7 +155,7 @@ export default [
           },
         ]
       },
-      { id: 2,
+      { id: 1,
         name: "3.1 the SHAPE", 
         value: "Working with the shape attribute in PyTorch can sometimes be tricky, especially when you're manipulating tensors or performing operations that involve reshaping, matrix multiplication. To help visualize and understand the shape, let's look at an example.",
         image: "src/assets/chapter_one/shape.jpeg",
@@ -184,7 +184,7 @@ export default [
     name: "Tensor Operations",
     description: "",
     sections: [
-      { id: 1,
+      { id: 0,
         name: "4. Tensor Operations", 
         value: "",
         image: "src/assets/chapter_one/operations.jpeg",
@@ -195,7 +195,7 @@ export default [
           },
         ]
       },
-      { id: 2,
+      { id: 1,
         name: "4.1 Basic Operations", 
         value: "",
         image: "src/assets/chapter_one/addsub.jpeg",
@@ -210,18 +210,22 @@ export default [
           },
         ]
       },
-      { id: 3,
+      { id: 2,
         name: "4.2 Matrix Multiplication", 
-        value: "Matrix multiplication is a fundamental operation in linear algebra where two matrices are multiplied to produce a third matrix. This operation is crucial in various fields, including computer science, engineering, physics, and especially in machine learning, where it plays a key role in tasks such as training neural networks, data transformations, and efficiently handling large datasets.",
+        value: "",
         image: "src/assets/chapter_one/matmul.jpeg",
         content: [
           { id: 1, 
+            title: "",
+            value: "Matrix multiplication is a fundamental operation in linear algebra where two matrices are multiplied to produce a third matrix. This operation is crucial in various fields, including computer science, engineering, physics, and especially in machine learning, where it plays a key role in tasks such as training neural networks, data transformations, and efficiently handling large datasets."
+          },
+          { id: 2, 
             title: "",
             value: "Matrix multiplication, also known as the dot product when applied to vectors, involves taking the sum of the products of corresponding elements from a row of the first matrix and a column of the second matrix. For matrix multiplication to be valid, the number of columns in the first matrix must be equal to the number of rows in the second matrix."
           },
         ]
       },
-      { id: 4,
+      { id: 3,
         name: ":: How it Works", 
         value: "",
         image: "src/assets/chapter_one/matmul_work.jpeg",
@@ -232,7 +236,7 @@ export default [
           },
         ]
       },
-      { id: 5,
+      { id: 4,
         name: ":: Two Rules", 
         value: "",
         image: "src/assets/chapter_one/matmul_rules.jpeg",
@@ -243,7 +247,7 @@ export default [
           },
         ]
       },
-      { id: 6,
+      { id: 5,
         name: ":: Learning Webs", 
         value: "If you want to dive deeper into matrix multiplication, I recommend checking out these two websites. They offer valuable insights that can enhance your understanding of both matrix multiplication and the dot product.",
         image: "src/assets/chapter_one/dot_webs.jpeg",
@@ -258,7 +262,7 @@ export default [
           },
         ]
       },
-      { id: 7,
+      { id: 6,
         name: ":: Dot-Product", 
         value: "",
         image: "src/assets/chapter_one/dot.jpeg",
@@ -269,7 +273,7 @@ export default [
           },
         ]
       },
-      { id: 8,
+      { id: 7,
         name: ":: Dot-Product in Transformer", 
         value: "The dot product is a fundamental operation in the Transformer architecture, enabling the model to weigh the importance of different parts of the input efficiently and effectively, which is why it has become so powerful in tasks like translation, summarization, and more.",
         image: "src/assets/chapter_one/dot_attention.jpeg",
@@ -288,7 +292,7 @@ export default [
           },
         ]
       },
-      { id: 9,
+      { id: 8,
         name: "4.3 Aggregating Operations", 
         value: "Aggregating tensors refers to the process of reducing a tensor along one or more dimensions to produce a tensor with a lower rank. Aggregation is commonly used in deep learning to summarize or compress the information contained in a tensor, making it more manageable for further processing.",
         image: "src/assets/chapter_one/aggregate.jpeg",
@@ -368,7 +372,7 @@ export default [
         ]
       },
       { id: 2,
-        name: "5.2 Tensor Transposing", 
+        name: ":: Transposing a Tensor", 
         value: "Transposing a tensor in PyTorch is all about swapping two of its dimensions. This operation is commonly used in mathematical computations, especially in linear algebra, where you need to switch the rows and columns of matrices. But it's not just for matrices — you can use transposition on any tensor, no matter how many dimensions it has.",
         image: "src/assets/chapter_one/transpose.jpeg",
         content: [
@@ -386,10 +390,8 @@ export default [
           },
         ]
       },
-      // Move tensor & NumPy array section here 
-      // to be part of tensor manipulation for changing data type of a tensor
       { id: 3,
-        name: "5.3 Tensor & NumPy Array", 
+        name: "5.2 Changing Data Type", 
         value: "PyTorch tensors can easily interact with NumPy arrays, making it simple to convert between the two. This seamless interoperability is super useful when you want to take advantage of both PyTorch's capabilities and NumPy's strengths in your workflow. Here's how you can implement this interaction:",
         image: "src/assets/chapter_one/tensor_numpy.jpeg",
         content: [
@@ -410,7 +412,7 @@ export default [
       // Move tensor run on GPUs here,
       // cus that's all about changing the device (cpu/gpu)
       { id: 4,
-        name: "5.5 Concatenation and Stacking", 
+        name: "5.4 Concatenation and Stacking", 
         value: "",
         image: "src/assets/chapter_one/concat_stack.jpeg",
         content: [
@@ -424,13 +426,23 @@ export default [
           },
         ]
       },
-
     ]
   },
   { id: 6, 
-    name: "6. Tensor Indexing",
-    description: "Tensor indexing in PyTorch is all about accessing specific elements, rows, columns, or subarrays within a tensor. It is similar to how you would index lists or arrays in Python, but it's way more powerful and flexible because PyTorch supports multi-dimentional tensors. Whether you're working with a simple 2D matrix or a more complex tensor, indexing lets you dive into the exact data you need.",
+    name: "Tensor Indexing",
+    description: "",
     sections: [
+      { id: 0,
+        name: "6. Tensor Indexing", 
+        value: "Tensor indexing in PyTorch is all about accessing specific elements, rows, columns, or subarrays within a tensor.",
+        image: "",
+        content: [
+          { id: 1, 
+            title: "",
+            value: "It is similar to how you would index lists or arrays in Python, but it's way more powerful and flexible because PyTorch supports multi-dimentional tensors. Whether you're working with a simple 2D matrix or a more complex tensor, indexing lets you dive into the exact data you need."
+          },
+        ]
+      },
       { id: 1,
         name: "6.1 Basic Indexing", 
         value: "",
@@ -463,7 +475,7 @@ export default [
       },
     ]
   },
-  { id: 8,
+  { id: 7,
     name: "Tensor Reproducibility",
     description: "",
     sections: [
@@ -609,12 +621,12 @@ export default [
       },
     ]
   },
-  { id: 9, 
+  { id: 8, 
     name: "Tensor on GPUs",
     description: "", 
     sections: [
       { id: 0, 
-        name: "9. Tensor on GPUs",
+        name: "8. Tensor on GPUs",
         value: "Running tensors on GPUs can significantly speed up computation, especially when dealing with large tensors or training deep learning models.",
         image: "", 
         content: [
@@ -624,8 +636,8 @@ export default [
           }
         ]
       }, 
-      { id: 6, 
-        name: "9.1 Run Tensor on GPUs", 
+      { id: 1, 
+        name: "8.1 Run Tensor on GPUs", 
         value: "To run tensors on GPUs with PyTorch, you need to move your tensor data to the GPU and then perform operations using GPU acceleration. This can really speed up computation, especially when working with large tensors and deep learning models.", 
         image: "src/assets/chapter_one/tensorrun.jpeg", 
         content: [
@@ -647,8 +659,8 @@ export default [
           },
         ]
       },
-      { id: 1, 
-        name: "9.2 What's GPUs",
+      { id: 2, 
+        name: "8.2 GPUs",
         value: "A GPU, short from Graphics Processing Unit, is much faster at tensor computations compared to a CPU.",
         image: "",
         content: [
@@ -658,7 +670,7 @@ export default [
           }
         ]
       },
-      { id: 2, 
+      { id: 3, 
         name: ":: GPU Features",
         value: "",
         image: "src/assets/chapter_one/gpuf.jpeg", 
@@ -681,8 +693,8 @@ export default [
           },
         ]
       }, 
-      { id: 3, 
-        name: "9.3 What's CUDA",
+      { id: 4, 
+        name: "8.3 CUDA",
         value: "",
         image: "src/assets/chapter_one/cuda.jpg", 
         content: [
@@ -692,7 +704,7 @@ export default [
           }
         ]
       },
-      { id: 4, 
+      { id: 5, 
         name: ":: CUDA Features",
         value: "", 
         image: "src/assets/chapter_one/cudaf.jpeg", 
@@ -715,8 +727,8 @@ export default [
           },
         ]
       }, 
-      { id: 5, 
-        name: "9.4 Get GPUs",
+      { id: 6, 
+        name: "8.4 Get GPUs",
         value: "",
         image: "src/assets/chapter_one/cudaget.jpeg", 
         content: [

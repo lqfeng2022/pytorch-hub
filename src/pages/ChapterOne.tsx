@@ -22,10 +22,10 @@ const ChapterOne = () => {
   const ritems = lists.slice(-5)
 
   const footer = {
-    left: "0. Artificial Intelligence",
-    leftl: "/artificial-intelligence",
-    right: "1. A Straight Line Model",
-    rightl: "/a-straight-line-model"
+    l: "0. Artificial Intelligence",
+    r: "1. A Straight Line Model",
+    ll: "/artificial-intelligence",
+    rl: "/a-straight-line-model"
   }
 
   return (
@@ -35,9 +35,9 @@ const ChapterOne = () => {
         <Divider variant='brand' w="30%" mx="auto"/>
       </Flex>
       <ChapterList 
-        leftItems={litems} 
-        rightItems={ritems} 
-        description={descrip}
+        litems={litems} 
+        ritems={ritems} 
+        descrip={descrip}
       />
       <TensorWhats/>
       <TensorCreate/>
@@ -51,10 +51,10 @@ const ChapterOne = () => {
         <Divider variant='thick'/>
       </Flex>
       <FootLinks 
-        l={footer.left}
-        llink={footer.leftl} 
-        r={footer.right}
-        rl={footer.rightl}
+        l={footer.l} 
+        ll={footer.ll} 
+        r={footer.r} 
+        rl={footer.rl}
       />
     </Container>
   )

@@ -1,4 +1,3 @@
-import { Box, Text } from '@chakra-ui/react'
 import Definition from '../Definition'
 import chapterOne from '../../data/chapterOne'
 import BaseGrid from '../BaseGrid'
@@ -11,10 +10,7 @@ const TensorWhats = () => {
 
   return (
     <>
-      <Box py={5}>
-        <Text as='b' fontSize='xl' color='gray.600'>1. What's a Tensor</Text>
-        <Definition definition={whats}/>
-      </Box>
+      <Definition title={"1. What's a Tensor"} definition={whats}/>
       <BaseGrid section={how}/>
       <CodeDisplay codes={tensorCode}/>
     </>

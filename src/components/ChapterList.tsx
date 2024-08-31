@@ -5,13 +5,12 @@ import SectionItem from '../entities/SectionItem'
 
 
 interface Props {
-  leftItems: SectionItem[],
-  rightItems: SectionItem[],
-  description: Content[]
+  litems: SectionItem[],
+  ritems: SectionItem[],
+  descrip: Content[]
 }
 
-const ChapterList = ({ leftItems, rightItems, description }: Props) => {
-
+const ChapterList = ({ litems, ritems, descrip }: Props) => {
   return (
     <Box>
       <SimpleGrid 
@@ -23,18 +22,18 @@ const ChapterList = ({ leftItems, rightItems, description }: Props) => {
         bg='red.50' alignItems='center' // Ensure centered vertically
       >
         <List spacing={4}>
-          {leftItems.map((list) => <ListItem key={list.id}> 
+          {litems.map((list) => <ListItem key={list.id}> 
             <Lists name={list.name}/>
           </ListItem>)}
         </List>
         <List spacing={4}>
-          {rightItems.map((list) => <ListItem key={list.id}>
+          {ritems.map((list) => <ListItem key={list.id}>
             <Lists name={list.name}/>
           </ListItem>)}
         </List>
       </SimpleGrid>
       <Stack my={5} spacing={4}>
-        {description.map((p) => <Text key={p.id}>{p.value}</Text>)}
+        {descrip.map((p) => <Text key={p.id}>{p.value}</Text>)}
       </Stack>
     </Box>
   )

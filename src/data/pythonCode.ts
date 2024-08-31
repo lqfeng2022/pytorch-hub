@@ -1,5 +1,5 @@
 export default [
-  { id: 1, 
+  { id: 0, 
     name: "TENSORs",
     code: [
       { id: 1, 
@@ -49,8 +49,8 @@ TENSOR`,
       }, 
     ]
   }, 
-  { id: 2,
-    name: "create_tensor_random", 
+  { id: 1,
+    name: "tensor_create_random", 
     code: [
       { id: 6, 
         input: 
@@ -75,8 +75,8 @@ tensor_randn = torch.randn(3, 3)`,
       }, 
     ]
   },
-  { id: 3,
-    name: "create_tensor_zeros",
+  { id: 2,
+    name: "tensor_create_zeros",
     code: [      
       { id: 8, 
         input: 
@@ -98,8 +98,8 @@ tensor_ones = torch.ones(size=(3, 3))`,
       }, 
     ]
   },
-  { id: 4,
-    name: "create_tensor_range",
+  { id: 3,
+    name: "tensor_create_range",
     code: [
       { id: 10, 
         input: 
@@ -119,8 +119,8 @@ tensor_arange_two`,
       }, 
     ]
   },
-  { id: 5,
-    name: "create_tensor_likes",
+  { id: 4,
+    name: "tensor_create_likes",
     code: [
       { id: 12, 
         input: 
@@ -140,8 +140,8 @@ ones_like`,
       }, 
     ]
   }, 
-  { id: 6, 
-    name: "tensors_attributes",
+  { id: 5, 
+    name: "tensor_attributes",
     code: [
       { id: 14, 
         input: 
@@ -169,8 +169,8 @@ Device tensor is on: cpu`,
     ]
   },
   
-  { id: 7, 
-    name: "tensor_operation_addsub",
+  { id: 6, 
+    name: "tensor_operation_addsubmuldiv",
     code: [
       { id: 15, 
         input: 
@@ -297,7 +297,7 @@ torch.mul(tensor_mul, tensor_mul)`,
       },
     ]
   },
-  { id: 8, 
+  { id: 7, 
     name: "tensor_operation_matmul",
     code: [
       { id: 32, 
@@ -374,7 +374,7 @@ Shape of tensor_3: torch.Size([2, 2])`,
       },
     ]
   },
-  { id: 9, 
+  { id: 8, 
     name: "tensor_operation_aggregate",
     code: [
       { id: 39, 
@@ -435,7 +435,7 @@ Index of the minimum value: 0`,
       },
     ]
   },
-  { id: 10, 
+  { id: 9, 
     name: "tensor_manipulate_reshape",
     code: [
       { id: 45, 
@@ -583,7 +583,7 @@ Permuted tensor shape: torch.Size([3, 128, 128])`,
     ]
   },
 
-  { id: 11, 
+  { id: 10, 
     name: "tensor_manipulate_transpose",
     code: [
       { id: 59, 
@@ -658,8 +658,8 @@ Output shape: torch.Size([2, 2])`,
       },
     ]
   },
-  { id: 12, 
-    name: "tensor_numpy",
+  { id: 11, 
+    name: "tensor_manipulate_numpy",
     code: [
       { id: 82, 
         input: 
@@ -712,7 +712,7 @@ array([1., 1., 1., 1., 1., 1., 1.], dtype=float32))`,
       },
     ]
   }, 
-  { id: 13, 
+  { id: 12, 
     name: "tensor_manipulate_catstack",
     code: [
       { id: 55, 
@@ -791,8 +791,8 @@ tensor([1., 2., 3., 4., 5., 2., 3., 4., 5., 6.]) torch.Size([10])`,
       },
     ]
   },
-  { id: 14, 
-    name: "tensor_indexing_rowcolumn",
+  { id: 13, 
+    name: "tensor_index_rowcolumn",
     code: [
       {
         id: 71, 
@@ -877,8 +877,8 @@ A_index[:, 0]`,
       },
     ]
   },
-  { id: 15, 
-    name: "tensor_indexing_sliceboolean",
+  { id: 14, 
+    name: "tensor_index_sliceboolean",
     code: [
       {
         id: 79,
@@ -910,8 +910,8 @@ A_index[A_index > 3]`,
       },
     ]
   },
-  { id: 16, 
-    name: "tensor_randomness",
+  { id: 15, 
+    name: "tensor_reproducibility_randomness",
     code: [
       { id: 87,
         input: 
@@ -942,7 +942,7 @@ tensor([[False, False],
        },
     ]
   },
-  { id: 17,
+  { id: 16,
     name: "tensor_reproducibility",
     code: [
       { id: 88, 
@@ -981,7 +981,7 @@ tensor([[True, True, True, True],
       },
     ]
   },
-  { id: 18,
+  { id: 17,
     name: "tensor_gpus",
     code: [
       { id: 89,

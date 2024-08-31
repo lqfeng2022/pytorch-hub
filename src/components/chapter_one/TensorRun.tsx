@@ -1,4 +1,3 @@
-import { Box, Text } from '@chakra-ui/react'
 import chapterOne from '../../data/chapterOne'
 import pythonCode from '../../data/pythonCode'
 import BaseGrid from '../BaseGrid'
@@ -14,16 +13,10 @@ const TensorRun = () => {
   
   return (
     <>
-      <Box py={5}>
-        <Text as='b' fontSize='lg' color='gray.600'>{ongpu.name}</Text>
-        <Definition definition={ongpu}/>
-      </Box>
+      <Definition title={ongpu.name} definition={ongpu}/>
       <BaseGrid section={rungpu}/>
       <CodeDisplay codes={tensorrunCode}/>
-      <Box py={5}>
-        <Text as='b' fontSize='lg' color='gray.600'>{gpu.name}</Text>
-        <Definition definition={gpu}/>
-      </Box>
+      <Definition title={gpu.name} definition={gpu}/>
       <BaseGrid section={gpuf}/>
       <LeftGrid section={cuda}/>
       <BaseGrid section={cudaf}/>
