@@ -10,7 +10,7 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
         <Divider variant='middle'/>
       </Flex>
       <Box bg='gray.50' minWidth='0'>
-        {codes.map((code: Code) => <Stack key={code.id} py={3}>
+        {codes.map((code: Code) => <Stack key={code.id} p={3}>
           <Flex>
             <Text 
               pt='6.5px' 
@@ -39,7 +39,7 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
           <Flex>
             <Text 
               pt='6.5px' 
-              pr={2} 
+              pr={4}
               color='gray.500' 
               fontSize='13px' 
               fontFamily='Menlo, monospace'
@@ -53,6 +53,9 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
                 customStyle={{
                   fontFamily: 'Menlo, monospace', 
                   fontSize: '13px',
+                  backgroundColor: code.output.includes('Error')
+                      ? 'pink'
+                      : '',
                 }}
               >
                 {code.output}

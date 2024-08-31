@@ -1,4 +1,4 @@
-import { Heading, Center, Stack, Text, Image } from '@chakra-ui/react'
+import { Heading, Center, Stack, Text, Image, AspectRatio } from '@chakra-ui/react'
 import Cover from '../entities/Cover'
 
 const Header = ({ cover }: { cover: Cover }) => {
@@ -15,7 +15,9 @@ const Header = ({ cover }: { cover: Cover }) => {
         </Stack>
       </Center>
       <Stack py={5}>
-        <Image src={cover.image} />
+        <AspectRatio ratio={ 16/9 }>
+          <Image src={cover.image} />
+        </AspectRatio>
         <Text as='b' fontSize='sm'>{cover.name}</Text>
         <Text as='i' fontSize='sm'>{cover.descript}</Text>
       </Stack>

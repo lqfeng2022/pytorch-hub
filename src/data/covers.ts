@@ -12,7 +12,7 @@ export default [
     quote: "Maxwell's equations… when rewritten using time as the fourth dimension, this rather awkward set of eight equations collapses into a single tensor equation. This is what a physicist calls 'beauty'.", 
     author: "Michio Kaku",
     image: "src/assets/tesseract.jpg",
-    name: "Model of A Tesseract, or hypercube, in an otherworldly setting | Robert Brook/Science Photo Library Art", 
-    descript: "This image represents a tesseract, a 4-dimensional hypercube. While we can’t see the 4th dimension, this image gives us a 3D “shadow” of it—like shining a flashlight on a cube to cast a 2D shadow of two squares, with one smaller inside the other. Here, a tesseract appears as a cube within a cube, connected at the corners. In 4D space, both cubes are actually the same size, with the connecting lines representing higher-dimensional relationships."
+    name: "Model of A Tesseract (or hypercube), in an otherworldly setting | Robert Brook/Science Photo Library Art", 
+    descript: "This image represents a tesseract, a 4-dimensional hypercube. While we can't see the 4th dimension, this image gives us a 3D shadow. You can image a 4D flashlight shining onto our 3D space, and the tesseract positioned in the middle. similar to how a light casts a shadow of a 3D cube onto a 2D surface—resulting in two squares, one inside the other. In this image, the tesseract appears as a cube within a cube, connected at the corners. In 4D space, both cubes are actually the same size, with the connecting lines representing higher-dimensional relationships."
   },
 ]

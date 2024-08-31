@@ -4,11 +4,11 @@ export default [
     name: "Artificial Intelligence",
     link: "artificial-intelligence",
     items: [
-      { id: 1, name: "Artificial Intelligence", link: "artificial-intelligence" },
-      { id: 2, name: "Machine Learning", link: "machine-learing" },
-      { id: 3, name: "Deep Learning", link: "deep-learning"},
-      { id: 4, name: "Neural Network", link: "neural-network" },
-      { id: 5, name: "ML Frameworks and Libraries", link: "libraries" },
+      { id: 1, name: "AI - Artificial Intelligence", link: "artificial-intelligence" },
+      { id: 2, name: "ML - Machine Learning", link: "machine-learing" },
+      { id: 3, name: "DL - Deep Learning", link: "deep-learning"},
+      { id: 4, name: "NN - Neural Network", link: "neural-network" },
+      { id: 5, name: "Frameworks and Libraries", link: "libraries" },
       { id: 6, name: "PyTorch", link: "pytorch" },
       { id: 7, name: "Prerequisites", link: "prerequisites" },
       { id: 8, name: "How to take this Course", link: "how-to-take-course" },
@@ -16,7 +16,7 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: "In this chapter, we're gonna dive into some fundamental concepts of Artificial Intelligence and explore a few key AI frameworks and libraries."
+        value: "In this chapter, we'll dive into some fundamental concepts of Artificial Intelligence and explore a few key AI frameworks and libraries."
       },
       { id: 2, 
         title: "",
@@ -36,33 +36,35 @@ export default [
     name: "TENSORs", 
     link: "tensors",
     items: [
-      { id: 1, name: "TENSOR", link: "" },
-      { id: 2, name: "Create Tensor", link: "" },
-      { id: 3, name: "Tensor's Attributes", link: "" },
-      { id: 4, name: "Tensor Operation", link: "" },
-      { id: 5, name: "Tensor Manipulating", link: "" },
-      { id: 6, name: "Tensor Transpose", link: "" },
-      { id: 7, name: "Tensor Indexing", link: "" },
-      { id: 8, name: "Tensor vs. NumPy Array", link: "" },
-      { id: 9, name: "Tensor Reproducibility", link: "" },
-      { id: 10, name: "Tensor on GPUs", link: "" }
+      { id: 1, name: "TENSOR ?", link: "" },
+      { id: 2, name: "Tensor Creating", link: "" },
+      { id: 3, name: "Tensor Attributes", link: "" },
+      { id: 4, name: "Tensor Operations", link: "" },
+      { id: 5, name: "Tensor Manipulation", link: "" },
+      { id: 6, name: "Tensor Indexing", link: "" },
+      { id: 7, name: "Tensor Reproducibility", link: "" },
+      { id: 8, name: "Tensor on GPUs", link: "" }
     ],
     description: [
       { id: 1, 
         title: "",
-        value: "In this chapter, we’re gonna talk about the TENSOR, which is the most basic and crucial concept in Machine learning."
+        value: "In this chapter, we're going to talk about TENSOR, which is the most basic and crucial concept in Machine Learning."
       },
       { id: 2, 
         title: "",
-        value: "Fist of all, you gotta know what is TENSOR and why tensor is so crucial. There is one thing you should always remember, just one thing - “Computer love data” - , and we use TENSOR to convert everything around our into DATA, whether it’s letters, words, articles, or even voices, images and videos. Next, we’re gonna cover how to create a tensor and go over its 4 key attributes: shape, dimensions, data type and device. Then we’ll move on to tensor operations, adding, subtracting, dividing, and multiplying - just like regular math. We’ll also tackle matrix multiplication, which is a bit tricky for beginners, but super important."
+        value: "Fist off, you need to know what a TENSOR is. And there is one thing you should always remember - just one thing - 'Computers love DATA'. We use TENSOR to convert everything around us into DATA, whether it's a word, a sound, an image or a video."
       },
       { id: 3, 
         title: "",
-        value: "After that, you’ll learn how to manipulate tensors, we’re gonna talk about aggregating, reshaping, squeezing, unsqueezing, permuting a tensor, changing data types, and even how to concatenate or stack tensors.Knowing how to transpose a tensor is another crucial skill, especially for fixing shape errors during matrix multiplication."
+        value: "Next up, we'll talk about how to create a tensor and go over its 4 key attributes: shape, dimensions, data type and device. Then we'll move on to tensor operations, like adding, subtracting, dividing, and multiplying. And we'll also cover Matrix Multiplication, which might be a little tricky for beginners but super important."
       },
       { id: 4, 
         title: "",
-        value: "And once you get the hang of tensor indexing, you’ll be able to confidently access specific elements - whether it’s a single number, row, rows, column, columns, or a block of numbers. We’re gonna also touch on the concept of reproducibility in machine learning, which is super important since models usually starts with random data. Understanding reproducibility and how to ensure it is a big deal. Actually it’s quite simple, you’ll learn about it. Finally, we’ll wrap up by talking about GPUs, the engine of machine learning. We need it."
+        value: "After that, you'll learn how to work with tensors. We're going to cover things like aggregating, reshaping, squeezing, unsqueezing, permuting, changing data type, and how to concatenate or stack tensors. We'll also talk about transposing tensors, which is key when you need to fix shape errors during Matrix Multiplication."
+      },
+      { id: 5, 
+        title: "",
+        value: "And once you get the hang of tensor indexing, you'll be able to confidently access specific elements - whether it's a single number, a row, rows, a column, columns, a block or specific numbers. We'll also touch on the concept of Reproducibility in Machine Learning, which is super important since models usually start with random data. Finally, we'll wrap up by talking about GPUs, the engines of Machine Learning. We need it."
       }
     ]
    },
@@ -70,7 +72,7 @@ export default [
     name: "A Straight Line Model", 
     link: "a-straight-line-model",
     items: [
-      { id: 1, name: "- PyTorch Workflow", link: "" },
+      { id: 1, name: "• PyTorch Workflow", link: "" },
       { id: 2, name: "i. Prepare Data", link: "" },
       { id: 3, name: "ii. Build a Model", link: "" },
       { id: 4, name: "iii. Train and Test a Model", link: "" },
