@@ -14,10 +14,7 @@ const AISection = () => {
 
   return (
     <>
-      <Box py={5}>
-        <Text as='b' fontSize='xl' color='gray.600'>1. Artificial Intelligence</Text>
-        <Definition definition={whats}/>
-      </Box>
+      <Definition title={whats.name} definition={whats}/>
       <BaseGrid section={reason}/>
       <Box py={5}>
         <Text as='b' fontSize='lg' color='gray.600'>1.2 The History of AI</Text>

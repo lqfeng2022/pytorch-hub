@@ -1,10 +1,9 @@
 export default [
   { id: 1, 
     name: "Artificial Intelligence",
-    description: "",
     sections: [
       { id: 1,
-        name: "Artificial Intelligence", 
+        name: "1. Artificial Intelligence", 
         value: "Artificial Intelligence (AI) is a branch of Computer Science that makes Machines and Systems perform tasks that Simulate Human Intelligence.",
         image: "",
         content: [
@@ -46,7 +45,7 @@ export default [
         ]
       },
       { id: 3,
-        name: "1) Turning Test", 
+        name: ":: Turning Test", 
         value: "",
         image: "src/assets/chapter_zero/turingtest.jpeg",
         content: [
@@ -61,7 +60,7 @@ export default [
         ]
       },
       { id: 4, 
-        name: "2) Expert System", 
+        name: ":: Expert System", 
         value: "",
         image: "src/assets/chapter_zero/expertsystem.jpeg",
         content: [
@@ -72,7 +71,7 @@ export default [
         ]
       },
       { id: 5, 
-        name: "3) Connectionism + Neural Network", 
+        name: ":: Connectionism + Neural Network", 
         value: "",
         image: "src/assets/chapter_zero/connectionism.jpeg",
         content: [
@@ -87,7 +86,7 @@ export default [
         ]
       },
       { id: 6, 
-        name: "4) Convolutional Neural Network", 
+        name: ":: Convolutional Neural Network", 
         value: "",
         image: "src/assets/chapter_zero/cnn.jpeg",
         content: [
@@ -98,7 +97,7 @@ export default [
         ]
       },
       { id: 7, 
-        name: "5) AlphaGo", 
+        name: ":: AlphaGo", 
         value: "",
         image: "src/assets/chapter_zero/alphago.jpeg",
         content: [
@@ -113,7 +112,7 @@ export default [
         ]
       },
       { id: 8, 
-        name: "6) ChatGPT", 
+        name: ":: ChatGPT", 
         value: "",
         image: "src/assets/chapter_zero/openai.jpeg",
         content: [
@@ -127,10 +126,9 @@ export default [
   },
   { id: 2, 
     name: "Machine Learning",
-    description: "",
     sections: [
-      { id: 1, 
-        name: "Machine Learning", 
+      { id: 0, 
+        name: "2. Machine Learning", 
         value: "Machine Learning (ML) is a subset of AI that perform Specific Tasks without being Explicitly Programmed.",
         image: "",
         content: [
@@ -152,8 +150,8 @@ export default [
           }
         ]
       },
-      { id: 2,
-        name: "2.1 Machine Learing V.S. Traditinal Programming",
+      { id: 1,
+        name: "2.1 Machine Learing vs. Traditional Programming",
         value: "",
         image: "src/assets/chapter_zero/mlcomparing.jpeg",
         content: [
@@ -167,8 +165,8 @@ export default [
           },
         ]
       },
-      { id: 3, 
-        name: "1) Support-vector machines (SVMs)", 
+      { id: 2, 
+        name: ":: Support-vector machines (SVMs)", 
         value: "",
         image: "src/assets/chapter_zero/svms.jpeg",
         content: [
@@ -181,8 +179,8 @@ export default [
             value: "Not only the linear regression, SVMs can also handle non-linear classification."
           }
       ]},
-      { id: 4, 
-        name: "2) Decision Tree",
+      { id: 3, 
+        name: ":: Decision Tree",
         value: "",
         image: "src/assets/chapter_zero/decisiontree.jpeg",
         content: [
@@ -191,8 +189,8 @@ export default [
             value: "It is a hierarchical model that uses a tree-like structure to represent decisions and their possible consequences. It's more like a human-logic simulation than the biological mimics of ANNs.A decision tree is like a chat flow, where each internal note represents a TEST on an attribute, each branch represents the output of the test, and each leaf node represents a class label. The paths from the root to the leaves show the classification rules."
           },
       ]},
-      { id: 5, 
-        name: "3) Artificial Neural Networks (ANNs)", 
+      { id: 4, 
+        name: ":: Artificial Neural Networks (ANNs)", 
         value: "",
         image: "src/assets/chapter_zero/anns.jpeg",
         content: [
@@ -209,10 +207,9 @@ export default [
   },
   { id: 3, 
     name: "Deep Learning",
-    description: "",
     sections: [
-      { id: 1, 
-        name: "Deep Learning", 
+      { id: 0, 
+        name: "3. Deep Learning", 
         value: "Deep Learning (DL) is a subset of Machine Learning that utilizes neural networks with multiple layers to model complex patterns in data.",
         image: "",
         content: [
@@ -242,8 +239,8 @@ export default [
           },
         ]
       },
-      { id: 2, 
-        name: "3.1 Deep Learing < Machine Learing < Artificial Intelligence",
+      { id: 1, 
+        name: "3.1 Deep Learing < Machine Learing < AI",
         value: "In summary,  AI is the overall goal of creating intelligent systems. ML is a way to achieve AI by enabling machines to learn from data. DL is a more advanced technique within ML that uses layered neural networks to learn from large amounts of data.",
         image: "src/assets/chapter_zero/relationships.jpeg",
         content: [
@@ -261,8 +258,8 @@ export default [
           },
         ]
       },
-      { id: 3, 
-        name: "1) Machine Learning Model (Decision Tree)",
+      { id: 2, 
+        name: ":: Machine Learning Model (Decision Tree)",
         value: "",
         image: "src/assets/chapter_zero/mlcat.jpeg",
         content: [
@@ -280,8 +277,8 @@ export default [
           },
         ]
       },
-      { id: 4, 
-        name: "2) Deep Learning Model (Neural Network)",
+      { id: 3, 
+        name: ":: Deep Learning Model (Neural Network)",
         value: "",
         image: "src/assets/chapter_zero/dlcat.jpeg",
         content: [
@@ -299,8 +296,8 @@ export default [
           },
         ]
       },
-      { id: 5, 
-        name: "3) Differences between Machine Learnig and Deep Learning",
+      { id: 4, 
+        name: "3.2 Differences between Machine Learnig and Deep Learning",
         value: "",
         image: "src/assets/chapter_zero/mldl.jpeg",
         content: [
@@ -330,7 +327,7 @@ export default [
           },
         ]
       },
-      { id: 6,
+      { id: 5,
         name: "3.3 Deep Learning Applications",
         value: "",
         image: "src/assets/chapter_zero/dlapps.jpeg",
@@ -357,10 +354,9 @@ export default [
   },
   { id: 4, 
     name: "Neural Network",
-    description: "",
     sections: [
-      { id: 1, 
-        name: "Neural Network", 
+      { id: 0, 
+        name: "4. Neural Network", 
         value: "A Neural Network (NN) is a type of algorithm designed to mimic the way the human brain processes information and the connections between neurons.",
         image: "",
         content: [
@@ -386,7 +382,7 @@ export default [
           },
         ]
       },
-      { id: 2,
+      { id: 1,
         name: "4.1 Neural Network Architecture",
         value: "A neural network consists of layers of interconnected units called neurons or nodes. Here's a breakdown of its basic components:",
         image: "src/assets/chapter_zero/nnmodel.jpeg",
@@ -413,8 +409,8 @@ export default [
           },
         ]
       },
-      { id: 3,
-        name: "4.2 What is Neurons in the Brain?",
+      { id: 2,
+        name: "4.2 What is Neurons in Brain?",
         value: "",
         image: "src/assets/chapter_zero/neurons.jpeg",
         content: [
@@ -440,9 +436,8 @@ export default [
   },
   { id: 5,
     name: "Frameworks and Libraries",
-    description: "",
     sections: [
-      { id: 1, 
+      { id: 0, 
         name: "PyTorch",
         value: "",
         image: "",
@@ -457,7 +452,7 @@ export default [
           }
         ],
       },
-      { id: 2, 
+      { id: 1, 
         name: "TensorFlow",
         value: "",
         image: "",
@@ -476,7 +471,7 @@ export default [
           }
         ],
       },
-      { id: 3, 
+      { id: 2, 
         name: "NumPy",
         value: "",
         image: "",
@@ -491,7 +486,7 @@ export default [
           },
         ],
       },
-      { id: 4, 
+      { id: 3, 
         name: "MatPLotLib",
         value: "",
         image: "",
@@ -502,7 +497,7 @@ export default [
           },
         ],
       },
-      { id: 5, 
+      { id: 4, 
         name: "Scikit-Learn",
         value: "",
         image: "",
@@ -517,10 +512,9 @@ export default [
   },
   { id: 6, 
     name: "PyTorch",
-    description: "",
     sections: [
-      { id: 1, 
-        name: "PyTorch", 
+      { id: 0, 
+        name: "6. PyTorch", 
         value: "PyTorch is an open-source Deep Learning framework based on the Torch library, designed for use with the Python programming language.",
         image: "",
         content: [
@@ -538,7 +532,7 @@ export default [
           },
         ]
       },
-      { id: 2,
+      { id: 1,
         name: "6.1 PyTorch Features",
         value: "",
         image: "src/assets/chapter_zero/ptfeatures.jpeg",
@@ -566,8 +560,8 @@ export default [
           },
         ]
       },
-      { id: 3,
-        name: "6.2 Trends",
+      { id: 2,
+        name: "6.2 Framework Trends",
         value: "",
         image: "src/assets/chapter_zero/pttrends.jpeg",
         content: [
@@ -581,7 +575,7 @@ export default [
           }
         ]
       },
-      { id: 4,
+      { id: 3,
         name: "6.3 Companies with PyTorch",
         value: "PyTorch has become one of the most popular deep learning frameworks, and many leading companies across various industries are using it for their AI and machine learning applications. Here are some well-known companies that use PyTorch:",
         image: "src/assets/chapter_zero/ptcompanies.jpeg",
@@ -614,9 +608,8 @@ export default [
   }, 
   { id: 7, 
     name: "Prerequisites",
-    description: "",
     sections: [
-      { id: 1, 
+      { id: 0, 
         name: "Python Programming Language",
         value: "",
         image: "",
@@ -627,7 +620,7 @@ export default [
           },
         ],
       },
-      { id: 2, 
+      { id: 1, 
         name: "Mathematical Fondations",
         value: "",
         image: "",
@@ -651,13 +644,16 @@ export default [
   }, 
   { id: 8,
     name: "How to take this course?",
-    description: "",
     sections: [
-      { id: 1, 
+      { id: 0, 
         name: "8. How to take this course?",
-        value: "Before starting this training course, it's important to have a basic understanding of Python programming. You'll also need some foundational knowledge in mathematics, including matrix computation, calculus, probability, and statistics.",
+        value: "",
         image: "src/assets/chapter_zero/takecourse.jpeg",
         content: [
+          { id: 0,
+            title: "",
+            value: "Before starting this training course, it's important to have a basic understanding of Python programming. You'll also need some foundational knowledge in mathematics, including matrix computation, calculus, probability, and statistics."
+          },
           { id: 1, 
             title: "Watch all lessons from A to Z",
             value: "First and foremost, I recommend watching the entire course from beginning to end, even if you're already familiar with PyTorch. Throughout the course, I'll be sharing numerous tips and tricks to deepen your understanding, and I don't want you to miss out on any of them. I've designed the course to be concise and focused, so you won't waste time on repetitive or irrelevant content. Make sure to watch every lesson."

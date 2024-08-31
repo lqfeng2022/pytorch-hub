@@ -31,8 +31,8 @@ const ChapterOne = () => {
   return (
     <Container maxW='1200px' px='0'>
       <Header cover={cover}/>
-      <Flex align='center' justifyContent='center' h='80px'>
-        <Divider variant='brand' w="30%" mx="auto"/>
+      <Flex align='center' h='60px'>
+        <Divider variant='brand' w="30%"/>
       </Flex>
       <ChapterList 
         litems={litems} 
@@ -47,7 +47,7 @@ const ChapterOne = () => {
       <TensorIndex/>
       <TensorReproducibility/>
       <TensorRun/>
-      <Flex align='center' justifyContent='center' h='80px'>
+      <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
       <FootLinks 

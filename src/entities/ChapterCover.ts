@@ -1,9 +1,9 @@
 export default interface Cover {
   id: number,
-  title: string,
+  name: string,
   quote: string,
   author: string,
   image: string,
-  name: string,
+  title: string,
   descript: string
 }

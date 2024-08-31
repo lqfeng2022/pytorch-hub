@@ -5,15 +5,12 @@ import chapterZero from '../../data/chapterZero'
 
 const DLSection = () => {
   const [
-    definition, comparing, mlmodel, dlmodel, mldl, dlapps
+    whats, comparing, mlmodel, dlmodel, mldl, dlapps
   ] = chapterZero[2].sections
   
   return (
     <>
-      <Box py={5}>
-        <Text as='b' fontSize='xl' color='gray.600'>3. Deep Learning</Text>
-        <Definition definition={definition}/>
-      </Box>
+      <Definition title={whats.name} definition={whats}/>
       <BaseGrid section={comparing}/>
       <Box py={5}>
         <Text as='b' fontSize='lg' color='gray.600'>3.2 Deep Learing V.S. Machine Learing</Text>

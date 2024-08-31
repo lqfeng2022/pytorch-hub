@@ -1,17 +1,13 @@
-import { Box, Text } from '@chakra-ui/react'
 import BaseGrid from '../BaseGrid'
 import Definition from '../Definition'
 import chapterZero from '../../data/chapterZero'
 
 const NNSection = () => {
-  const [ definition, model, neurons ] = chapterZero[3].sections
+  const [ whats, model, neurons ] = chapterZero[3].sections
   
   return (
     <>
-      <Box py={5}>
-        <Text as='b' fontSize='xl' color='gray.600'>4. Neural Network</Text>
-        <Definition definition={definition}/>
-      </Box>
+      <Definition title={whats.name} definition={whats}/>
       <BaseGrid section={model}/>
       <BaseGrid section={neurons}/>
     </>

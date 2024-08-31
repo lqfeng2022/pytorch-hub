@@ -1,7 +1,6 @@
 export default [
   { id: 1, 
     name: "TENSORs ?",
-    description: "",
     sections: [
       { id: 0,
         name: "What's a Tensor", 
@@ -45,7 +44,6 @@ export default [
   },
   { id: 2, 
     name: "Tensor Creating",
-    description: "",
     sections: [
       { id: 0,
         name: "2. Tensor Creating", 
@@ -130,7 +128,6 @@ export default [
   },
   { id: 3, 
     name: "Tensor Attributes",
-    description: "",
     sections: [
       { id: 0,
         name: "3. Tensor Attributes", 
@@ -182,7 +179,6 @@ export default [
   },
   { id: 4, 
     name: "Tensor Operations",
-    description: "",
     sections: [
       { id: 0,
         name: "4. Tensor Operations", 
@@ -327,7 +323,6 @@ export default [
   },
   { id: 5, 
     name: "Tensor Manipulation",
-    description: "",
     sections: [
       { id: 0,
         name: "5. Tensor Manipulation", 
@@ -430,7 +425,6 @@ export default [
   },
   { id: 6, 
     name: "Tensor Indexing",
-    description: "",
     sections: [
       { id: 0,
         name: "6. Tensor Indexing", 
@@ -477,7 +471,6 @@ export default [
   },
   { id: 7,
     name: "Tensor Reproducibility",
-    description: "",
     sections: [
       { id: 0, 
         name: "7. Tensor Reproducibility",
@@ -623,7 +616,6 @@ export default [
   },
   { id: 8, 
     name: "Tensor on GPUs",
-    description: "", 
     sections: [
       { id: 0, 
         name: "8. Tensor on GPUs",
