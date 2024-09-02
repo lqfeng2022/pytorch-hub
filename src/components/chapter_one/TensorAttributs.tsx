@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react'
 import chapterOne from '../../data/chapterOne'
 import BaseGrid from '../BaseGrid'
 import CodeDisplay from '../CodeDisplay'
-import pythonCode from '../../data/pythonCode'
+import pythonCode from '../../data/codeTensors'
 
 const TensorAttributs = () => {
   const [ attributes, shape ] = chapterOne[2].sections

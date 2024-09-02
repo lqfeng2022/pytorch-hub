@@ -1,6 +1,11 @@
 export default [
-  { name: "Introduction", link: 'introduction' },
-  { id: 0,
+  { id: 0, 
+    name: "Introduction", 
+    link: 'introduction', 
+    items: [], 
+    description: [] 
+  },
+  { id: 1,
     name: "Artificial Intelligence",
     link: "artificial-intelligence",
     items: [
@@ -32,7 +37,7 @@ export default [
       }
     ]
   },
-  { id: 1, 
+  { id: 2, 
     name: "TENSORs", 
     link: "tensors",
     items: [
@@ -68,19 +73,24 @@ export default [
       }
     ]
    },
-  { id: 2, 
+  { id: 3, 
     name: "A Straight Line Model", 
     link: "a-straight-line-model",
     items: [
-      { id: 1, name: "• PyTorch Workflow", link: "" },
+      { id: 1, name: "PyTorch Workflow", link: "" },
       { id: 2, name: "i. Prepare Data", link: "" },
       { id: 3, name: "ii. Build a Model", link: "" },
       { id: 4, name: "iii. Train and Test a Model", link: "" },
-      { id: 5, name: "iv. Improve a Model", link: "" },
-      { id: 6, name: "v. Save and Load a Model", link: "" },
+      { id: 5, name: "iv. Save and Load a Model", link: "" },
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: "In this chapter, we’re gonna talk about how to build a machine learning and deep learning model, the basic PyTorch workflow. We separate it into 5 steps, they are, preparing data, building a model, training and evaluating a model, improving the model, saving and loading the model."
+      },
     ]
   },
-  { id: 3, 
+  { id: 4, 
     name: "The Maths Behind (I)", 
     link: "the-maths-behind-one",
     items: [
@@ -91,7 +101,7 @@ export default [
       { id: 5, name: "- Learning Rate (lr)", link: "" }
     ]
   },
-  { id: 4, 
+  { id: 5, 
     name: "A Binary Classification Model", 
     link: "a-binary-classification-model",
     items: [
@@ -102,7 +112,7 @@ export default [
       { id: 5, name: "v. Save and Load a Model", link: "" },
     ]
   },
-  { id: 5, 
+  { id: 6, 
     name: "The Maths Behind (II)", 
     link: "the-maths-behind-two",
     items: [
@@ -114,7 +124,7 @@ export default [
       { id: 6, name: "- Activation Function (ReLU)", link: "" }
     ]
   },
-  { id: 6, 
+  { id: 7, 
     name: "A CNN Model", 
     link: "a-cnn-model",
     items: [
@@ -125,7 +135,7 @@ export default [
       { id: 5, name: "v. Save and Load a Model", link: "" },
     ]
   },
-  { id: 7, 
+  { id: 8, 
     name: "The Maths Behind (III)", 
     link: "the-maths-behind-three",
     items: [
@@ -139,7 +149,7 @@ export default [
       { id: 8, name: "- SoftMax Function", link: "" }
     ]
   },
-  { id: 8, 
+  { id: 9, 
     name: "A Vision Transformer Model", 
     link: "a-vit-model",
     items: [
@@ -150,28 +160,28 @@ export default [
       { id: 5, name: "v. Save and Load a Model", link: "" },
     ]
   },
-  { id: 9, 
+  { id: 10, 
     name: "The Maths Behind (IV)", 
     link: "the-maths-behind-four",
     items: [
       { id: 1, name: "- Vision Transformer", link: "" },
       { id: 2, name: "- ViT Architecture", link: "" },
       { id: 3, name: "- Patch Embedding (Epat)", link: "" },
-      { id: 4, name: "-- Class Token Embedding", link: "" },
+      // { id: 4, name: "-- Class Token Embedding", link: "" },
       { id: 5, name: "- Positional Embedding (Epos)", link: "" },
       { id: 6, name: "- Transformer Encoder", link: "" },
-      { id: 7, name: "-- Attention Mechanism", link: "" },
-      { id: 8, name: "-- Multi-Head Self-Attention (MHA)", link: "" },
-      { id: 9, name: "-- Layer Normalization (LN)", link: "" },
-      { id: 10, name: "-- Residual Connection (+)", link: "" },
-      { id: 11, name: "-- Multi-Layer Perceptron (MLP)", link: "" },
-      { id: 12, name: "-- Perceptron", link: "" },
-      { id: 13, name: "-- Dropout Layer", link: "" },
+      // { id: 7, name: "-- Attention Mechanism", link: "" },
+      // { id: 8, name: "-- Multi-Head Self-Attention (MHA)", link: "" },
+      // { id: 9, name: "-- Layer Normalization (LN)", link: "" },
+      // { id: 10, name: "-- Residual Connection (+)", link: "" },
+      // { id: 11, name: "-- Multi-Layer Perceptron (MLP)", link: "" },
+      // { id: 12, name: "-- Perceptron", link: "" },
+      // { id: 13, name: "-- Dropout Layer", link: "" },
       { id: 14, name: "- Classifier", link: "" },
       { id: 15, name: "- Activation Function (GeLU)", link: "" },
     ]
   },
-  { id: 10, 
+  { id: 11, 
     name: "A Language Translation Model", 
     link: "a-language-translation-model",
     items: [
@@ -182,7 +192,7 @@ export default [
       { id: 5, name: "v. Save and Load a Model", link: "" },
     ]
   },
-  { id: 11, 
+  { id: 12, 
     name: "The Maths Behind (V)", 
     link: "the-maths-behind-five",
     items: [
@@ -195,7 +205,22 @@ export default [
       { id: 7, name: "- Transformer Decoder", link: "" },
     ]
   },
-  { id: 12, name: "Dedication", link: 'dedication' },
-  { id: 13, name: "Additional Resources", link: 'additional-resources' },
-  { id: 14, name: "Credits", link: 'credits' }
+  { id: 13, 
+    name: "Dedication", 
+    link: 'dedication', 
+    items: [], 
+    description: [] 
+  },
+  { id: 14, 
+    name: "Additional Resources", 
+    link: 'additional-resources', 
+    items: [],
+    description: [] 
+  },
+  { id: 15, 
+    name: "Credits", 
+    link: 'credits',
+    items: [],
+    description: [] 
+  }
 ]

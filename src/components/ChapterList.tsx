@@ -5,36 +5,30 @@ import SectionItem from '../entities/SectionItem'
 
 
 interface Props {
-  litems: SectionItem[],
-  ritems: SectionItem[],
+  items: SectionItem[],
   descrip: Content[]
 }
 
-const ChapterList = ({ litems, ritems, descrip }: Props) => {
+const ChapterList = ({ items, descrip }: Props) => {
   return (
     <Box>
-      <SimpleGrid 
-        minH='350px' 
-        p={6} 
-        my={3} 
-        spacing={4} 
-        columns={{ sm: 1, md: 2 }} 
-        bg='red.50' alignItems='center' // Ensure centered vertically
-      >
-        <List spacing={4}>
-          {litems.map((list) => <ListItem key={list.id}> 
-            <Lists name={list.name}/>
-          </ListItem>)}
-        </List>
-        <List spacing={4}>
-          {ritems.map((list) => <ListItem key={list.id}>
-            <Lists name={list.name}/>
-          </ListItem>)}
-        </List>
+      <SimpleGrid spacing={4} columns={{ sm: 1, md: 2 }} >
+        <Box 
+          p={6} 
+          my={3} 
+          minH='300px' maxH='400px'
+          bg='red.50' alignItems='center' // Ensure centered vertically
+        >
+          <List spacing={4}>
+            {items.map((list) => <ListItem key={list.id}>
+              <Lists name={list.name}/>
+            </ListItem>)}
+          </List>
+        </Box>
+        <Stack my={5} spacing={4}>
+          {descrip.map((p) => <Text key={p.id}>{p.value}</Text>)}
+        </Stack>
       </SimpleGrid>
-      <Stack my={5} spacing={4}>
-        {descrip.map((p) => <Text key={p.id}>{p.value}</Text>)}
-      </Stack>
     </Box>
   )
 }

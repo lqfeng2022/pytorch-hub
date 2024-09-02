@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import chapterOne from '../../data/chapterOne'
 import BaseGrid from '../BaseGrid'
-import pythonCode from '../../data/pythonCode'
+import pythonCode from '../../data/codeTensors'
 import CodeDisplay from '../CodeDisplay'
 import LeftGrid from '../LeftGrid'
 import RightGrid from '../RightGrid'

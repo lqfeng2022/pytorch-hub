@@ -2,7 +2,7 @@ import BaseGrid from '../BaseGrid'
 import Definition from '../Definition'
 import chapterOne from '../../data/chapterOne'
 import CodeDisplay from '../CodeDisplay'
-import pythonCode from '../../data/pythonCode'
+import pythonCode from '../../data/codeTensors'
 import RightGrid from '../RightGrid'
 import LeftGrid from '../LeftGrid'
 

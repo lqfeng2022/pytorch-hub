@@ -1,6 +1,6 @@
 import chapterOne from '../../data/chapterOne'
 import CodeDisplay from '../CodeDisplay'
-import pythonCode from '../../data/pythonCode'
+import pythonCode from '../../data/codeTensors'
 import Definition from '../Definition'
 import LeftGrid from '../LeftGrid'
 import RightGrid from '../RightGrid'

@@ -19,8 +19,7 @@ const ChapterZero = () => {
 
   const descrip = sectionList[1].description!
   const lists = sectionList[1].items!
-  const litems = lists.slice(0, 4)
-  const ritems = lists.slice(-4)
+  const items = lists.slice(0, 8)
   
   const [ takeCourse ] = chapterZero[7].sections
 
@@ -38,8 +37,7 @@ const ChapterZero = () => {
         <Divider variant='brand' w="30%" mx="auto"/>
       </Flex>
       <ChapterList 
-        litems={litems} 
-        ritems={ritems} 
+        items={items} 
         descrip={descrip} 
       />
       <AISection/>

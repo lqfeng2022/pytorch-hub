@@ -33,7 +33,7 @@ const BookList = () => {
             <Box flex='1' textAlign='left'>
               <Link to={list.link!}>
                 <HStack spacing={3} _hover={{color: 'tomato'}}>
-                  <Text>{list.id}</Text>
+                  <Text>{list.id - 1}</Text>
                   <Text fontSize='md'>{list.name}</Text>
                 </HStack>
               </Link>

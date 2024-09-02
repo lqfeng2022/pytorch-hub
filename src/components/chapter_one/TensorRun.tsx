@@ -1,5 +1,5 @@
 import chapterOne from '../../data/chapterOne'
-import pythonCode from '../../data/pythonCode'
+import pythonCode from '../../data/codeTensors'
 import BaseGrid from '../BaseGrid'
 import CodeDisplay from '../CodeDisplay'
 import Definition from '../Definition'

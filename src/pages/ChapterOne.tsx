@@ -18,8 +18,7 @@ const ChapterOne = () => {
 
   const descrip = sectionList[2].description!
   const lists = sectionList[2].items!
-  const litems = lists.slice(0, 4)
-  const ritems = lists.slice(-4)
+  const items = lists.slice(0, 8)
 
   const footer = {
     l: "0. Artificial Intelligence",
@@ -35,8 +34,7 @@ const ChapterOne = () => {
         <Divider variant='brand' w="30%"/>
       </Flex>
       <ChapterList 
-        litems={litems} 
-        ritems={ritems} 
+        items={items} 
         descrip={descrip}
       />
       <TensorWhats/>
