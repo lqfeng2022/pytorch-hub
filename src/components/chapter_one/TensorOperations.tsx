@@ -3,6 +3,8 @@ import chapterOne from '../../data/chapterOne'
 import BaseGrid from '../BaseGrid'
 import pythonCode from '../../data/pythonCode'
 import CodeDisplay from '../CodeDisplay'
+import LeftGrid from '../LeftGrid'
+import RightGrid from '../RightGrid'
 
 const TensorOperations = () => {
   const [ 
@@ -15,16 +17,16 @@ const TensorOperations = () => {
   return (
     <Box py={2}>
       <BaseGrid section={operations}/>
-      <BaseGrid section={addSub}/>
+      <LeftGrid section={addSub}/>
       <CodeDisplay codes={addSubCode}/>
-      <BaseGrid section={matmul}/>
+      <RightGrid section={matmul}/>
       <BaseGrid section={mmWork}/>
-      <BaseGrid section={twoRule}/>
+      <LeftGrid section={twoRule}/>
       <BaseGrid section={mmWebs}/>
       <BaseGrid section={dot}/>
       <BaseGrid section={dotTransf}/>
       <CodeDisplay codes={matmulCode}/>
-      <BaseGrid section={aggre}/>
+      <LeftGrid section={aggre}/>
       <CodeDisplay codes={aggreCode}/>
     </Box>
   )

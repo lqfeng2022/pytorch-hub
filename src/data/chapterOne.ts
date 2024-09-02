@@ -48,7 +48,7 @@ export default [
       { id: 0,
         name: "2. Tensor Creating", 
         value: "",
-        image: "src/assets/chapter_one/tensorcreate.jpeg",
+        image: "src/assets/chapter_one/create.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -59,7 +59,7 @@ export default [
       { id: 1,
         name: "2.1 Random Tensor", 
         value: "",
-        image: "src/assets/chapter_one/randomtensor.jpeg",
+        image: "src/assets/chapter_one/create_random.jpeg",
         content: [
           { id: 1, 
             title: "What's a random tensor?",
@@ -78,7 +78,7 @@ export default [
       { id: 2,
         name: "2.2 Zeros Tensor & Ones Tensor", 
         value: "",
-        image: "src/assets/chapter_one/zerosOnes.jpeg",
+        image: "src/assets/chapter_one/create_zerosOnes.jpeg",
         content: [
           { id: 1, 
             title: "What are zeros ones tensors?",
@@ -97,7 +97,7 @@ export default [
       { id: 3,
         name: "2.3 Range Tensor", 
         value: "",
-        image: "src/assets/chapter_one/rangetensor.jpeg",
+        image: "src/assets/chapter_one/create_range.jpeg",
         content: [
           { id: 1, 
             title: "What's a range tensor?",
@@ -116,7 +116,7 @@ export default [
       { id: 4,
         name: "2.4 Tensor Like", 
         value: "",
-        image: "src/assets/chapter_one/tensorlike.jpeg",
+        image: "src/assets/chapter_one/create_like.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -155,7 +155,7 @@ export default [
       { id: 1,
         name: "3.1 the SHAPE", 
         value: "Working with the shape attribute in PyTorch can sometimes be tricky, especially when you're manipulating tensors or performing operations that involve reshaping, matrix multiplication. To help visualize and understand the shape, let's look at an example.",
-        image: "src/assets/chapter_one/shape.jpeg",
+        image: "src/assets/chapter_one/attributes_shape.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -183,7 +183,7 @@ export default [
       { id: 0,
         name: "4. Tensor Operations", 
         value: "",
-        image: "src/assets/chapter_one/operations.jpeg",
+        image: "src/assets/chapter_one/operats.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -194,7 +194,7 @@ export default [
       { id: 1,
         name: "4.1 Basic Operations", 
         value: "",
-        image: "src/assets/chapter_one/addsub.jpeg",
+        image: "src/assets/chapter_one/operats_addsub.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -209,7 +209,7 @@ export default [
       { id: 2,
         name: "4.2 Matrix Multiplication", 
         value: "",
-        image: "src/assets/chapter_one/matmul.jpeg",
+        image: "src/assets/chapter_one/operats_matmul.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -224,7 +224,7 @@ export default [
       { id: 3,
         name: ":: How it Works", 
         value: "",
-        image: "src/assets/chapter_one/matmul_work.jpeg",
+        image: "src/assets/chapter_one/operats_matmul_work.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -235,7 +235,7 @@ export default [
       { id: 4,
         name: ":: Two Rules", 
         value: "",
-        image: "src/assets/chapter_one/matmul_rules.jpeg",
+        image: "src/assets/chapter_one/operats_matmul_rules.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -246,7 +246,7 @@ export default [
       { id: 5,
         name: ":: Learning Webs", 
         value: "If you want to dive deeper into matrix multiplication, I recommend checking out these two websites. They offer valuable insights that can enhance your understanding of both matrix multiplication and the dot product.",
-        image: "src/assets/chapter_one/dot_webs.jpeg",
+        image: "src/assets/chapter_one/operats_matmul_webs.jpeg",
         content: [
           { id: 1, 
             title: "mathisfun.com",
@@ -261,7 +261,7 @@ export default [
       { id: 6,
         name: ":: Dot-Product", 
         value: "",
-        image: "src/assets/chapter_one/dot.jpeg",
+        image: "src/assets/chapter_one/operats_matmul_dot.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -272,7 +272,7 @@ export default [
       { id: 7,
         name: ":: Dot-Product in Transformer", 
         value: "The dot product is a fundamental operation in the Transformer architecture, enabling the model to weigh the importance of different parts of the input efficiently and effectively, which is why it has become so powerful in tasks like translation, summarization, and more.",
-        image: "src/assets/chapter_one/dot_attention.jpeg",
+        image: "src/assets/chapter_one/operats_matmul_dot_mha.jpeg",
         content: [
           { id: 1, 
             title: "Measuring Similarity",
@@ -291,7 +291,7 @@ export default [
       { id: 8,
         name: "4.3 Aggregating Operations", 
         value: "Aggregating tensors refers to the process of reducing a tensor along one or more dimensions to produce a tensor with a lower rank. Aggregation is commonly used in deep learning to summarize or compress the information contained in a tensor, making it more manageable for further processing.",
-        image: "src/assets/chapter_one/aggregate.jpeg",
+        image: "src/assets/chapter_one/operats_aggregate.jpeg",
         content: [
           { id: 1, 
             title: "max()",
@@ -327,7 +327,7 @@ export default [
       { id: 0,
         name: "5. Tensor Manipulation", 
         value: "",
-        image: "src/assets/chapter_one/manipulation.jpeg",
+        image: "src/assets/chapter_one/manipul.jpeg",
         content: [
           { id: 1, 
             title: "",
@@ -342,38 +342,34 @@ export default [
       { id: 1,
         name: "5.1 Reshaping a Tensor", 
         value: "",
-        image: "src/assets/chapter_one/dtype_reshape.jpeg",
+        image: "src/assets/chapter_one/manipul_shape.jpeg",
         content: [
           { id: 1, 
-            title: "Change the Data Type of a Tensor",
-            value: "Changing the data type of a tensor is a common operation in PyTorch. You may need to change the data type of a tensor for compatibility with certain operations or to optimize memory usage. Here we use type() to change the target data type of a tensor. Changing the data type of tensors allows for greater control over computational efficiency and accuracy in your machine learning models."
+            title: "Squeeze or unsqueeze a Tensor",
+            value: "The squeeze() method in PyTorch removes dimensions of size 1 from a tensor, effectively reducing unnecessary dimensions. In contrast, unsqueeze() adds a dimension of size 1 at a specified position, allowing you to expand the tensor's shape as needed for operations like batching or channel expansion."
           },
           { id: 2, 
-            title: "Reshape a Tensor",
-            value: "In PyTorch, reshaping a tensor is often necessary when preparing data for different types of operations. This is super important with neural networks since they usually expect the input data to be in a specific shape. Here we use reshape() to change the shape of target tensor. We'll use it quite often when preparing data for neural networks, which expect input data to be in a specific shape."
+            title: "Transpose a Tensor",
+            value: "When we transpose a tensor, we have 2 choices - transpose()/T. The transpose() method in PyTorch swaps two specified dimensions of a tensor, allowing for flexible rearrangement of data. The T attribute is a shorthand for transposing the last two dimensions of a 2D tensor, making it a quick way to transpose matrices without specifying dimensions."
           },
           { id: 3, 
-            title: "Squeeze a Tensor",
-            value: "In PyTorch, squeeze is a common operation used to adjust the shape of tensors by removing dimensions with a size of 1."
-          },
-          { id: 4, 
-            title: "Unsqueeze a Tensor",
-            value: "Just as the squeeze method, unsqueeze is a common operation used to modify the shape of a tensor by adding dimensions of size 1"
-          },
-          { id: 5, 
             title: "Permute a Tensor",
             value: "Permuting a tensor in PyTorch means rearranging its dimensions according to a specified order. This operation is especially useful when you need to change the order of dimensions for tasks like reshaping, aligning data with model requirements, or simply reordering data dimensions."
+          },
+          { id: 4, 
+            title: "Reshape or view a Tensor",
+            value: "The reshape() and view() methods in PyTorch both change the shape of a tensor without altering its data. reshape() can handle non-contiguous tensors by returning a new tensor if needed, while view() requires the tensor to be contiguous in memory, making it faster but less flexible."
           },
         ]
       },
       { id: 2,
-        name: ":: Transposing a Tensor", 
+        name: ":: Transpose a Tensor", 
         value: "Transposing a tensor in PyTorch is all about swapping two of its dimensions. This operation is commonly used in mathematical computations, especially in linear algebra, where you need to switch the rows and columns of matrices. But it's not just for matrices — you can use transposition on any tensor, no matter how many dimensions it has.",
-        image: "src/assets/chapter_one/transpose.jpeg",
+        image: "src/assets/chapter_one/manipul_shape_trans.jpeg",
         content: [
           { id: 1, 
             title: "",
-            value: "Transposing isn't just for 2D tensors—you can swap any two dimensions in tensors with more dimensions. Just like with 2D tensors, where you can switch rows and columns, you can use transposition to rearrange any pair of dimensions in higher-dimensional tensors too"
+            value: "Transposing isn't just for 2D tensors — you can swap any two dimensions in tensors with more dimensions. Just like with 2D tensors, where you can switch rows and columns, you can use transposition to rearrange any pair of dimensions in higher-dimensional tensors too."
           },
           { id: 2, 
             title: "",
@@ -386,38 +382,125 @@ export default [
         ]
       },
       { id: 3,
-        name: "5.2 Changing Data Type", 
-        value: "PyTorch tensors can easily interact with NumPy arrays, making it simple to convert between the two. This seamless interoperability is super useful when you want to take advantage of both PyTorch's capabilities and NumPy's strengths in your workflow. Here's how you can implement this interaction:",
-        image: "src/assets/chapter_one/tensor_numpy.jpeg",
+        name: ":: Permute a Tensor", 
+        value: "",
+        image: "src/assets/chapter_one/manipul_shape_permute.jpeg",
         content: [
           { id: 1, 
-            title: "PyTorch Tensor -> NumPy Array",
-            value: "You can convert a PyTorch tensor to a NumPy array using numpy() method. This method creates a view of the tensor data, meaning the NumPy array and the PyTorch tensor share the same underlying data. So, any changes made to one will affect the other."
+            title: "",
+            value: "The permute() method is used to reorder the dimensions of a tensor based on their index positions. This is crucial when you need to manipulate tensor shapes for specific operations, ensuring the data structure aligns with the requirements of subsequent computations."
+          },
+        ]
+      },
+      { id: 4,
+        name: ":: Reshape a Tensor", 
+        value: "",
+        image: "src/assets/chapter_one/manipul_shape_reshape.jpeg",
+        content: [
+          { id: 1, 
+            title: "",
+            value: "This image demonstrates that reshape() and view() rearrange the elements to fit into the new shape (no limit to original dim), providing flexibility in how data can be structured without altering the underlying data itself."
+          },
+          { id: 2, 
+            title: "[3, 4, 5] --> [5, 4, 3]",
+            value: "Reshaping to [5, 4, 3] maintains the same number of dimensions (3D) but changes how the elements are grouped across those dimensions."
+          },
+          { id: 3, 
+            title: "[3, 4, 5] --> [3, 12]",
+            value: "When reshaped to [3, 12], the tensor is reduced to a 2-dimensional shape. This flattens the last two dimensions (4 and 5) into a single dimension of 12, resulting in a lower-dimensional tensor."
+          },
+          { id: 4, 
+            title: "[3, 4, 5] --> [2, 2, 3, 5]",
+            value: "When reshaped to [2, 2, 3, 5], the tensor is expanded to a 4-dimensional shape. Here, the original tensor is split into smaller blocks, increasing the number of dimensions from 3 to 4."
+          },
+          { id: 5, 
+            title: "reshape() vs. view()",
+            value: "In PyTorch, reshape() can change a tensor's shape and might create a new copy of the data if necessary, making it more flexible. In contrast, view() only changes the shape if the data's memory layout allows it without copying, so it's faster but less adaptable."
+          },
+        ]
+      },
+      { id: 5,
+        name: "5.2 Changing Data Type", 
+        value: "PyTorch tensors can easily interact with NumPy arrays, making it simple to convert between the two. This seamless interoperability is super useful when you want to take advantage of both PyTorch's capabilities and NumPy's strengths in your workflow. Here's how you can implement this interaction:",
+        image: "src/assets/chapter_one/manipul_dtype.jpeg",
+        content: [
+          { id: 0, 
+            title: "",
+            value: "We can easily change a tensor's data type using the type() method. Simple, right? However, this conversion can also happen automatically when you convert data from other libraries, like a NumPy array, to a PyTorch tensor. The tensor's data type might not be what you expect. While PyTorch tensors default to float32, NumPy arrays might introduce a different data type (float64). So, when working with both PyTorch tensors and NumPy arrays, it's important to understand how data types are handled during these conversions."
+          },
+          { id: 1, 
+            title: "Change data tupe with type()",
+            value: "Changing the data type of a tensor is a common operation in PyTorch. You may need to change the data type of a tensor for compatibility with certain operations or to optimize memory usage. Here we use type() to change the target data type of a tensor. Changing the data type of tensors allows for greater control over computational efficiency and accuracy in your machine learning models."
           },
           { id: 2, 
             title: "NumPy Array -> PyTorch Tensor",
             value: "To convert a NumPy array to a PyTorch tensor, you can use the torch.from_numpy() function. Like the numpy() method, this conversion creates a tensor that shares the same data with the NumPy array, ensuring any changes in the NumPy array will also reflect in the tensor."
           },
           { id: 3, 
-            title: "Summary",
-            value: "Use numpy() to convert a PyTorch tensor to a NumPy array and torch.from_numpy() to go the other way. Since both conversions share the same underlying data, so changes in one will reflect in the other.If your tensor is on a GPU, remember to move it to the CPU before converting it to a NumPy array."
+            title: "PyTorch Tensor -> NumPy Array",
+            value: "You can convert a PyTorch tensor to a NumPy array using numpy() method. This method creates a view of the tensor data, meaning the NumPy array and the PyTorch tensor share the same underlying data. So, any changes made to one will affect the other."
           },
         ]
       },
       // Move tensor run on GPUs here,
       // cus that's all about changing the device (cpu/gpu)
-      { id: 4,
-        name: "5.4 Concatenation and Stacking", 
+      { id: 6,
+        name: "5.3 Concatenate and Stack Tensors", 
         value: "",
-        image: "src/assets/chapter_one/concat_stack.jpeg",
+        image: "src/assets/chapter_one/manipul_catstack.jpeg",
         content: [
           { id: 1, 
             title: "Concatenate Tensors",
-            value: "Concatenating tensors in PyTorch involves joining two or more tensors along a specific dimension. This is useful when you want to merge datasets, combine outputs from different models, or manipulate data in various ways."
+            value: "Concatenates multiple tensors along an existing dimension, merging them into a single tensor without adding a new axis. It's ideal for joining data along a shared axis, such as merging batches of data."
           },
           { id: 2, 
             title: "Stack Tensors",
-            value: "Tensor stacking in PyTorch is a technique used to combine multiple tensors along a new dimension. This is useful when you want to group a list of tensors into a single tensor, adding an extra dimension to represent this grouping."
+            value: "From this image, we can see this operation stacks A and B horizontally along the 1th dimension (columns). The resulting tensor C has a shape of [4, 10], meaning it has 4 rows and 10 columns. You can think of this as placing B directly next A, doubling the number of columns."
+          },
+        ]
+      },
+      { id: 7,
+        name: ":: Stack tensors", 
+        value: "",
+        image: "src/assets/chapter_one/manipul_stack.jpeg",
+        content: [
+          { id: 1, 
+            title: "",
+            value: "In this image, you can see how two tensors, A and B, are combined into a new tensor, C. The original tensors, both having a shape of [4, 5], are brought together in a way that adds an extra dimension. The resulting tensor, C, now has a shape of [2, 4, 5], indicating that it holds two layers, each with the original shape of 4 x 5."
+          },
+          { id: 2, 
+            title: "",
+            value: "This process essentially stacks A and B on top of each other, creating a new structure where the first dimension represents the number of layers. Each layer corresponds to one of the original tensors, neatly preserving their internal arrangement while grouping them together."
+          },
+        ]
+      },
+      { id: 8,
+        name: ":: Concatenate tensors vertically", 
+        value: "",
+        image: "src/assets/chapter_one/manipul_shape_cat_vstack.jpeg",
+        content: [
+          { id: 1, 
+            title: "",
+            value: "In this image, you can observe how two tensors, A and B, are combined by stacking them vertically along the first dimension. The resulting tensor, C, has a shape of [8, 5], which indicates that the operation has effectively doubled the number of rows by placing B directly beneath A."
+          },
+          { id: 2, 
+            title: "",
+            value: "In a similar manner, another method also stacks A and B vertically, producing the same outcome with a shape of [8, 5]. This approach provides a more concise way to achieve the same result, seamlessly joining the two tensors into a single structure."
+          },
+        ]
+      },
+      { id: 9,
+        name: ":: Concatenate tensors horizontally", 
+        value: "",
+        image: "src/assets/chapter_one/manipul_shape_cat_hstack.jpeg",
+        content: [
+          { id: 1, 
+            title: "",
+            value: "In this image, you can see how tensors A and B are combined by aligning them side by side along the second dimension. The resulting tensor, C, has a shape of [4, 10], where the number of columns has been doubled, while the number of rows remains the same."
+          },
+          { id: 2, 
+            title: "",
+            value: "Similarly, another method achieves the same horizontal stacking, resulting in a tensor with the shape [4, 10]. This approach offers a simpler way to accomplish the same outcome, effectively joining the two tensors into a single, wider structure."
           },
         ]
       },
@@ -631,7 +714,7 @@ export default [
       { id: 1, 
         name: "8.1 Run Tensor on GPUs", 
         value: "To run tensors on GPUs with PyTorch, you need to move your tensor data to the GPU and then perform operations using GPU acceleration. This can really speed up computation, especially when working with large tensors and deep learning models.", 
-        image: "src/assets/chapter_one/tensorrun.jpeg", 
+        image: "src/assets/chapter_one/gpu_run.jpeg", 
         content: [
           { id: 1, 
             title: "Check if GPU is Available", 
@@ -665,7 +748,7 @@ export default [
       { id: 3, 
         name: ":: GPU Features",
         value: "",
-        image: "src/assets/chapter_one/gpuf.jpeg", 
+        image: "src/assets/chapter_one/gpu_feature.jpeg", 
         content: [
           { id: 1, 
             title: "Parallel Processing", 
@@ -688,7 +771,7 @@ export default [
       { id: 4, 
         name: "8.3 CUDA",
         value: "",
-        image: "src/assets/chapter_one/cuda.jpg", 
+        image: "src/assets/chapter_one/gpu_cuda.jpg", 
         content: [
           { id: 1, 
             title: "", 
@@ -699,7 +782,7 @@ export default [
       { id: 5, 
         name: ":: CUDA Features",
         value: "", 
-        image: "src/assets/chapter_one/cudaf.jpeg", 
+        image: "src/assets/chapter_one/gpu_cuda_feature.jpeg", 
         content: [
           { id: 1, 
             title: "Parallel Computing Framework", 
@@ -722,7 +805,7 @@ export default [
       { id: 6, 
         name: "8.4 Get GPUs",
         value: "",
-        image: "src/assets/chapter_one/cudaget.jpeg", 
+        image: "src/assets/chapter_one/gpu_get.jpeg", 
         content: [
           { id: 1, 
             title: "Check if Your Local Machine Has a GPU", 

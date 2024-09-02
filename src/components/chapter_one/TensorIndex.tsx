@@ -1,21 +1,22 @@
 import chapterOne from '../../data/chapterOne'
-import BaseGrid from '../BaseGrid'
 import CodeDisplay from '../CodeDisplay'
 import pythonCode from '../../data/pythonCode'
 import Definition from '../Definition'
+import LeftGrid from '../LeftGrid'
+import RightGrid from '../RightGrid'
 
 const TensorIndex = () => {
   const [ define, basic, slice ] = chapterOne[5].sections
   const [
     indexbasicCode, indexsliceCode 
-  ] = pythonCode.slice(13, 15).map(obj => obj.code)
+  ] = pythonCode.slice(18, 20).map(obj => obj.code)
 
   return (
     <>
       <Definition title={define.name} definition={define}/>
-      <BaseGrid section={basic}/>
+      <LeftGrid section={basic}/>
       <CodeDisplay codes={indexbasicCode}/>
-      <BaseGrid section={slice}/>
+      <RightGrid section={slice}/>
       <CodeDisplay codes={indexsliceCode}/>
     </>
   )

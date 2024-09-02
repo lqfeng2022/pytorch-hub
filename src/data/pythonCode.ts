@@ -1,6 +1,6 @@
 export default [
   { id: 0, 
-    name: "TENSORs",
+    name: "1_TENSORs",
     code: [
       { id: 1, 
         input: 
@@ -20,43 +20,53 @@ scalar`,
       { id: 3, 
         input: 
 `# Vector
-vector = torch.tensor([0, 1])
+vector = torch.tensor([0, 1, 2])
 vector`,
         output: 
-`tensor([0, 1])`,
+`tensor([0, 1, 2])`,
       }, 
       { id: 4, 
         input: 
 `# MATRIX
-MATRIX = torch.tensor([[0, 1],
-                       [1, 2]])
+MATRIX = torch.tensor([[0, 1, 2],
+                       [1, 2, 3],
+                       [2, 3, 4]])
 MATRIX`,
         output: 
-`tensor([[ 0, 1],
-        [ 1, 2]])`,
+`tensor([[0, 1, 2],
+        [1, 2, 3],
+        [2, 3, 4]])`,
       }, 
       { id: 5, 
         input: 
 `# TENSOR
 TENSOR = torch.tensor([[[0, 1, 2],
                         [1, 2, 3],
-                        [2, 3, 4]]])
+                        [2, 3, 4]],
+                       [[1, 2, 3],
+                        [2, 3, 4],
+                        [3, 4, 5]]])
 TENSOR`,
         output: 
 `tensor([[[0, 1, 2],
          [1, 2, 3],
-         [2, 3, 4]]])`,
+         [2, 3, 4]],
+
+        [[1, 2, 3],
+         [2, 3, 4],
+         [3, 4, 5]]])`,
       }, 
     ]
   }, 
   { id: 1,
-    name: "tensor_create_random", 
+    name: "2.1_tensor_create_random", 
     code: [
       { id: 6, 
         input: 
-`# Create a random tensor with shape (3, 3)
-# rand(): uniform distribution
-tensor_rand = torch.rand(3, 3) 
+`import torch
+
+# Create a random tensor with rand()
+tensor_rand = torch.rand(3, 3) # uniform distribution
 # tensor_rand = torch.rand(size=(3, 3))`,
         output: 
 `tensor([[0.0088, 0.0259, 0.8963],
@@ -65,9 +75,8 @@ tensor_rand = torch.rand(3, 3)
       }, 
       { id: 7, 
         input: 
-`# Create another random tensor with 
-# randn(): normal distribution
-tensor_randn = torch.randn(3, 3)`,
+`# Create another random tensor with randn()
+tensor_randn = torch.randn(3, 3) # normal distribution`,
         output: 
 `tensor([[0.1229, 0.6476, 0.1100],
         [0.7567, 0.7385, 0.2270],
@@ -76,7 +85,7 @@ tensor_randn = torch.randn(3, 3)`,
     ]
   },
   { id: 2,
-    name: "tensor_create_zeros",
+    name: "2.2_tensor_create_zeros",
     code: [      
       { id: 8, 
         input: 
@@ -99,7 +108,7 @@ tensor_ones = torch.ones(size=(3, 3))`,
     ]
   },
   { id: 3,
-    name: "tensor_create_range",
+    name: "2.3_tensor_create_range",
     code: [
       { id: 10, 
         input: 
@@ -111,29 +120,41 @@ tensor_arange`,
       }, 
       { id: 11, 
         input: 
-`tensor_arange_two = torch.arange(0, 10, 2)
-# tensor_arange_two = torch.arange(start=0, end=10, step=2)
-tensor_arange_two`,
+`tensor_arange_2 = torch.arange(0, 10, 2)
+# tensor_arange_2 = torch.arange(start=0, end=10, step=2)
+tensor_arange_2`,
         output: 
 `tensor([0, 2, 4, 6, 8])`,
       }, 
+      { id: 12,
+        input: 
+`tensor_range = torch.range(0, 5)
+tensor_range # Warning's here
+# issue: torch.range() includes the end value`,
+        output:
+`<ipython-input-19-37d0b3f49663>:1: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  tensor_range = torch.range(0, 5)
+tensor([0., 1., 2., 3., 4., 5.])`,
+      }
     ]
   },
   { id: 4,
-    name: "tensor_create_likes",
+    name: "2.4_tensor_create_likes",
     code: [
-      { id: 12, 
+      { id: 13, 
         input: 
-`# Create tensor like - zeros like
-zeros_like = torch.zeros_like(input=tensor_arange_two)
+`x = torch.tensor([0, 1, 2, 3, 4])
+
+# Create a zeros like tensor
+zeros_like = torch.zeros_like(x)
 zeros_like`,
         output: 
 `tensor([0, 0, 0, 0, 0])`,
       }, 
-      { id: 13, 
+      { id: 14, 
         input: 
-`# Create tensor like - ones like
-ones_like = torch.ones_like(input=tensor_arange_two)
+`# Create an ones like tensor
+ones_like = torch.ones_like(x)
 ones_like`,
         output: 
 `tensor([1, 1, 1, 1, 1])`,
@@ -141,27 +162,27 @@ ones_like`,
     ]
   }, 
   { id: 5, 
-    name: "tensor_attributes",
+    name: "3_tensor_attributes",
     code: [
-      { id: 14, 
+      { id: 15, 
         input: 
 `import torch
 
-# Create a tensor with shape 3*3
-tensor_33 = torch.randn(3, 3)
+# Create a tensor with shape 3*4
+tensor_34 = torch.randn(3, 4)
 
 # Let's check the attributes of this tensor
-print(f"{tensor_33}\\n")
-print(f"Shape of tensor: {tensor_33.shape}") # or tensor_33.size()
-print(f"Dim Number of tensor: {tensor_33.ndim}")
-print(f"Data type of tensor: {tensor_33.dtype}")
-print(f"Device tensor is on: {tensor_33.device}")`,
+print(f"{tensor_34}\\n")
+print(f"Shape of tensor: {tensor_34.shape}") # or tensor_34.size()
+print(f"Dim Number of tensor: {tensor_34.ndim}")
+print(f"Data type of tensor: {tensor_34.dtype}")
+print(f"Device tensor is on: {tensor_34.device}")`,
         output: 
-`tensor([[-0.1240,  1.7736, -1.6758],
-        [-0.8741,  0.7059, -0.4879],
-        [-1.5880,  0.8205,  0.4376]])
+`tensor([[-0.9299, -1.3055,  0.6203,  1.7717],
+        [-0.0485, -0.2823,  0.5894,  0.3612],
+        [-0.0100,  0.9483,  0.6907,  0.4991]])
 
-Shape of tensor: torch.Size([3, 3])
+Shape of tensor: torch.Size([3, 4])
 Dim Number of tensor: 2
 Data type of tensor: torch.float32
 Device tensor is on: cpu`,
@@ -170,214 +191,214 @@ Device tensor is on: cpu`,
   },
   
   { id: 6, 
-    name: "tensor_operation_addsubmuldiv",
+    name: "4.1_tensor_operations_addsub",
     code: [
-      { id: 15, 
+      { id: 16, 
         input: 
 `import torch
 
 # Create a tensor and add a number to it
-tensor_add = torch.tensor([1, 2, 3])
-tensor_add + 10`,
+X = torch.tensor([1, 2, 3])
+X + 10`,
         output: 
 `tensor([11, 12, 13])`,
-      },
-      { id: 16, 
-        input: 
-`tensor_add # tensor_add don't change unless reassign it`,
-        output: 
-`tensor([1, 2, 3])`,
       },
       { id: 17, 
         input: 
-`# Here we can use add(), 
-# but we prefere for '+', cus it's more common and readable
-# tensor_add.add(10)
-torch.add(tensor_add, 10)`,
+`X # keep the original value unless reassign it`,
         output: 
-`tensor([11, 12, 13])`,
+`tensor([1, 2, 3])`,
       },
       { id: 18, 
         input: 
-`# Add 2 tensors with the same shape
-tensor_add + tensor_add`,
+`# We can alse use add()
+# X.add(10)
+torch.add(X, 10)`,
         output: 
-`tensor([2, 4, 6])`,
+`tensor([11, 12, 13])`,
       },
       { id: 19, 
         input: 
-`torch.add(tensor_add, tensor_add)`,
+`# Add 2 tensors with the same shape
+X + X`,
         output: 
 `tensor([2, 4, 6])`,
       },
       { id: 20, 
         input: 
-`# Create a tensor then subtract a single number
-tensor_sub = torch.tensor([1, 2, 3])
-tensor_sub - 10`,
+`torch.add(X, X)`,
         output: 
-`tensor([-9, -8, -7])`,
+`tensor([2, 4, 6])`,
       },
       { id: 21, 
         input: 
-`torch.sub(tensor_sub, 10)`,
+`# Create a tensor then subtract a single number
+S = torch.tensor([1, 2, 3])
+S - 10`,
         output: 
 `tensor([-9, -8, -7])`,
       },
       { id: 22, 
         input: 
-`# Subtract a tensor with the same shape
-tensor_sub - tensor_sub`,
+`torch.sub(S, 10)`,
         output: 
-`tensor([0, 0, 0])`,
+`tensor([-9, -8, -7])`,
       },
       { id: 23, 
         input: 
-`torch.sub(tensor_sub, tensor_sub)`,
+`# Subtract a tensor with the same shape
+S - S`,
         output: 
 `tensor([0, 0, 0])`,
       },
       { id: 24, 
         input: 
-`# Create a tensor then divide it by a single number
-tensor_div = torch.tensor([1, 2, 3])
-tensor_div / 10`,
+`torch.sub(S, S)`,
         output: 
-`tensor([1.1000, 1.2000, 1.3000])`,
+`tensor([0, 0, 0])`,
       },
       { id: 25, 
         input: 
-`# Can also use torch function
-torch.div(tensor_div, 10) # build-in function`,
+`# Create a tensor then multiply it by a single number
+M = torch.tensor([1, 2, 3])
+M * 10`,
         output: 
-`tensor([1.1000, 1.2000, 1.3000])`,
+`tensor([10, 20, 30])`,
       },
       { id: 26, 
         input: 
-`# Divide it by a tensor (same shape)
-tensor_div / tensor_div`,
+`# Can also use torch functions
+torch.mul(M, 10)`,
         output: 
-`tensor([1., 1., 1.])`,
+`tensor([10, 20, 30])`,
       },
       { id: 27, 
         input: 
-`# Divide with div()
-torch.div(tensor_div, tensor_div)`,
+`# Element-wise multiplication 
+M * M`,
         output: 
-`tensor([1., 1., 1.])`,
+`tensor([1, 4, 9])`,
       },
       { id: 28, 
         input: 
-`# Create a tensor then multiply it by a single number
-tensor_mul = torch.tensor([1, 2, 3])
-tensor_mul * 10`,
+`# Can also use torch functions
+torch.mul(M, M)`,
         output: 
-`tensor([10, 20, 30])`,
+`tensor([1, 4, 9])`,
       },
       { id: 29, 
         input: 
-`# Can also use torch functions
-torch.mul(tensor_mul, 10)`,
+`# Create a tensor then divide it by a single number
+D = torch.tensor([1, 2, 3])
+D / 10`,
         output: 
-`tensor([10, 20, 30])`,
+`tensor([1.1000, 1.2000, 1.3000])`,
       },
       { id: 30, 
         input: 
-`# Element-wise multiplication 
-tensor_mul * tensor_mul`,
+`# Can also use torch function
+torch.div(D, 10) # build-in function`,
         output: 
-`tensor([1, 4, 9])`,
+`tensor([1.1000, 1.2000, 1.3000])`,
       },
       { id: 31, 
         input: 
-`# Can also use torch functions
-torch.mul(tensor_mul, tensor_mul)`,
+`# Divide it by a tensor (same shape)
+D / D`,
         output: 
-`tensor([1, 4, 9])`,
+`tensor([1., 1., 1.])`,
+      },
+      { id: 32, 
+        input: 
+`# Divide with div()
+torch.div(D, D)`,
+        output: 
+`tensor([1., 1., 1.])`,
       },
     ]
   },
   { id: 7, 
-    name: "tensor_operation_matmul",
+    name: "4.2_tensor_operations_matmul",
     code: [
-      { id: 32, 
+      { id: 33, 
         input: 
 `import torch
 
-tensor_matmul = torch.tensor([1, 2, 3]) # vector`,
+X = torch.tensor([1, 2, 3]) # vector`,
         output: 
 `tensor([1, 2, 3])`,
       },
-      { id: 33, 
-        input: 
-`# Matrix Multiplication
-tensor_matmul.matmul(tensor_matmul) # dot product`,
-        output: 
-`tensor(14)`,
-      },
       { id: 34, 
         input: 
-`# Prefer '@', clear and concise
-tensor_matmul @ tensor_matmul`,
+`# Matrix Multiplication
+X.matmul(X) # dot product`,
         output: 
 `tensor(14)`,
       },
       { id: 35, 
         input: 
+`# Prefer '@', clear and concise
+X @ X`,
+        output: 
+`tensor(14)`,
+      },
+      { id: 36, 
+        input: 
 `%%time
 # Matrix multiplication by hand
 # (avoid doing operations with for loops at all cost, they are computationally expensive)
 value = 0
-for i in range(len(tensor_matmul)):
-  value += tensor_matmul[i] * tensor_matmul[i]
+for i in range(len(X)):
+  value += X[i] * X[i]
 value`,
         output: 
 `CPU times: user 995 µs, sys: 0 ns, total: 995 µs
 Wall time: 2.22 ms
 tensor(14)`,
       },
-      { id: 36, 
+      { id: 37, 
         input: 
 `%%time
-torch.matmul(tensor_matmul, tensor_matmul)`,
+torch.matmul(X, X)`,
         output: 
 `CPU times: user 138 µs, sys: 0 ns, total: 138 µs
 Wall time: 142 µs
 tensor(14)`,
       },
-      { id: 37, 
+      { id: 38, 
         input: 
 `# Create 2 matrices, and matrix multiplication
-tensor_matmul_1 = torch.tensor([[1, 2, 0],
-                                [0, 1, 0]])
-tensor_matmul_2 = torch.tensor([[2, 1],
-                                [0, 1],
-                                [6, 8]])
+A = torch.tensor([[1, 2, 0],
+                  [0, 1, 0]])
 
-tensor_3 = tensor_matmul_1 @ tensor_matmul_2
-tensor_3`,
+B = torch.tensor([[2, 1],
+                  [0, 1],
+                  [6, 8]])
+
+C = A @ B
+C`,
         output: 
 `tensor([[2, 3],
         [0, 1]])`,
       },
-      { id: 38, 
+      { id: 39, 
         input: 
 `# Check the tensors' shape
-print(f"Shape of tensor_matmul_1: {tensor_matmul_1.shape}")
-print(f"Shape of tensor_matmul_2: {tensor_matmul_2.shape}\\n")
-print(f"Shape of tensor_3: {tensor_3.shape}")`,
+print(f"Shape of A: {A.shape}")
+print(f"Shape of B: {B.shape}\\n")
+print(f"Shape of C: {C.shape}")`,
         output: 
-`Shape of tensor_matmul_1: torch.Size([2, 3])
-Shape of tensor_matmul_2: torch.Size([3, 2])
+`Shape of A: torch.Size([2, 3])
+Shape of B: torch.Size([3, 2])
 
-Shape of tensor_3: torch.Size([2, 2])`,
+Shape of C: torch.Size([2, 2])`,
       },
     ]
   },
   { id: 8, 
-    name: "tensor_operation_aggregate",
+    name: "4.3_tensor_operations_aggregate",
     code: [
-      { id: 39, 
+      { id: 40, 
         input: 
 `# Create a tensor
 x = torch.arange(0, 50, 10)
@@ -385,7 +406,7 @@ x, x.dtype`,
         output: 
 `(tensor([ 0, 10, 20, 30, 40]), torch.int64)`,
       },
-      { id: 40, 
+      { id: 41, 
         input: 
 `print(f"Minimum: {x.min()}")
 print(f"Maximum: {x.max()}")
@@ -395,7 +416,7 @@ print(f"Sum: {x.sum()}")`,
 Maximum: 40
 Sum: 100`,
       },
-      { id: 41, 
+      { id: 42, 
         input: 
 `print(f"Mean: {x.mean()}") # error's here —>`,
         output: 
@@ -408,20 +429,27 @@ RuntimeError                              Traceback (most recent call last)
 
 RuntimeError: mean(): could not infer output dtype. Input dtype must be either a floating point or complex dtype. Got: Long`,
       },
-      { id: 42, 
+      { id: 43, 
         input: 
 `# mean(): won't work without float datatype
+# Let's specify to 'float32', we'll cover type() next section
 print(f"Mean: {x.type(torch.float32).mean()}")`,
         output: 
 `Mean: 20.0`,
       },
-      { id: 43, 
-        input: 
-`torch.max(x), torch.min(x), torch.mean(x.type(torch.float32)), torch.sum(x)`,
-        output: 
-`(tensor(40), tensor(0), tensor(20.), tensor(100))`,
-      },
       { id: 44, 
+        input: 
+`print(f"Minimum: {torch.min(x)}")
+print(f"Maximum: {torch.max(x)}")
+print(f"Mean: {torch.mean(x.type(torch.float32))}")
+print(f"Sum: {torch.sum(x)}")`,
+        output: 
+`Minimum: 0
+Maximum: 40
+Mean: 20.0
+Sum: 100`,
+      },
+      { id: 45, 
         input: 
 `print(f"Tensor: {x}")
 
@@ -436,35 +464,9 @@ Index of the minimum value: 0`,
     ]
   },
   { id: 9, 
-    name: "tensor_manipulate_reshape",
+    name: "5.1_tensor_manipulate_shape",
     code: [
-      { id: 45, 
-        input: 
-`import torch
-
-# Create a tensor and check its data type
-x = torch.tensor([0., 10., 20., 30., 40.])
-x, x.dtype`,
-        output: 
-`(tensor([ 0., 10., 20., 30., 40.]), torch.float32)`,
-      },
       { id: 46, 
-        input: 
-`# float32 -> float16
-tensor_f16 = x.type(torch.float16)
-tensor_f16`,
-        output: 
-`tensor([ 0., 10., 20., 30., 40.], dtype=torch.float16)`,
-      },
-      { id: 47, 
-        input: 
-`# Create a certain data type tensor
-tensor_int8 = torch.tensor([0, 1, 2, 3], dtype=torch.int8)
-tensor_int8`,
-        output: 
-`tensor([0, 1, 2, 3], dtype=torch.int8)`,
-      },
-      { id: 48, 
         input: 
 `import torch
 
@@ -476,89 +478,15 @@ x.shape`,
         output: 
 `torch.Size([5])`,
       },
-      { id: 49, 
-        input: 
-`# add an extra dim with reshape()
-x_reshape_1 = x.reshape(5, 1) # add an inner dim
-x_reshape_2 = x.reshape(1, 5) # add an outer dim
-
-print(x_reshape_1)
-print(x_reshape_2)`,
-        output: 
-`tensor([[9.],
-        [2.],
-        [4.],
-        [6.],
-        [8.]])
-tensor([[9., 2., 4., 6., 8.]])`,
-      },
-      { id: 50, 
-        input: 
-`print(f"Original tensor:\\n {x}\\n")
-
-x_reshape_2[:, 0] = 9
-
-# change x_reshape_2, x changed
-# (reason: share the same memory)
-print(f"Change the reshaped tensor:\\n {x_reshape_2}\\n")
-print(f"Original tensor changed:\\n {x}")`,
-        output: 
-`Original tensor:
- tensor([ 0., 10., 20., 30., 40.])
-
-Change the reshaped tensor:
- tensor([[9., 2., 4., 6., 8.]])
-
-Original tensor changed:
- tensor([ 0., 10., 20., 30., 40.])`,
-      },
-      { id: 51, 
-        input: 
-`# change tensor shape with view()
-x_view_3 = x.view(5, 1)
-x_view_4 = x.view(1, 5)
-
-print(f"Change the view (inner dim):\\n {x_view_3}")
-print(f"Change the view (outer dim):\\n {x_view_4}\\n")
-print(f"Original tensor:\\n {x}")`,
-        output: 
-`Change the view (inner dim):
- tensor([[ 0.],
-        [10.],
-        [20.],
-        [30.],
-        [40.]])
-Change the view (outer dim):
- tensor([[ 0., 10., 20., 30., 40.]])
-
-Original tensor:
- tensor([ 0., 10., 20., 30., 40.])`,
-      },
-      { id: 52, 
-        input: 
-`# squeeze(): remove all single dimensions from a target tensor
-print(f"Previous tensor:\\n {x_view_4, x_view_4.shape}]\\n")
-
-# Remove extra dimensions from x_reshaped
-x_view_4_squeezed = x_view_4.squeeze()
-
-print(f"Squeezed tensor:\\n {x_view_4_squeezed, x_view_4_squeezed.shape}")`,
-        output: 
-`Previous tensor:
- (tensor([[ 0., 10., 20., 30., 40.]]), torch.Size([1, 5]))
-
-Squeezed tensor:
- (tensor([ 0., 10., 20., 30., 40.]), torch.Size([5]))`,
-      },
-      { id: 53, 
+      { id: 47, 
         input: 
 `# unsqueeze(): adds a single dimension to a target tensor at a specific dim
-print(f"Previous tensor:\\n {x_view_4_squeezed, x_view_4_squeezed.shape}\\n")
+print(f"Previous tensor:\\n {x, x.shape}\\n")
 
 # Add an extra dimension with unsqueeze()
-x_view_4_unsqueezed = x_view_4_squeezed.unsqueeze(dim=0)
+x_unsqueezed = x.unsqueeze(dim=0)
 
-print(f"Squeezed tensor:\\n {x_view_4_unsqueezed, x_view_4_unsqueezed.shape}")`,
+print(f"Squeezed tensor:\\n {x_unsqueezed, x_unsqueezed.shape}")`,
         output: 
 `Previous tensor:
  (tensor([ 0., 10., 20., 30., 40.]), torch.Size([5]))
@@ -566,63 +494,64 @@ print(f"Squeezed tensor:\\n {x_view_4_unsqueezed, x_view_4_unsqueezed.shape}")`,
 Squeezed tensor:
  (tensor([[ 0., 10., 20., 30., 40.]]), torch.Size([1, 5]))`,
       },
-      { id: 54, 
+      { id: 48, 
         input: 
-`# Create a tensor with a specific shape
-img = torch.rand(size=[128, 128, 3])
+`# squeeze(): remove all single dimensions from a target tensor
+print(f"Previous tensor:\\n {x_unsqueezed, x_unsqueezed.shape}]\\n")
 
-print(f"Original tensor shape: {img.shape}")
+# Remove extra dimensions from x_reshaped
+x_squeezed = x_unsqueezed.squeeze()
 
-# permute(): rearrange the axis order
-p = img.permute(2, 0, 1)
-print(f"Permuted tensor shape: {p.shape}")`,
+print(f"Squeezed tensor:\\n {x_squeezed, x_squeezed.shape}")`,
         output: 
-`Original tensor shape: torch.Size([128, 128, 3])
-Permuted tensor shape: torch.Size([3, 128, 128])`,
+`Previous tensor:
+ (tensor([[ 0., 10., 20., 30., 40.]]), torch.Size([1, 5]))
+
+Squeezed tensor:
+ (tensor([ 0., 10., 20., 30., 40.]), torch.Size([5]))`,
       },
     ]
   },
-
   { id: 10, 
     name: "tensor_manipulate_transpose",
     code: [
-      { id: 59, 
+      { id: 49, 
         input: 
 `import torch
 
 # Create 2 tensors and matrix multiplicate them
-A = torch.tensor([[1., 2., 3.], 
-                [4., 5., 6.]])
-B = torch.tensor([[2., 3., 4.],
-                [5., 6., 7.]])
+A = torch.tensor([[1., 2., 1.], 
+                  [0., 1., 0.]])
+B = torch.tensor([[1., 2., 3.],
+                  [4., 5., 6.]])
 
 torch.matmul(A, B) # error's here`,
         output: 
 `---------------------------------------------------------------------------
 RuntimeError                              Traceback (most recent call last)
-<ipython-input-63-d1c1c19eddeb> in <cell line: 9>()
-        7                   [5., 6., 7.]])
-        8 
+<ipython-input-15-2e352ffdc080> in <cell line: 9>()
+      7                   [4., 5., 6.]])
+      8 
 ----> 9 torch.matmul(A, B) # error's here
 
 RuntimeError: mat1 and mat2 shapes cannot be multiplied (2x3 and 2x3)`,
       },
-      { id: 60, 
+      { id: 50, 
         input: 
 `# Their inner shapes are not matched
-print(f"Shape of A: {A.shape}")
-print(f"Shape of B: {B.shape}\\n")
+print(f"A Shape: {A.shape}")
+print(f"B Shape: {B.shape}\\n")
 
 # Transpose B to match the inner dim
 print(f"Original B shape: {B.shape}")
 print(f"Transposed B shape: {B.T.shape}\\n")
 
 # A @ B.T
-output = torch.matmul(A, B.T)
+C = torch.matmul(A, B.T)
 
 print(f"Matrix Multiplicate :\\n {A.shape} * {B.T.shape} <- inner dim match")
 print(f"Output:")
-print(f"Output shape: {output.shape}")`,
+print(f"C shape: {C.shape}")`,
         output: 
 `Shape of A: torch.Size([2, 3])
 Shape of B: torch.Size([2, 3])
@@ -633,9 +562,9 @@ Transposed B shape: torch.Size([3, 2])
 Matrix Multiplicate :
 torch.Size([2, 3]) * torch.Size([3, 2]) <- inner dim match
 Output:
-Output shape: torch.Size([2, 2])`,
+C shape: torch.Size([2, 2])`,
       },
-      { id: 61, 
+      { id: 51, 
         input: 
 `# transpose(input, dim0, dim1)
 B_transposed = torch.transpose(B, 0, 1)
@@ -646,7 +575,7 @@ print(f"Transposed B shape: {B_transposed.shape}\\n")
 result = A @ B_transposed
 print(f"Matrix Multiplicate :\\n {A.shape} * {B_transposed.shape} <- inner dim match")
 print(f"Output:")
-print(f"Output shape: {result.shape}")`,
+print(f"result shape: {result.shape}")`,
         output: 
 `Original B shape: torch.Size([2, 3])
 Transposed B shape: torch.Size([3, 2])
@@ -654,154 +583,533 @@ Transposed B shape: torch.Size([3, 2])
 Matrix Multiplicate :
 torch.Size([2, 3]) * torch.Size([3, 2]) <- inner dim match
 Output:
-Output shape: torch.Size([2, 2])`,
+result shape: torch.Size([2, 2])`,
       },
     ]
   },
   { id: 11, 
-    name: "tensor_manipulate_numpy",
+    name: "tensor_manipulate_permuate",
     code: [
-      { id: 82, 
+      { id: 52, 
         input: 
-`# NumPy array to tensor
-import torch
+`# Create a tensor with a specific shape
+p = torch.rand(size=[128, 128, 3])
+
+print(f"Original tensor shape: {p.shape}")
+
+# permute(): rearrange the axis order
+p_permuted = p.permute(2, 0, 1)
+print(f"Permuted tensor shape: {p_permuted.shape}")`,
+        output: 
+`Original tensor shape: torch.Size([128, 128, 3])
+Permuted tensor shape: torch.Size([3, 128, 128])`,
+      },
+      { id: 53,
+        input:
+`# Create a 3 dimensional tensor with shape [3, 4, 5]
+P = torch.randint(low=0, high=10, size=[3, 4, 5], dtype=torch.int8)
+P, P.shape`,
+        output:
+`(tensor([[[3, 3, 2, 7, 9],
+          [8, 1, 0, 3, 8],
+          [3, 0, 2, 5, 5],
+          [4, 5, 3, 8, 5]],
+ 
+         [[9, 3, 3, 8, 8],
+          [0, 3, 3, 2, 1],
+          [2, 4, 6, 0, 5],
+          [5, 6, 6, 0, 5]],
+ 
+         [[7, 8, 4, 3, 7],
+          [6, 1, 5, 1, 9],
+          [7, 2, 8, 3, 5],
+          [1, 0, 9, 2, 2]]], dtype=torch.int8),
+ torch.Size([3, 4, 5]))`,
+      },
+      { id: 54,
+        input:
+`# Let's permute this tensor
+P_permuted_1 = P.permute(0, 2, 1) # rearrange dim order with index
+P_permuted_1, P_permuted_2.shape`,
+        output:
+`(tensor([[[3, 8, 3, 4],
+          [3, 1, 0, 5],
+          [2, 0, 2, 3],
+          [7, 3, 5, 8],
+          [9, 8, 5, 5]],
+ 
+         [[9, 0, 2, 5],
+          [3, 3, 4, 6],
+          [3, 3, 6, 6],
+          [8, 2, 0, 0],
+          [8, 1, 5, 5]],
+ 
+         [[7, 6, 7, 1],
+          [8, 1, 2, 0],
+          [4, 5, 8, 9],
+          [3, 1, 3, 2],
+          [7, 9, 5, 2]]], dtype=torch.int8),
+ torch.Size([5, 3, 4]))`,
+      },
+      { id: 55,
+        input:
+`P_permuted_2 = P.permute(2, 0, 1)
+P_permuted_2, P_permuted_2.shape`,
+        output:
+`(tensor([[[3, 8, 3, 4],
+          [9, 0, 2, 5],
+          [7, 6, 7, 1]],
+ 
+         [[3, 1, 0, 5],
+          [3, 3, 4, 6],
+          [8, 1, 2, 0]],
+ 
+         [[2, 0, 2, 3],
+          [3, 3, 6, 6],
+          [4, 5, 8, 9]],
+ 
+         [[7, 3, 5, 8],
+          [8, 2, 0, 0],
+          [3, 1, 3, 2]],
+ 
+         [[9, 8, 5, 5],
+          [8, 1, 5, 5],
+          [7, 9, 5, 2]]], dtype=torch.int8),
+ torch.Size([5, 3, 4]))`,
+      },
+      { id: 56,
+        input:
+`P_permuted_3 = P.permute(2, 1, 0)
+P_permuted_3, P_permuted_3.shape`,
+        output:
+`(tensor([[[3, 9, 7],
+          [8, 0, 6],
+          [3, 2, 7],
+          [4, 5, 1]],
+ 
+         [[3, 3, 8],
+          [1, 3, 1],
+          [0, 4, 2],
+          [5, 6, 0]],
+ 
+         [[2, 3, 4],
+          [0, 3, 5],
+          [2, 6, 8],
+          [3, 6, 9]],
+ 
+         [[7, 8, 3],
+          [3, 2, 1],
+          [5, 0, 3],
+          [8, 0, 2]],
+ 
+         [[9, 8, 7],
+          [8, 1, 9],
+          [5, 5, 5],
+          [5, 5, 2]]], dtype=torch.int8),
+ torch.Size([5, 4, 3]))`,
+      }
+    ]
+  },
+  { id: 12, 
+    name: "tensor_manipulate_reshape",
+    code: [
+      { id: 57, 
+        input: 
+`import torch
+
+x = torch.tensor([0, 10, 20, 30, 40])
+
+# add an extra dim with reshape()
+x_1 = x.reshape(5, 1) # add an inner dim
+x_2 = x.reshape(1, 5) # add an outer dim
+
+print(x_1)
+print(x_2)`,
+        output: 
+`tensor([[ 0],
+        [10],
+        [20],
+        [30],
+        [40]])
+tensor([[ 0, 10, 20, 30, 40]])`,
+      },
+      { id: 58, 
+        input: 
+`print(f"Original tensor:\\n {x}\\n")
+
+x_2[:, 0] = 99
+
+# change x_2, x changed, cus sharing the same data..
+# if necessary it might create a new copy of the data
+print(f"Change the reshaped tensor:\\n {x_2}\\n")
+print(f"Original tensor changed:\\n {x}")`,
+        output: 
+`Original tensor:
+ tensor([99, 10, 20, 30, 40])
+
+Change the reshaped tensor:
+ tensor([[99, 10, 20, 30, 40]])
+
+Original tensor changed:
+ tensor([99, 10, 20, 30, 40])`,
+      },
+      { id: 59, 
+        input: 
+`# change tensor shape with view()
+# view(): a different way of looking at the same data
+x_3 = x.view(5, 1)
+x_4 = x.view(1, 5)
+
+x_4[:, 0] = 88
+
+print(f"Change the view (inner dim):\\n {x_3}")
+print(f"Change the view (outer dim):\\n {x_4}\\n")
+print(f"Original tensor:\\n {x}")`,
+        output: 
+`Change the view (inner dim):
+ tensor([[88],
+        [10],
+        [20],
+        [30],
+        [40]])
+Change the view (outer dim):
+ tensor([[88, 10, 20, 30, 40]])
+
+Original tensor:
+ tensor([88, 10, 20, 30, 40])`,
+      },
+      { id: 60, 
+        input: 
+`# Create a 3d tensor
+P = torch.randint(low=0, high=10, size=[3, 4, 5], dtype=torch.int8)
+P, P.shape`,
+        output:
+`(tensor([[[6, 3, 0, 3, 6],
+          [0, 3, 7, 3, 8],
+          [9, 8, 2, 5, 5],
+          [4, 8, 1, 7, 9]],
+ 
+         [[2, 6, 8, 2, 8],
+          [2, 1, 0, 0, 6],
+          [5, 0, 6, 9, 2],
+          [4, 2, 0, 2, 3]],
+ 
+         [[3, 1, 6, 4, 6],
+          [9, 4, 8, 9, 2],
+          [5, 9, 9, 6, 4],
+          [0, 8, 2, 4, 0]]], dtype=torch.int8),
+ torch.Size([3, 4, 5]))`,
+      },
+      { id: 61, 
+        input: 
+`# with reshape(), we can rearrange this tensor
+P.reshape(5, 3, 4)
+# P.view(5, 3, 4) # as reshape()`,
+        output:
+`tensor([[[6, 3, 0, 3],
+         [6, 0, 3, 7],
+         [3, 8, 9, 8]],
+
+        [[2, 5, 5, 4],
+         [8, 1, 7, 9],
+         [2, 6, 8, 2]],
+
+        [[8, 2, 1, 0],
+         [0, 6, 5, 0],
+         [6, 9, 2, 4]],
+
+        [[2, 0, 2, 3],
+         [3, 1, 6, 4],
+         [6, 9, 4, 8]],
+
+        [[9, 2, 5, 9],
+         [9, 6, 4, 0],
+         [8, 2, 4, 0]]], dtype=torch.int8)`,
+      },
+      { id: 62, 
+        input: 
+`# 3d -> 2d, 
+# in deep learing, we ofthen use to flatten a tensor
+P.reshape(5, 12)
+# P.view(5, 12)`,
+        output:
+`tensor([[6, 3, 0, 3, 6, 0, 3, 7, 3, 8, 9, 8],
+        [2, 5, 5, 4, 8, 1, 7, 9, 2, 6, 8, 2],
+        [8, 2, 1, 0, 0, 6, 5, 0, 6, 9, 2, 4],
+        [2, 0, 2, 3, 3, 1, 6, 4, 6, 9, 4, 8],
+        [9, 2, 5, 9, 9, 6, 4, 0, 8, 2, 4, 0]], dtype=torch.int8)`,
+      },
+      { id: 63, 
+        input: 
+`# 3d -> 4d, also often used in deep learing model
+P.reshape(2, 2, 3, 5)
+# P.view(2, 2, 3, 5)`,
+        output:
+`tensor([[[[6, 3, 0, 3, 6],
+          [0, 3, 7, 3, 8],
+          [9, 8, 2, 5, 5]],
+
+         [[4, 8, 1, 7, 9],
+          [2, 6, 8, 2, 8],
+          [2, 1, 0, 0, 6]]],
+
+
+        [[[5, 0, 6, 9, 2],
+          [4, 2, 0, 2, 3],
+          [3, 1, 6, 4, 6]],
+
+         [[9, 4, 8, 9, 2],
+          [5, 9, 9, 6, 4],
+          [0, 8, 2, 4, 0]]]], dtype=torch.int8)`,
+      },
+    ]
+  },
+  { id: 13, 
+    name: "5.2_tensor_manipulate_dtype",
+    code: [
+      { id: 64, 
+        input: 
+`import torch
+
+# Create a tensor and check its data type
+A = torch.arange(1.0, 8.0)
+B = torch.ones(5)
+print(f"{A,A.dtype}")
+print(f"{B,B.dtype}")`,
+        output: 
+`(tensor([1., 2., 3., 4., 5., 6., 7.]), torch.float32)
+(tensor([1., 1., 1., 1., 1.]), torch.float32)`,
+      },
+      { id: 65, 
+        input: 
+`# Changet data type of B
+C =B.type(torch.float16)
+
+print(B, B.dtype)
+print(C)`,
+        output: 
+`tensor([1., 1., 1., 1., 1.]) torch.float32
+tensor([1., 1., 1., 1., 1.], dtype=torch.float16)`,
+      },
+      { id: 66, 
+        input: 
+`import torch
 import numpy as np
 
 # Numpy Array -> Tensor
 array = np.arange(1.0, 8.0)
 tensor = torch.from_numpy(array)
 
-array, tensor`, 
+print(array, array.dtype) # float64
+print(tensor) # tensor: float32 -> float64`,
         output: 
-`(array([1., 2., 3., 4., 5., 6., 7.]),
-tensor([1., 2., 3., 4., 5., 6., 7.], dtype=torch.float64))`,
+`[1. 2. 3. 4. 5. 6. 7.] float64
+tensor([1., 2., 3., 4., 5., 6., 7.], dtype=torch.float64)`,
       },
-      { id: 83, 
+      { id: 67, 
         input: 
 `# Change the array, keep the tensor
 array = array + 1
-array, tensor`, 
+
+print(array, array.dtype)
+print(tensor, tensor.dtype)`, 
         output: 
-`(array([2., 3., 4., 5., 6., 7., 8.]),
-tensor([1., 2., 3., 4., 5., 6., 7.], dtype=torch.float64))`,
+`[ 7.  8.  9. 10. 11. 12. 13.] float64
+tensor([1., 1., 1., 1., 1., 1., 1.]) torch.float32`,
       },
-      { id: 84, 
-        input: 
-`array.dtype, tensor.dtype`, 
-        output: 
-`(dtype('float64'), torch.float64)`,
-      },
-      { id: 85, 
+      { id: 68, 
         input: 
 `# Tensor -> NumPy array
-tensor = torch.ones(7) 
+tensor = torch.ones(7)
 numpy_tensor = tensor.numpy()
-tensor, numpy_tensor`, 
+
+print(tensor, tensor.dtype) # float32
+print(numpy_tensor, numpy_tensor.dtype) # float64 -> float32`, 
         output: 
-`(tensor([1., 1., 1., 1., 1., 1., 1.]),
-array([1., 1., 1., 1., 1., 1., 1.], dtype=float32))`,
+`tensor([1., 1., 1., 1., 1., 1., 1.]) torch.float32
+[1. 1. 1. 1. 1. 1. 1.] float32`,
       },
-      { id: 86, 
+      { id: 69, 
         input: 
 `# Change the tensor, what happens to numpy_tensor?
 tensor = tensor + 1
-tensor, numpy_tensor`, 
+tensor, numpy_tensor
+
+print(tensor, tensor.dtype)
+print(numpy_tensor, numpy_tensor.dtype)`, 
         output: 
-`(tensor([2., 2., 2., 2., 2., 2., 2.]),
-array([1., 1., 1., 1., 1., 1., 1.], dtype=float32))`,
+`tensor([2., 2., 2., 2., 2., 2., 2.]) torch.float32
+[1. 1. 1. 1. 1. 1. 1.] float32`,
       },
     ]
   }, 
-  { id: 12, 
-    name: "tensor_manipulate_catstack",
+  { id: 14, 
+    name: "5.3_tensor_manipulate_catstack",
     code: [
-      { id: 55, 
+      { id: 70, 
         input: 
 `import torch
 
 # Create 2 tensors
-A = torch.tensor([[1., 2., 3.], [4., 5., 6.]])
-B = torch.tensor([[2., 3., 4.], [5., 6., 7.]])
+A = torch.tensor([1., 2., 3.])
+B = torch.tensor([2., 3., 4.])
 
-# Concatenate A and B on the 1st dim
-A_cat_B = torch.cat([A, B], dim=0)
-print(f"Concatenated tensor:\\n {A_cat_B}\\n")
-
-# Concatenate A and B on the 2nd dim
-A_cat_B_2 = torch.cat([A, B], dim=1)
-print(f"Concatenated tensor:\\n {A_cat_B_2}")`,
+print(f"{A, A.shape}")
+print(f"{B, B.shape}\\n")`,
+        output: 
+`(tensor([1., 2., 3.]), torch.Size([3]))
+(tensor([2., 3., 4.]), torch.Size([3]))`,
+      },
+      { id: 71, 
+        input: 
+`# Concatenate A and B on the 1st dim
+A_cat_B_1 = torch.cat([A, B], dim=0)
+print(f"Concatenated tensor:\\n {A_cat_B_1, A_cat_B_1.shape}\\n")`,
         output: 
 `Concatenated tensor:
- tensor([[1., 2., 3.],
-        [4., 5., 6.],
-        [2., 3., 4.],
-        [5., 6., 7.]])
-
-Concatenated tensor:
- tensor([[1., 2., 3., 2., 3., 4.],
-        [4., 5., 6., 5., 6., 7.]])`,
+ (tensor([1., 2., 3., 2., 3., 4.]), torch.Size([6]))`,
       },
-      { id: 56, 
+      { id: 72, 
         input: 
-`import torch
+`# Stack A and B on the 1st dim
+A_stack_B_1 = torch.stack([A, B], dim=0)
+print(f"Stacked tensor:\\n {A_stack_B_1, A_stack_B_1.shape}\\n")
 
-# create a tensor 
-A = torch.tensor([1., 2., 3., 4., 5.])
-A, A.shape`,
+# Stack A and B on the 2nd dim
+A_stack_B_2 = torch.stack([A, B], dim=1)
+print(f"Stacked tensor:\\n {A_stack_B_2, A_stack_B_2.shape}")`,
         output: 
-`(tensor([1., 2., 3., 4., 5.]), torch.Size([5]))`,
-      },
-      { id: 57, 
-        input: 
-`# Stack tensors on top of each other
-A_stacked = torch.stack([A, A+1, A+2], dim=0)
+`Stacked tensor:
+ (tensor([[1., 2., 3.],
+        [2., 3., 4.]]), torch.Size([2, 3]))
 
-# We can use vstack() to get the same result
-A_vstacked = torch.vstack([A, A+1, A+2])
-
-print(f"{A_stacked, A_stacked.shape}\\n")
-print(A_vstacked, A_vstacked.shape)`,
-        output: 
-`(tensor([[1., 2., 3., 4., 5.],
-        [2., 3., 4., 5., 6.],
-        [3., 4., 5., 6., 7.]]), torch.Size([3, 5]))
-
-tensor([[1., 2., 3., 4., 5.],
-        [2., 3., 4., 5., 6.],
-        [3., 4., 5., 6., 7.]]) torch.Size([3, 5])`,
-      },
-      { id: 58, 
-        input: 
-`# Stack tensors on the second dim
-A_stacked = torch.stack([A, A+1], dim=1)
-
-# vstack(): horizontally stack along the last dim
-A_hstacked = torch.hstack([A, A+1])
-
-print(f"{A_stacked, A_stacked.shape}\\n")
-print(A_hstacked, A_hstacked.shape)`,
-        output: 
-`(tensor([[1., 2.],
+Stacked tensor:
+ (tensor([[1., 2.],
         [2., 3.],
-        [3., 4.],
-        [4., 5.],
-        [5., 6.]]), torch.Size([5, 2]))
-
-tensor([1., 2., 3., 4., 5., 2., 3., 4., 5., 6.]) torch.Size([10])`,
+        [3., 4.]]), torch.Size([3, 2]))`,
       },
     ]
   },
-  { id: 13, 
-    name: "tensor_index_rowcolumn",
+  { id: 15,
+    name: ":: Stack tensors",
+    code: [
+      { id: 73,
+        input: 
+`import torch
+
+# Create two 2d tensors
+A = torch.randint(low=0, high=10, size=[4, 5], dtype=torch.int8)
+B = torch.randint(low=0, high=10, size=[4, 5], dtype=torch.int8)
+
+print(f"{A, A.shape}\\n")
+print(B, B.shape)`,
+        output:
+`(tensor([[7, 6, 3, 5, 2],
+        [4, 6, 6, 2, 9],
+        [1, 0, 8, 9, 6],
+        [0, 6, 6, 3, 7]], dtype=torch.int8), torch.Size([4, 5]))
+
+tensor([[5, 1, 5, 6, 1],
+        [9, 9, 7, 2, 3],
+        [3, 7, 8, 3, 0],
+        [7, 8, 3, 3, 9]], dtype=torch.int8) torch.Size([4, 5])`,
+      },
+      { id: 74,
+        input: 
+`# stack 2 tensors on the 1st dim (depth dim added)
+C = torch.stack((A, B), dim=0)
+C, C.shape`,
+        output:
+`(tensor([[[7, 6, 3, 5, 2],
+          [4, 6, 6, 2, 9],
+          [1, 0, 8, 9, 6],
+          [0, 6, 6, 3, 7]],
+ 
+         [[5, 1, 5, 6, 1],
+          [9, 9, 7, 2, 3],
+          [3, 7, 8, 3, 0],
+          [7, 8, 3, 3, 9]]], dtype=torch.int8),
+ torch.Size([2, 4, 5]))`,
+      },
+    ]
+  },
+  { id: 16,
+    name: ":: Stack tensors",
+    code: [
+      { id: 75,
+        input: 
+`# Concatenate A and B o the 1st dim (ndim no changing)
+C = torch.cat((A, B), dim=0)
+C, C.shape`,
+        output:
+`(tensor([[7, 6, 3, 5, 2],
+         [4, 6, 6, 2, 9],
+         [1, 0, 8, 9, 6],
+         [0, 6, 6, 3, 7],
+         [5, 1, 5, 6, 1],
+         [9, 9, 7, 2, 3],
+         [3, 7, 8, 3, 0],
+         [7, 8, 3, 3, 9]], dtype=torch.int8),
+ torch.Size([8, 5]))`,
+      },
+      { id: 76,
+        input: 
+`# with vstack(), we can get the same result
+D = torch.vstack((A, B))
+D, D.shape`,
+        output:
+`(tensor([[7, 6, 3, 5, 2],
+         [4, 6, 6, 2, 9],
+         [1, 0, 8, 9, 6],
+         [0, 6, 6, 3, 7],
+         [5, 1, 5, 6, 1],
+         [9, 9, 7, 2, 3],
+         [3, 7, 8, 3, 0],
+         [7, 8, 3, 3, 9]], dtype=torch.int8),
+ torch.Size([8, 5]))`,
+      },
+    ]
+  },
+  { id: 17,
+    name: ":: Stack tensors",
+    code: [
+      { id: 77,
+        input: 
+`# Concatenate A and B o the 2nd dim (ndim no changing)
+C = torch.cat((A, B), dim=1)
+C, C.shape`,
+        output:
+`(tensor([[7, 6, 3, 5, 2, 5, 1, 5, 6, 1],
+         [4, 6, 6, 2, 9, 9, 9, 7, 2, 3],
+         [1, 0, 8, 9, 6, 3, 7, 8, 3, 0],
+         [0, 6, 6, 3, 7, 7, 8, 3, 3, 9]], dtype=torch.int8),
+ torch.Size([4, 10]))`,
+      },
+      { id: 78,
+        input: 
+`# with stack(), we can get the same result
+D = torch.hstack((A, B))
+D, D.shape`,
+        output:
+`(tensor([[7, 6, 3, 5, 2, 5, 1, 5, 6, 1],
+         [4, 6, 6, 2, 9, 9, 9, 7, 2, 3],
+         [1, 0, 8, 9, 6, 3, 7, 8, 3, 0],
+         [0, 6, 6, 3, 7, 7, 8, 3, 3, 9]], dtype=torch.int8),
+ torch.Size([4, 10]))`,
+      },
+    ]
+  },
+  { id: 18, 
+    name: "6.1_tensor_index_basicIndexing",
     code: [
       {
-        id: 71, 
+        id: 79, 
         input: 
 `import torch
 
 # Create a tensor
-A_index = torch.arange(0, 9).reshape(1, 3, 3)
-A_index, A_index.shape`,
+A = torch.arange(0, 9).reshape(1, 3, 3)
+A, A.shape`,
         output: 
 `(tensor([[[0, 1, 2],
           [3, 4, 5],
@@ -809,12 +1117,12 @@ A_index, A_index.shape`,
  torch.Size([1, 3, 3]))`,
       },
       {
-        id: 72, 
+        id: 80, 
         input: 
 `# Let's index this tensor by bracket
-print(f"The outer square bracket: \\n{A_index[0]}")
-print(f"The middle squre bracket: {A_index[0][0]}")
-print(f"The inner square bracket: {A_index[0][0][0]}")`,
+print(f"The outer square bracket: \\n{A[0]}")
+print(f"The middle squre bracket: {A[0][0]}")
+print(f"The inner square bracket: {A[0][0][0]}")`,
         output: 
 `The outer square bracket: 
 tensor([[0, 1, 2],
@@ -824,12 +1132,12 @@ The middle squre bracket: tensor([0, 1, 2])
 The inner square bracket: 0`,
       },
       {
-        id: 73, 
+        id: 81, 
         input: 
 `# Another way to index tensor with ','
-print(f"The outer square bracket: \\n{A_index[0]}")
-print(f"The middle squre bracket: {A_index[0, 0]}")
-print(f"The inner square bracket: {A_index[0, 0, 0]}")`,
+print(f"The outer square bracket: \\n{A[0]}")
+print(f"The middle squre bracket: {A[0, 0]}")
+print(f"The inner square bracket: {A[0, 0, 0]}")`,
         output: 
 `The outer square bracket: 
 tensor([[0, 1, 2],
@@ -839,92 +1147,92 @@ The middle squre bracket: tensor([0, 1, 2])
 The inner square bracket: 0`,
       },
       {
-        id: 74, 
+        id: 82, 
         input: 
 `# Index a particular number('8')
-A_index[0][2][2]`,
+A[0][2][2]`,
         output: 
 `tensor(8)`,
       },
       {
-        id: 75, 
+        id: 83, 
         input: 
-`A_index[0, 2, 2]`,
+`A[0, 2, 2]`,
         output: 
 `tensor(8)`,
       },
       {
-        id: 76, 
+        id: 84, 
         input: 
-`A_index[:, 2, 2] # ':' - means all values in current dim`,
+`A[:, 2, 2] # ':' - means all values in current dim`,
         output: 
 `tensor([8])`,
       },
       {
-        id: 77, 
+        id: 85, 
         input: 
 `# Row/Column Indexing
-A_index[:, 0]`,
+A[:, 0]`,
         output: 
 `tensor([[0, 1, 2]])`,
       },
       {
-        id: 78, 
+        id: 86, 
         input: 
-`A_index[:, :, 1]`,
+`A[:, :, 1]`,
         output: 
 `tensor([[1, 4, 7]])`,
       },
     ]
   },
-  { id: 14, 
-    name: "tensor_index_sliceboolean",
+  { id: 16, 
+    name: "6.2_tensor_index_sliceboolean",
     code: [
       {
-        id: 79,
+        id: 87,
         input: 
 `# Slicing Indexing
 # (extract a range of elements form a tensor)
-A_index[:, :2, :2] # ':2" - means get the 1st 2 elements in current dim`,
+A[:, :2, :2] # ':2" - means get the 1st 2 elements in current dim`,
         output: 
 `tensor([[[0, 1],
          [3, 4]]])`,
       },
       {
-        id: 80,
+        id: 88,
         input: 
 `# (specific a step value in a tensor)
-A_index[:, :2, ::2] # '::2' - means take every 2nd element`,
+A[:, :2, ::2] # '::2' - means take every 2nd element`,
         output: 
 `tensor([[[0, 2],
          [3, 5]]])`,
       },
       {
-        id: 81,
+        id: 89,
         input: 
 `# Boolean Indexing
 # (with a condition to index tensor)
-A_index[A_index > 3]`,
+A[A > 3]`,
         output: 
 `tensor([4, 5, 6, 7, 8])`,
       },
     ]
   },
-  { id: 15, 
-    name: "tensor_reproducibility_randomness",
+  { id: 17, 
+    name: "7.1_tensor_reproducibility_randomness",
     code: [
-      { id: 87,
+      { id: 90,
         input: 
 `import torch
 
 # Create 2 random tensors
-random_tensor_A = torch.rand(3, 2)
-random_tensor_B = torch.rand(3, 2)
+A = torch.rand(3, 2)
+B = torch.rand(3, 2)
 
-print(f"Tensor A: \\n{random_tensor_A}")
-print(f"Tensor B: \\n{random_tensor_B}\\n")
+print(f"Tensor A: \\n{A}")
+print(f"Tensor B: \\n{B}\\n")
 print(f"Does Tensor A equal Tensor B?")
-random_tensor_A == random_tensor_B`,
+A == B`,
         output: 
 `Tensor A: 
 tensor([[0.7278, 0.4802],
@@ -942,10 +1250,10 @@ tensor([[False, False],
        },
     ]
   },
-  { id: 16,
-    name: "tensor_reproducibility",
+  { id: 18,
+    name: "7.3_tensor_randomseed",
     code: [
-      { id: 88, 
+      { id: 91, 
         input:
 `# Let's make some random but reproducible tensors
 import torch
@@ -954,15 +1262,15 @@ import torch
 RANDOM_SEED = 42 # you could choose any number here
 
 torch.manual_seed(RANDOM_SEED)
-random_tensor_A = torch.rand(3, 4)
+A = torch.rand(3, 4)
 
 torch.manual_seed(RANDOM_SEED)
-random_tensor_B = torch.rand(3, 4)
+B = torch.rand(3, 4)
 
 print(f"Tensor A: \\n{random_tensor_A}\\n")
-print(f"Tensor B: \\n{random_tensor_B}\\n")
+print(f"Tensor B: \\n{B}\\n")
 print(f"Does Tensor A equal Tensor B?")
-random_tensor_A == random_tensor_B`,
+random_tensor_A == B`,
         output:
 `Tensor A: 
 tensor([[0.8823, 0.9150, 0.3829, 0.9593],
@@ -981,10 +1289,10 @@ tensor([[True, True, True, True],
       },
     ]
   },
-  { id: 17,
+  { id: 19,
     name: "tensor_gpus",
     code: [
-      { id: 89,
+      { id: 92,
         input: 
 `!nvidia-smi`,
         output:
@@ -1009,7 +1317,7 @@ tensor([[True, True, True, True],
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+`,
        },
-       { id: 90,
+       { id: 93,
         input: 
 `# check if GPU is available
 import torch
@@ -1017,7 +1325,7 @@ torch.cuda.is_available()`,
         output:
 `TRUE`,
        },
-       { id: 91,
+       { id: 94,
         input: 
 `# Set Device-agnostic code
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -1025,14 +1333,14 @@ device`,
         output:
 `'cuda'`,
        },
-       { id: 92,
+       { id: 95,
         input: 
 `# Count number of devices
 torch.cuda.device_count()`,
         output:
 `1`,
        },
-       { id: 93,
+       { id: 96,
         input: 
 `# Create a tensor (default on the CPU)
 tensor = torch.tensor([1, 2, 3])
@@ -1047,9 +1355,10 @@ tensor_on_gpu`,
 `tensor([1, 2, 3]) cpu
 tensor([1, 2, 3], device='cuda:0')`,
        },
-       { id: 94,
+       { id: 97,
         input: 
-`# If tensor is on GPU, can't transform it to NumPy
+`# If tensor is on GPU, we can't transform it to NumPy
+# cus NumPy array don't support GPU
 tensor_on_gpu.numpy()`,
         output:
 `-------------------------------------------------------------------------------
@@ -1060,17 +1369,17 @@ TypeError                                 Traceback (most recent call last)
 
 TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.`,
        },
-       { id: 95,
+       { id: 98,
         input: 
-`# Instead, copy the tensor back to cpu
-tensor_back_on_cpu = tensor_on_gpu.cpu().numpy()
-tensor_back_on_cpu`,
+`# Set the tensor back to cpu, then copy it to NumPy
+tensor_on_cpu = tensor_on_gpu.cpu().numpy()
+tensor_on_cpu`,
         output:
 `array([1, 2, 3])`,
        },
-       { id: 96,
+       { id: 99,
         input: 
-`# it returns a copy of the GPU tensor in CPU memory, so the original tensor is still on GPU
+`# the original tensor is still on GPU
 tensor_on_gpu`,
         output:
 `tensor([1, 2, 3], device='cuda:0')`,

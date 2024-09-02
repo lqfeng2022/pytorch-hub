@@ -18,8 +18,8 @@ const ChapterOne = () => {
 
   const descrip = sectionList[2].description!
   const lists = sectionList[2].items!
-  const litems = lists.slice(0, 5)
-  const ritems = lists.slice(-5)
+  const litems = lists.slice(0, 4)
+  const ritems = lists.slice(-4)
 
   const footer = {
     l: "0. Artificial Intelligence",

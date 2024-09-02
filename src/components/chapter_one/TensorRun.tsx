@@ -9,7 +9,7 @@ const TensorRun = () => {
   const [ 
     ongpu, rungpu, gpu, gpuf, cuda, cudaf, getgpu
   ] = chapterOne[7].sections
-  const tensorrunCode = pythonCode[17].code
+  const tensorrunCode = pythonCode[22].code
   
   return (
     <>

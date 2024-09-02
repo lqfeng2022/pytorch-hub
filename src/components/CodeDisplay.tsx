@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Stack, Text } from '@chakra-ui/react';
+import { Box, Flex, Stack, Text } from '@chakra-ui/react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Code from '../entities/code';
@@ -6,10 +6,14 @@ import Code from '../entities/code';
 function CodeDisplay({ codes }: { codes: Code[] }) {
   return (
     <>
-      <Flex align='center' justifyContent='center' h='50px'>
-        <Divider variant='middle'/>
-      </Flex>
-      <Box bg='gray.50' minWidth='0'>
+      <Box h={5}/>
+      <Box 
+        bg='gray.50' 
+        minWidth='0' 
+        py={2} 
+        borderTop='1px solid red'
+        borderBottom='1px solid red'
+      >
         {codes.map((code: Code) => <Stack key={code.id} p={3}>
           <Flex>
             <Text 
@@ -55,6 +59,8 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
                   fontSize: '13px',
                   backgroundColor: code.output.includes('Error')
                       ? 'pink'
+                      : code.output.includes('Warning')
+                      ? '#ADD8E6'
                       : '',
                 }}
               >
@@ -64,9 +70,7 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
           </Flex>
         </Stack>)}
       </Box>
-      <Flex align='center' justifyContent='center' h='50px'>
-        <Divider variant='middle'/>
-      </Flex>
+      <Box h={5}/>
     </>
   );
 }
