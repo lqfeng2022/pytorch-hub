@@ -86,7 +86,11 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: "In this chapter, we’re gonna talk about how to build a machine learning and deep learning model, the basic PyTorch workflow. We separate it into 5 steps, they are, preparing data, building a model, training and evaluating a model, improving the model, saving and loading the model."
+        value: "In this chapter, we will explore the essential steps involved in a typical PyTorch workflow for deep learning, using a straight line model as our guide. Starting with data preparation, we’ll walk through the process of building, training, and evaluating this simple model, making it easier to grasp the key concepts."
+      },
+      { id: 2, 
+        title: "",
+        value: "This approach will provide a clear and practical understanding of each stage in the workflow, from data handling to model refinement, all within the context of a linear model that is both accessible and illustrative. By the end of this chapter, you’ll be equipped to apply these principles to more complex models with confidence."
       },
     ]
   },

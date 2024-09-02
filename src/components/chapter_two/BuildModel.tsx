@@ -4,6 +4,7 @@ import RightGrid from '../RightGrid'
 import LeftGrid from '../LeftGrid'
 import codeLineModel from '../../data/codeLineModel'
 import CodeDisplay from '../CodeDisplay'
+import BaseGrid from '../BaseGrid'
 
 const BuildModel = () => {
   const [ defin, model, architect, visual ] = chapterTwo[2].sections
@@ -12,7 +13,7 @@ const BuildModel = () => {
   return (
     <>
       <Definition title={defin.name} definition={defin}/>
-      <RightGrid section={model}/>
+      <BaseGrid section={model}/>
       <CodeDisplay codes={buildcode}/>
       <LeftGrid section={architect}/>
       <RightGrid section={visual}/>

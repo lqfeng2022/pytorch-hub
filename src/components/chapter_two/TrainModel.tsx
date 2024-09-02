@@ -1,9 +1,8 @@
 import Definition from '../Definition'
-import LeftGrid from '../LeftGrid'
-import RightGrid from '../RightGrid'
 import chapterTwo from '../../data/chapterTwo'
 import codeLineModel from '../../data/codeLineModel'
 import CodeDisplay from '../CodeDisplay'
+import BaseGrid from '../BaseGrid'
 
 const TrainModel = () => {
   const [ 
@@ -16,14 +15,14 @@ const TrainModel = () => {
   return (
     <div>
       <Definition title={define.name} definition={define}/>
-      <RightGrid section={loop}/>
+      <BaseGrid section={loop}/>
       <CodeDisplay codes={loopCode}/>
-      <LeftGrid section={visual_before}/>
-      <RightGrid section={visual_train}/>
+      <BaseGrid section={visual_before}/>
+      <BaseGrid section={visual_train}/>
       <CodeDisplay codes={visualCode}/>
-      <LeftGrid section={visual_test}/>
+      <BaseGrid section={visual_test}/>
       <CodeDisplay codes={testCode}/>
-      <RightGrid section={loss_curves}/>
+      <BaseGrid section={loss_curves}/>
       <CodeDisplay codes={losscurvesCode}/>
     </div>
   )

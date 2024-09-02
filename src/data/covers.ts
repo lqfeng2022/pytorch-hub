@@ -20,7 +20,7 @@ export default [
     quote: "The straight line belongs to men, the curved one to God.", 
     author: "Antoni Gaudi",
     image: "src/assets/straight_lines.jpg",
-    title: "How To Draw Freakishly Straight Lines by Hand - 'Tatyanadeniz.com'", 
+    title: "How To Draw Freakishly Straight Lines by Hand - 'tatyanadeniz.com/straight-lines'", 
     descript: "This drawing is all about straight lines creating a cool, spiraling pattern. It’s like a bunch of triangles and angles that pull you in towards the center. Even though it’s just straight lines, they come together in a way that feels almost like it’s moving or shifting as you look at it. It’s a great example of how straight lines can be used to create something that feels dynamic and alive, despite their rigid and orderly nature."
   },
 ]
