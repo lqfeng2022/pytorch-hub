@@ -29,6 +29,6 @@ export default [
     author: "Andrej Karpathy",
     image: "src/assets/gradient_descent.jpeg",
     title: "GRADIENT DESCENT SIMULATION - TWO PARAMETERS",
-    description: "Let’s visualize the 2 parameters Gradient Descent. This 3D surface plot visually represents the process of Gradient Descent in a multi-parameter scenario, where two parameters θ1 and θ2 are being optimized to minimize a loss function, denoted as  Loss(θ1, θ2)."
+    description: "This graph is a powerful visualization of how Gradient Descent operates when two parameters are involved. It shows the path the algorithm takes across the parameter space (θ₁ and θ₂) to minimize the loss function - Loss(θ₁,θ₂). The movement along the surface illustrates how the parameters are iteratively adjusted to reduce the loss, eventually converging to a point where the model is optimally trained."
   }
 ]

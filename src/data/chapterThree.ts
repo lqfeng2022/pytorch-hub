@@ -43,7 +43,7 @@ export default [
     sections: [
       { id: 0,
         name: "2. Normal Distribution", 
-        value: "A Normal Distribution is a type of continuous probability distribution for a real-valued random variable.",
+        value: "A Normal Distribution is a type of continuous probability distribution for a real-valued random variable, typically forming a bell curve.",
         image: "",
         content: [
           { id: 1, 
@@ -62,51 +62,51 @@ export default [
       },
       { id: 1,
         name: "2.1 Probability Density Function (PDF)", 
-        value: "Sure, here’s the function - Probability Density Function (short for PDF), which is a Standard Normal Distribution. Here what I wanna point is that don’t remember the fancy function, just remember the shape of function and get to know the key parameters that can determine the shape of  bell-curve, it’s narrow bell or a wide bell?",
+        value: "Let’s dive into the Probability Density Function, or PDF, which is key when talking about the Standard Normal Distribution. No need to stress over memorizing the complicated formula; what’s crucial is grasping the shape of the function and the key parameters that shape it. These parameters dictate whether the bell curve is narrow or wide, giving you a clear picture of how the data is spread out.",
         image: "src/assets/chapter_three/ndistrib_pdf.jpeg",
         content: [
           { id: 1, 
             title: "Bell-shaped:",
-            value: "keep in you mind that it’s just a bell"
+            value: "Picture a bell. That’s the shape we’re talking about."
           },
           { id: 2, 
             title: "Mean (µ = 0):",
-            value: "the peak of the bell, and in standard normal distribution, µ = 0."
+            value: "This is the peak, or the highest point of the bell. In the standard normal distribution, µ equals 0."
           },
           { id: 3, 
             title: "Standard Deviation (σ = 1):",
-            value: "this parameter can determine the shape of bell, it’s narrow or wide?."
+            value: "This determines how wide or narrow the bell is. For the standard normal distribution, σ is 1."
           },
           { id: 4, 
             title: "x-axis",
-            value: "represents values of the random variable."
+            value: "Represents the possible values of the random variable."
           },
           { id: 5, 
             title: "y-axis:",
-            value: "represents the probability density."
+            value: "Shows the probability density, or how likely each value on the x-axis is."
           },
         ]
       },
       { id: 2,
         name: "2.2 Cumulative Distribution Function (CDF)", 
-        value: "The CDF is shown as the shaded area under the curve to the left of a specific point, here I mark it as x. It represents the probability that the random variable X takes a value less than or equal to a certain value x.",
+        value: "The CDF is visualized as the shaded area under the curve to the left of a specific point, which we’ll call x. It represents the probability that the random variable X will take on a value less than or equal to x.",
         image: "src/assets/chapter_three/ndistrib_cdf.jpeg",
         content: [
           { id: 1, 
             title: "S-shaped:",
-            value: "keep in you mind that it’s just a bell"
+            value: "Think of it as an S-curve, but still related to that bell shape."
           },
           { id: 2, 
             title: "A special point - (µ, 0.5):",
-            value: "For example, in a standard normal distribution, the CDF at x = 0 would be 0.5, meaning there’s a 50% chance the variable falls to the left of the mean."
+            value: "In a standard normal distribution, the CDF at x = 0 is 0.5. This means there’s a 50% chance the variable falls to the left of the mean."
           },
           { id: 3, 
             title: "x-axis",
-            value: "represents values of the random variable."
+            value: "Represents the values of the random variable."
           },
           { id: 4, 
             title: "y-axis:",
-            value: "represents the probability density."
+            value: "Represents the probability density."
           },
         ]
       },
@@ -117,35 +117,35 @@ export default [
     sections: [
       { id: 0,
         name: "3. Loss Function",
-        value: "Loss Function uses to evaluate how well your model’s prediction, lower is better.",
+        value: "The Loss Function is used to evaluate how well your model’s predictions are performing, the lower the value, the better the model is doing.",
         image: "",
         content: [
           { id: 1,
             title: "What is loss function",
-            value: " Loss Function uses to evaluate how well your model’s prediction, lower is better. A Loss Function is a critical component in machine learning and deep learning models. It measures how well or poorly your model is performing by comparing the model’s predictions to the actual target values. The goal is to minimize this loss, meaning you wanna your model’s predictions to be as close as possible to the actual target values."
+            value: "A Loss Function is essential in evaluating how well your model’s predictions match the actual data. It measures the difference between your model’s predictions and the true values, with the goal being to minimize this difference. In simple terms, a lower loss means your model’s predictions are more accurate."
           },
           { id: 2,
             title: "How it works",
-            value: "The loss function calculates the difference between the predicted values generated by your model and the true values from your dataset. This difference is then quantified as a single scalar value, which represents the “loss” or error."
+            value: "The loss function calculates the difference between the values predicted by your model and the actual values from your dataset. This difference is then summarized into a single scalar value, representing the “loss” or error."
           },
           { id: 3,
             title: "Why it matters",
-            value: "The loss function guides the optimization process. During training, the model uses the loss value to adjust its internal parameters (like weights and biases) to reduce the loss, improving its predictions over time."
+            value: "The loss function plays a crucial role in guiding the optimization process. During training, the model uses the loss value to fine-tune its internal parameters (like weights and biases) to reduce the loss, leading to better predictions over time."
           },
           { id: 4,
             title: "Lower is Better",
-            value: "The primary objective during training is to reduce the loss function as much as possible. A lower loss indicates that your model’s predictions are closer to the actual values, meaning the model is learning effectively."
+            value: "The key goal during training is to minimize the loss function. A lower loss indicates that your model’s predictions are getting closer to the actual values, meaning the model is effectively learning."
           }
         ]
       },
       { id: 1,
         name: "3.1 Mean Squared Error (MSE)",
-        value: "Takes the average of the squared differences between predicted and actual values. It’s more sensitive to outliers, as larger errors are squared, making them more significant.",
+        value: "Mean Squared Error, or MSE for short, is a type of loss function. It’s quite sensitive to outliers because larger errors are squared, making them more significant.",
         image: "",
         content: [
           { id: 1,
             title: "",
-            value: "Takes the average of the squared differences between predicted and actual values. It’s more sensitive to outliers, as larger errors are squared, making them more significant."
+            value: "It calculates the average of the squared differences between predicted and actual values. Since larger errors are squared, MSE is more sensitive to outliers, making them more significant."
           },
         ]
       },
@@ -156,11 +156,11 @@ export default [
         content: [
           { id: 1,
             title: "Graph Explanation:",
-            value: "This graph shows two lines: the current line (in red) representing the model’s predictions and the target line (in blue) representing the true values we want the model to predict. The data points corresponding to different values of  x  are plotted as dots on both lines. The blue dots are the target values, and the red dots are the predictions made by the current model."
+            value: "This graph displays two lines: the current line (in red), which represents the model’s predictions, and the target line (in blue), which represents the true values we want the model to predict. Data points for different values of x are plotted as dots on both lines—the blue dots correspond to the target values, while the red dots show the predictions made by the current model."
           },
           { id: 2,
             title: "Mathematical Representation:",
-            value: "The current line is represented by the equation  y = 0.3x + b , where  b  is the bias term. The target line is represented by  Y = 0.6x + 0.1 . The difference between the predictions and the actual target values is visualized by the vertical arrows, indicating the errors for each point."
+            value: "The current line is represented by the equation y = 0.3x + b, where b is the bias term. The target line follows the equation Y = 0.6x + 0.1. The difference between the predictions and the actual target values is illustrated by vertical arrows, showing the gap between the two."
           },
         ]
       },
@@ -171,15 +171,15 @@ export default [
         content: [
           { id: 1,
             title: "MSE Calculation:",
-            value: "The Mean Squared Error (MSE) is calculated by taking the average of the squared differences between the predicted values (from the red line) and the actual target values (from the blue line). Here we can see the formula for MSE, and this equation is used to measure how far off the predictions are from the actual values."
+            value: "The Mean Squared Error (MSE) is calculated by averaging the squared differences between the predicted values (from the red line) and the actual target values (from the blue line). This formula measures how far off the predictions are from the actual values."
           },
           { id: 2, 
             title: "Graph of MSE:",
-            value: "The graph on the right plots the MSE as a function of the bias term  b . The curve shows that as  b  varies, the MSE changes, and it has a minimum point, which corresponds to the optimal value of  b  that minimizes the error."
+            value: "The graph on the right plots the MSE as a function of the bias term b. The curve shows how the MSE changes as b varies, with a minimum point indicating the optimal value of b that minimizes the error."
           },
           { id: 3, 
             title: "Objective:",
-            value: "The goal of training the model is to adjust the bias  b (here we only consider one variable, starts simple) to minimize the MSE. This is visually represented by finding the lowest point on the MSE curve."
+            value: "The goal of training the model is to adjust the bias b (starting simple by considering just one variable) to minimize the MSE. This is visually represented by finding the lowest point on the MSE curve."
           },
         ]
       },
@@ -192,7 +192,7 @@ export default [
             title: "",
             value: "Loss Curve is essentially a graphic tool that tracks the error or losses of a model over the training time. With loss curves, we can easily understand how well a model is performing during training and evaluation."
           },
-          { id: 1,
+          { id: 2,
             title: "",
             value: "They graphically represent the change in loss over epochs, which is the training iterations. Usually, there are two curves on the same graph, Training Loss Curve, which represent how the loss decreases on the Training DATA over epochs, and the Testing Loss Curve, or we call it the Validation Loss Curve, which represents how the loss changes on the Testing DATA over epochs."
           },
@@ -404,7 +404,7 @@ export default [
             title: "Convergence Rate:",
             value: "GD: Slower but more stable convergence to a precise minimum. SGD: Faster convergence but with more variability and potential oscillation around the minimum."
           },
-          { id: 5,
+          { id: 6,
             title: "Accuracy:",
             value: "GD: Often results in higher final accuracy, as updates are less noisy and reflect the overall trend in the data. SGD: May result in slightly lower accuracy due to noisy updates, but can be improved with techniques like learning rate decay and momentum."
           },
@@ -477,7 +477,7 @@ export default [
         ]
       },
       { id: 2,
-        name: "Too Low (lr=0.05)",
+        name: ":: Too Low (lr=0.05)",
         value: "",
         image: "src/assets/chapter_three/lr_low.jpeg",
         content: [
@@ -488,7 +488,7 @@ export default [
         ]
       },
       { id: 3,
-        name: "Too High (lr=0.8)",
+        name: ":: Too High (lr=0.8)",
         value: "",
         image: "src/assets/chapter_three/lr_low.jpeg",
         content: [
@@ -499,7 +499,7 @@ export default [
         ]
       },
       { id: 4,
-        name: "Just Right (lr=0.2)",
+        name: ":: Just Right (lr=0.2)",
         value: "",
         image: "src/assets/chapter_three/lr_low.jpeg",
         content: [

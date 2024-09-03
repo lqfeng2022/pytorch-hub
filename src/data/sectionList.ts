@@ -108,12 +108,16 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: "In this chapter, we will explore the essential steps involved in a typical PyTorch workflow for deep learning, using a straight line model as our guide. Starting with data preparation, we’ll walk through the process of building, training, and evaluating this simple model, making it easier to grasp the key concepts."
+        value: "We'll start with Linear Regression, the foundation of our straight-line model, which helps us find the best-fitting line to represent the relationship between input and output data. Alongside this, we’ll touch on the Normal Distribution to understand how data points cluster around a mean, which is crucial for statistical analysis."
       },
       { id: 2, 
         title: "",
-        value: "This approach will provide a clear and practical understanding of each stage in the workflow, from data handling to model refinement, all within the context of a linear model that is both accessible and illustrative. By the end of this chapter, you’ll be equipped to apply these principles to more complex models with confidence."
+        value: "Next, we’ll discuss the Loss Function, particularly Mean Squared Error (MSE), which measures how well our model fits the data, and how Loss Curves help visualize this improvement. We'll then explore Gradient Descent, a technique for adjusting our model to minimize the loss, and its faster variant, Stochastic Gradient Descent (SGD)."
       },
+      { id: 3, 
+        title: "",
+        value: "Finally, we'll cover the importance of the Learning Rate, which controls how quickly our model adjusts during training, ensuring that it converges efficiently without overshooting the optimal solution."
+      }
     ]
   },
   { id: 5, 

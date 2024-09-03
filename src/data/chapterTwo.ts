@@ -49,7 +49,7 @@ export default [
             title: "Improve a Model",
             value: "After training, it’s crucial to assess the model’s performance. If the results are not satisfactory, improvements are necessary. Well, for our first model, we’ll skip this step. In future projects, we’ll dive deeper into this process, placing major emphasis on refining models to achieve better and more efficient outcomes."
           },
-          { id: 4, 
+          { id: 5, 
             title: "Save a Model",
             value: "Once we’ve developed a good model, it’s important to save it for reuse or further training. In this case, we’ll primarily save the model’s parameters."
           },
@@ -80,7 +80,7 @@ export default [
             title: "",
             value: "In the data preparation stage, we start by creating the input data using torch.arange(0, 1, 0.02), which generates 50 evenly spaced numbers between 0 and 1. This sequence of values will serve as the input for our model."
           },
-          { id: 1,
+          { id: 2,
             title: "",
             value: "To generate the corresponding output data, we apply a simple linear formula:  y = 0.6x + 0.1 . This equation produces the target values that our model will learn to predict, creating a clear linear relationship between the input and output."
           }
