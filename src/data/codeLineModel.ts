@@ -426,26 +426,9 @@ plt.legend()`,
     ]
   },
   { id: 9,
-    name: "4.1_save_a_model",
-    code: [
-      { id: 28,
-        input: ``,
-        output: ``
-      },
-      { id: 29,
-        input: ``,
-        output: ``
-      },
-      { id: 30,
-        input: ``,
-        output: ``
-      },
-    ]
-  },
-  { id: 10,
     name: "4.2_load_a_model",
     code: [
-      { id: 31,
+      { id: 28,
         input: 
 `# Saving our PyTorch model
 from pathlib import Path
@@ -465,13 +448,13 @@ torch.save(obj=model_0.state_dict(),
         output: 
 `Saving model to: models/01_aStraightLine_model_0.pth`
       },
-      { id: 32,
+      { id: 29,
         input: 
 `!ls -1 models`,
         output: 
 `01_aStraightLine_model_0.pth`
       },
-      { id: 33,
+      { id: 30,
         input: 
 `model_0.state_dict()`,
         output: 
@@ -479,10 +462,10 @@ torch.save(obj=model_0.state_dict(),
       },
     ]
   },
-  { id: 11,
+  { id: 10,
     name: "4.2_load_a_model",
     code: [
-      { id: 34,
+      { id: 31,
         input: 
 `# Instantiate a new model (initial with random weight)
 loaded_model_0 = LinearRegressionModel()
@@ -494,13 +477,13 @@ loaded_model_0.load_state_dict(torch.load(f=MODEL_SAVE_PATH))`,
   loaded_model_0.load_state_dict(torch.load(f=MODEL_SAVE_PATH))
 <All keys matched successfully>`,
       },
-      { id: 35,
+      { id: 32,
         input: 
 `loaded_model_0.state_dict()`,
         output: 
 `OrderedDict([('weight', tensor([0.5632])), ('bias', tensor([0.1151]))])`
       },
-      { id: 36,
+      { id: 33,
         input: 
 `# Make predictions with loaded model
 loaded_model_0.eval()
@@ -520,7 +503,7 @@ loaded_model_preds`,
         [0.6557],
         [0.6670]])`
       },
-      { id: 37,
+      { id: 34,
         input: 
 `# Make predictions with model_0
 model_0.eval()
@@ -539,7 +522,7 @@ y_preds`,
         [0.6557],
         [0.6670]])`
       },
-      { id: 38,
+      { id: 35,
         input: 
 `# Compare the predictions of loaded model and original model
 y_preds == loaded_model_preds`,

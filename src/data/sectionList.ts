@@ -99,10 +99,21 @@ export default [
     link: "the-maths-behind-one",
     items: [
       { id: 1, name: "- Linear Regression", link: "" },
-      { id: 2, name: "- Loss Function (MSA)", link: "" },
-      { id: 3, name: "- Gradient Descent (GD)", link: "" },
-      { id: 4, name: "- Stochastic Gradient Descent (SGD)", link: "" },
-      { id: 5, name: "- Learning Rate (lr)", link: "" }
+      { id: 2, name: "- Normal Distribution", link: "" },
+      { id: 3, name: "- Loss Function (MSE)", link: "" },
+      { id: 4, name: "- Gradient Descent (GD)", link: "" },
+      { id: 5, name: "- Stochastic Gradient Descent (SGD)", link: "" },
+      { id: 6, name: "- Learning Rate (lr)", link: "" }
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: "In this chapter, we will explore the essential steps involved in a typical PyTorch workflow for deep learning, using a straight line model as our guide. Starting with data preparation, we’ll walk through the process of building, training, and evaluating this simple model, making it easier to grasp the key concepts."
+      },
+      { id: 2, 
+        title: "",
+        value: "This approach will provide a clear and practical understanding of each stage in the workflow, from data handling to model refinement, all within the context of a linear model that is both accessible and illustrative. By the end of this chapter, you’ll be equipped to apply these principles to more complex models with confidence."
+      },
     ]
   },
   { id: 5, 
@@ -114,6 +125,16 @@ export default [
       { id: 3, name: "iii. Train and Test a Model", link: "" },
       { id: 4, name: "iv. Improve a Model", link: "" },
       { id: 5, name: "v. Save and Load a Model", link: "" },
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 6, 
@@ -126,6 +147,16 @@ export default [
       { id: 4, name: "- Sigmoid Function", link: "" },
       { id: 5, name: "- BackPropagation", link: "" },
       { id: 6, name: "- Activation Function (ReLU)", link: "" }
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 7, 
@@ -137,6 +168,16 @@ export default [
       { id: 3, name: "iii.Train and Test a Model", link: "" },
       { id: 4, name: "iv. Improve a Model", link: "" },
       { id: 5, name: "v. Save and Load a Model", link: "" },
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 8, 
@@ -151,6 +192,16 @@ export default [
       { id: 6, name: "- Convolutional Neural Network (CNN)", link: "" },
       { id: 7, name: "- MaxPooling Layer", link: "" },
       { id: 8, name: "- SoftMax Function", link: "" }
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 9, 
@@ -162,6 +213,16 @@ export default [
       { id: 3, name: "iii. Train and Test a Model", link: "" },
       { id: 4, name: "iv. Improve a Model", link: "" },
       { id: 5, name: "v. Save and Load a Model", link: "" },
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 10, 
@@ -183,6 +244,16 @@ export default [
       // { id: 13, name: "-- Dropout Layer", link: "" },
       { id: 14, name: "- Classifier", link: "" },
       { id: 15, name: "- Activation Function (GeLU)", link: "" },
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 11, 
@@ -194,6 +265,16 @@ export default [
       { id: 3, name: "iii. Train and Test a Model", link: "" },
       { id: 4, name: "iv. Improve a Model", link: "" },
       { id: 5, name: "v. Save and Load a Model", link: "" },
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 12, 
@@ -207,6 +288,16 @@ export default [
       { id: 5, name: "- Masked Multi-Head Attention", link: "" },
       { id: 6, name: "- Transformer Encoder", link: "" },
       { id: 7, name: "- Transformer Decoder", link: "" },
+    ],
+    description: [
+      { id: 1, 
+        title: "",
+        value: ""
+      },
+      { id: 2, 
+        title: "",
+        value: ""
+      },
     ]
   },
   { id: 13, 

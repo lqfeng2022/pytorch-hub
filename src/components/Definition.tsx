@@ -1,4 +1,4 @@
-import { Center, Box, Stack, Text } from '@chakra-ui/react'
+import { Center, Box, Stack, Text, HStack } from '@chakra-ui/react'
 import Section from '../entities/Section'
 
 interface Props {
@@ -15,7 +15,20 @@ const Definition = ({ title, definition }: Props) => {
         </Box>
       </Center>
       <Stack spacing={4}>
-        {definition.content.map((p) => <Text key={p.id}>{p.value}</Text>)}
+        {definition.content.map((p) => 
+          <div key={p.id}>
+            {p.title && 
+              <>
+                <HStack>
+                  <Text>{'•'}</Text>
+                  <Text as='b'>{p.title}</Text>
+                </HStack>
+                <Text pl={4}>{p.value}</Text>
+             </>
+            }
+            {!p.title && <Text>{p.value}</Text>}
+          </div>
+        )}
       </Stack>
     </Box>
   )

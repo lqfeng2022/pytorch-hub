@@ -19,7 +19,7 @@ const Header = ({ cover }: { cover: Cover }) => {
           <Image src={cover.image} />
         </AspectRatio>
         <Text as='b' fontSize='sm'>{cover.title}</Text>
-        <Text as='i' fontSize='sm'>{cover.descript}</Text>
+        <Text as='i' fontSize='sm'>{cover.description}</Text>
       </Stack>
     </>
   )

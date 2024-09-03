@@ -5,5 +5,5 @@ export default interface Cover {
   author: string,
   image: string,
   title: string,
-  descript: string
+  description: string
 }

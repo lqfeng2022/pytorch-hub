@@ -7,7 +7,7 @@ const Workflow = () => {
 
   return (
     <>
-      <Definition title={"1. PyTorch Workflow"} definition={whats}/>
+      <Definition title={"0. PyTorch Workflow"} definition={whats}/>
       <BaseGrid section={overview}/>
       <BaseGrid section={explain}/>
     </>

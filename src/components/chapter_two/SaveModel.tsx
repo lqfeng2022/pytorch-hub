@@ -6,7 +6,7 @@ import BaseGrid from '../BaseGrid'
 
 const SaveModel = () => {
   const [ define, save, load ] = chapterTwo[4].sections
-  const [ savecode, loadcode ] = codeLineModel.slice(10, 12).map(obj => obj.code)
+  const [ savecode, loadcode ] = codeLineModel.slice(9, 11).map(obj => obj.code)
 
   return (
     <div>

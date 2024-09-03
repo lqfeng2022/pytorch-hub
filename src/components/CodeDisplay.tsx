@@ -1,4 +1,4 @@
-import { Box, Flex, Stack, Text } from '@chakra-ui/react';
+import { Box, Flex, Show, Stack, Text } from '@chakra-ui/react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Code from '../entities/code';
@@ -11,20 +11,21 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
         bg='gray.50' 
         minWidth='0' 
         py={2} 
-        borderTop='1px solid red'
-        borderBottom='1px solid red'
+        borderLeft='1px solid red'
       >
         {codes.map((code: Code) => <Stack key={code.id} p={3}>
           <Flex>
-            <Text 
-              pt='6.5px' 
-              pr={2} 
-              color='gray.500' 
-              fontSize='13px' 
-              fontFamily='Menlo, monospace'
-            >
-              In [<span style={{ color: 'tomato' }}>{code.id}</span>]:
-            </Text>
+            <Show above='md'>
+              <Text
+                pt='6.5px'
+                pr={2}
+                color='gray.500'
+                fontSize='13px'
+                fontFamily='Menlo, monospace'
+              >
+                In [<span style={{ color: 'tomato' }}>{code.id}</span>]:
+              </Text>
+            </Show>
             <Box flex='1' overflowX='auto'>
               <SyntaxHighlighter
                 language='python'
@@ -41,15 +42,17 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
             </Box>
           </Flex>
           <Flex>
-            <Text 
-              pt='6.5px' 
-              pr={4}
-              color='gray.500' 
-              fontSize='13px' 
-              fontFamily='Menlo, monospace'
-            >
-              Out []:
-            </Text>
+            <Show above='md'>
+              <Text
+                pt='6.5px'
+                pr={4}
+                color='gray.500'
+                fontSize='13px'
+                fontFamily='Menlo, monospace'
+              >
+                Out []:
+              </Text>
+            </Show>
             <Box flex='1' overflowX='auto'>
               <SyntaxHighlighter
                 language='python'
