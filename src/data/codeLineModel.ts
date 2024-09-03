@@ -463,7 +463,7 @@ torch.save(obj=model_0.state_dict(),
     ]
   },
   { id: 10,
-    name: "4.2_load_a_model",
+    name: "4.1_save_a_model",
     code: [
       { id: 31,
         input: 

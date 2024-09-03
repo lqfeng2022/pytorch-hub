@@ -185,16 +185,16 @@ export default [
       },
       { id: 4,
         name: "3.2 Loss Curve",
-        value: "Loss Curve is essentially a graph that tracks the error or losses of a model over the training time.",
+        value: "The Loss Curve is a graph that tracks a model’s error or losses over the course of training.",
         image: "",
         content: [
           { id: 1,
             title: "",
-            value: "Loss Curve is essentially a graphic tool that tracks the error or losses of a model over the training time. With loss curves, we can easily understand how well a model is performing during training and evaluation."
+            value: "The Loss Curve is a graphic tool that tracks a model’s error or losses over the training period. It helps us easily understand how well a model is performing during both training and evaluation."
           },
           { id: 2,
             title: "",
-            value: "They graphically represent the change in loss over epochs, which is the training iterations. Usually, there are two curves on the same graph, Training Loss Curve, which represent how the loss decreases on the Training DATA over epochs, and the Testing Loss Curve, or we call it the Validation Loss Curve, which represents how the loss changes on the Testing DATA over epochs."
+            value: "Loss curves visually represent the change in loss over epochs, which are the training iterations. Typically, you’ll see two curves on the same graph: the Training Loss Curve shows how the loss decreases on the training data over epochs, while the Testing Loss Curve—also known as the Validation Loss Curve—illustrates how the loss changes on the testing data over the same period."
           },
         ]
       },
@@ -204,16 +204,16 @@ export default [
         image: "src/assets/chapter_three/losscurves.jpg",
         content: [
           { id: 1,
-            title: "Overfitting: Too Much of a Good Thing",
-            value: "The training loss is low and decreases rapidly, but the test loss is significantly higher and starts to increase. The model is too focused on the training data and fails to generalize to new data."
+            title: "Underfitting: Falling short",
+            value: "In the first graph, labeled “Underfitting,” both the training loss (blue line) and the test loss (red line) are high and decrease slowly. The gap between the losses is small, but both could be lower. This indicates that the model is struggling to learn the underlying patterns in the data."
           },
           { id: 2,
-            title: "Underfitting: Falling short",
-            value: "Both the training and test losses are high and decrease slowly. The model is not able to capture the underlying patterns in the data."
+            title: "Overfitting: Too Much of a Good Thing",
+            value: "The second graph, labeled “Overfitting,” shows a scenario where the training loss (blue line) decreases rapidly and is much lower than the test loss (red line), which starts to increase after an initial drop. This means the model is performing very well on the training data but poorly on the test data, indicating it has become too specialized to the training set and isn’t generalizing well."
           },
           { id: 3,
             title: "Just Right: Striking the Balance",
-            value: "Both training and test losses decrease smoothly and converge at a low value. The model generalizes well to new data."
+            value: "In the third graph, labeled “Just Right,” both the training loss (blue line) and test loss (red line) decrease smoothly and converge at similar low values. This indicates that the model is well-tuned, learning effectively from the training data while also generalizing well to the test data."
           }
         ]
       },
@@ -224,40 +224,40 @@ export default [
     sections: [
       { id: 0,
         name: "4. Gradient Descent",
-        value: "Gradient Descent is an optimization algorithm that uses all samples in the training set to compute the gradient(slope) and update parameters in each iteration.",
+        value: "Gradient Descent is an optimization algorithm that calculates the gradient (slope) using all the samples in the training set to update the model’s parameters during each iteration.",
         image: "",
         content: [
           { id: 1,
-            title: "What is Gradient Descent",
-            value: "Gradient Descent is an optimization algorithm that uses all samples in the training set to compute the gradient(slope) and update parameters in each iteration."
+            title: "",
+            value: "Think of yourself on a mountain, aiming to reach the lowest point, which is the global minimum. The loss function represents the landscape, and the gradients are the slopes that guide you on which direction to step to go downhill."
           },
           { id: 2,
-            title: "What is Gradient",
-            value: "Imagine you’re on a mountain trying to reach the lowest point (the global minimum). The loss function is like the landscape, and gradients are the slopes that tell you in which direction you should step to go downhill. The gradient is the derivative of the loss function with respect to the model’s parameters. It indicates the direction and rate of change of the loss function."
+            title: "",
+            value: "The gradient is the derivative of the loss function with respect to the model’s parameters, indicating both the direction and the rate at which the loss function is changing."
           },
         ]
       },
       { id: 1,
-        name: "4.1 GD SIMULATION (single parameter)",
+        name: "4.1 GD SIMULATION (1 parameter)",
         value: "",
         image: "src/assets/chapter_three/gd_one.jpeg",
         content: [
+          { id: 0,
+            title: "",
+            value: "This graph visually demonstrates how Gradient Descent iteratively adjusts the model’s parameters to minimize the error between the model’s predictions (red points) and the actual values (blue points). With each step, the model’s prediction line shifts from  y = 0.3x  towards a line closer to  Y = 0.6x + 0.1 , effectively reducing the overall error. The gradual alignment of the model’s line with the target line showcases the effectiveness of Gradient Descent in enhancing the model’s performance."
+          },
           { id: 1,
-            title: "Initial Line (Red Line,  y = 0.3x):",
+            title: "Initial Line (Red Line):",
             value: "The red points correspond to the initial predictions made by the model with the initial parameter  b = 0 . The red line represents the model’s starting point before any Gradient Descent iterations have occurred."
           },
           { id: 2,
-            title: "Target Line (Blue Line,  Y = 0.6x + 0.1):",
-            value: "The blue points represent the target values that the model should ideally predict. The blue line passing through these points is the optimal line that the model aims to approximate through Gradient Descent."
+            title: "Target Line (Blue Line):",
+            value: "The blue points represent the ideal target values that the model should predict. The blue line, which passes through these points, is the optimal line that the model aims to approximate through Gradient Descent."
           },
           { id: 3,
             title: "Gradient Descent Iterations:",
-            value: "The series of grey lines between the red line and the blue line show how the model’s prediction line changes after each iteration of Gradient Descent. Each update reduces the difference between the model’s predictions and the target values. The line gradually moves closer to the target line, demonstrating the convergence of the model towards better predictions."
+            value: "The grey lines between the red and blue lines illustrate how the model’s prediction line shifts after each Gradient Descent iteration. Each update reduces the discrepancy between the model’s predictions and the target values, gradually moving the prediction line closer to the target line. This process demonstrates the model’s convergence towards more accurate predictions."
           },
-          { id: 4,
-            title: "Summary",
-            value: "This graph demonstrates how Gradient Descent iteratively adjusts the model’s parameters to minimize the error between the model’s predictions (red points) and the actual values (blue points). With each step, the model’s prediction line shifts from  y = 0.3x  toward a line closer to  Y = 0.6x + 0.1 , reducing the overall error. The gradual movement of the model’s line toward the target line illustrates the effectiveness of Gradient Descent in improving the model’s performance."
-          }
         ]
       },
       { id: 2,
@@ -267,15 +267,15 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "In his table, we show the parameter b across iterations, along with the corresponding MSE and the derivative of the MSE."
+            value: "In this table, we display the parameter  b  across several iterations, along with the corresponding Mean Squared Error (MSE) and the derivative of the MSE."
           },
           { id: 2,
             title: "",
-            value: "The algorithm starts with an initial guess for b (for demonstration, we set it to 0) and iteratively updates b based on the gradient (slope) of the MSE at that point."
+            value: "The algorithm begins with an initial guess for  b  (set to 0 for demonstration purposes) and iteratively updates  b  based on the gradient (slope) of the MSE at that particular point."
           },
           { id: 3,
             title: "",
-            value: "The update rule is given by the function, b(n+1) =  b(n) - lr * MSE’(b), and lr is the learning rate, we set it to 0.2."
+            value: "The update rule is given by the function, b(n+1) =  b(n) - lr*MSE’(b), and lr is the learning rate, we set it to 0.2."
           },
         ]
       },
@@ -289,13 +289,13 @@ export default [
             value: "The middle graph shows the MSE curve as a function of  b . The curve represents how the error changes as we adjust  b . The red points on the curve show the progression of the gradient descent, starting from an initial b = 0 and moving towards a lower MSE value as b is updated in each step. The lines touching the curve represent the gradient at each point, guiding the direction and magnitude of the updates."
           },
           { id: 2,
-            title: "",
+            title: "Derivative of MSE",
             value: "The right graph represents the derivative of the MSE with respect to b. The red dots indicate the values of the gradient at each iteration. The gradient decreases as the algorithm approaches the minimum. The gradient becomes closer to zero as b approaches the value that minimizes the MSE. When the gradient is zero, the algorithm has reached the optimal value of b ."
           },
         ]
       },
       { id: 4,
-        name: "4.2 GD SIMULATION (two parameter)",
+        name: "4.2 GD SIMULATION (2 parameters)",
         value: "Let’s visualize the 2 parameters Gradient Descent. This 3D surface plot visually represents the process of Gradient Descent in a multi-parameter scenario, where two parameters θ1 and θ2 are being optimized to minimize a loss function, denoted as  Loss(θ1, θ2).",
         image: "src/assets/gradient_descent.jpeg",
         content: [
@@ -313,7 +313,7 @@ export default [
           },
           { id: 4,
             title: "Axes:",
-            value: "The x and y axes represent the values of the parameters \theta_1 and \theta_2. The z-axis represents the loss value  \text{Loss}(\theta_1, \theta_2) ."
+            value: "The x and y axes represent the values of the parameters θ1 and θ2. The z-axis represents the loss value Loss(θ1, θ2)."
           },
         ]
       },
@@ -324,26 +324,22 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "In his table, we show the parameter b across iterations, along with the corresponding MSE and the derivative of the MSE."
+            value: "Here in this table we display two parameters bias (b) and weights (w) across several iterations, along with the corresponding MSE and the deriveative of MSE. We initialize these two parameters (set b to 0 and w to 0.3)."
           },
           { id: 2,
             title: "",
-            value: "The algorithm starts with an initial guess for b (for demonstration, we set it to 0) and iteratively updates b based on the gradient (slope) of the MSE at that point."
-          },
-          { id: 3,
-            title: "",
-            value: "The update rule is given by the function, b(n+1) =  b(n) - lr * MSE’(b), and lr is the learning rate, we set it to 0.2."
+            value: " Then update w and b based on the gradient of the MSE, and the update rule is pretty much similar to the 1 parameter function. Here's the tricky part, when we're calculating ths slope for one parameter, we treat the other parameter as a constant number."
           },
         ]
       },
       { id: 6,
-        name: ":: GD SIMULATION Visualize",
+        name: ":: GD SIMULATION Visualization",
         value: "",
         image: "src/assets/chapter_three/gd_two.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "This graph is a visualization of how Gradient Descent optimizes a linear model by iteratively updating its two parameters: the weight ( w ) and the bias ( b )."
+            value: "This graph is a visualization of how Gradient Descent optimizes a linear model by iteratively updating its two parameters: the weight (w) and the bias (b)."
           },
           { id: 2,
             title: "",
@@ -411,7 +407,7 @@ export default [
         ]
       },
       { id: 2,
-        name: ":: Visualize the Difference of SGD and GD",
+        name: ":: SGD vs. GD",
         value: "The graph effectively illustrates the key differences between Gradient Descent (GD) and Stochastic Gradient Descent (SGD) in the context of how each algorithm updates parameters to minimize a loss function.",
         image: "src/assets/chapter_three/sgd_two.jpeg",
         content: [

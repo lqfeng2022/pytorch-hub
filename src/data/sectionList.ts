@@ -133,11 +133,7 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: ""
-      },
-      { id: 2, 
-        title: "",
-        value: ""
+        value: "In this chapter, we’ll dive into a new project, building a basic classification model using a simple neural network architecture. In this project, we’re gonna tackle a typical binary classification problem by classifying two different groups of data."
       },
     ]
   },

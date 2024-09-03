@@ -30,5 +30,13 @@ export default [
     image: "src/assets/gradient_descent.jpeg",
     title: "GRADIENT DESCENT SIMULATION - TWO PARAMETERS",
     description: "This graph is a powerful visualization of how Gradient Descent operates when two parameters are involved. It shows the path the algorithm takes across the parameter space (θ₁ and θ₂) to minimize the loss function - Loss(θ₁,θ₂). The movement along the surface illustrates how the parameters are iteratively adjusted to reduce the loss, eventually converging to a point where the model is optimally trained."
-  }
+  },
+  { id: 4,
+    name: "Chapter 4: A Binary Classification Model",
+    quote: "At its core, machine learning is about learning to make predictions on the basis of data. It’s fundamentally about generalization, about forming rules that enable us to classify unseen examples.",
+    author: "Pedro Domingos’ book “The Master Algorithm” (2015)",
+    image: "src/assets/classification.webp",
+    title: "GRADIENT DESCENT SIMULATION - TWO PARAMETERS",
+    description: "This image serves as a visual metaphor for the way machine learning models, especially neural networks, process input data to produce classified or simplified outputs. It highlights the transformation of raw data into meaningful information through computational processes, which is central to the functioning of machine learning systems."
+  },
 ]
