@@ -15,7 +15,6 @@ const ChapterList = ({ items, descrip }: Props) => {
       <SimpleGrid spacing={4} columns={{ sm: 1, md: 2 }} >
         <Box 
           p={6} 
-          my={3} 
           minH='300px' maxH='400px'
           bg='red.50' alignItems='center' // Ensure centered vertically
         >
@@ -25,7 +24,7 @@ const ChapterList = ({ items, descrip }: Props) => {
             </ListItem>)}
           </List>
         </Box>
-        <Stack spacing={4} mt={3}>
+        <Stack spacing={4}>
           {descrip.map((p) => <Text key={p.id}>{p.value}</Text>)}
         </Stack>
       </SimpleGrid>
