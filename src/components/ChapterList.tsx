@@ -25,7 +25,7 @@ const ChapterList = ({ items, descrip }: Props) => {
             </ListItem>)}
           </List>
         </Box>
-        <Stack my={5} spacing={4}>
+        <Stack spacing={4} mt={3}>
           {descrip.map((p) => <Text key={p.id}>{p.value}</Text>)}
         </Stack>
       </SimpleGrid>

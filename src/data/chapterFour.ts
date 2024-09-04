@@ -4,50 +4,42 @@ export default [
     sections: [
       { id: 0, 
         name: "1. Prepare DATA", 
-        value: "Preparing data is the essential initial step in machine learning that involves organizing and refining raw data to ensure it is suitable for training.",
+        value: "Too much explaining is not a good thing. We’ll explore what data preparation is and how it works in this real project.",
         image: "",
         content: [
         ]
       },
       { id: 1, 
-        name: "1.1 Create DATA", 
+        name: ":: Create DATA", 
         value: "",
         image: "src/assets/chapter_four/prepare_create.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "Different from our first project, here we’ll use Scikit Learn Datasets to create a circle distribution dataset, the method is make_circles(). Let’s see the first 5 data and plot it on the Cartesian coordinate system, and we use blue and orange to represent the label “1” and label “0”."
+            value: "Unlike our first project, in this one, we use Scikit Learn Datasets to create a circular distribution dataset. You’ll see a visualization of the distribution points soon."
           },
         ]
       },
       { id: 2, 
-        name: "1.2 Split DATA", 
-        value: "Now, we’ve got some data, here we gotta split X and y into training set and test set.",
+        name: ":: Split DATA", 
+        value: "",
         image: "src/assets/chapter_four/prepare_split.jpeg",
         content: [
           { id: 1,
-            title: "Training Set",
-            value: "Training set is what the model learn from, and it’s usually be 80% of the total DATA. Here we use blue to mark the training set."
+            title: "",
+            value: "Just like with the previous model, we split the data into a training set and a test set using the usual percentage. Here, we allocate 40 data points (80% of the total) to the training set, while the remaining 10 data points (20%) are reserved for the test set."
           },
-          { id: 2,
-            title: "Testing Set",
-            value: "Testing set is what the model gets evaluated on, use to test what it has learned from the Training DATA, it’s about 20% of the total DATA. Here we use green to mark the testing set."
-          }
         ]
       },
       { id: 3, 
-        name: ":: Visualize Data", 
+        name: ":: Visualize DATA", 
         value: "",
         image: "src/assets/chapter_four/prepare_visual.png",
         content: [
           { id: 1,
             title: "",
-            value: "Once the input and output data are generated, the next step is to split the data into training and testing sets. We allocate 40 data points (the 80% of total) to the training set, which the model will use to learn the relationship between the inputs and outputs."
+            value: "Here we plot our dataset, showing that the 1,000 points are clearly distributed into two distinct clusters, each with a circular shape, with one cluster nested inside the other. In the next steps, we’ll build a model to classify these circular-shaped clusters."
           },
-          { id: 2,
-            title: "",
-            value: "The remaining 10 data points (the 20% of total) are reserved for the testing set, allowing us to evaluate the model’s performance on data it hasn’t seen before. This split ensures that the model is trained effectively while also providing a means to assess its accuracy and generalization ability."
-          }
         ]
       },
     ]
@@ -57,7 +49,7 @@ export default [
     sections: [
       { id: 0, 
         name: "2. Build a Model", 
-        value: "Building a model is a crucial step in the machine learning process, where we design and implement a machine learning algorithm that can learn patterns from data.",
+        value: "Building a model in deep learning involves designing, implementing a neural network to learn patterns from data for a specific task.",
         image: "",
         content: [
           { id: 1,
@@ -67,33 +59,33 @@ export default [
         ]
       },
       { id: 1, 
-        name: ":: Build a Model class", 
-        value: "",
-        image: "src/assets/chapter_four/build_model.jpeg",
-        content: [
-          { id: 1,
-            title: "",
-            value: "Just like our first project, first of all, we create a class that inherits from a base class for all neural network module in PyTorch. Then we initialize the layers instead of the parameters in the first project. In this class, we define two layers, layer_1 and layer_2. Layer_1 takes an input of 2 features and outputs 5 features, and layer_2 takes the 5 features from layer_1 and reduces them to 1 feature. And they are both done by a linear function in neural network."
-          },
-          { id: 2,
-            title: "",
-            value: "Then we overwrite the forward() method to define the forward pass of this network, describing how the input X is transformed as it passes through the network. The input X is first passed through layer_1, then the output of layer_1 is passed through layer_2. The result of layer_2 is returned as the output of the model."
-          },
-          { id: 3,
-            title: "",
-            value: "When we built a model, we gotta creates an instance of the CircleModelV0 class and transfers the model to the specified device (e.g., CPU or GPU). This step is necessary for running the model on a specific hardware device."
-          },
-        ]
-      },
-      { id: 2, 
-        name: ":: Model Architecture", 
+        name: ":: Construct model Architecture", 
         value: "",
         image: "src/assets/chapter_four/build_architecture.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "To get a clear understanding of this model, I visualized its architecture. From this diagram, we can easily see the structure of our model. It’s a simple deep learning model with three main components: the input, a single hidden layer, and the output. The input layer takes in two features, the hidden layer has five neurons, and the output layer produces a single feature. That’s pretty much it!"
+            value: "To better understand this model, I visualized its architecture. The diagram clearly shows the structure: a simple deep learning model with three main components—input, a single hidden layer, and output. The input layer takes in two features, the hidden layer consists of five neurons, and the output layer produces a single feature. That’s all there is to it!"
           }
+        ]
+      },
+      { id: 2, 
+        name: ":: Build a Model with PyTorch", 
+        value: "",
+        image: "src/assets/chapter_four/build_model.jpeg",
+        content: [
+          { id: 1,
+            title: "",
+            value: "First, we create a class for our neural network by inheriting from PyTorch’s base class. We define two layers: layer_1, which takes 2 input features and outputs 5 features, and layer_2, which reduces these 5 features to 1. Both layers use a linear function."
+          },
+          { id: 2,
+            title: "",
+            value: "Next, we override the forward() method to specify how the input data X moves through the network. The input goes through layer_1, then through layer_2, and the final output is returned."
+          },
+          { id: 3,
+            title: "",
+            value: "Finally, we instantiate the CircleModelV0 class and move the model to the desired device (CPU or GPU) for execution. This ensures the model runs on the specified hardware."
+          },
         ]
       },
     ]
@@ -103,7 +95,7 @@ export default [
     sections: [
       { id: 0, 
         name: "3. Train a Model", 
-        value: "Different from our former model, here we use a new loss function - Binary Cross Entropy, and put our training and testing data on GPUs if you have.",
+        value: "Unlike our previous model, we use a new loss function - Binary Cross Entropy - and run training and test data on GPUs if available.",
         image: "",
         content: [
         ]
@@ -113,25 +105,17 @@ export default [
         value: "",
         image: "src/assets/chapter_four/train_model.jpeg",
         content: [
+          { id: 0,
+            title: "",
+            value: "There are two main differences between the previous model and this binary classification model: First, we introduce a new loss function — Binary Cross Entropy — suitable for binary classification tasks. Second, we utilize GPUs for training and testing data if available. Let's focsus on these two changes, there's no necessary to exaplain the whole steps again."
+          },
           { id: 1,
-            title: "Pick Up a Loss Function",
-            value: "Here we use a new loss function - Binary Cross Entropy, which is a Popular Loss Function to Measure the Performance of a Binary Classification problem."
+            title: "Pick Up a New Loss Function",
+            value: "We use Binary Cross Entropy, a popular loss function for measuring performance in binary classification problems."
           },
           { id: 2,
-            title: "Pick Up an Optimizer",
-            value: "As the former model, here we choose Stochastic Gradient Descent, it's way efficient to compare with Gradient Descent."
-          },
-          { id: 3,
-            title: "Set Up Training Epochs",
-            value: "We set 100 epochs first of all, we can add more epochs in the improving model step if necessary."
-          },
-          { id: 4,
-            title: "Set Up Training Loop",
-            value: "Here's the training loop is exactly same as our first model, actually, these training steps are arranged perfectly, so we don't need to change it. And in the next projects, we're not gonna focus on these steps."
-          },
-          { id: 5,
-            title: "Set Up Testing Loop",
-            value: "Look at our testing loop, when we predict with our model, we use squeeze() method to delete an extra dimension. So everytime when we treate these data, we should take our eyes on their shape, is pretty important, you should be very very careful."
+            title: "Put data on GPUs",
+            value: "In this project, we’ll use GPUs for training and testing data if available."
           },
         ]
       },
@@ -142,7 +126,11 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "We use the testing data to make predictions with our trained model and plot the results as red points. From the image, we can see that these red points are very close to the green points, which represent the target values."
+            value: "After training, we test our model on both the training and test data, resulting in two sets of predictions. When we plot these predictions, it’s clear that the model performs poorly. The plot shows a straight line with a slight angle separating the data points, regardless of whether they are from the training or test set."
+          },
+          { id: 2,
+            title: "",
+            value: "What a horribal predictions! This poor performance might be due to we used only linear functions in our model. Since the clusters are circular shape, a non-linear function could be more effective, as a straight line can’t properly separate circular shapes, right?"
           }
         ]
       },
@@ -152,17 +140,13 @@ export default [
         image: "src/assets/chapter_four/train_loss.jpeg",
         content: [
           { id: 1,
-            title: "Train Loss (Blue Line)",
-            value: "The training loss decreases steadily as the epochs progress, indicating that the model is learning and improving its performance on the training data. The curve flattens out towards the end, suggesting that the model is nearing convergence."
+            title: "",
+            value: "Even though the model’s performance is poor, we should still examine the loss curves as part of the regular training process."
           },
           { id: 2,
-            title: "Test Loss (Orange Line)",
-            value: "The testing loss also decreases over time but starts higher than the training loss and remains above it throughout the training process. This suggests that the model is generalizing reasonably well but still performs slightly worse on the unseen test data compared to the training data."
+            title: "",
+            value: "From the loss curves, we see that both the training and test losses decrease smoothly and slowly as the number of epochs increases. We might want to consider increasing the number of epochs. However, the loss only dropped by about 0.01, from around 0.7 to 0.69, over 100 epochs. This slow progress suggests that even with 1,000 epochs, the model might not perform much better. But hey, it’s worth a shot to experiment, right?"
           },
-          { id: 3,
-            title: "Overall",
-            value: "Both curves decreasing is a good sign, indicating that the model is improving during training and is not overfitting, as the test loss is also lowering over time. The gap between the two curves could be further minimized with additional tuning."
-          }
         ]
       },
     ]
@@ -172,39 +156,47 @@ export default [
     sections: [
       { id: 0, 
         name: "4. Improve a Model", 
-        value: "Saving a model involves storing the trained model’s parameters to a file, allowing you to reuse the model later without retraining it from scratch.",
+        value: "Improving a model involves making adjustments to enhance its performance on a given task.",
         image: "",
         content: [
           { id: 1,
             title: "",
-            value: "Saving a model is a critical step in the machine learning workflow. After training a model, you typically want to save it so that you can deploy it, share it, or resume training later without starting from scratch."
+            value: "This can be done in several ways: adding more layers to increase the model’s depth, adding more hidden units to boost its capacity, increasing training epochs for more learning iterations, adjusting the learning rate for better convergence, changing the loss function, activation function or optimizer to better suit the problem, and using pre-trained models to leverage existing knowledge."
           },
         ]
       },
       { id: 1, 
         name: ":: How to Improve a Model", 
-        value: "Saving a model involves storing the trained model’s parameters to a file, allowing you to reuse the model later without retraining it from scratch.",
+        value: "",
         image: "src/assets/chapter_four/improve_model.jpeg",
         content: [
-          { id: 1,
+          { id: 0,
             title: "",
-            value: "Saving a model is a critical step in the machine learning workflow. After training a model, you typically want to save it so that you can deploy it, share it, or resume training later without starting from scratch."
+            value: "When we want to improve a model, we can look at two main scenarios: the model itself and the training process."
+          },
+          { id: 1,
+            title: "Rebuild the Model",
+            value: "The input and output layers are fixed, so we can focus on the hidden layers. We can add more layers to make it deeper or add more neurons to boost its capability. We can also think about changing the activation function (we’ll get into that in the math chapter). Using a pre-trained model is another option, which is really useful and something we’ll use in upcoming projects."
+          },
+          { id: 2,
+            title: "Rebuild the Training Loop",
+            value: "We can also train our model with different parameters and functions. For example, we can change the learning rate, set more training epochs, or try a different loss function or optimizer. In this model, we’ll only cover changing the learning rate and increasing the number of epochs."
           },
         ]
       },
     ]
   },
   { id: 4, 
-    name: "A better Model (+ReLU)",
+    name: "The 1st Model (+ReLU)",
     sections: [
       { id: 0, 
-        name: "4.1 A better Model (+ReLU)", 
-        value: "Saving a model involves storing the trained model’s parameters to a file, allowing you to reuse the model later without retraining it from scratch.",
+        name: "4.1 The First Model (+ReLU)", 
+        value: "",
         image: "src/assets/chapter_four/improve_one.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "Saving a model is a critical step in the machine learning workflow. After training a model, you typically want to save it so that you can deploy it, share it, or resume training later without starting from scratch."
+            value: "Since we’ve used linear functions to build our model so far, we haven’t explored non-linear functions. Now, we’ll introduce our first non-linear formula as the activation function in this model to see how it performs."
           },
         ]
       },
@@ -215,29 +207,29 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "First, we create a directory for our model and save its state dictionary using the save() method in PyTorch."
+            value: "Before we rebuild our model, let’s visualize its architecture with a new non-linear activation function - ReLU - a powerful non-linear function that eliminates all negative values flowing to neurons."
           }
         ]
       },
       { id: 2, 
-        name: ":: Build this model", 
+        name: ":: Build and Train model", 
         value: "",
         image: "src/assets/chapter_four/improve_one_build.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "First, we add a new model parameter ‘relu’, which is the ReLU function. During the computation process, we place it between layer_1 and layer_2 to filter out the negative values from layer_1."
           }
         ]
       },
       { id: 3, 
-        name: ":: Train and Test Model", 
+        name: ":: Evaluate Model", 
         value: "",
         image: "src/assets/chapter_four/improve_one_test.png",
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "After training and testing this new model, we plot the predictions against the training and test data. From this image, we can clearly see that our predictions are still poor, even with the addition of the non-linear function. Why is that? Do we need more training epochs? Let’s continue exploring."
           }
         ]
       },
@@ -248,45 +240,53 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
-          }
+            value: "Even though it’s still a poor model, we should check the loss curves—maybe we can uncover something and identify the key issue from another perspective."
+          },
+          { id: 2,
+            title: "",
+            value: "Comparing it to our original model, the curves change continuously, almost at the same pace as the epochs increase. The loss is still decreasing slowly, much like the original model."
+          },
         ]
       },
     ]
   },
   { id: 5, 
-    name: "Another Model (+epochs)",
+    name: "The 2nd Model (+epochs)",
     sections: [
       { id: 0, 
-        name: "4.2 Another Model (+epochs)", 
-        value: "Saving a model involves storing the trained model’s parameters to a file, allowing you to reuse the model later without retraining it from scratch.",
+        name: "4.2 The Second Model (+epochs)", 
+        value: "",
         image: "src/assets/chapter_four/improve_two.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "Saving a model is a critical step in the machine learning workflow. After training a model, you typically want to save it so that you can deploy it, share it, or resume training later without starting from scratch."
+            value: "In this model, we maintain the architecutre of the first model. However in the training loop, we increase the number of epochs from 100 to 1,000 for more learning iteration. Now, let's build this new model - model_2 - train it and then evaluate its performance."
           },
         ]
       },
       { id: 1, 
-        name: ":: Build this model", 
+        name: ":: Build and Train Model", 
         value: "",
         image: "src/assets/chapter_four/improve_two_build.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "In this experiment, we keep the the model architecture the same as in model_1. Since we’re just rebuilding the same model, I didn’t include the code here - just refer to the previous one, with the model name updated, of course."
+          },
+          { id: 2,
+            title: "",
+            value: "This image shows the training loop settings, where the only change we made is increasing the epochs from 100 to 1,000."
           }
         ]
       },
       { id: 2, 
-        name: ":: Train and Test Model", 
+        name: ":: Evaluate Model", 
         value: "",
         image: "src/assets/chapter_four/improve_two_test.png",
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "Looking at this plot, the predictions are pretty solid - much better than the last one. Almost 80% of the points are separated by the white curve, which is a great sign. It means we’re heading in the right direction."
           }
         ]
       },
@@ -297,45 +297,45 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "From this image, we can see that the loss curves are smooth, with the loss values steadily decreasing as the training epochs progress. After halfway through, the curves start changing more rapidly up until the end of training. So, it’s likely that if we add more epochs, this line could continue to decrease at a similar pace."
           }
         ]
       },
     ]
   },
   { id: 6, 
-    name: "A Best Model (->lr)",
+    name: "The 3rd Model (->lr)",
     sections: [
       { id: 0, 
-        name: "4.3 A Best Model (->lr)", 
-        value: "Saving a model involves storing the trained model’s parameters to a file, allowing you to reuse the model later without retraining it from scratch.",
+        name: "4.3 The Third Model (->lr)", 
+        value: "",
         image: "src/assets/chapter_four/improve_three.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "Saving a model is a critical step in the machine learning workflow. After training a model, you typically want to save it so that you can deploy it, share it, or resume training later without starting from scratch."
+            value: "Building on the first two changes we made in model_1 and model_2, now, let's focus on the learing rate - a crucial important hyperparameter in deep learing. Our first 2 models slowed slow changes in loss, so what if we increase the learning step. By taking a bigger step, we might get a better model with the same training epochs and same architecture. Let's experiment with this."
           },
         ]
       },
       { id: 1, 
-        name: ":: Build this model", 
+        name: ":: Build and Train Model", 
         value: "",
         image: "src/assets/chapter_four/improve_three_build.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "Next, we’ll build a new model - model_3. In the training loop, we’ve adjusted the learning rate for a faster learning pace. Let’s train and evaluate this new model."
           }
         ]
       },
       { id: 2, 
-        name: ":: Train and Test Model", 
+        name: ":: Evaluate Model", 
         value: "",
         image: "src/assets/chapter_four/improve_three_test.png",
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "Wow, from the plot, we can clearly see that our model successfully separates the two point clusters, even with the circular shape. The predictions are nearly 100% accurate—this is a perfect model!"
           }
         ]
       },
@@ -346,7 +346,7 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "From these loss curves, we can clearly see that this model’s loss drops much faster to a lower level compared to the last model, even with the same number of training epochs. This shows just how crucial the learning rate is in our training process, we should pay more attention to this hyperparamater in future prejects."
           }
         ]
       },
@@ -357,53 +357,45 @@ export default [
     sections: [
       { id: 0, 
         name: "5. Save a Model", 
-        value: "Saving a model involves storing the trained model’s parameters to a file, allowing you to reuse the model later without retraining it from scratch.",
+        value: "Before we save the model, we need to choose the best one.",
         image: "",
         content: [
           { id: 1,
             title: "",
-            value: "Saving a model is a critical step in the machine learning workflow. After training a model, you typically want to save it so that you can deploy it, share it, or resume training later without starting from scratch."
-          },
-          { id: 2,
-            title: "",
-            value: "The saved model includes the learned parameters (weights and biases) and sometimes the model’s architecture, making it possible to reload and use the model immediately for making predictions."
-          },
-          { id: 3,
-            title: "",
-            value: "Saving a model ensures that the time and resources spent on training aren’t lost, and it also makes it easier to deploy the model in production environments where it can be used to make predictions on new data. Additionally, saved models can be shared with others or reused in different projects."
+            value: "Well, as part of the regular model training process, the only different here is that we need to choose the best model to save, since we built several versions models to improve on the original model."
           },
         ]
       },
       { id: 1, 
-        name: "4.0 Choose a Best Model", 
+        name: "5.0 Choose a Best Model", 
         value: "",
         image: "src/assets/chapter_four/save_choose.png",
         content: [
           { id: 1,
             title: "",
-            value: "First, we create a directory for our model and save its state dictionary using the save() method in PyTorch."
+            value: "Here, we’ve plotted all the models—from the initial poor model to the perfect model_3—so you can clearly see the differences between them. Starting with model_0, you can see how the models progressively improve until the perfect one emerges. It’s clear, understandable, and visually striking."
           }
         ]
       },
       { id: 2, 
-        name: "4.1 Save a Model", 
+        name: "5.1 Save a Model", 
         value: "",
         image: "src/assets/chapter_four/save_model_3.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "First, we create a directory for our model and save its state dictionary using the save() method in PyTorch."
+            value: "Just follow the usual model-saving process, over!"
           }
         ]
       },
       { id: 3, 
-        name: "4.2 Load a Model", 
+        name: "5.2 Load a Model", 
         value: "",
         image: "src/assets/chapter_four/save_load_model_3.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: "In the first step - preparing data - we load the data onto GPUs if available. However, we save our model on the CPUs. So, before making predictions with the saved model, we need to move this model to GPUs if they are available. That’s the only difference compared to the last project"
           }
         ]
       },

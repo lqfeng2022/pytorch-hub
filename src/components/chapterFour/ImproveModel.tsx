@@ -12,20 +12,17 @@ const ImproveModel = () => {
   const [ two, two_build, two_visual, two_loss ] = chapterFour[5].sections
   const [ three, three_build, three_visual, three_loss ] = chapterFour[6].sections
 
-  const [ 
-    one_build_code, one_train_code, one_loss_code
+  const [ one_build_code, one_train_code, one_loss_code
   ] = codeBinaryModel.slice(7, 10).map(obj => obj.code)
-  const [ 
-    two_build_code, two_train_code, two_loss_code
+  const [ two_build_code, two_train_code, two_loss_code
   ] = codeBinaryModel.slice(10, 13).map(obj => obj.code)
-  const [ 
-    three_build_code, three_train_code, three_loss_code
+  const [ three_build_code, three_train_code, three_loss_code
   ] = codeBinaryModel.slice(13, 16).map(obj => obj.code)
 
   return (
     <div>
       <Definition title={defin.name} definition={defin}/>
-      <LeftGrid section={improve}/>
+      <BaseGrid section={improve}/>
       <div id='model_one'>
         <BaseGrid section={one}/>
         <LeftGrid section={one_architec}/>

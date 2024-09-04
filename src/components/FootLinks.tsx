@@ -16,7 +16,7 @@ const FootLinks = ({ l, ll, r, rl }: Props) => {
         <Link to={ll}>
           <Text color='gray'>Previous Chapter</Text>
           <Text as='b' color='gray.600' _hover={hoverStyle}>
-            {`<- ${l}`}
+            {l}
           </Text>
         </Link>
       </Box>
@@ -24,7 +24,7 @@ const FootLinks = ({ l, ll, r, rl }: Props) => {
         <Link to={rl}>
           <Text textAlign='right' color='gray'>Next Chapter</Text>
           <Text as='b' color='gray.600' _hover={hoverStyle}>
-            {`${r} ->`}
+            {r}
           </Text>
         </Link>
       </Box>

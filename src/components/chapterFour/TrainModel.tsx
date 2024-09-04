@@ -1,8 +1,9 @@
 import chapterFour from '../../data/chapterFour'
 import Definition from '../Definition'
-import BaseGrid from '../BaseGrid'
 import codeBinaryModel from '../../data/codeBinaryModel'
 import CodeDisplay from '../CodeDisplay'
+import RightGrid from '../RightGrid'
+import LeftGrid from '../LeftGrid'
 
 const TrainModel = () => {
   const [ defin, train, test, loss ] = chapterFour[2].sections
@@ -13,11 +14,11 @@ const TrainModel = () => {
   return (
     <div>
       <Definition title={defin.name} definition={defin}/>
-      <BaseGrid section={train}/>
+      <RightGrid section={train}/>
       <CodeDisplay codes={trainCode}/>
-      <BaseGrid section={test}/>
+      <LeftGrid section={test}/>
       <CodeDisplay codes={testCode}/>
-      <BaseGrid section={loss}/>
+      <RightGrid section={loss}/>
       <CodeDisplay codes={lossCode}/>
     </div>
   )

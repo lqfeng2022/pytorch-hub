@@ -2,6 +2,7 @@ import { Box, Text } from '@chakra-ui/react'
 import Definition from '../Definition'
 import BaseGrid from '../BaseGrid'
 import chapterZero from '../../data/chapterZero'
+import LeftGrid from '../LeftGrid'
 
 const DLSection = () => {
   const [
@@ -11,7 +12,7 @@ const DLSection = () => {
   return (
     <>
       <Definition title={whats.name} definition={whats}/>
-      <BaseGrid section={comparing}/>
+      <LeftGrid section={comparing}/>
       <Box py={5}>
         <Text as='b' fontSize='lg' color='gray.600'>3.2 Deep Learing V.S. Machine Learing</Text>
         <BaseGrid section={mlmodel}/>

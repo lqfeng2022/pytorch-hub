@@ -1,4 +1,4 @@
-import { Box, Image, SimpleGrid, Stack, Text, Flex, HStack } from '@chakra-ui/react'
+import { Box, Image, SimpleGrid, Stack, Text, Flex, HStack, Grid } from '@chakra-ui/react'
 import Section from '../entities/Section'
 
 const LeftGrid = ({ section }: { section: Section }) => {
@@ -8,7 +8,7 @@ const LeftGrid = ({ section }: { section: Section }) => {
         <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>
         {section.value && <Text as='i' fontSize='lg'>{section.value}</Text>}
       </Stack>
-      <SimpleGrid columns={[1, null, 2]} spacing='20px' pt={3}>
+      <Grid templateColumns={{ base: '1fr', md: '3fr 2fr' }} gap={5} pt={3}>
         <Flex alignItems='center' justifyContent='center'>
           <Image src={section.image}/>
         </Flex>
@@ -29,7 +29,7 @@ const LeftGrid = ({ section }: { section: Section }) => {
             </div>
           )}
         </Stack>
-      </SimpleGrid>
+      </Grid>
     </Box>
   )
 }

@@ -324,11 +324,11 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "Here in this table we display two parameters bias (b) and weights (w) across several iterations, along with the corresponding MSE and the deriveative of MSE. We initialize these two parameters (set b to 0 and w to 0.3)."
+            value: "In this table, we’re showing the two parameters—bias (b) and weights (w)—over several iterations, along with the corresponding MSE and its derivative. We start by initializing b at 0 and w at 0.3."
           },
           { id: 2,
             title: "",
-            value: " Then update w and b based on the gradient of the MSE, and the update rule is pretty much similar to the 1 parameter function. Here's the tricky part, when we're calculating ths slope for one parameter, we treat the other parameter as a constant number."
+            value: "Then, we update w and b based on the gradient of the MSE. The update rule is pretty similar to the one-parameter function. Here’s the tricky part: when we calculate the slope for one parameter, we treat the other as a constant."
           },
         ]
       },
@@ -339,19 +339,19 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "This graph is a visualization of how Gradient Descent optimizes a linear model by iteratively updating its two parameters: the weight (w) and the bias (b)."
+            value: "This graph shows how Gradient Descent fine-tunes a linear model by iteratively adjusting its two key parameters: the weight (w) and the bias (b)."
           },
           { id: 2,
             title: "",
-            value: "Previously, we focused on just one parameter, the bias ( b ), while keeping the weight ( w = 0.3 ) fixed. This allowed us to understand how Gradient Descent adjusts the bias to minimize error. Now, let’s take it a step further by considering both parameters — weight and bias — simultaneously."
+            value: "Earlier, we focused on just one parameter, the bias (b), while keeping the weight fixed at w = 0.3. This helped us see how Gradient Descent tweaks the bias to minimize error. Now, we’re stepping it up by looking at both parameters—weight and bias—together."
           },
           { id: 3,
             title: "",
-            value: "By incorporating both parameters, the Gradient Descent algorithm updates them at each iteration to reduce the model’s error, just as we did with a single parameter. The process involves calculating new values for  w  and  b  based on their gradients and adjusting the model accordingly."
+            value: "When both parameters are in play, the Gradient Descent algorithm updates them at each iteration to bring down the model’s error, just like we did with a single parameter. The process involves recalculating w and b based on their gradients and adjusting the model accordingly."
           },
           { id: 4,
             title: "",
-            value: "This visualization will help you see how the model evolves when both the weight and bias are adjusted together, showcasing the path Gradient Descent takes to find the optimal parameter values. It’s essentially the same concept as before, just applied to a more complex scenario with two variables."
+            value: "This visualization lets you see how the model evolves as both weight and bias are adjusted together, highlighting the path Gradient Descent takes to find the best parameter values. It’s basically the same idea as before, just applied to a more complex scenario with two variables."
           },
         ]
       },
@@ -362,47 +362,47 @@ export default [
     sections: [
       { id: 0,
         name: "5. Stochastic Gradient Descent (SGD)",
-        value: "Stochastic Gradient Descent uses one sample or a subset of the samples randomly to do the same thing as regular Gradient Descent.",
+        value: "Stochastic Gradient Descent (SGD) works by using a single sample or a randomly selected subset of the data to perform the same process as regular Gradient Descent.",
         image: "",
         content: [
           { id: 1,
-            title: "What is SGD?",
-            value: "Stochastic Gradient Descent uses one or a subset of the samples randomly to do the same thing as regular Gradient Descent. Stochastic Gradient Descent (SGD) is an optimization technique used in machine learning and deep learning. Unlike the regular Gradient Descent, which uses the entire dataset to compute the gradient and update the parameters, SGD uses only one sample or a small, randomly selected subset of samples (also called a mini-batch) at each iteration to compute the gradient."
+            title: "What's SGD",
+            value: "Stochastic Gradient Descent (SGD) is an optimization method in machine learning that updates model parameters using just one sample or a small, random subset of data at each iteration, unlike regular Gradient Descent, which uses the entire dataset. This makes SGD faster and more efficient, though it can introduce more variability in updates"
           },
           { id: 2,
-            title: "Why SGD?",
-            value: "By using only one data or a small subset of data to update the parameters, SGD can be much faster and more memory-efficient than regular Gradient Descent, especially when dealing with large datasets. The more frequent parameter updates because of the faster computation, and frequent parameters’ updating can lead to faster convergence, though the path to convergence might be noisier and less smooth compared to regular Gradient Descent."
+            title: "Why SGD",
+            value: "SGD is faster and more memory-efficient than regular Gradient Descent, especially with large datasets. By using only one data point or a small subset for updates, it allows for quicker, more frequent parameter adjustments. However, this can lead to a noisier, less smooth path to convergence."
           },
         ]
       },
       { id: 1,
         name: ":: SGD vs. GD",
-        value: "Stochastic Gradient Descent uses one sample or a subset of the samples randomly to do the same thing as regular Gradient Descent.",
+        value: "",
         image: "src/assets/chapter_three/sgd_one.jpeg",
         content: [
           { id: 1,
             title: "Large dataset",
-            value: "GD: Struggles with large datasets because it requires processing the entire dataset for each update. SGD: Handles large datasets efficiently by using only one or a small subset of samples per update."
+            value: "GD struggles with large datasets since it processes the entire dataset for each update. SGD efficiently handles large datasets by updating parameters using only one or a small subset of samples."
           },
           { id: 2,
             title: "Lots of parameters:",
-            value: "GD: Handles well but can be slow due to the need to compute gradients for all parameters at once. SGD: Scales better with a large number of parameters due to more frequent updates."
+            value: "GD manages many parameters well but can be slow due to computing gradients for all parameters at once. SGD scales better with numerous parameters thanks to more frequent "
           },
           { id: 3,
             title: "Parameter Updating:",
-            value: "GD: Updates parameters after computing gradients from the whole dataset, leading to stable and accurate updates. SGD: Updates parameters more frequently with each sample or subset, which introduces noise but speeds up the process."
+            value: "GD updates parameters after processing the entire dataset, resulting in stable and accurate changes. SGD updates parameters more frequently with each sample or subset, which speeds up the process but introduces some noise."
           },
           { id: 4,
             title: "RAM usage:",
-            value: "GD: Requires more RAM as it processes the entire dataset at each step. SGD: Requires less RAM since it processes only a small subset of the data at a time."
+            value: "GD requires more RAM since it processes the full dataset at each step. SGD uses less RAM by processing only a small subset of data at a time."
           },
           { id: 5,
             title: "Convergence Rate:",
-            value: "GD: Slower but more stable convergence to a precise minimum. SGD: Faster convergence but with more variability and potential oscillation around the minimum."
+            value: "GD is slower but more stable convergence towards a precise minimum. SGD converges faster, though with more variability and possible oscillation around the minimum."
           },
           { id: 6,
             title: "Accuracy:",
-            value: "GD: Often results in higher final accuracy, as updates are less noisy and reflect the overall trend in the data. SGD: May result in slightly lower accuracy due to noisy updates, but can be improved with techniques like learning rate decay and momentum."
+            value: "GD often achieves higher final accuracy as updates are less noisy and better reflect the overall data trend. SGD may have slightly lower accuracy due to noisy updates, but this can be improved with techniques like learning rate decay and momentum."
           },
         ]
       },
@@ -413,11 +413,11 @@ export default [
         content: [
           { id: 1,
             title: "Gradient Descent:",
-            value: "Provides a smooth, stable, and consistent path to the minimum but is computationally expensive and slower for large datasets."
+            value: "Offers a smooth and stable path to finding the minimum, but it can be computationally expensive and slower when dealing with large datasets."
           },
           { id: 2,
             title: "Stochastic Gradient Descent:",
-            value: "Offers a faster, more memory-efficient alternative but introduces noise in the updates, leading to a less predictable and more erratic path towards the minimum. This noise can be beneficial for escaping local minima but may require techniques like learning rate decay to stabilize the final convergence."
+            value: "Provides a faster and more memory-efficient alternative, but it introduces noise into the updates, leading to a less predictable and more erratic path towards the minimum. This noise can help for escaping local minima but may require techniques like learning rate decay to stabilize the final convergence."
           },
         ]
       },
@@ -433,19 +433,11 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "Learning Rate is a parameter in an optimization algorithm that determines the step size at each iteration."
+            value: "The learning rate is a crucial hyperparameter in optimization algorithms like Gradient Descent. It dictates the step size at each iteration while updating model parameters. This parameter significantly affects the training process, influencing how quickly and effectively a model converges to the minimum of the loss function."
           },
           { id: 2,
             title: "",
-            value: "The learning rate is indeed a critical parameter in optimization algorithms like Gradient Descent and its variants. It controls the size of the steps taken towards the minimum of the loss function during the training process of a machine learning model."
-          },
-          { id: 3,
-            title: "",
-            value: "The learning rate is a fundamental aspect of training machine learning models. It directly influences the training process’s efficiency, speed, and stability. By understanding and tuning the learning rate appropriately, you can significantly improve the performance and convergence of your models, ensuring they learn effectively from the data."
-          },
-          { id: 4,
-            title: "",
-            value: "The learning rate is a critical hyperparameter that directly influences how the training loss behaves during model optimization. An optimal learning rate results in efficient and stable convergence of the training loss. In contrast, an excessively high or low learning rate can lead to oscillations, divergence, or slow convergence, making it crucial to carefully tune this parameter for effective training."
+            value: "A well-chosen learning rate can lead to efficient and stable training, improving model performance. Conversely, an excessively high or low learning rate may cause issues such as oscillations, divergence, or slow convergence. Therefore, careful tuning of the learning rate is essential for achieving optimal training outcomes."
           },
         ]
       },
@@ -456,7 +448,7 @@ export default [
         content: [
           { id: 1,
             title: "Flat Region:",
-            value: "At very low learning rates, the training loss remains relatively constant, shown by the flat region at the beginning of the curve. The model is updating its parameters too slowly to make significant progress, leading to minimal changes in the loss."
+            value: "At very low learning rates, the training loss remains relatively constant, shown by the flat region at the beginning of the curve. The low learning rate means the model is making very small adjustments, which can delay convergence and make it harder to achieve significant improvements."
           },
           { id: 2,
             title: "Descent Region:",
@@ -479,29 +471,33 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: "The learning rate is very small, leading to tiny steps during each iteration of Gradient Descent. The model converges towards the minimum, but it does so very slowly. The training process becomes lengthy, requiring many more iterations to achieve a minimal loss. The gradient steps are small and tightly packed, showing slow progress toward the optimal point."
+            value: "When the learning rate is very small, each iteration of Gradient Descent takes tiny steps, particularly in the later stages of training."
+          },
+          { id: 2,
+            title: "",
+            value: "While the model does converge towards the minimum, this process is very slow, leading to a lengthy training period and requiring many more iterations to achieve minimal loss. The gradient steps are small and closely spaced, resulting in gradual and slow progress toward the optimal point."
           },
         ]
       },
       { id: 3,
         name: ":: Too High (lr=0.8)",
         value: "",
-        image: "src/assets/chapter_three/lr_low.jpeg",
+        image: "src/assets/chapter_three/lr_high.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "The learning rate is too large, causing the model to take large steps during each iteration. The model oscillates around the minimum or even diverges, leading to instability and failure to converge to the optimal solution. The gradient steps are erratic, often overshooting the optimal point and resulting in an increase in loss rather than a decrease."
+            value: "When the learning rate is too large, the model takes large steps during each iteration. This can cause the model to oscillate around the minimum or even diverge, leading to instability and failure to converge to the optimal solution. The gradient steps are erratic, often overshooting the optimal point and resulting in an increase in loss rather than a decrease."
           },
         ]
       },
       { id: 4,
         name: ":: Just Right (lr=0.2)",
         value: "",
-        image: "src/assets/chapter_three/lr_low.jpeg",
+        image: "src/assets/chapter_three/lr_right.jpeg",
         content: [
           { id: 1,
             title: "",
-            value: "The learning rate is appropriately set, allowing the model to make significant progress without overshooting the minimum. The model converges quickly and efficiently to the minimum loss. This represents an optimal learning rate where the balance between speed and accuracy is achieved. The gradient steps are well-paced, showing a steady and effective progression toward the optimal point."
+            value: "When the learning rate is set appropriately, the model makes substantial progress without overshooting the minimum. This balance allows the model to converge quickly and efficiently to the minimum loss. In this optimal scenario, the learning rate strikes a perfect balance between speed and accuracy, with gradient steps well-paced and showing steady, effective progress toward the optimal point."
           },
         ]
       },

@@ -133,7 +133,7 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: "In this chapter, we’ll dive into a new project, building a basic classification model using a simple neural network architecture. In this project, we’re gonna tackle a typical binary classification problem by classifying two different groups of data."
+        value: "In this chapter, we’ll dive into a new project by building a basic classification model using a simple neural network architecture. We’ll tackle a common binary classification problem by distinguishing between two different groups of data."
       },
     ]
   },
@@ -141,8 +141,8 @@ export default [
     name: "The Maths Behind (II)", 
     link: "the-maths-behind-two",
     items: [
-      { id: 1, name: "- Classification Problem", link: "" },
-      { id: 2, name: "- Binary Classification Problem", link: "" },
+      // { id: 1, name: "- Classification Problem", link: "" },
+      { id: 2, name: "- Binary Classification", link: "" },
       { id: 3, name: "- Loss Function (BCE)", link: "" },
       { id: 4, name: "- Sigmoid Function", link: "" },
       { id: 5, name: "- BackPropagation", link: "" },
@@ -151,7 +151,7 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: ""
+        value: "In this chapter, we’ll dive into a new project, building a basic classification model using a simple neural network architecture. In this project, we’re gonna tackle a typical binary classification problem by classifying two different groups of data."
       },
       { id: 2, 
         title: "",

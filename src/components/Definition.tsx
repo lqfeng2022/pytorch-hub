@@ -7,7 +7,7 @@ interface Props {
 }
 const Definition = ({ title, definition }: Props) => {
   return (
-    <Box py={5}>
+    <Box py={3}>
       <Text as='b' fontSize='xl' color='gray.600'>{title}</Text>
       <Center my={5} minH='250px' bg='red.50'>
         <Box maxW='500px'>

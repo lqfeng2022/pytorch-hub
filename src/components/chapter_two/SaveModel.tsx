@@ -3,6 +3,8 @@ import chapterTwo from '../../data/chapterTwo'
 import codeLineModel from '../../data/codeLineModel'
 import CodeDisplay from '../CodeDisplay'
 import BaseGrid from '../BaseGrid'
+import LeftGrid from '../LeftGrid'
+import RightGrid from '../RightGrid'
 
 const SaveModel = () => {
   const [ define, save, load ] = chapterTwo[4].sections
@@ -11,9 +13,9 @@ const SaveModel = () => {
   return (
     <div>
       <Definition title={define.name} definition={define}/>
-      <BaseGrid section={save}/>
+      <LeftGrid section={save}/>
       <CodeDisplay codes={savecode}/>
-      <BaseGrid section={load}/>
+      <RightGrid section={load}/>
       <CodeDisplay codes={loadcode}/>
     </div>
   )

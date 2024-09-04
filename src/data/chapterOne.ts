@@ -294,28 +294,16 @@ export default [
         image: "src/assets/chapter_one/operats_aggregate.jpeg",
         content: [
           { id: 1, 
-            title: "max()",
-            value: "Find the maximum value among all elements in a tensor or along a specific axis."
+            title: "max()/min()",
+            value: "Find the maximum/minimum value among all elements in a tensor or along a specific axis."
           },
           { id: 2, 
-            title: "min()",
-            value: "Find the minimum value among all elements in a tensor or along a specific axis."
+            title: "sum()/mean()",
+            value: "Calculate the sum/average of all elements in a tensor or along a specific axis."
           },
           { id: 3, 
-            title: "sum()",
-            value: "Calculate the sum of all elements in a tensor or along a specific axis."
-          },
-          { id: 4, 
-            title: "mean()",
-            value: "Calculates the average of all elements in a tensor or along a specific axis."
-          },
-          { id: 5, 
-            title: "argmax()",
-            value: "Return the indices of the maximum values along a specific axis of a tensor"
-          },
-          { id: 6, 
-            title: "argmin()",
-            value: "Return the indices of the minimum values along a specific axis of a tensor."
+            title: "argmax()/argmin()",
+            value: "Return the indices of the maximum/minimum values along a specific axis of a tensor"
           },
         ]
       },

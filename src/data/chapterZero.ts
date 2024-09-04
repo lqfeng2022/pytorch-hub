@@ -245,16 +245,16 @@ export default [
         image: "src/assets/chapter_zero/relationships.jpeg",
         content: [
           { id: 1, 
-            title: "Artificial Intelligence (AI)", 
-            value: "Artificial Intelligence (AI) is the broadest concept, referring to the development of computer systems that can perform tasks typically requiring human intelligence. This includes things like problem-solving, understanding language, recognizing patterns, and making decisions."
+            title: "", 
+            value: "Artificial Intelligence (AI) is the broadest concept, referring to the development of computer systems that can perform tasks typically requiring human intelligence."
           },
           { id: 2, 
-            title: "Machine Learning (ML)",
-            value: "Machine Learning (ML) is a subset of AI. It focuses on creating algorithms and models that allow computers to learn from and make predictions or decisions based on data. Instead of being explicitly programmed to perform a task, a machine learning model is trained on data to find patterns and improve over time."
+            title: "",
+            value: "Machine Learning (ML) is a subset of AI. It focuses on creating algorithms and models that allow computers to learn from and make predictions or decisions based on data."
           },
           { id: 3, 
-            title: "Deep Learning (DL)",
-            value: "Deep Learning (DL) is a subset of Machine Learning. It involves neural networks with many layers (hence DEEP) that can automatically learn complex patterns in data. Deep Learning excels at tasks like image and speech recognition, where traditional machine learning methods might struggle."
+            title: "",
+            value: "Deep Learning (DL) is a subset of Machine Learning. It involves neural networks with many layers (hence DEEP) that can automatically learn complex patterns in data."
           },
         ]
       },

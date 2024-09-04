@@ -11,7 +11,7 @@ const Header = ({ cover }: { cover: Cover }) => {
       <Center py={3}>
         <Stack maxW='300px'>
           <Text as='i' textAlign='center' pb={3}>{`"${cover.quote}"`}</Text>
-          <Text as='i' textAlign='center'>{`-- ${cover.author}`}</Text>
+          <Text as='i' textAlign='center'>{cover.author}</Text>
         </Stack>
       </Center>
       <Stack py={5}>

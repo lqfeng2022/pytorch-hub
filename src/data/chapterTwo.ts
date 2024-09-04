@@ -3,7 +3,7 @@ export default [
     name: "PyTorch Workflow",
     sections: [
       { id: 0,
-        name: "What's PyTorch Workflow", 
+        name: "0. PyTorch Workflow", 
         value: "A PyTorch workflow typically follows a sequence of steps that guide you through building, training, and evaluating deep learning models.",
         image: "",
         content: [
@@ -18,7 +18,7 @@ export default [
         ]
       },
       { id: 1,
-        name: "Workflow Overview", 
+        name: ":: Workflow Overview", 
         value: "",
         image: "src/assets/chapter_two/workflow.jpeg",
         content: [
@@ -29,7 +29,7 @@ export default [
         ]
       },
       { id: 2,
-        name: "Workflow Explaining", 
+        name: ":: Workflow Details", 
         value: "",
         image: "src/assets/chapter_two/workflow_explain.jpeg",
         content: [
@@ -62,12 +62,12 @@ export default [
     sections: [
       { id: 0, 
         name: "1. Prepare DATA", 
-        value: "Preparing data is the critical first step in machine learning, where the quality and structure of the data are established to influence the model’s success.",
+        value: "Preparing data is the first step in machine learning, involving the organization and refinement of raw data to ensure it is suitable for training.",
         image: "",
         content: [
           { id: 1,
             title: "",
-            value: "Preparing data is the essential initial step in machine learning that involves organizing and refining raw data to ensure it is suitable for training. The quality and structure of this data directly impact the performance and accuracy of the model, making this step crucial for the overall success of the project."
+            value: "Preparing data is the first step in machine learning that involves organizing and refining raw data to ensure it is suitable for training. The quality and structure of this data directly impact the performance and accuracy of the model, making this step crucial for the overall success of the project."
           },
         ]
       },
@@ -102,7 +102,7 @@ export default [
         ]
       },
       { id: 3, 
-        name: ":: Visualize DATA", 
+        name: ":: DATA Visualization ", 
         value: "",
         image: "src/assets/chapter_two/prepare_visual.png",
         content: [
@@ -221,7 +221,7 @@ export default [
         ]
       },
       { id: 2, 
-        name: ":: Visualize the Untrained Model", 
+        name: ":: Visualize the Model before training", 
         value: "",
         image: "src/assets/chapter_two/train_visual_before.jpeg",
         content: [

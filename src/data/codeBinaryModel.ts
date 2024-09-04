@@ -2,6 +2,7 @@ export default [
   { id: 0, 
     name: "1.1_create_data",
     code: [
+      // Regular setting
       { id: 1, 
         input: 
 `import torch
@@ -31,6 +32,7 @@ torch.cuda.device_count()`,
         output: 
 `0`,
       },
+      // 1.1 Create Data
       { id: 5,
         input: 
 `from sklearn.datasets import make_circles
@@ -43,7 +45,7 @@ X, y = make_circles(n_samples=1_000,
         output: 
 ``,
       },
-      { id: 7,
+      { id: 6,
         input: 
 `print(f"First 5 samples of X: \n {X[:5]}")
 print(f"First 5 samples of y: \n {y[:5]}")`,
@@ -57,7 +59,7 @@ print(f"First 5 samples of y: \n {y[:5]}")`,
 First 5 samples of y: 
  [1 1 1 1 0]`,
       },
-      { id: 8,
+      { id: 7,
         input: 
 `# Make DataFrame of circle data
 import pandas as pd
@@ -73,7 +75,7 @@ circles.head(5)`,
 3 -0.386558  0.581747	1
 4 0.445602  -0.894936	0`,
       },
-      { id: 9,
+      { id: 8,
         input: 
 `# Check the different labels
 circles.label.value_counts()`,
@@ -83,7 +85,7 @@ circles.label.value_counts()`,
 0	500
 dtype: int64`,
       },
-      { id: 10,
+      { id: 9,
         input: 
 `# View the first example of features and labels
 X_first = X[0]
@@ -95,13 +97,13 @@ print(f"The first sample of y: {y_first}")`,
 `The first sample of X: [0.64566871 0.22060161]
 The first sample of y: 1`,
       },
-      { id: 11,
+      { id: 10,
         input: 
 `type(X), X.dtype`,
         output: 
 `(numpy.ndarray, dtype('float64'))`,
       },
-      { id: 12,
+      { id: 11,
         input: 
 `X[:5], y[:5]`,
         output: 
@@ -112,7 +114,7 @@ The first sample of y: 1`,
         [ 0.44560223, -0.89493556]]),
  array([1, 1, 1, 1, 0]))`,
       },
-      { id: 13,
+      { id: 12,
         input: 
 `# 1)Turn data into tensors
 X = torch.from_numpy(X).type(torch.float)
@@ -127,7 +129,7 @@ X[:5], y[:5]`,
          [ 0.4456, -0.8949]]),
  tensor([1., 1., 1., 1., 0.]))`,
       },
-      { id: 14,
+      { id: 13,
         input: 
 `type(X), type(y), X.dtype, y.dtype`,
         output: 
@@ -138,7 +140,7 @@ X[:5], y[:5]`,
   { id: 1, 
     name: "1.2_split_data",
     code: [
-      { id: 15,
+      { id: 14,
         input: 
 `# 2)Split DATA into Training SET and Test SET
 from sklearn.model_selection import train_test_split
@@ -150,7 +152,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,
         output: 
 ``,
       },
-      { id: 16,
+      { id: 15,
         input: 
 `len(X_train), len(X_test), len(y_train), len(y_test)`,
         output: 
@@ -161,7 +163,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,
   { id: 2,
     name: "1.3_visualize_data",
     code: [
-      { id: 6,
+      { id: 16,
         input: 
 `# Visualize, visualize, visualize
 import matplotlib.pyplot as plt
@@ -213,16 +215,16 @@ model_0`,
 `model_0.state_dict()`,
         output: 
 `OrderedDict([('layer_1.weight',
-              tensor([[ 0.5406,  0.5869],
-                      [-0.1657,  0.6496],
-                      [-0.1549,  0.1427],
-                      [-0.3443,  0.4153],
-                      [ 0.6233, -0.5188]])),
+              tensor([[ 0.2291, -0.6847],
+                      [ 0.0437,  0.5737],
+                      [ 0.1430,  0.1516],
+                      [ 0.0209,  0.3754],
+                      [ 0.0614, -0.1734]], device='cuda:0')),
              ('layer_1.bias',
-              tensor([0.6146, 0.1323, 0.5224, 0.0958, 0.3410])),
+              tensor([-0.2749,  0.2505, -0.1695, -0.3641,  0.4621], device='cuda:0')),
              ('layer_2.weight',
-              tensor([[-0.0631,  0.3448,  0.0661, -0.2088,  0.1140]])),
-             ('layer_2.bias', tensor([-0.2060]))])`,
+              tensor([[ 0.3347,  0.1223, -0.1030, -0.4103,  0.3121]], device='cuda:0')),
+             ('layer_2.bias', tensor([0.2674], device='cuda:0'))])`,
       },
     ]
   },
@@ -272,56 +274,46 @@ for epoch in range(epochs):
   # Training
   model_0.train()
 
-  # 1. Forward pass (model outputs raw logits)
+  # 1)Forward pass (model outputs raw logits)
   y_logits = model_0(X_train).squeeze()
   y_pred = torch.round(torch.sigmoid(y_logits))
-
-  # 2. Calculate loss/accuracy
-  # loss = loss_fn(torch.sigmoid(y_logits), # Using nn.BCELoss you need torch.sigmoid()
-  #                y_train)
-  loss = loss_fn(y_logits, # RAW Logits
-                 y_train)
-  acc = accuracy_fn(y_true=y_train,
-                    y_pred=y_pred)
-
-  # 3. Optimizer zero grad
+  # 2)Calculate loss/accuracy
+  loss = loss_fn(y_logits, y_train) # RAW Logits
+  acc = accuracy_fn(y_true=y_train, y_pred=y_pred)
+  # 3)Optimizer zero grad
   optimizer.zero_grad()
-
-  # 4. Loss backwards
+  # 4)Loss backwards
   loss.backward()
-
-  # 5. Optimizer step
+  # 5)Optimizer step
   optimizer.step()
 
   ### Testing
   model_0.eval()
   with torch.inference_mode():
-    # 1. Forward pass
+    # 1)Forward pass
     test_logits = model_0(X_test).squeeze()
     test_pred = torch.round(torch.sigmoid(test_logits))
-    # 2. Calculate loss/accuracy
-    test_loss = loss_fn(test_logits,
-                        y_test)
-    test_acc = accuracy_fn(y_true=y_test,
-                           y_pred=test_pred)
+    # 2)Calculate loss/accuracy
+    test_loss = loss_fn(test_logits, y_test)
+    test_acc = accuracy_fn(y_true=y_test, y_pred=test_pred)
 
-  # Print out what's happening every 10 epochs
+  # Print out loss and accuracy every 10 epochs
   if epoch % 10 == 0:
     epoch_count.append(epoch)
     train_loss_values.append(loss)
     test_loss_values.append(test_loss)
     print(f"Epoch: {epoch} | Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Test loss: {test_loss: .5f}, Test acc: {test_acc:.2f}%")`,
         output: 
-`Epoch: 0 | Loss: 0.69567, Accuracy: 50.00% | Test loss:  0.69720, Test acc: 50.00%
-Epoch: 10 | Loss: 0.69400, Accuracy: 49.88% | Test loss:  0.69615, Test acc: 49.50%
-Epoch: 20 | Loss: 0.69339, Accuracy: 43.00% | Test loss:  0.69587, Test acc: 44.50%
-Epoch: 30 | Loss: 0.69317, Accuracy: 47.62% | Test loss:  0.69581, Test acc: 45.00%
-Epoch: 40 | Loss: 0.69309, Accuracy: 49.12% | Test loss:  0.69579, Test acc: 47.00%
-Epoch: 50 | Loss: 0.69305, Accuracy: 49.62% | Test loss:  0.69577, Test acc: 46.50%
-Epoch: 60 | Loss: 0.69303, Accuracy: 49.88% | Test loss:  0.69574, Test acc: 46.00%
-Epoch: 70 | Loss: 0.69302, Accuracy: 50.62% | Test loss:  0.69570, Test acc: 46.50%
-Epoch: 80 | Loss: 0.69301, Accuracy: 50.25% | Test loss:  0.69566, Test acc: 46.50%
-Epoch: 90 | Loss: 0.69300, Accuracy: 50.50% | Test loss:  0.69562, Test acc: 46.50%`
+`Epoch: 0 | Loss: 0.73573, Accuracy: 50.00% | Test loss:  0.71928, Test acc: 50.00%
+Epoch: 10 | Loss: 0.71432, Accuracy: 55.38% | Test loss:  0.70242, Test acc: 57.00%
+Epoch: 20 | Loss: 0.70521, Accuracy: 58.63% | Test loss:  0.69586, Test acc: 62.50%
+Epoch: 30 | Loss: 0.70089, Accuracy: 54.25% | Test loss:  0.69321, Test acc: 55.00%
+Epoch: 40 | Loss: 0.69859, Accuracy: 52.62% | Test loss:  0.69213, Test acc: 52.00%
+Epoch: 50 | Loss: 0.69721, Accuracy: 52.38% | Test loss:  0.69171, Test acc: 52.50%
+Epoch: 60 | Loss: 0.69629, Accuracy: 51.38% | Test loss:  0.69159, Test acc: 52.00%
+Epoch: 70 | Loss: 0.69563, Accuracy: 51.00% | Test loss:  0.69162, Test acc: 50.50%
+Epoch: 80 | Loss: 0.69513, Accuracy: 50.88% | Test loss:  0.69171, Test acc: 49.50%
+Epoch: 90 | Loss: 0.69474, Accuracy: 50.75% | Test loss:  0.69185, Test acc: 50.00%`
       },
     ]
   }, 
@@ -334,13 +326,13 @@ Epoch: 90 | Loss: 0.69300, Accuracy: 50.50% | Test loss:  0.69562, Test acc: 46.
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Define a Decison Boundary function to visualize model
+# Define a plot function to visualize model
 def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Tensor):
     """Plots decision boundaries of model predicting on X in comparison to y.
 
     Source - https://madewithml.com/courses/foundations/neural-networks/ (with modifications)
     """
-    # Put everything to CPU (works better with NumPy + Matplotlib)
+    # Put everything to CPU (works for NumPy + Matplotlib)
     model.to("cpu")
     X, y = X.to("cpu"), y.to("cpu")
 
@@ -392,11 +384,11 @@ train_loss_values = np.array(torch.tensor(train_loss_values).numpy())
 test_loss_values = np.array(torch.tensor(test_loss_values).numpy())
 train_loss_values, test_loss_values`,
         output: 
-`(array([0.6956717 , 0.69399756, 0.6933943 , 0.6931729 , 0.6930874 ,
-        0.6930506 , 0.6930317 , 0.69302   , 0.6930114 , 0.6930044 ],
+`(array([0.7357303 , 0.71431684, 0.7052077 , 0.70088726, 0.6985858 ,
+        0.69720733, 0.6962918 , 0.6956338 , 0.69513494, 0.69474363],
        dtype=float32),
- array([0.69720024, 0.6961511 , 0.6958704 , 0.6958076 , 0.69579   ,
-        0.6957708 , 0.69574153, 0.69570416, 0.6956622 , 0.69561833],
+ array([0.7192759 , 0.7024158 , 0.6958596 , 0.69320744, 0.6921252 ,
+        0.6917087 , 0.6915907 , 0.6916151 , 0.69171184, 0.6918471 ],
        dtype=float32))`
       },
       { id: 26,
@@ -427,7 +419,7 @@ plt.legend()`,
 
   def forward(self, x):
     return self.layer_2(self.relu(self.layer_1(x)))
-    # this way of writing operations leverages speedups where possible behind the scene
+    # This nested way of writing operations takes advantage of behind-the-scenes speedups whenever possible
 
 model_1 = CircleModelV1().to(device)
 model_1`,
@@ -445,7 +437,7 @@ model_1`,
     code: [
       { id: 28,
         input: 
-`# Setup loss and optimizer
+`# Pick up loss function and optimizer
 loss_fn = nn.BCEWithLogitsLoss()
 optimizer = torch.optim.SGD(model_1.parameters(), lr=0.1)`,
         output: 
@@ -466,53 +458,46 @@ epoch_count = []
 train_loss_values = []
 test_loss_values = []
 
+# Training loop
 for epoch in range(epochs):
-  # 1. Forward pass
+  # 1)Forward pass
   y_logits = model_1(X_train).squeeze()
   y_pred = torch.round(torch.sigmoid(y_logits))
 
-  # 2. Calculate loss and accuracy
+  # 2)Calculate loss and accuracy
   loss = loss_fn(y_logits, y_train)
-  acc = accuracy_fn(y_true=y_train,
-                    y_pred=y_pred)
-
-  # 3. Optimizer zero grad
-  optimizer.zero_grad()
-
-  # 4. Loss backward
-  loss.backward()
-
-  # 5. Optimizer step
-  optimizer.step()
+  acc = accuracy_fn(y_true=y_train, y_pred=y_pred)
+  optimizer.zero_grad() # 3)Optimizer ZERO Gradient
+  loss.backward() # 4)Loss backwards (backPropagation)
+  optimizer.step() # 5)Optimizer step
 
   ### Testing
   model_1.eval()
   with torch.inference_mode():
-    # 1. Forward pass
+    # 1)Forward pass
     test_logits = model_1(X_test).squeeze()
     test_pred = torch.round(torch.sigmoid(test_logits))
-    # 2. Calculate the loss and accuracy
+    # 2)Calculate the loss and accuracy
     test_loss = loss_fn(test_logits, y_test)
-    test_acc = accuracy_fn(y_true=y_test,
-                           y_pred=test_pred)
+    test_acc = accuracy_fn(y_true=y_test, y_pred=test_pred)
 
-  # Print out what's happening
+  # Print out the loss and accuracy every 10 epochs
   if epoch % 10 == 0:
     epoch_count.append(epoch)
     train_loss_values.append(loss)
     test_loss_values.append(test_loss)
     print(f"Epoch: {epoch} | Loss: {loss:.5f}, accuracy: {acc:.2f} | Test loss: {test_loss: .5f}, Test Accuracy: {test_acc: .2f}")`,
         output: 
-`Epoch: 0 | Loss: 0.69779, accuracy: 53.12 | Test loss:  0.69798, Test Accuracy:  54.00
-Epoch: 10 | Loss: 0.69540, accuracy: 52.75 | Test loss:  0.69533, Test Accuracy:  56.50
-Epoch: 20 | Loss: 0.69362, accuracy: 51.38 | Test loss:  0.69334, Test Accuracy:  55.00
-Epoch: 30 | Loss: 0.69214, accuracy: 52.25 | Test loss:  0.69170, Test Accuracy:  55.00
-Epoch: 40 | Loss: 0.69083, accuracy: 57.12 | Test loss:  0.69026, Test Accuracy:  54.50
-Epoch: 50 | Loss: 0.68962, accuracy: 59.38 | Test loss:  0.68894, Test Accuracy:  55.50
-Epoch: 60 | Loss: 0.68845, accuracy: 59.75 | Test loss:  0.68769, Test Accuracy:  56.50
-Epoch: 70 | Loss: 0.68731, accuracy: 59.50 | Test loss:  0.68649, Test Accuracy:  57.50
-Epoch: 80 | Loss: 0.68618, accuracy: 58.38 | Test loss:  0.68532, Test Accuracy:  58.50
-Epoch: 90 | Loss: 0.68508, accuracy: 58.63 | Test loss:  0.68417, Test Accuracy:  57.50`,
+`Epoch: 0 | Loss: 0.69083, accuracy: 53.62 | Test loss:  0.68830, Test Accuracy:  55.50
+Epoch: 10 | Loss: 0.68809, accuracy: 53.12 | Test loss:  0.68669, Test Accuracy:  52.00
+Epoch: 20 | Loss: 0.68634, accuracy: 53.50 | Test loss:  0.68572, Test Accuracy:  53.00
+Epoch: 30 | Loss: 0.68494, accuracy: 53.37 | Test loss:  0.68493, Test Accuracy:  53.00
+Epoch: 40 | Loss: 0.68370, accuracy: 53.37 | Test loss:  0.68421, Test Accuracy:  53.00
+Epoch: 50 | Loss: 0.68252, accuracy: 53.50 | Test loss:  0.68351, Test Accuracy:  53.00
+Epoch: 60 | Loss: 0.68138, accuracy: 54.00 | Test loss:  0.68281, Test Accuracy:  53.00
+Epoch: 70 | Loss: 0.68027, accuracy: 54.25 | Test loss:  0.68211, Test Accuracy:  53.50
+Epoch: 80 | Loss: 0.67918, accuracy: 54.50 | Test loss:  0.68139, Test Accuracy:  53.50
+Epoch: 90 | Loss: 0.67811, accuracy: 54.62 | Test loss:  0.68066, Test Accuracy:  54.00`,
       },
       { id: 30,
         input: 
@@ -553,7 +538,7 @@ plt.legend()`,
   { id: 10, 
     name: "4.2.1_build_a_new_model",
     code: [
-      { id: 27,
+      { id: 32,
         input: 
 `from torch import nn
 
@@ -562,7 +547,7 @@ class CircleModelV2(nn.Module):
     super().__init__()
     self.layer_1 = nn.Linear(in_features=2, out_features=10)
     self.layer_2 = nn.Linear(in_features=10, out_features=1)
-    self.relu = nn.ReLU()
+    self.relu = nn.ReLU() # add ReLU function here
 
   def forward(self, x):
     return self.layer_2(self.relu(self.layer_1(x)))
@@ -581,21 +566,20 @@ model_2`,
   { id: 11, 
     name: "4.2.2_train_test_model",
     code: [
-      { id: 28,
+      { id: 33,
         input: 
-`# Pick a loss function and optimizer
+`# Pick up loss function and optimizer
 loss_fn = nn.BCEWithLogitsLoss() # Sigmoid built-in
-
 optimizer = torch.optim.SGD(params=model_2.parameters(),
                             lr=0.1)`,
         output: 
 ``,
       },
-      { id: 29,
+      { id: 34,
         input: 
 `torch.manual_seed(69)
 
-epochs = 1000
+epochs = 1000 # 100 -> 1,000
 
 # Put data to the target device
 X_train, y_train = X_train.to(device), y_train.to(device)
@@ -631,25 +615,25 @@ for epoch in range(epochs):
     test_loss = loss_fn(test_logits, y_test)
     test_acc = accuracy_fn(y_true=y_test, y_pred=test_pred)
 
-  # Print out what's happening every 10 epochs
+  # Print out loss and accurary every 10 epochs
   if epoch % 100 == 0:
     epoch_count.append(epoch)
     train_loss_values.append(loss)
     test_loss_values.append(test_loss)
     print(f"Epoch: {epoch} | Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Test loss: {test_loss: .5f}, Test acc: {test_acc:.2f}%")`,
         output: 
-`Epoch: 0 | Loss: 0.69779, Accuracy: 57.50% | Test loss:  0.69798, Test acc: 54.00%
-Epoch: 100 | Loss: 0.68400, Accuracy: 57.50% | Test loss:  0.68305, Test acc: 58.00%
-Epoch: 200 | Loss: 0.67339, Accuracy: 57.50% | Test loss:  0.67221, Test acc: 60.50%
-Epoch: 300 | Loss: 0.66225, Accuracy: 57.50% | Test loss:  0.66060, Test acc: 62.00%
-Epoch: 400 | Loss: 0.65013, Accuracy: 57.50% | Test loss:  0.64791, Test acc: 66.00%
-Epoch: 500 | Loss: 0.63634, Accuracy: 57.50% | Test loss:  0.63354, Test acc: 70.50%
-Epoch: 600 | Loss: 0.61991, Accuracy: 57.50% | Test loss:  0.61700, Test acc: 74.50%
-Epoch: 700 | Loss: 0.59961, Accuracy: 57.50% | Test loss:  0.59727, Test acc: 80.00%
-Epoch: 800 | Loss: 0.57379, Accuracy: 57.50% | Test loss:  0.57341, Test acc: 85.00%
-Epoch: 900 | Loss: 0.54110, Accuracy: 57.50% | Test loss:  0.54444, Test acc: 89.00%`,
+`Epoch: 0 | Loss: 0.69083, Accuracy: 53.62% | Test loss:  0.68830, Test acc: 55.50%
+Epoch: 100 | Loss: 0.67704, Accuracy: 55.12% | Test loss:  0.67993, Test acc: 54.50%
+Epoch: 200 | Loss: 0.66572, Accuracy: 62.62% | Test loss:  0.67164, Test acc: 62.50%
+Epoch: 300 | Loss: 0.65251, Accuracy: 69.38% | Test loss:  0.66123, Test acc: 66.00%
+Epoch: 400 | Loss: 0.63537, Accuracy: 73.38% | Test loss:  0.64740, Test acc: 71.50%
+Epoch: 500 | Loss: 0.61388, Accuracy: 78.38% | Test loss:  0.62967, Test acc: 74.50%
+Epoch: 600 | Loss: 0.58537, Accuracy: 84.50% | Test loss:  0.60625, Test acc: 78.50%
+Epoch: 700 | Loss: 0.54921, Accuracy: 90.38% | Test loss:  0.57596, Test acc: 84.00%
+Epoch: 800 | Loss: 0.50659, Accuracy: 95.12% | Test loss:  0.53875, Test acc: 90.50%
+Epoch: 900 | Loss: 0.45954, Accuracy: 97.88% | Test loss:  0.49689, Test acc: 94.50%`,
       },
-      { id: 30,
+      { id: 35,
         input: 
 `# Plot decision boundaries for training and test sets
 plt.figure(figsize=(9, 4))
@@ -667,7 +651,7 @@ plot_decision_boundary(model_2, X_test, y_test)`,
   { id: 12, 
     name: "4.2.3_plot_loss_curves",
     code: [
-      { id: 31,
+      { id: 36,
         input: 
 `import numpy as np
 train_loss_values = np.array(torch.tensor(train_loss_values).numpy())
@@ -688,7 +672,7 @@ plt.legend()`,
   { id: 13, 
     name: "4.3.1_build_a_new_model",
     code: [
-      { id: 27,
+      { id: 37,
         input: 
 `from torch import nn
 
@@ -716,19 +700,18 @@ model_3`,
   { id: 14, 
     name: "4.3.2_train_test_model",
     code: [
-      { id: 28,
+      { id: 38,
         input: 
-`# Pick a loss function and optimizer
-loss_fn = nn.BCEWithLogitsLoss() # Sigmoid built-in
+`# Pick up loss function and optimizer
+loss_fn = nn.BCEWithLogitsLoss()
 optimizer = torch.optim.SGD(params=model_3.parameters(),
                             lr=0.3)`,
         output: 
 ``,
       },
-      { id: 29,
+      { id: 39,
         input: 
 `torch.manual_seed(69)
-
 epochs = 1000
 
 # Put data to the target device
@@ -763,25 +746,25 @@ for epoch in range(epochs):
     test_loss = loss_fn(test_logits, y_test)
     test_acc = accuracy_fn(y_true=y_test, y_pred=test_pred)
 
-  # Print out what's happening every 10 epochs
+  # Print out loss/accuracy every 10 epochs
   if epoch % 100 == 0:
     epoch_count.append(epoch)
     train_loss_values.append(loss)
     test_loss_values.append(test_loss)
     print(f"Epoch: {epoch} | Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Test loss: {test_loss: .5f}, Test acc: {test_acc:.2f}%")`,
         output: 
-`Epoch: 0 | Loss: 0.69779, Accuracy: 57.50% | Test loss:  0.69736, Test acc: 56.00%
-Epoch: 100 | Loss: 0.66231, Accuracy: 57.50% | Test loss:  0.66041, Test acc: 62.00%
-Epoch: 200 | Loss: 0.62008, Accuracy: 57.50% | Test loss:  0.61680, Test acc: 74.50%
-Epoch: 300 | Loss: 0.54165, Accuracy: 57.50% | Test loss:  0.54424, Test acc: 89.00%
-Epoch: 400 | Loss: 0.41856, Accuracy: 57.50% | Test loss:  0.44522, Test acc: 93.00%
-Epoch: 500 | Loss: 0.29038, Accuracy: 57.50% | Test loss:  0.32788, Test acc: 96.50%
-Epoch: 600 | Loss: 0.19058, Accuracy: 57.50% | Test loss:  0.22930, Test acc: 99.00%
-Epoch: 700 | Loss: 0.13140, Accuracy: 57.50% | Test loss:  0.16752, Test acc: 100.00%
-Epoch: 800 | Loss: 0.09762, Accuracy: 57.50% | Test loss:  0.13082, Test acc: 100.00%
-Epoch: 900 | Loss: 0.07669, Accuracy: 57.50% | Test loss:  0.10792, Test acc: 100.00%`,
+`Epoch: 0 | Loss: 0.69083, Accuracy: 98.62% | Test loss:  0.68785, Test acc: 53.00%
+Epoch: 100 | Loss: 0.65257, Accuracy: 98.62% | Test loss:  0.66105, Test acc: 66.00%
+Epoch: 200 | Loss: 0.58578, Accuracy: 98.62% | Test loss:  0.60608, Test acc: 78.50%
+Epoch: 300 | Loss: 0.46037, Accuracy: 98.62% | Test loss:  0.49677, Test acc: 94.50%
+Epoch: 400 | Loss: 0.31990, Accuracy: 98.62% | Test loss:  0.36718, Test acc: 97.00%
+Epoch: 500 | Loss: 0.21253, Accuracy: 98.62% | Test loss:  0.26066, Test acc: 99.00%
+Epoch: 600 | Loss: 0.14532, Accuracy: 98.62% | Test loss:  0.19060, Test acc: 99.50%
+Epoch: 700 | Loss: 0.10525, Accuracy: 98.62% | Test loss:  0.14739, Test acc: 100.00%
+Epoch: 800 | Loss: 0.08044, Accuracy: 98.62% | Test loss:  0.11945, Test acc: 100.00%
+Epoch: 900 | Loss: 0.06447, Accuracy: 98.62% | Test loss:  0.10122, Test acc: 100.00%`,
       },
-      { id: 30,
+      { id: 40,
         input: 
 `# Plot decision boundaries for training and test sets
 plt.figure(figsize=(9, 4))
@@ -799,7 +782,7 @@ plot_decision_boundary(model_3, X_test, y_test)`,
   { id: 15, 
     name: "4.3.3_plot_loss_curves",
     code: [
-      { id: 31,
+      { id: 41,
         input: 
 `import numpy as np
 train_loss_values = np.array(torch.tensor(train_loss_values).numpy())
@@ -820,7 +803,7 @@ plt.legend()`,
   { id: 16, 
     name: "5.0_save_model_choose",
     code: [
-      { id: 32,
+      { id: 42,
         input: 
 `# Plot decision boundaries for training and test sets
 plt.figure(figsize=(14, 3))
@@ -844,7 +827,7 @@ plot_decision_boundary(model_3, X_test, y_test)`,
   { id: 17, 
     name: "5.1_save_model_model_3",
     code: [
-      { id: 33,
+      { id: 43,
         input: 
 `from pathlib import Path
 
@@ -860,9 +843,9 @@ MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
 print(f"Saving model to: {MODEL_SAVE_PATH}")
 torch.save(obj=model_3.state_dict(), f=MODEL_SAVE_PATH)`,
         output: 
-``,
+`Saving model to: models/01_aBinaryClassification_model_3.pth`,
       },
-      { id: 34,
+      { id: 44,
         input: 
 `model_3.state_dict()`,
         output:
@@ -890,7 +873,7 @@ torch.save(obj=model_3.state_dict(), f=MODEL_SAVE_PATH)`,
   { id: 18, 
     name: "5.0_save_model_load",
     code: [
-      { id: 35,
+      { id: 45,
         input: 
 `# 1)Instantiate a new model
 loaded_model_0 = CircleModelV3()
@@ -902,7 +885,7 @@ loaded_model_0.load_state_dict(torch.load(f=MODEL_SAVE_PATH))`,
   loaded_model_0.load_state_dict(torch.load(f=MODEL_SAVE_PATH))
 <All keys matched successfully>`,
       },
-      { id: 36,
+      { id: 46,
         input: 
 `loaded_model_0.state_dict()`,
         output: 
@@ -925,9 +908,11 @@ loaded_model_0.load_state_dict(torch.load(f=MODEL_SAVE_PATH))`,
                        -3.0189, -3.5742]])),
              ('layer_2.bias', tensor([2.1943]))])`,
       },
-      { id: 37,
+      { id: 47,
         input: 
 `# Make predictions with loaded model
+loaded_model_0.to(device) # Remember putting model on GPUs if available
+
 loaded_model_0.eval()
 with torch.inference_mode():
   test_logits = loaded_model_0(X_test).squeeze()
@@ -935,9 +920,11 @@ with torch.inference_mode():
         output: 
 ``,
       },
-      { id: 38,
+      { id: 48,
         input: 
 `# Make predictions with model_3
+model_3.to(device) # Put model on the GPUs
+
 model_3.eval()
 with torch.inference_mode():
   test_logits = model_3(X_test).squeeze()
@@ -945,7 +932,7 @@ with torch.inference_mode():
         output: 
 ``,
       },
-      { id: 39,
+      { id: 49,
         input: 
 `# 3)Compare the predictions of loaded model and original model
 y_preds[:69] == loaded_model_preds[:69]`,
