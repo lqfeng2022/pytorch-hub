@@ -6,14 +6,14 @@ import RightGrid from '../RightGrid'
 
 const BinaryClassification = () => {
   const [ 
-    classificDefin, classific, binaryDefin, binaryLinear, binaryNonlinear 
+    defin, classific, bClassific, binaryLinear, binaryNonlinear 
   ] = chapterFive[0].sections
 
   return (
     <div>
-      <Definition title={classificDefin.name} definition={classific}/>
+      <Definition title={defin.name} definition={defin}/>
       <BaseGrid section={classific}/>
-      <Definition title={binaryDefin.name} definition={binaryDefin}/>
+      <Definition title={bClassific.name} definition={bClassific}/>
       <LeftGrid section={binaryLinear}/>
       <RightGrid section={binaryNonlinear}/>
     </div>

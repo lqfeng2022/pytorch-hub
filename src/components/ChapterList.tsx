@@ -11,7 +11,7 @@ interface Props {
 
 const ChapterList = ({ items, descrip }: Props) => {
   return (
-    <Box>
+    <Box py={5}>
       <SimpleGrid spacing={4} columns={{ sm: 1, md: 2 }} >
         <Box 
           p={6} 

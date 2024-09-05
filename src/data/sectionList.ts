@@ -133,7 +133,19 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: "In this chapter, we’ll dive into a new project by building a basic classification model using a simple neural network architecture. We’ll tackle a common binary classification problem by distinguishing between two different groups of data."
+        value: "In the mathematic part of this chapter, we’ll focus on the classification problems, particularly a binary classification. We’ll start by introducing a new loss function, binary cross-entropy, commonly used in classification tasks."
+      },
+      { id: 2, 
+        title: "",
+        value: "Next, we’ll delve into logistic regression, which transforms a set of data into a probability distribution between 0 and 1 - a crucial element in classification models."
+      },
+      { id: 3, 
+        title: "",
+        value: "In the last chapter, we were introduced to backpropagation, but we didn’t dive into the details, here we’re gonna explore more about it."
+      },
+      { id: 4, 
+        title: "",
+        value: "Finally, we’ll introduce the ReLU function, a non-linear activation function widely used in neural networks."
       },
     ]
   },
@@ -141,8 +153,8 @@ export default [
     name: "The Maths Behind (II)", 
     link: "the-maths-behind-two",
     items: [
-      // { id: 1, name: "- Classification Problem", link: "" },
-      { id: 2, name: "- Binary Classification", link: "" },
+      { id: 1, name: "- Classification Problem", link: "" },
+      // { id: 2, name: "- Binary Classification", link: "" },
       { id: 3, name: "- Loss Function (BCE)", link: "" },
       { id: 4, name: "- Sigmoid Function", link: "" },
       { id: 5, name: "- BackPropagation", link: "" },
@@ -151,11 +163,11 @@ export default [
     description: [
       { id: 1, 
         title: "",
-        value: "In this chapter, we’ll dive into a new project, building a basic classification model using a simple neural network architecture. In this project, we’re gonna tackle a typical binary classification problem by classifying two different groups of data."
+        value: "In this chapter, we’ll dive into the math and basic machine learing concepts behind the binary classification model we built in the last chapter."
       },
       { id: 2, 
         title: "",
-        value: ""
+        value: "Let's keep it simple - first, we'll introduce the fundmental concept of classification in machine learning. Then we'll cover a few key functions used in our model, like binary cross-entropy with sigmoid, which together form our loss function. As you might remember, we also introduced the idea of activation functions, and here we use a non-linear one - ReLU. After that, we'll explore the core algrithm - backpropagation, discussing its basic concepts and some implementation details. So, let's get started!",
       },
     ]
   },

@@ -10,7 +10,7 @@ const Definition = ({ title, definition }: Props) => {
     <Box py={3}>
       <Text as='b' fontSize='xl' color='gray.600'>{title}</Text>
       <Center my={5} minH='250px' bg='red.50'>
-        <Box maxW='500px'>
+        <Box maxW='600px' px={5}>
           <Text textAlign='center' fontSize='2xl' color='tomato'>{definition.value}</Text>
         </Box>
       </Center>

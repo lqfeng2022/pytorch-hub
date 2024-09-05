@@ -45,6 +45,6 @@ export default [
     author: "― John D. Kelleher, Deep Learning",
     image: "src/assets/backpropagation.webp",
     title: "Multilayer Perceptron architecture and our notation. Handmade sketch by D Goglia.",
-    description: "This image serves as a visual metaphor for the way machine learning models, especially neural networks, process input data to produce classified or simplified outputs. It highlights the transformation of raw data into meaningful information through computational processes, which is central to the functioning of machine learning systems."
+    description: "This handmade sketch display a pretty basic architecture in deep learing, which we call it multiplayer perceptron (MLP), we'll cover it in our future model. Here this neural network is pretty simple, which has only one hidden layer with fully connected feed-forward. In last chapter, we built a neural network with this kind of simple architecure, here in this chapter, we'll talk about it deeper, especially the backpropagation, - a core algrithm behind neural networ."
   },
 ]
