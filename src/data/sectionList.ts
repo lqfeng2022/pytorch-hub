@@ -313,21 +313,15 @@ export default [
     ]
   },
   { id: 13, 
-    name: "Dedication", 
-    link: 'dedication', 
+    name: "Reference", 
+    link: 'reference', 
     items: [], 
     description: [] 
   },
   { id: 14, 
-    name: "Additional Resources", 
-    link: 'additional-resources', 
+    name: "About Me", 
+    link: 'about-me', 
     items: [],
     description: [] 
   },
-  { id: 15, 
-    name: "Credits", 
-    link: 'credits',
-    items: [],
-    description: [] 
-  }
 ]

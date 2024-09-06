@@ -4,9 +4,8 @@ import HomePage from './HomePage'
 import ChapterZero from './pages/ChapterZero'
 import ErrorPage from './pages/ErrorPage'
 import Introduction from './pages/Introduction'
-import Dedication from './pages/Dedication'
-import Resources from './pages/Resources'
-import Credits from './pages/Credits'
+import Reference from './pages/Reference'
+import AboutMe from './pages/AboutMe'
 import ChapterOne from './pages/ChapterOne'
 import ChapterTwo from './pages/ChapterTwo'
 import ChapterThree from './pages/ChapterThree'
@@ -39,9 +38,8 @@ const router = createBrowserRouter([
       { path: 'the-maths-behind-four', element: <ChapterNine/> },
       { path: 'a-language-translation-model', element: <ChapterTen/> },
       { path: 'the-maths-behind-five', element: <ChapterEleven/> },
-      { path: 'dedication', element: <Dedication/> },
-      { path: 'additional-resources', element: <Resources/> },
-      { path: 'credits', element: <Credits/> }
+      { path: 'reference', element: <Reference/> },
+      { path: 'about-me', element: <AboutMe/> },
     ]
   }
 ])

@@ -1,11 +1,11 @@
 import { Container } from '@chakra-ui/react'
 
-const Resources = () => {
+const Reference = () => {
   return (
     <Container maxW='1200px' px='10px'>
-      <div>Additional Resources</div>
+      <div>Reference</div>
     </Container>
   )
 }
 
-export default Resources
+export default Reference

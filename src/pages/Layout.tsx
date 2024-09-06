@@ -10,7 +10,7 @@ const Layout = () => {
       <Container maxW='1200px' px='10px' mt='72px'>
         <Grid
           templateAreas={{ base: `'main'`, lg: `'aside main'` }}
-          templateColumns={{ base: '1fr', lg: '330px 1fr' }}
+          templateColumns={{ base: '1fr', lg: '320px 1fr' }}
           gap={4}
           >
           <Show above='lg'>

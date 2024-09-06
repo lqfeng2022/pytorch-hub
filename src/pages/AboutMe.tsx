@@ -1,11 +1,11 @@
 import { Container } from '@chakra-ui/react'
 
-const Credits = () => {
+const AboutMe = () => {
   return (
     <Container maxW='1200px' px='10px'>
-      <div>Credits</div>
+      <div>Additional AboutMe</div>
     </Container>
   )
 }
 
-export default Credits
+export default AboutMe

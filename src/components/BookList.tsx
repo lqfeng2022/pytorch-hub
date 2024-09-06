@@ -14,12 +14,13 @@ import { Link } from 'react-router-dom';
 import chapterList from '../data/sectionList';
 
 const BookList = () => {
-  const [ frontMatter ] = chapterList.slice(0, 1)
+  const frontMatter = chapterList[0]
   const lists = chapterList.slice(1, 13)
-  const backMatter = chapterList.slice(-3)
+  const backMatter = chapterList.slice(-2)
 
   return (
     <Accordion allowToggle >
+      {/* Front matter: Introduce chapter */}
       <List spacing={3} p='8px 16px'>
         <ListItem>
           <Link to={frontMatter.link}>
@@ -27,6 +28,7 @@ const BookList = () => {
           </Link>
         </ListItem>
       </List>
+      {/* 0 ~ 11 chapters */}
       {lists.map((list) => (
         <AccordionItem key={list.id}>
           <AccordionButton>
@@ -51,6 +53,7 @@ const BookList = () => {
           </AccordionPanel>
         </AccordionItem>
       ))}
+      {/*  Back Matter: Dedication/Additional Resources/.. */}
         <List spacing={3} p='8px 16px'>
           {backMatter.map((m) => <ListItem key={m.id}>
             <Link to={m.link}>
