@@ -2,6 +2,7 @@ import { Box, Container, Grid, GridItem, Show } from '@chakra-ui/react'
 import NavBar from '../components/NavBar'
 import { Outlet } from 'react-router-dom'
 import BookList from '../components/BookList'
+import ScrollToTop from '../components/ScrollToTop'
 
 const Layout = () => {
   return (
@@ -27,6 +28,7 @@ const Layout = () => {
             </GridItem>
           </Show>
           <GridItem area='main' minWidth="0">
+            <ScrollToTop/>
             <Outlet/>
           </GridItem>
         </Grid>
