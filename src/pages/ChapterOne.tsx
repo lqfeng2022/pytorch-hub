@@ -2,30 +2,24 @@ import { Container, Divider, Flex } from '@chakra-ui/react'
 import ChapterList from '../components/ChapterList'
 import FootLinks from '../components/FootLinks'
 import Header from '../components/Header'
-import TensorCreate from '../components/chapter_one/TensorCreate'
-import TensorReproducibility from '../components/chapter_one/TensorReproducibility'
-import TensorAttributs from '../components/chapter_one/TensorAttributs'
-import TensorIndex from '../components/chapter_one/TensorIndex'
-import TensorManipulate from '../components/chapter_one/TensorManipulate'
-import TensorOperations from '../components/chapter_one/TensorOperations'
-import TensorRun from '../components/chapter_one/TensorRun'
-import sectionList from '../data/sectionList'
+import {
+  TensorAttributs,
+  TensorCreate,
+  TensorIndex,
+  TensorManipulate,
+  TensorOperations,
+  TensorReproducibility, TensorRun,
+  TensorWhats
+} from '../components/chapter_one'
 import covers from '../data/covers'
-import TensorWhats from '../components/chapter_one/TensorWhats'
+import sectionList from '../data/sectionList'
 
 const ChapterOne = () => {
   const cover = covers[1]
-
-  const descrip = sectionList[2].description!
-  const lists = sectionList[2].items!
+  const { description: descript, items: lists } = sectionList[2];
   const items = lists.slice(0, 8)
-
-  const footer = {
-    l: "0. Artificial Intelligence",
-    r: "1. A Straight Line Model",
-    ll: "/artificial-intelligence",
-    rl: "/a-straight-line-model"
-  }
+  const { name: l, link: ll } = sectionList[1]
+  const { name: r, link: rl } = sectionList[3]
 
   return (
     <Container maxW='1200px' px='0'>
@@ -33,10 +27,7 @@ const ChapterOne = () => {
       <Flex align='center' h='60px'>
         <Divider variant='brand' w="30%"/>
       </Flex>
-      <ChapterList 
-        items={items} 
-        descrip={descrip}
-      />
+      <ChapterList items={items} descrip={descript}/>
       <TensorWhats/>
       <TensorCreate/>
       <TensorAttributs/>
@@ -48,12 +39,7 @@ const ChapterOne = () => {
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
-      <FootLinks 
-        l={footer.l} 
-        ll={footer.ll} 
-        r={footer.r} 
-        rl={footer.rl}
-      />
+      <FootLinks l={l} ll={ll} r={r} rl={rl}/>
     </Container>
   )
 }

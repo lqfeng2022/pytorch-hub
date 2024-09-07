@@ -1,34 +1,42 @@
 import { Container, Divider, Flex } from '@chakra-ui/react';
-import AISection from '../components/chapter_zero/AISection';
-import DLSection from '../components/chapter_zero/DLSection';
-import Libraries from '../components/chapter_zero/Libraries';
-import MLSection from '../components/chapter_zero/MLSection';
-import NNSection from '../components/chapter_zero/NNSection';
-import Prerequisites from '../components/chapter_zero/Prerequisites';
-import PTSection from '../components/chapter_zero/PTSection';
-import FootLinks from '../components/FootLinks';
-import covers from '../data/covers';
-import Header from '../components/Header';
-import sectionList from '../data/sectionList';
-import ChapterList from '../components/ChapterList';
-import chapterZero from '../data/chapterZero';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import BaseGrid from '../components/BaseGrid';
+import {
+  AISection, 
+  DLSection, 
+  Libraries, 
+  MLSection, 
+  NNSection, 
+  PTSection, 
+  Prerequisites
+} from '../components/chapter_zero';
+import ChapterList from '../components/ChapterList';
+import FootLinks from '../components/FootLinks';
+import Header from '../components/Header';
+import chapterZero from '../data/chapterZero';
+import covers from '../data/covers';
+import sectionList from '../data/sectionList';
 
 const ChapterZero = () => {
   const cover = covers[0]
-
-  const descrip = sectionList[1].description!
-  const lists = sectionList[1].items!
-  const items = lists.slice(0, 8)
-  
+  const { description: descript, items: lists } = sectionList[1];
   const [ takeCourse ] = chapterZero[7].sections
+  const { name: l, link: ll } = sectionList[0]
+  const { name: r, link: rl } = sectionList[2]
 
-  const footer = {
-    l: "Introduction",
-    r: "0. TENSORs",
-    ll: "/introduction",
-    rl: "/tensors"
-  }
+  // Anchor links setting (<a href="#section1">)
+  const pt60 = { paddingTop: '60px' }
+  const location = useLocation()
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.substring(1) // Remove the '#' from the hash
+      const element = document.getElementById(id)
+      // Scroll to element and then adjust for the 60px fixed header
+      if (element) element.scrollIntoView()
+    } 
+    else window.scrollTo({ top: 0})
+  }, [location]);
 
   return (
     <Container maxW='1200px' px='0'>
@@ -36,27 +44,19 @@ const ChapterZero = () => {
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='brand' w="30%" mx="auto"/>
       </Flex>
-      <ChapterList 
-        items={items} 
-        descrip={descrip} 
-      />
-      <AISection/>
-      <MLSection/>
-      <DLSection/>
-      <NNSection/>
-      <Libraries/>
-      <PTSection/>
-      <Prerequisites/>
-      <BaseGrid section={takeCourse}/>
+      <ChapterList items={lists} descrip={descript}/>
+      <div id={lists[0].link} style={pt60}><AISection/></div>
+      <div id={lists[1].link} style={pt60}><MLSection/></div>
+      <div id={lists[2].link} style={pt60}><DLSection/></div>
+      <div id={lists[3].link} style={pt60}><NNSection/></div>
+      <div id={lists[4].link} style={pt60}><Libraries/></div>
+      <div id={lists[5].link} style={pt60}><PTSection/></div>
+      <div id={lists[6].link} style={pt60}><Prerequisites/></div>
+      <div id={lists[7].link} style={pt60}><BaseGrid section={takeCourse}/></div>
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
-      <FootLinks 
-        l={footer.l} 
-        ll={footer.ll} 
-        r={footer.r} 
-        rl={footer.rl}
-      />
+      <FootLinks l={l} ll={ll} r={r} rl={rl}/>
     </Container>
   )
 }

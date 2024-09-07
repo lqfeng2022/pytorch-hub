@@ -1,29 +1,24 @@
 import { Container, Divider, Flex } from '@chakra-ui/react'
 import ChapterList from '../components/ChapterList'
+import FootLinks from '../components/FootLinks'
 import Header from '../components/Header'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
-import FootLinks from '../components/FootLinks'
-import LinearRegression from '../components/chapter_three/LinearRegression'
-import NormalDistribution from '../components/chapter_three/NormalDistribution'
-import LossCurves from '../components/chapter_three/LossCurves'
-import GradientDescent from '../components/chapter_three/GradientDescent'
-import StochasticGD from '../components/chapter_three/StochasticGD'
-import LearningRate from '../components/chapter_three/LearningRate'
+import {
+  GradientDescent,
+  LearningRate,
+  LinearRegression,
+  LossCurves,
+  NormalDistribution,
+  StochasticGD
+} from '../components/chapter_three'
 
 const ChapterThree = () => {
   const cover = covers[3]
-
-  const descript = sectionList[4].description!
-  const lists = sectionList[4].items!
+  const { description: descript, items: lists } = sectionList[4];
   const items = lists.slice(0, 6)
-
-  const footer = {
-    l: "2. A Straight Line Model",
-    r: "4. A Binary Classification Model",
-    ll: "/a-straight-line-model",
-    rl: "/a-binary-classification-model"
-  }
+  const { name: l, link: ll } = sectionList[3]
+  const { name: r, link: rl } = sectionList[5]
 
   return (
     <Container maxW='1200px' px='10px'>
@@ -44,12 +39,7 @@ const ChapterThree = () => {
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
-      <FootLinks 
-        l={footer.l} 
-        ll={footer.ll} 
-        r={footer.r} 
-        rl={footer.rl}
-      />
+      <FootLinks l={l} ll={ll} r={r} rl={rl}/>
     </Container>
   )
 }

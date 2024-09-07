@@ -1,0 +1,5 @@
+export { default as Classification } from './Classification'
+export { default as BCEloss } from './BCEloss'
+export { default as SigmoidFunction } from './SigmoidFunction'
+export { default as ReLUfunction } from './ReLUfunction'
+export { default as Backpropagation } from './Backpropagation'
