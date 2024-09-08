@@ -6,7 +6,7 @@ export default [
     content: [
       { id: 0,
         title: "",
-        value: "The sole purpose of this book is to help readers understand the key architecture behind ChatGPT - the Transformer. I built five deep learning models, progressing from simple to more complex, to help master the general workflow of deep learnig models. In the final moel, we’ll create a language translation model using the Transformer architecture. Follow along with me step by step as I code, and along the way, I’ll also explain some of the basic mathematical and computer science concepts behind each model."
+        value: "The main goal of this book is to help readers get a clear understanding of the key behind ChatGPT - the Transformer. I built five deep learning models, progressing from simple to more complex, to help master the general workflow of deep learnig models. In the final moel, we’ll create a language translation model using the Transformer architecture. Follow along with me step by step as I code, and along the way, I’ll also explain some of the basic mathematical and computer science concepts behind each model."
       },
     ]
   },
@@ -155,5 +155,28 @@ export default [
         value: "Of course, you could choose to study the math beforehand, but I prefere learning it as we go. There is so much math out there, so it’s more efficient to learn what you need  when you need it.",
       },
     ]
-  }
+  },
+  { id: 7,
+    name: "About the Shape",
+    value: "",
+    image: "",
+    content: [
+      { id: 0,
+        title: "",
+        value: "After building all five deep learning models, what I want to empasize is shape. As we learned, shape is a key attribute of tensors, and it's crucial in machin learning. Unlike other coding courses that focus mainly on the code, I prefer to draw the data shape at each layer - from the input through every hidden layer, to the hidden output."
+      },
+      { id: 1, 
+        title: "",
+        value: "The reason I do this is simple: I want to visualize the model's architecture, especially as it becomes more complex. Computers love data, but people prefer pictures. By giving data a clear shape through visuals, we can better understand the core concepts of machine learning and deep learning. It's much easier to grasp these ideas with images than with just words and numbers."
+      },
+      { id: 2, 
+        title: "",
+        value: "In this course, we don't just build models, we also dive into the mathematics behind them. But how do we truely understand the math? Do we need to memorize all those fancy formulas? And why are these forumlas even used in our models? If you really want to grasp the model, you have to understand the math first."
+      },
+      { id: 3, 
+        title: "",
+        value: "Nature is our best teacher. What if we relate formulas to nature objects? For instance, we describe the normal distribution formula as a bell shape. But imagine it like a mountain - variance changes the shape of that mountain. Think of Mountain Fuji, it's like a standard normal distribution with a variance square of 1."
+      },
+    ]
+  },
 ]

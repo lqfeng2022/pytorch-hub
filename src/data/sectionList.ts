@@ -318,7 +318,7 @@ export default [
     description: [] 
   },
   { id: 14, 
-    name: "About Shape", 
+    name: "About the Shape", 
     link: "/about-shape", 
     items: [],
     description: [] 

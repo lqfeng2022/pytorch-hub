@@ -1,19 +1,13 @@
-import { Container, Text, Stack, Heading, Divider, Flex } from '@chakra-ui/react'
-import Section from '../entities/Section'
-import introduce from '../data/introduce'
-import IntroduceGrid from '../components/IntroduceGrid'
+import { Container, Divider, Flex, Heading, Text } from '@chakra-ui/react'
 import FootLinks from '../components/FootLinks'
+import IntroduceGrid from '../components/IntroduceGrid'
+import introduce from '../data/introduce'
+import sectionList from '../data/sectionList'
 
 const Introduction = () => {
-  const intro = introduce[0]
-  const [ story, contents, ai, tensor, models, maths ] = introduce.slice(1, 7)
-
-  const footer = {
-    l: "Book Cover",
-    r: "0. Artificial Intelligence",
-    ll: "/",
-    rl: "/artificial-intelligence"
-  }
+  const [ 
+    intro, story, contents, ai, tensor, models, maths ] = introduce.slice(0, 7)
+  const { name: r, link: rl } = sectionList[1]
 
   return (
     <Container maxW='1200px' px='10px'>
@@ -30,12 +24,7 @@ const Introduction = () => {
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
-      <FootLinks 
-        l={footer.l} 
-        ll={footer.ll} 
-        r={footer.r} 
-        rl={footer.rl}
-      />
+      <FootLinks l={'Book Cover'} ll={'/'} r={r} rl={rl}/>
     </Container>
   )
 } 

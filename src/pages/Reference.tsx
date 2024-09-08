@@ -2,17 +2,13 @@ import { Container, Divider, Flex, Heading, Stack } from '@chakra-ui/react';
 import ReferGrid from '../components/ReferGrid';
 import reference from '../data/reference';
 import FootLinks from '../components/FootLinks';
+import sectionList from '../data/sectionList';
 
 const Reference = () => {
   const [ 
     paper, statQuest, blueBrown, codeEmporium, others, webs ] = reference
-  const footer = {
-    l: "11. The Maths Behind (V)",
-    r: "About Me",
-    ll: "/the-maths-behind-five",
-    rl: "/about-me"
-  }
-
+  const { name: l, link: ll } = sectionList[12]
+  const { name: r, link: rl } = sectionList[14]
   
   return (
     <Container maxW='1200px' px='10px'>
@@ -33,12 +29,7 @@ const Reference = () => {
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
-      <FootLinks 
-        l={footer.l} 
-        ll={footer.ll} 
-        r={footer.r} 
-        rl={footer.rl}
-      />
+      <FootLinks l={l} ll={ll} r={r} rl={rl}/>
     </Container>
   )
 }
