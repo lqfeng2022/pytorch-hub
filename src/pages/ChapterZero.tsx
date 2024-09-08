@@ -1,42 +1,32 @@
 import { Container, Divider, Flex } from '@chakra-ui/react';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import BaseGrid from '../components/BaseGrid';
 import {
-  AISection, 
-  DLSection, 
-  Libraries, 
-  MLSection, 
-  NNSection, 
-  PTSection, 
+  AISection,
+  DLSection,
+  Libraries,
+  MLSection,
+  NNSection,
+  PTSection,
   Prerequisites
 } from '../components/chapter_zero';
 import ChapterList from '../components/ChapterList';
 import FootLinks from '../components/FootLinks';
 import Header from '../components/Header';
+import useScrollToHash from '../components/useScrollToHash';
 import chapterZero from '../data/chapterZero';
 import covers from '../data/covers';
 import sectionList from '../data/sectionList';
+import '../index.css';
 
 const ChapterZero = () => {
   const cover = covers[0]
-  const { description: descript, items: lists } = sectionList[1];
-  const [ takeCourse ] = chapterZero[7].sections
+  const { description: descript, items: lists } = sectionList[1]
+  const [ ai, ml, dl, nn, lib, pt, pre, take ] = lists.slice(0, 8)
   const { name: l, link: ll } = sectionList[0]
   const { name: r, link: rl } = sectionList[2]
+  const [ takeCourse ] = chapterZero[7].sections
 
-  // Anchor links setting (<a href="#section1">)
-  const pt60 = { paddingTop: '60px' }
-  const location = useLocation()
-  useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.substring(1) // Remove the '#' from the hash
-      const element = document.getElementById(id)
-      // Scroll to element and then adjust for the 60px fixed header
-      if (element) element.scrollIntoView()
-    } 
-    else window.scrollTo({ top: 0})
-  }, [location]);
+  useScrollToHash() // Anchor link navigation
 
   return (
     <Container maxW='1200px' px='0'>
@@ -45,14 +35,14 @@ const ChapterZero = () => {
         <Divider variant='brand' w="30%" mx="auto"/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <div id={lists[0].link} style={pt60}><AISection/></div>
-      <div id={lists[1].link} style={pt60}><MLSection/></div>
-      <div id={lists[2].link} style={pt60}><DLSection/></div>
-      <div id={lists[3].link} style={pt60}><NNSection/></div>
-      <div id={lists[4].link} style={pt60}><Libraries/></div>
-      <div id={lists[5].link} style={pt60}><PTSection/></div>
-      <div id={lists[6].link} style={pt60}><Prerequisites/></div>
-      <div id={lists[7].link} style={pt60}><BaseGrid section={takeCourse}/></div>
+      <div id={ai.link} className='pt60'><AISection/></div>
+      <div id={ml.link} className='pt60'><MLSection/></div>
+      <div id={dl.link} className='pt60'><DLSection/></div>
+      <div id={nn.link} className='pt60'><NNSection/></div>
+      <div id={lib.link} className='pt60'><Libraries/></div>
+      <div id={pt.link} className='pt60'><PTSection/></div>
+      <div id={pre.link} className='pt60'><Prerequisites/></div>
+      <div id={take.link} className='pt60'><BaseGrid section={takeCourse}/></div>
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>

@@ -9,7 +9,7 @@ const Header = ({ cover }: { cover: Cover }) => {
         {cover.name}
       </Heading>
       <Center py={3}>
-        <Stack maxW='300px'>
+        <Stack maxW='390px'>
           <Text as='i' textAlign='center' pb={3}>{`"${cover.quote}"`}</Text>
           <Text as='i' textAlign='center'>{cover.author}</Text>
         </Stack>

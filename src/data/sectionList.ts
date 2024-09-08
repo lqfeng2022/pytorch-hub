@@ -6,7 +6,7 @@ export default [
     description: [] 
   },
   { id: 1,
-    name: "1. Artificial Intelligence",
+    name: "0. Artificial Intelligence",
     link: "/artificial-intelligence",
     items: [
       { id: 1, name: "AI - Artificial Intelligence", link: "artificial-intelligence" },
@@ -38,7 +38,7 @@ export default [
     ]
   },
   { id: 2, 
-    name: "2. TENSORs", 
+    name: "1. TENSORs", 
     link: "/tensors",
     items: [
       { id: 1, name: "TENSOR ?", link: "tensors" },
@@ -74,8 +74,8 @@ export default [
     ]
    },
   { id: 3, 
-    name: "3. A Straight Line Model", 
-    link: "/a-straight-line-model",
+    name: "2. A Line Model", 
+    link: "/a-line-model",
     items: [
       { id: 1, name: "PyTorch Workflow", link: "pytorch-workflow" },
       { id: 2, name: "i. Prepare Data", link: "prepare-data" },
@@ -95,7 +95,7 @@ export default [
     ]
   },
   { id: 4, 
-    name: "4. The Maths Behind (I)", 
+    name: "3. The Maths Behind (I)", 
     link: "/the-maths-behind-one",
     items: [
       { id: 1, name: "- Linear Regression", link: "linear-regression" },
@@ -121,8 +121,8 @@ export default [
     ]
   },
   { id: 5, 
-    name: "5. A Binary Classification Model", 
-    link: "/a-binary-classification-model",
+    name: "4. A Classification Model", 
+    link: "/a-classification-model",
     items: [
       { id: 1, name: "i. Prepare Data", link: "prepare-data" },
       { id: 2, name: "ii. Build a Model", link: "build-a-model" },
@@ -150,7 +150,7 @@ export default [
     ]
   },
   { id: 6, 
-    name: "6. The Maths Behind (II)", 
+    name: "5. The Maths Behind (II)", 
     link: "/the-maths-behind-two",
     items: [
       { id: 1, name: "- Classification Task", link: "classification-task" },
@@ -171,7 +171,7 @@ export default [
     ]
   },
   { id: 7, 
-    name: "7. A CNN Model", 
+    name: "6. A CNN Model", 
     link: "/a-cnn-model",
     items: [
       { id: 1, name: "i. Prepare Data", link: "prepare-data" },
@@ -192,7 +192,7 @@ export default [
     ]
   },
   { id: 8, 
-    name: "8. The Maths Behind (III)", 
+    name: "7. The Maths Behind (III)", 
     link: "/the-maths-behind-three",
     items: [
       { id: 1, name: "- Computer Vision", link: "computer-vision" },
@@ -216,7 +216,7 @@ export default [
     ]
   },
   { id: 9, 
-    name: "9. A Vision Transformer Model", 
+    name: "8. A Vision Transformer Model", 
     link: "/a-vit-model",
     items: [
       { id: 1, name: "i. Prepare Data", link: "prepare-data" },
@@ -237,7 +237,7 @@ export default [
     ]
   },
   { id: 10, 
-    name: "10. The Maths Behind (IV)", 
+    name: "9. The Maths Behind (IV)", 
     link: "/the-maths-behind-four",
     items: [
       { id: 1, name: "- Vision Transformer", link: "vision-transformer" },
@@ -268,8 +268,8 @@ export default [
     ]
   },
   { id: 11, 
-    name: "11. A Language Translation Model", 
-    link: "/a-language-translation-model",
+    name: "10. A Translation Model", 
+    link: "/a-translation-model",
     items: [
       { id: 1, name: "i. Prepare Data", link: "prepare-data" },
       { id: 2, name: "ii. Build a Model", link: "build-a-model" },
@@ -289,7 +289,7 @@ export default [
     ]
   },
   { id: 12, 
-    name: "12. The Maths Behind (V)", 
+    name: "11. The Maths Behind (V)", 
     link: "/the-maths-behind-five",
     items: [
       { id: 1, name: "- Word Embedding", link: "word-embedding" },
@@ -318,8 +318,8 @@ export default [
     description: [] 
   },
   { id: 14, 
-    name: "About Me", 
-    link: "/about-me", 
+    name: "About Shape", 
+    link: "/about-shape", 
     items: [],
     description: [] 
   },

@@ -15,9 +15,9 @@ const Layout = () => {
           gap={4}
           >
           <Show above='lg'>
-            <GridItem area='aside' p={1} bg='gray.100' >
+            <GridItem area='aside' bg='gray.100' >
               <Box
-                py={3}
+                py={2}
                 position='sticky'
                 top='72px'
                 maxH='calc(100vh - 72px)'

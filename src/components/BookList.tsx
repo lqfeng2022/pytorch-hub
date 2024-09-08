@@ -1,9 +1,9 @@
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
-  AccordionPanel,
   AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
   List,
   ListItem,
@@ -20,7 +20,7 @@ const BookList = () => {
   const backMatter = chapterList.slice(-2)
 
   return (
-    <Accordion allowToggle >
+    <Accordion allowToggle>
       {/* Front matter: Introduce chapter */}
       <List spacing={3} p='8px 16px'>
         <ListItem>
@@ -40,7 +40,7 @@ const BookList = () => {
         <AccordionItem key={list.id}>
           <AccordionButton>
             <Box flex='1' textAlign='left'>
-              <Link to={list.link!}>
+              <Link to={list.link}>
                 <Text 
                   fontSize='md'
                   _hover={{color: 'tomato'}}
@@ -50,11 +50,11 @@ const BookList = () => {
                 </Text>
               </Link>
             </Box>
-            <AccordionIcon />
+            <AccordionIcon/>
           </AccordionButton>
           <AccordionPanel pb={4}>
             <List spacing={3}>
-              {list.items?.map((item) => (
+              {list.items.map((item) => (
                 <ListItem pl='22px' key={item.id}>
                   <Text 
                     fontSize='sm' 
