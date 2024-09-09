@@ -15,7 +15,7 @@ const ChapterSix = () => {
     <Container maxW='1200px' px='10px'>
       <Header cover={cover}/>
       <Flex align='center' h='60px'>
-        <Divider variant='brand' w="30%"/>
+        <Divider variant='brand' w='30%'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
       <div>Chapter Six comming soon..</div>

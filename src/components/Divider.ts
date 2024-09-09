@@ -15,7 +15,7 @@ const middle = defineStyle({
 const brandPrimary = defineStyle({
   borderWidth: '5px',
   borderStyle: 'dashed',
-  borderColor: 'orange.500',
+  borderColor: 'teal.500',
 })
 
 export const dividerTheme = defineStyleConfig({

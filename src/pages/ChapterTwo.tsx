@@ -27,7 +27,7 @@ const ChapterTwo = () => {
     <Container maxW='1200px' px='10px'>
       <Header cover={cover}/>
       <Flex align='center' h='60px'>
-        <Divider variant='brand' w="30%"/>
+        <Divider variant='brand' w='30%' ml='auto'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
       <div id={flow.link} className='pt60'><Workflow/></div>

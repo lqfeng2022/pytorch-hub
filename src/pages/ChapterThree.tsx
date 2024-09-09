@@ -28,12 +28,9 @@ const ChapterThree = () => {
     <Container maxW='1200px' px='10px'>
       <Header cover={cover}/>
       <Flex align='center' h='60px'>
-        <Divider variant='brand' w="30%"/>
+        <Divider variant='brand' w='30%'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <Flex align='center' h='80px'>
-        <Divider variant='thick'/>
-      </Flex>
       <div id={lin.link} className='pt60'><LinearRegression/></div>
       <div id={distrib.link} className='pt60'><NormalDistribution/></div>
       <div id={loss.link} className='pt60'><LossCurves/></div>

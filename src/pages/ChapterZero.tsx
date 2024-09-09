@@ -32,7 +32,7 @@ const ChapterZero = () => {
     <Container maxW='1200px' px='0'>
       <Header cover={cover}/>
       <Flex align='center' justifyContent='center' h='80px'>
-        <Divider variant='brand' w="30%" mx="auto"/>
+        <Divider variant='brand' w='30%'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
       <div id={ai.link} className='pt60'><AISection/></div>

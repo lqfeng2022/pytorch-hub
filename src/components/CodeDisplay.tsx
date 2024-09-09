@@ -5,8 +5,7 @@ import Code from '../entities/code';
 
 function CodeDisplay({ codes }: { codes: Code[] }) {
   return (
-    <>
-      <Box h={5}/>
+    <Box py={5}>
       <Box 
         bg='gray.50' 
         minWidth='0' 
@@ -73,8 +72,7 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
           </Flex>
         </Stack>)}
       </Box>
-      <Box h={5}/>
-    </>
+    </Box>
   );
 }
 
