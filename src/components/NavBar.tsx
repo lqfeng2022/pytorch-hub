@@ -1,5 +1,4 @@
-import { Container, HStack, Icon, Text } from '@chakra-ui/react';
-import { HiLanguage } from 'react-icons/hi2';
+import { Container, HStack, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
@@ -26,7 +25,7 @@ const NavBar = () => {
             AI &nbsp;WITH &nbsp;PYTORCH
           </Text>
         </Link>
-        <Icon boxSize='25px' as={HiLanguage} />
+        <Text as='b' fontSize='xl' color='gray.500'>SIMON LEE</Text>
       </HStack>
     </Container>
   );

@@ -163,19 +163,23 @@ export default [
     content: [
       { id: 0,
         title: "",
-        value: "After building all five deep learning models, what I want to empasize is shape. As we learned, shape is a key attribute of tensors, and it's crucial in machin learning. Unlike other coding courses that focus mainly on the code, I prefer to draw the data shape at each layer - from the input through every hidden layer, to the hidden output."
+        value: "After building all five deep learning models, what I want to empasize one thing: the shape. As we've seen,  the shape of tensors is a key attribute in machine learning, and it plays a critical role in how models process data. So throughout this book, whenever I build a model, I always draw the shape of the data at every stage, from the input, through the hidden layers, all the way to the output. This helps clarify how data flows and transforms within the model."
       },
       { id: 1, 
         title: "",
-        value: "The reason I do this is simple: I want to visualize the model's architecture, especially as it becomes more complex. Computers love data, but people prefer pictures. By giving data a clear shape through visuals, we can better understand the core concepts of machine learning and deep learning. It's much easier to grasp these ideas with images than with just words and numbers."
+        value: "The reason I do this is simple: I want to visualize the model's architecture so we can clearly see what the model is doing at each step. And this becomes pretty important as our model grow more complex. Computers love data, while people prefer pictures. By assigning a shape to the data, we can gain a more intuitive understanding for the entire architecture. It makes it easier to grasp the ideas behind the model, compared tojust looking at raw numbers and technical descriptions."
       },
       { id: 2, 
         title: "",
-        value: "In this course, we don't just build models, we also dive into the mathematics behind them. But how do we truely understand the math? Do we need to memorize all those fancy formulas? And why are these forumlas even used in our models? If you really want to grasp the model, you have to understand the math first."
+        value: "In this course, after building each model, we also dive into the mathematics behind them, and I believe this is the most challenging part of the training. Building and training model is a bit like following a manufacturing process to create a product. But if you want to improve the quantity of that product, you will need to enhance your model, possibly by reworking its architecture. And to do that effectively, you must first understand the math that underpins your model. Math is the key, you need to find it, discover and master it, then you can apply it repeatedly to improve your model."
       },
       { id: 3, 
         title: "",
-        value: "Nature is our best teacher. What if we relate formulas to nature objects? For instance, we describe the normal distribution formula as a bell shape. But imagine it like a mountain - variance changes the shape of that mountain. Think of Mountain Fuji, it's like a standard normal distribution with a variance square of 1."
+        value: "Well, now we already known that math is the key to the door of machine learnig, so how do we learn and master it? Do we need to remember all those fancy formulas? No, it's the worthest approach, and even you rember the formulas, you don't understand the meaning behind those formulas, you still cannot use them properly. Instead, you should focus on how to understand them, Here I think we don't need to rembember the fancy formulas, you just need to know it, like known the key parameters how to influence the formula. In today's AI-drive world, especially with tools like ChatGPT,  memorizing formulas isn't as important. What truely matters is understanding the meaning behind these functions and knowing how to apply them to specific tasks, like building a deep learning model, that's the real point."
+      },
+      { id: 3, 
+        title: "",
+        value: "So in our maths course, I visualize each formula with a shape. These shapes might be a bell-shaped, S-shaped, downhill and so on. It's easy to visualize these shapes, and when you associate the key parameters of the formulas with their shapes, you can quicky grasp the meaning behind them. For example, consider the normal distribution, often represented by a bell-shape, or as I prefer, a mountain-shape. One parameter, the mean, determines the location of the mountain, while the variance shapes it. Imagine a steep, narrow mountain with a small variance compare to something like Mount Fuji, which has a broadeer, smoother slope due to a large variance."
       },
     ]
   },
