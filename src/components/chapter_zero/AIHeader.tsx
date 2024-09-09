@@ -2,7 +2,7 @@ import { Center, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import covers from '../../data/covers'
 
 const Header = () => {
-  const cover = covers[0].cover
+  const cover = covers[0]
 
   return (
     <>
@@ -18,7 +18,7 @@ const Header = () => {
       <Stack py={5}>
         <Image src={cover.image} />
         <Text as='b' fontSize='sm'>{cover.name}</Text>
-        <Text as='i' fontSize='sm'>{cover.descript}</Text>
+        <Text as='i' fontSize='sm'>{cover.description}</Text>
       </Stack>
     </>
   )
