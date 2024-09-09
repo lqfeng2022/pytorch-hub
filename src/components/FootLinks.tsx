@@ -7,23 +7,24 @@ interface Props {
   r: string,
   rl: string
 }
+
 const FootLinks = ({ l, ll, r, rl }: Props) => {
-  const hoverStyle = { color: 'tomato', textDecoration: 'underline' }
+  const hoverStyle = { color: 'pink', textDecoration: 'underline' }
   const fontSizeDynamic = {base: 'sm', md: 'lg'}
 
   return (
     <HStack justifyContent='space-between' pb={10}>
       <Box>
         <Link to={ll}>
-          <Text color='gray'>Previous Chapter</Text>
+          <Text color='gray' fontSize='sm'>Previous Chapter</Text>
           <Text as='b' fontSize={fontSizeDynamic} color='gray.500' _hover={hoverStyle}>
             {l}
           </Text>
         </Link>
       </Box>
-      <Box>
+      <Box textAlign='right' ml='auto'>
         <Link to={rl}>
-          <Text textAlign='right' color='gray'>Next Chapter</Text>
+          <Text color='gray' fontSize='sm'>Next Chapter</Text>
           <Text as='b' fontSize={fontSizeDynamic} color='gray.500' _hover={hoverStyle}>
             {r}
           </Text>

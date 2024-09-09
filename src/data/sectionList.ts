@@ -200,7 +200,7 @@ export default [
       { id: 3, name: "- MNIST Dataset", link: "mnist-dataset" },
       { id: 4, name: "- DATALOADER", link: "dataloader" },
       { id: 5, name: "- ARGMAX Function", link: "argmax-function" },
-      { id: 6, name: "- Convolutional Neural Network (CNN)", link: "cnn" },
+      { id: 6, name: "- CNN", link: "cnn" },
       { id: 7, name: "- MaxPooling Layer", link: "maxPooling-layer" },
       { id: 8, name: "- SoftMax Function", link: "softMax-function" }
     ],

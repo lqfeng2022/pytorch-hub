@@ -3,7 +3,6 @@ import Content from '../entities/content'
 import SectionItem from '../entities/sectionItem'
 import Lists from './Lists'
 
-
 interface Props {
   items: SectionItem[],
   descrip: Content[]
