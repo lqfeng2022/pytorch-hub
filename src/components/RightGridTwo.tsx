@@ -1,9 +1,9 @@
-import { Box, Image, SimpleGrid, Stack, Text, Flex } from '@chakra-ui/react'
-import Section from '../entities/Section'
+import { Box, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react'
+import Section from '../entities/section'
 
 const RightGridTwo = ({ section }: { section: Section }) => {
   return (
-    <Box pt={3} pb={5}>
+    <Box pt={3}>
       <Stack spacing={3}>
         <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>
         {section.value && <Text as='i' fontSize='lg'>{section.value}</Text>}

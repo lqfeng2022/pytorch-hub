@@ -1,7 +1,7 @@
-import { Box, List, ListItem, SimpleGrid, Stack, Text } from '@chakra-ui/react'
-import Lists from './Lists'
+import { Box, List, ListItem, Stack, Text } from '@chakra-ui/react'
 import Content from '../entities/Content'
 import SectionItem from '../entities/SectionItem'
+import Lists from './Lists'
 
 
 interface Props {
@@ -11,23 +11,17 @@ interface Props {
 
 const ChapterList = ({ items, descrip }: Props) => {
   return (
-    <Box py={5}>
-      <SimpleGrid spacing={4} columns={{ sm: 1, md: 2 }} >
-        <Box 
-          p={6} 
-          minH='300px' maxH='400px'
-          bg='red.50' alignItems='center' // Ensure centered vertically
-        >
-          <List spacing={4}>
-            {items.map((list) => <ListItem key={list.id}>
-              <Lists name={list.name}/>
-            </ListItem>)}
-          </List>
-        </Box>
-        <Stack spacing={4}>
-          {descrip.map((p) => <Text key={p.id}>{p.value}</Text>)}
-        </Stack>
-      </SimpleGrid>
+    <Box pt={5}>
+      <Box p={6} mb={5} bg='red.50'>
+        <List spacing={4}>
+          {items.map((list) => <ListItem key={list.id}>
+            <Lists name={list.name}/>
+          </ListItem>)}
+        </List>
+      </Box>
+      <Stack spacing={4}>
+        {descrip.map((p) => <Text key={p.id}>{p.value}</Text>)}
+      </Stack>
     </Box>
   )
 }

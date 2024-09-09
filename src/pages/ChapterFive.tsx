@@ -25,22 +25,20 @@ const ChapterFive = () => {
 
   return (
     <Container maxW='1200px' px='10px'>
-      <div>
-        <Header cover={cover}/>
-        <Flex align='center' h='60px'>
-          <Divider variant='brand' w="30%"/>
-        </Flex>
-        <ChapterList items={lists} descrip={descript}/>
-        <div id={classific.link} className='pt60'><Classification/></div>
-        <div id={bceloss.link} className='pt60'><BCEloss/></div>
-        <div id={sigmoid.link} className='pt60'><SigmoidFunction/></div>
-        <div id={relu.link} className='pt60'><ReLUfunction/></div>
-        <div id={backpro.link} className='pt60'><Backpropagation/></div>
-        <Flex align='center' h='80px'>
-          <Divider variant='thick'/>
-        </Flex>
-        <FootLinks l={l} ll={ll} r={r} rl={rl}/>
-      </div>
+      <Header cover={cover}/>
+      <Flex align='center' h='60px'>
+        <Divider variant='brand' w="30%"/>
+      </Flex>
+      <ChapterList items={lists} descrip={descript}/>
+      <div id={classific.link} className='pt60'><Classification/></div>
+      <div id={bceloss.link} className='pt60'><BCEloss/></div>
+      <div id={sigmoid.link} className='pt60'><SigmoidFunction/></div>
+      <div id={relu.link} className='pt60'><ReLUfunction/></div>
+      <div id={backpro.link} className='pt60'><Backpropagation/></div>
+      <Flex align='center' h='80px'>
+        <Divider variant='thick'/>
+      </Flex>
+      <FootLinks l={l} ll={ll} r={r} rl={rl}/>
     </Container>
   )
 }

@@ -26,9 +26,6 @@ const ChapterFour = () => {
         <Divider variant='brand' w="30%"/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <Flex align='center' h='80px'>
-        <Divider variant='thick'/>
-      </Flex>
       <div id={pre.link} className='pt60'><PrepareData/></div>
       <div id={build.link} className='pt60'><BuildModel/></div>
       <div id={train.link} className='pt60'><TrainModel/></div>

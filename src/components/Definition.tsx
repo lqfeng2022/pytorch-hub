@@ -1,5 +1,5 @@
 import { Center, Box, Stack, Text, HStack } from '@chakra-ui/react'
-import Section from '../entities/Section'
+import Section from '../entities/section'
 
 interface Props {
   title: string,

@@ -2,7 +2,6 @@ import { Heading, Center, Stack, Text, Image, AspectRatio } from '@chakra-ui/rea
 import Cover from '../entities/ChapterCover'
 
 const Header = ({ cover }: { cover: Cover }) => {
-
   return (
     <>
       <Heading size='xl' color='gray.600' textAlign='center' py={3}>

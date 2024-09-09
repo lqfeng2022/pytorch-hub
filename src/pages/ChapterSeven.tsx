@@ -1,9 +1,28 @@
-import { Container } from '@chakra-ui/react'
+import { Container, Divider, Flex } from '@chakra-ui/react'
+import sectionList from '../data/sectionList'
+import FootLinks from '../components/FootLinks'
+import covers from '../data/covers'
+import Header from '../components/Header'
+import ChapterList from '../components/ChapterList'
 
 const ChapterSeven = () => {
+  const cover = covers[7]
+  const { description: descript, items: lists } = sectionList[8]
+  const { name: l, link: ll } = sectionList[7]
+  const { name: r, link: rl } = sectionList[9]
+  
   return (
     <Container maxW='1200px' px='10px'>
-      <div>ChapterSeven</div>
+      <Header cover={cover}/>
+      <Flex align='center' h='60px'>
+        <Divider variant='brand' w="30%"/>
+      </Flex>
+      <ChapterList items={lists} descrip={descript}/>
+      <div>Chapter Seven comming soon..</div>
+      <Flex align='center' h='80px'>
+        <Divider variant='thick'/>
+      </Flex>
+      <FootLinks l={l} ll={ll} r={r} rl={rl}/>
     </Container>
   )
 }

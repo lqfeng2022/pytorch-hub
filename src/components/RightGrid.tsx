@@ -1,9 +1,9 @@
 import { Box, Image, Stack, Text, Flex, HStack, Grid } from '@chakra-ui/react'
-import Section from '../entities/Section'
+import Section from '../entities/section'
 
 const RightGrid = ({ section }: { section: Section }) => {
   return (
-    <Box pt={3} pb={5}>
+    <Box pt={3}>
       <Stack spacing={3}>
         <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>
         {section.value && <Text as='i' fontSize='lg'>{section.value}</Text>}
@@ -21,7 +21,7 @@ const RightGrid = ({ section }: { section: Section }) => {
                       <Text as='b'>{p.title}</Text>
                     </HStack>
                     <Text pl={4}>{p.value}</Text>
-                </>
+                  </>
                 }
                 {!p.title && <Text>{p.value}</Text>}
               </div>
