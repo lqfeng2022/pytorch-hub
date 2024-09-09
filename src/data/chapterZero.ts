@@ -297,7 +297,7 @@ export default [
         ]
       },
       { id: 4, 
-        name: "3.2 Differences between Machine Learnig and Deep Learning",
+        name: "3.3 Differences between Machine Learnig and Deep Learning",
         value: "",
         image: "src/assets/chapter_zero/mldl.jpeg",
         content: [
@@ -328,7 +328,7 @@ export default [
         ]
       },
       { id: 5,
-        name: "3.3 Deep Learning Applications",
+        name: "3.4 Deep Learning Applications",
         value: "",
         image: "src/assets/chapter_zero/dlapps.jpeg",
         content: [

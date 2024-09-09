@@ -16,7 +16,6 @@ import useScrollToHash from '../components/useScrollToHash';
 import chapterZero from '../data/chapterZero';
 import covers from '../data/covers';
 import sectionList from '../data/sectionList';
-import '../index.css';
 
 const ChapterZero = () => {
   const cover = covers[0]
@@ -35,14 +34,14 @@ const ChapterZero = () => {
         <Divider variant='brand' w='30%'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <div id={ai.link} className='pt60'><AISection/></div>
-      <div id={ml.link} className='pt60'><MLSection/></div>
-      <div id={dl.link} className='pt60'><DLSection/></div>
-      <div id={nn.link} className='pt60'><NNSection/></div>
-      <div id={lib.link} className='pt60'><Libraries/></div>
-      <div id={pt.link} className='pt60'><PTSection/></div>
-      <div id={pre.link} className='pt60'><Prerequisites/></div>
-      <div id={take.link} className='pt60'><BaseGrid section={takeCourse}/></div>
+      <div id={ai.link}><AISection/></div>
+      <div id={ml.link}><MLSection/></div>
+      <div id={dl.link}><DLSection/></div>
+      <div id={nn.link}><NNSection/></div>
+      <div id={lib.link}><Libraries/></div>
+      <div id={pt.link}><PTSection/></div>
+      <div id={pre.link}><Prerequisites/></div>
+      <div id={take.link}><BaseGrid section={takeCourse}/></div>
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>

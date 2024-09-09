@@ -13,7 +13,6 @@ import Header from '../components/Header'
 import useScrollToHash from '../components/useScrollToHash'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
-import '../index.css'
 
 const ChapterThree = () => {
   const cover = covers[3]
@@ -31,12 +30,12 @@ const ChapterThree = () => {
         <Divider variant='brand' w='30%'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <div id={lin.link} className='pt60'><LinearRegression/></div>
-      <div id={distrib.link} className='pt60'><NormalDistribution/></div>
-      <div id={loss.link} className='pt60'><LossCurves/></div>
-      <div id={descent.link} className='pt60'><GradientDescent/></div>
-      <div id={stochast.link} className='pt60'><StochasticGD/></div>
-      <div id={lr.link} className='pt60'><LearningRate/></div>
+      <div id={lin.link}><LinearRegression/></div>
+      <div id={distrib.link}><NormalDistribution/></div>
+      <div id={loss.link}><LossCurves/></div>
+      <div id={descent.link}><GradientDescent/></div>
+      <div id={stochast.link}><StochasticGD/></div>
+      <div id={lr.link}><LearningRate/></div>
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>

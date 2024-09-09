@@ -4,6 +4,7 @@ import chapterZero from '../../data/chapterZero'
 
 const Libraries = () => {
   const libs = chapterZero[4].sections
+  
   return (
     <Box py={3}>
       <Text as='b' fontSize='lg' color='gray.600'>5. FRAMEWORKs and LIBRARIES</Text>

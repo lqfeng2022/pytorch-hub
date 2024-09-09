@@ -4,7 +4,7 @@ import Section from '../entities/section'
 const BaseGrid = ({ section }: { section: Section }) => {
 
   return (
-    <Box pt={3}>
+    <Box py={3}>
       <Stack spacing={3}>
         <Text as='b' fontSize='lg' color='gray.600'>{section.name}</Text>
         {section.value && <Text as='i' fontSize='lg'>{section.value}</Text>}

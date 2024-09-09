@@ -12,7 +12,6 @@ import {
 import useScrollToHash from '../components/useScrollToHash'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
-import '../index.css'
 
 const ChapterTwo = () => {
   const cover = covers[2]
@@ -30,11 +29,11 @@ const ChapterTwo = () => {
         <Divider variant='brand' w='30%' ml='auto'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <div id={flow.link} className='pt60'><Workflow/></div>
-      <div id={prepare.link} className='pt60'><PrepareData/></div>
-      <div id={build.link} className='pt60'><BuildModel/></div>
-      <div id={train.link} className='pt60'><TrainModel/></div>
-      <div id={save.link} className='pt60'><SaveModel/></div>
+      <div id={flow.link}><Workflow/></div>
+      <div id={prepare.link}><PrepareData/></div>
+      <div id={build.link}><BuildModel/></div>
+      <div id={train.link}><TrainModel/></div>
+      <div id={save.link}><SaveModel/></div>
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>

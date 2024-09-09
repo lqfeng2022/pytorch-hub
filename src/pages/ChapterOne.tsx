@@ -14,7 +14,6 @@ import {
 import useScrollToHash from '../components/useScrollToHash'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
-import '../index.css'
 
 const ChapterOne = () => {
   const cover = covers[1]
@@ -33,14 +32,14 @@ const ChapterOne = () => {
         <Divider variant='brand' w='30%' mx='auto'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <div id={tensor.link} className='pt60'><TensorWhats/></div>
-      <div id={create.link} className='pt60'><TensorCreate/></div>
-      <div id={attrib.link} className='pt60'><TensorAttributs/></div>
-      <div id={oper.link} className='pt60'><TensorOperations/></div>
-      <div id={manipul.link} className='pt60'><TensorManipulate/></div>
-      <div id={index.link} className='pt60'><TensorIndex/></div>
-      <div id={reproduc.link} className='pt60'><TensorReproducibility/></div>
-      <div id={run.link} className='pt60'><TensorRun/></div>
+      <div id={tensor.link}><TensorWhats/></div>
+      <div id={create.link}><TensorCreate/></div>
+      <div id={attrib.link}><TensorAttributs/></div>
+      <div id={oper.link}><TensorOperations/></div>
+      <div id={manipul.link}><TensorManipulate/></div>
+      <div id={index.link}><TensorIndex/></div>
+      <div id={reproduc.link}><TensorReproducibility/></div>
+      <div id={run.link}><TensorRun/></div>
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>

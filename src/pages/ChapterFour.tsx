@@ -1,6 +1,5 @@
 import { Container, Divider, Flex } from '@chakra-ui/react'
-import {
-  BuildModel, ImproveModel, PrepareData, SaveModel, TrainModel
+import { BuildModel, ImproveModel, PrepareData, SaveModel, TrainModel
 } from '../components/chapterFour'
 import ChapterList from '../components/ChapterList'
 import FootLinks from '../components/FootLinks'
@@ -8,7 +7,6 @@ import Header from '../components/Header'
 import useScrollToHash from '../components/useScrollToHash'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
-import '../index.css'
 
 const ChapterFour = () => {
   const cover = covers[4]
@@ -26,11 +24,11 @@ const ChapterFour = () => {
         <Divider variant='brand' w='30%' mx='auto'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <div id={pre.link} className='pt60'><PrepareData/></div>
-      <div id={build.link} className='pt60'><BuildModel/></div>
-      <div id={train.link} className='pt60'><TrainModel/></div>
-      <div id={improve.link} className='pt60'><ImproveModel/></div>
-      <div id={save.link} className='pt60'><SaveModel/></div>
+      <div id={pre.link}><PrepareData/></div>
+      <div id={build.link}><BuildModel/></div>
+      <div id={train.link}><TrainModel/></div>
+      <div id={improve.link}><ImproveModel/></div>
+      <div id={save.link}><SaveModel/></div>
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>

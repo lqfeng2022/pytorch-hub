@@ -1,8 +1,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* Define pt60, then reuse it everywhere */
-.pt60 {
-  padding-top: 60px;
-}

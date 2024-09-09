@@ -9,7 +9,13 @@ const useScrollToHash = () => {
       const id = location.hash.substring(1) // Remove the '#' from the hash
       const element = document.getElementById(id)
       // Scroll to element and then adjust for the 60px fixed header
-      if (element) element.scrollIntoView()
+      if (element) {
+        setTimeout(() => {
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - 60; // Adjust for 60px fixed header
+          window.scrollTo({ top: offsetPosition })
+        }, 100) // Delay for layout to stabilize
+      }
     } 
     else window.scrollTo({ top: 0})
   }, [location]);

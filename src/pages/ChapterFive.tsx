@@ -12,7 +12,6 @@ import Header from '../components/Header'
 import useScrollToHash from '../components/useScrollToHash'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
-import '../index.css'
 
 const ChapterFive = () => {
   const cover = covers[5]
@@ -30,11 +29,11 @@ const ChapterFive = () => {
         <Divider variant='brand' w='30%' ml='auto'/>
       </Flex>
       <ChapterList items={lists} descrip={descript}/>
-      <div id={classific.link} className='pt60'><Classification/></div>
-      <div id={bceloss.link} className='pt60'><BCEloss/></div>
-      <div id={sigmoid.link} className='pt60'><SigmoidFunction/></div>
-      <div id={relu.link} className='pt60'><ReLUfunction/></div>
-      <div id={backpro.link} className='pt60'><Backpropagation/></div>
+      <div id={classific.link}><Classification/></div>
+      <div id={bceloss.link}><BCEloss/></div>
+      <div id={sigmoid.link}><SigmoidFunction/></div>
+      <div id={relu.link}><ReLUfunction/></div>
+      <div id={backpro.link}><Backpropagation/></div>
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
