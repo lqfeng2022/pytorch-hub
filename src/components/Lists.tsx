@@ -10,7 +10,7 @@ const Lists = ({ name }: { name: string }) => {
         as={FaCircle} 
         color='red.300'
       />
-      <Text as='b' fontSize={{base: 'md', md: 'xl'}} color='gray.600'>
+      <Text as='b' fontSize={{base: 'md', md: 'lg'}} color='gray.600'>
         {name}
       </Text>
     </Flex>

@@ -1,5 +1,4 @@
 import { Container, Divider, Flex } from '@chakra-ui/react'
-import ChapterList from '../components/ChapterList'
 import FootLinks from '../components/FootLinks'
 import Header from '../components/Header'
 import {
@@ -14,10 +13,13 @@ import {
 import useScrollToHash from '../components/useScrollToHash'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
+import ChapterListTwo from '../components/ChapterListTwo'
 
 const ChapterOne = () => {
   const cover = covers[1]
   const { description: descript, items: lists } = sectionList[2];
+  const lItems = lists.slice(0, 4)
+  const rItems = lists.slice(-4)
   const [ tensor, create, attrib, oper, manipul, index, reproduc, run 
   ] = lists.slice(0, 8)
   const { name: l, link: ll } = sectionList[1]
@@ -31,7 +33,7 @@ const ChapterOne = () => {
       <Flex align='center' h='60px'>
         <Divider variant='brand' w='30%' mx='auto'/>
       </Flex>
-      <ChapterList items={lists} descrip={descript}/>
+      <ChapterListTwo leftItems={lItems} rightItems={rItems} descrip={descript}/>
       <div id={tensor.link}><TensorWhats/></div>
       <div id={create.link}><TensorCreate/></div>
       <div id={attrib.link}><TensorAttributs/></div>

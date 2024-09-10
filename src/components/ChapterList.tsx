@@ -7,7 +7,6 @@ interface Props {
   items: SectionItem[],
   descrip: Content[]
 }
-
 const ChapterList = ({ items, descrip }: Props) => {
   return (
     <Box py={5}>

@@ -9,17 +9,19 @@ import {
   PTSection,
   Prerequisites
 } from '../components/chapter_zero';
-import ChapterList from '../components/ChapterList';
 import FootLinks from '../components/FootLinks';
 import Header from '../components/Header';
 import useScrollToHash from '../components/useScrollToHash';
 import chapterZero from '../data/chapterZero';
 import covers from '../data/covers';
 import sectionList from '../data/sectionList';
+import ChapterListTwo from '../components/ChapterListTwo';
 
 const ChapterZero = () => {
   const cover = covers[0]
   const { description: descript, items: lists } = sectionList[1]
+  const lItems = lists.slice(0, 4)
+  const rItems = lists.slice(-4)
   const [ ai, ml, dl, nn, lib, pt, pre, take ] = lists.slice(0, 8)
   const { name: l, link: ll } = sectionList[0]
   const { name: r, link: rl } = sectionList[2]
@@ -33,7 +35,7 @@ const ChapterZero = () => {
       <Flex align='center' justifyContent='center' h='80px'>
         <Divider variant='brand' w='30%'/>
       </Flex>
-      <ChapterList items={lists} descrip={descript}/>
+      <ChapterListTwo leftItems={lItems} rightItems={rItems} descrip={descript}/>
       <div id={ai.link}><AISection/></div>
       <div id={ml.link}><MLSection/></div>
       <div id={dl.link}><DLSection/></div>
