@@ -6,7 +6,7 @@ import sectionList from '../data/sectionList'
 const AboutShape = () => {
   const intro = introduce[7]
   const { name: l, link: ll } = sectionList[13]
-  const { name: r, link: rl } = sectionList[0]
+  // const { name: r, link: rl } = sectionList[0]
 
   return (
     <Container maxW='1200px' px='10px'>
@@ -21,7 +21,7 @@ const AboutShape = () => {
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
       </Flex>
-      <FootLinks l={l} ll={ll} r={r} rl={rl}/>
+      <FootLinks l={l} ll={ll}/>
     </Container>
   )
 }

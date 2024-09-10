@@ -655,20 +655,20 @@ export default [
             value: "Before starting this training course, it's important to have a basic understanding of Python programming. You'll also need some foundational knowledge in mathematics, including matrix computation, calculus, probability, and statistics."
           },
           { id: 1, 
-            title: "Watch all lessons from A to Z",
+            title: "Watch all Lessons from A to Z",
             value: "First and foremost, I recommend watching the entire course from beginning to end, even if you're already familiar with PyTorch. Throughout the course, I'll be sharing numerous tips and tricks to deepen your understanding, and I don't want you to miss out on any of them. I've designed the course to be concise and focused, so you won't waste time on repetitive or irrelevant content. Make sure to watch every lesson."
           },
           { 
             id: 2, 
-            title: "Take notes",
+            title: "Take Notes",
             value: "While watching the lessons, I encourage you to take notes. Even if you prefer not to write extensively, jotting down key concepts and ideas can be very helpful. I strongly believe that writing things down aids in retaining new information. After each lesson, review your notes and practice the steps I demonstrated. This is the same approach I use to learn new material."
           },
           { id: 3, 
-            title: "Complete all exercises",
-            value: "I've carefully designed exercises to reinforce the concepts covered in each lesson. Completing these exercises is crucial for understanding and retaining what you've learned. The more you practice, the more proficient you'll become in the field of machine learning."
+            title: "Replicate the Models",
+            value: "Replicating models helps solidify the entire workflow, from building to improving, through hands-on practice. Once mastered, this skill not only enhances problem-solving but also builds confidence in replicating and implementing new models from research papers."
           },
           { id: 4, 
-            title: "Share your work",
+            title: "Share your Work",
             value: "The more you share, the more you learn. To gain a deeper understanding of this course, try building your own project based on what you've learned and share it with others. Sharing your work allows others to provide feedback, which can be invaluable for improving your skills and creating better projects in the future. Be open to constructive criticism, as it will help you grow. Remember, I believe you can do even better than I have!"
           },
         ],

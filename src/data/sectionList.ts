@@ -271,9 +271,9 @@ export default [
     items: [
       { id: 1, name: "i. Prepare Data", link: "prepare-data" },
       { id: 2, name: "ii. Build a Model", link: "build-a-model" },
-      { id: 3, name: "iii. Train and Test a Model", link: "train-a-model" },
+      { id: 3, name: "iii. Train a Model", link: "train-a-model" },
       { id: 4, name: "iv. Improve a Model", link: "improve-a-model" },
-      { id: 5, name: "v. Save and Load a Model", link: "save-a-model" },
+      { id: 5, name: "v. Save a Model", link: "save-a-model" },
     ],
     description: [
       { id: 1, 
@@ -290,13 +290,13 @@ export default [
     name: "11. The Maths Behind (V)", 
     link: "/the-maths-behind-five",
     items: [
-      { id: 1, name: "- Word Embedding", link: "word-embedding" },
+      { id: 1, name: "- Word Embedding and Word2Vec", link: "word-embedding" },
       { id: 2, name: "- Recurrent Neural Network (RNN)", link: "rnn"},
       { id: 3, name: "- Long Short-Term Memory (LSTM)", link: "lstm"},
       { id: 4, name: "- Transformer", link: "transformer" },
-      { id: 5, name: "- Masked Multi-Head Attention", link: "masked-multi-head-attention" },
-      { id: 6, name: "- Transformer Encoder", link: "transformer-encoder" },
-      { id: 7, name: "- Transformer Decoder", link: "transformer-decoder" },
+      { id: 5, name: "-- Masked Multi-Head Attention", link: "masked-multi-head-attention" },
+      { id: 6, name: "-- Transformer Encoder", link: "transformer-encoder" },
+      { id: 7, name: "-- Transformer Decoder", link: "transformer-decoder" },
     ],
     description: [
       { id: 1, 

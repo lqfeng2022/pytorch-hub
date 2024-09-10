@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 interface Props {
   l: string,
   ll: string,
-  r: string,
-  rl: string
+  r?: string,
+  rl?: string
 }
 
 const FootLinks = ({ l, ll, r, rl }: Props) => {
@@ -22,14 +22,14 @@ const FootLinks = ({ l, ll, r, rl }: Props) => {
           </Text>
         </Link>
       </Box>
-      <Box textAlign='right' ml='auto'>
-        <Link to={rl}>
+      {r && <Box textAlign='right' ml='auto'>
+        <Link to={rl!}>
           <Text color='gray' fontSize='sm'>Next Chapter</Text>
           <Text as='b' fontSize={fontSizeDynamic} color='gray.500' _hover={hoverStyle}>
-            {r}
+            {r!}
           </Text>
         </Link>
-      </Box>
+      </Box>}
     </HStack>
   )
 }
