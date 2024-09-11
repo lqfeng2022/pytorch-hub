@@ -407,7 +407,7 @@ export default [
         ]
       },
       { id: 2,
-        name: ":: SGD vs. GD",
+        name: ":: Visualize the Difference",
         value: "The graph effectively illustrates the key differences between Gradient Descent (GD) and Stochastic Gradient Descent (SGD) in the context of how each algorithm updates parameters to minimize a loss function.",
         image: "src/assets/chapter_three/sgd_two.jpeg",
         content: [
