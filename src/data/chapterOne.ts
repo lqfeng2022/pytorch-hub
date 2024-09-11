@@ -52,7 +52,7 @@ export default [
         content: [
           { id: 1, 
             title: "",
-            value: "A random tensor is simply a tensor filled with random numbers. These numbers usually come from a specific probability distribution, like a Normal Distribution—where most numbers cluster around the mean, or a Uniform Distribution—where all numbers within a certain range have an equal chance of being selected."
+            value: "We can create a tensor filled with random numbers, or set up a range of tensors that contain a sequence of numbers with a specific range and step size. You can also create tensors made entirely of ones or zeros, or even make a new tensor full of ones or zeros that matches the shape of an existing tensor."
           },
         ]
       },
@@ -670,14 +670,10 @@ export default [
         image: "src/assets/chapter_one/randseedpy.jpeg", 
         content: [
           { id: 1, 
-            title: "Set Random Seed to 42", 
-            value: "The number 42 is famously known from Douglas Adams' science fiction series 'The Hitchhiker's Guide to the Galaxy', where it's humorously dubbed “the Answer to the Ultimate Question of Life, the Universe, and Everything”. Because of this, 42 has become a geeky, tongue-in-cheek choice among programmers."
+            title: "69 - No Special Significance!", 
+            value: "Mathematically, 69 is just another number when used as a seed. It doesn't have any special properties that make it better or worse for generating random numbers."
           }, 
           { id: 2, 
-            title: "42 - No Special Significance", 
-            value: "Mathematically, 42 is just another number when used as a seed. It doesn't have any special properties that make it better or worse for generating random numbers. Its popularity comes from its quirky cultural reference, not from any unique mathematical advantage."
-          }, 
-          { id: 3, 
             title: "Can You Use Other Numbers?", 
             value: "Absolutely! You can set the seed to any integer. The choice of 42 is purely conventional and has no impact on the quality of the random numbers generated. What matters is that the seed is set, ensuring reproducibility, not the specific number used."
           }, 

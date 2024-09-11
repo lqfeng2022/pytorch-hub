@@ -67,17 +67,17 @@ export default [
     name: "Chapter 8: A Vision Transformer Model",
     quote: "When eyes were first developed in animals, suddenly animal life becomes proactive.",
     author: "― Fei-Fei Li",
-    image: "src/assets/patch_embedding.jpeg",
-    title: "AN IMAGE IS WORTH 16X16 WORDS",
-    description: "This image illustrates the patch embedding process in a Vision Transformer (ViT) model, which we’ll be constructing in this chapter. As the title suggests, ‘An Image is Worth 16x16 Words,’ we treat the cat image as a series of 16x16 pixel patches, similar to how words are processed in natural language models. These patches are then fed into a Transformer encoder, which learns to recognize patterns and features in the image, enabling the model to understand and classify visual data just like it would with sequential text data."
+    image: "src/assets/patch_embedding.jpg",
+    title: "Personalised Word Art Portrait, Anniversary Art Print by Scribbly Goose",
+    description: "This is a wedding photo composed of text, where the variations in light and shadow of the text outline the entire image, and the words themselves narrate the couple’s story, making it very creative. The idea of arranging text to form a picture is quite intriguing. Inspired by this, could we in the field of computer vision break down an image into individual 'text-like' units and then encode and analyze these 'text' elements in a manner similar to natural language processing?"
   },
   { id: 9,
     name: "Chapter 9: The Maths Behind (IV)",
     quote: "If you value intelligence above all other human qualities, you're gonna have a bad time.",
     author: "― Ilya Sutskever",
-    image: "src/assets/mha.jpeg",
-    title: "Multi-Head Attention",
-    description: "Multi-Head Attention is a core component of the Transformer architecture, and it plays a crucial role in its ability to capture complex relationships within data. Multi-Head Attention provides the model with a more nuanced understanding of the input, making the Transformer architecture powerful for both sequential data (text) and spatial data (images, through Vision Transformers)."
+    image: "src/assets/yamatanoorochi.jpeg",
+    title: "Yamata no Orochi Slaying - Illustration Material",
+    description: "The image depicts a scene from the famous Japanese myth of Yamata no Orochi, the eight-headed serpent. In the image, we see a warrior standing ready with a sword, facing the massive serpent with multiple dragon-like heads emerging from the background, each with distinct colors and shapes. It seems that, having multiple heads means power, which coincidentally aligns with the concept of multi-head attention in Transformer models."
   },
   { id: 10,
     name: "Chapter 10: A Language Translation Model",

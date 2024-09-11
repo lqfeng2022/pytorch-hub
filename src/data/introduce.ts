@@ -6,22 +6,22 @@ export default [
     content: [
       { id: 0,
         title: "",
-        value: "The main goal of this book is to help readers get a clear understanding of the key behind ChatGPT - the Transformer. I built five deep learning models, progressing from simple to more complex, to help master the general workflow of deep learnig models. In the final moel, we’ll create a language translation model using the Transformer architecture. Follow along with me step by step as I code, and along the way, I’ll also explain some of the basic mathematical and computer science concepts behind each model."
+        value: "The main goal of this book is to help beginners clearly understand Transformer architecture - the magic behind ChatGPT. I've built five deep learning models, starting simple (like a straight-line model) and gradually moving to more complex ones, following a general PyTorch workflow. By the end, we'll be building a language translation model using the Transformer. As we code together step by step, I'll break down the key concepts in math and computer science that power each model."
       },
     ]
   },
   { id: 1,
-    name: "The Stroy Behind this Book",
+    name: "The Story Behind this Book",
     value: "",
     image: "",
     content: [
       { id: 0, 
         title: "",
-        value: "What inspired me to write this book, I have to say, it all started with ChatGPT."
+        value: "What inspired me to write this book? Honestly, it all started with ChatGPT."
       },
       { id: 1,
         title: "",
-        value: "Before ChatGPT-3.5 was released, I had a pretty conventional view of artificial intelligence. Even though I had built several basic machine learning models, I still believed AI was far from being truly ‘intelligent’. To me it seemed more like a tool for performing repetitive tasks. Even when AlphaGo defeated the world champion Go player in 2015, I didn’t see it as a breakthrough in intelligence. Since Go has clear well-defined rules, I assumed the machine was simply memorizing and processing these rules way faster than a human, which didn’t seem all that impressive. Look back, Maybe my perspective was limited because I didn’t fully understand what AI could really be."
+        value: "Before ChatGPT-3.5 was released, I had a pretty standard view of artificial intelligence. Even though I had built a few basic machine learning models, I still believed AI was far from being truly ‘intelligent’. To me it seemed more like a tool for performing repetitive tasks. Even when AlphaGo defeated the world champion Go player in 2015, I didn’t see it as a breakthrough in intelligence. Since Go has clear well-defined rules, I assumed the machine was simply memorizing and processing these rules way faster than a human, which didn’t seem all that impressive. Look back, Maybe my perspective was limited because I didn’t fully understand what AI could really be."
       },
       { id: 2, 
         title: "",
@@ -29,19 +29,19 @@ export default [
       },
       { id: 3, 
         title: "",
-        value: "In that sense, I realized it’s smarter than most of us in many ways. It made me wonder if, for many of us, the Turing Test might already be passed. That thought is both fascinating and a little unsetting. But with that, I beleve we’ve on the verge of new opportunities and possibilities in the near future."
+        value: "In that sense, I realized it’s smarter than most of us in many ways. It made me wonder if, for many of us, the Turing Test might already be passed. That thought is both fascinating and a little unsetting. But with that, I believe we’ve on the verge of new opportunities and possibilities in the near future."
       },
       { id: 4, 
         title: "",
-        value: "As they say, ‘Winter is comming’, and so is AI - and I’m comming along for the ride. I felt the need to understand why ChatGPT behaves so intelligently and what core algorithm powers it. This curiosity led me to dive deeper into the world of artificial intelligence. I came across the groundbreaking paper ‘Attentin Is All You Need’, publised by Google in 2017, which introduced the ‘Transformer’ architecture - the very fundation of ChatGPT."
+        value: "As they say, ‘Winter is coming’, and so is AI - and I’m coming along for the ride. I felt the need to understand why ChatGPT behaves so intelligently and what core algorithm powers it. This curiosity led me to dive deeper into the world of artificial intelligence. I came across the groundbreaking paper ‘Attention Is All You Need’, published by Google in 2017, which introduced the ‘Transformer’ architecture - the very foundation of ChatGPT."
       },
       { id: 5, 
         title: "",
-        value: "Understanding this architecture is key to grasping how ChatGPT and similar large natural language models work. However, mastering the transformer architecture isn’t easy. To get there, I went through tosn of Wikipedia entries, read well-known paers, and wathced contless tutoriasl on the basic concepts and math behind deep learing."
+        value: "Understanding this architecture is key to grasping how ChatGPT and similar large natural language models work. However, mastering the transformer architecture isn’t easy. To get there, I went through tons of Wikipedia entries, read well-known papers, and watched countless tutorials on the basic concepts and math behind deep learning."
       },
       { id: 6, 
         title: "",
-        value: "But just doning some research, reading papers, or watching YouTube tutorials isn’t enough to truly master the Transformer. There’s no better approach to learn than through hands-on practice. So I started by building a series of deep learning models, starting from the most basic ones, like a simple linear regression. From there, I move on to slightly more compoex models, like binary classification, a model for handwritten digit recognition, and eventually an image classification model using a Transformer encoder. Finally, wecna tackle a language translation model, combining both the Transformer encoder and decoder."
+        value: "But just doing some research, reading papers, or watching YouTube tutorials isn’t enough to truly master the Transformer. There’s no better approach to learn than through hands-on practice. So I started by building a series of deep learning models, starting from the most basic ones, like a simple linear regression. From there, I move on to slightly more complex models, like binary classification, a model for handwritten digit recognition, and eventually an image classification model using a Transformer encoder. Finally, we can tackle a language translation model, combining both the Transformer encoder and decoder."
       },
     ]
   },
@@ -177,7 +177,7 @@ export default [
         title: "",
         value: "Well, now we already known that math is the key to the door of machine learnig, so how do we learn and master it? Do we need to remember all those fancy formulas? No, it's the worthest approach, and even you rember the formulas, you don't understand the meaning behind those formulas, you still cannot use them properly. Instead, you should focus on how to understand them, Here I think we don't need to rembember the fancy formulas, you just need to know it, like known the key parameters how to influence the formula. In today's AI-drive world, especially with tools like ChatGPT,  memorizing formulas isn't as important. What truely matters is understanding the meaning behind these functions and knowing how to apply them to specific tasks, like building a deep learning model, that's the real point."
       },
-      { id: 3, 
+      { id: 4, 
         title: "",
         value: "So in our maths course, I visualize each formula with a shape. These shapes might be a bell-shaped, S-shaped, downhill and so on. It's easy to visualize these shapes, and when you associate the key parameters of the formulas with their shapes, you can quicky grasp the meaning behind them. For example, consider the normal distribution, often represented by a bell-shape, or as I prefer, a mountain-shape. One parameter, the mean, determines the location of the mountain, while the variance shapes it. Imagine a steep, narrow mountain with a small variance compare to something like Mount Fuji, which has a broadeer, smoother slope due to a large variance."
       },

@@ -650,10 +650,6 @@ export default [
         value: "",
         image: "src/assets/chapter_zero/takecourse.jpeg",
         content: [
-          { id: 0,
-            title: "",
-            value: "Before starting this training course, it's important to have a basic understanding of Python programming. You'll also need some foundational knowledge in mathematics, including matrix computation, calculus, probability, and statistics."
-          },
           { id: 1, 
             title: "Watch all Lessons from A to Z",
             value: "First and foremost, I recommend watching the entire course from beginning to end, even if you're already familiar with PyTorch. Throughout the course, I'll be sharing numerous tips and tricks to deepen your understanding, and I don't want you to miss out on any of them. I've designed the course to be concise and focused, so you won't waste time on repetitive or irrelevant content. Make sure to watch every lesson."
