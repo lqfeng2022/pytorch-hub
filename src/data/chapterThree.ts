@@ -11,10 +11,6 @@ export default [
             title: "A straight-line Relationship",
             value: "Linear regression is a statistical method that models a straight-line relationship between variables. It seeks to fit a line that best represents the data, minimizing the differences between observed and predicted values. This approach is widely used for making predictions and understanding trends in various fields."
           },
-          { id: 2, 
-            title: "Two types of Variables",
-            value: "In its simplest form, linear regression involves two types of variables: an independent variable and a dependent variable. The independent variable is used to predict the outcome of the dependent variable. This method can also be extended to include multiple independent variables, enhancing the model’s predictive power."
-          },
           { id: 3, 
             title: "Linear Regression in Machine Learning",
             value: "In machine learning, linear regression both a foundational algorithm and a gateway to more complex models. It is often one of the first techniques taught because it's straightforward and easy to interpret, making it an essential tool for understanding the basics of predictive modeling. In machine learning, linear regression is used to predict continuous outcomes, such as prices, temperatures, or scores, based on input data."
@@ -28,11 +24,11 @@ export default [
         content: [
           { id: 1, 
             title: "",
-            value: "Here’s an example to visualize a simple linear relationship between working hours and salary. The blue line shows that the salary is directly proportional to the number of working hours, with a rate of $10 per hour."
+            value: "Here’s an example to visualize a linear relationship between working hours and salary."
           },
           { id: 2, 
             title: "",
-            value: "This straight line illustrates how each additional hour worked results in a $10 increase in salary, making it a straightforward linear regression model. This model effectively captures and predicts outcomes based on the linear relationship between these two variables."
+            value: "This blue line illustrates how each additional hour worked results in a $10 increase in salary, making it a straightforward linear regression model. This model effectively captures and predicts outcomes based on the linear relationship between these two variables."
           },
         ]
       },
@@ -51,18 +47,14 @@ export default [
             value: "A Normal Distribution is a type of continuous probability distribution for a real-valued random variable. In simpler terms, it’s a way to describe how certain types of data naturally tend to spread out. When data follows a normal distribution, most of the values cluster around a central point, known as the mean, with fewer values appearing as you move further away from that center. This creates the classic “bell-shaped curve” that’s symmetrical on both sides."
           },
           { id: 2, 
-            title: "Why we should know about Normal distribution?",
-            value: "The normal distribution is foundational in machine learning and deep learning. When we built our first model, we use normal distribution to initialize the weight and bias, why we do it? Cus in deep learning, weight and biases in neural networks are often initialized using values drawn from a normal distribution. This helps in ensuring that the model starts training with a balanced approach, preventing issues like vanishing or exploding gradients. No more explaining, we’re gonna cove the more details in Gradient Descent."
-          },
-          { id: 3, 
-            title: "Normal Distribution in Machine Learning",
-            value: "In machine learning, linear regression both a foundational algorithm and a gateway to more complex models. It is often one of the first techniques taught because it's straightforward and easy to interpret, making it an essential tool for understanding the basics of predictive modeling. In machine learning, linear regression is used to predict continuous outcomes, such as prices, temperatures, or scores, based on input data."
+            title: "Normal distribution in Machine Learning",
+            value: "The normal distribution is foundational in machine learning and deep learning. When we built our first model, we use normal distribution to initialize the weight and bias. This helps in ensuring that the model starts training with a balanced approach, preventing issues like vanishing or exploding gradients. No more explaining, we’re gonna cove the more details in Gradient Descent."
           },
         ]
       },
       { id: 1,
         name: "2.1 Probability Density Function (PDF)", 
-        value: "Let’s dive into the Probability Density Function, or PDF, which is key when talking about the Standard Normal Distribution. No need to stress over memorizing the complicated formula; what’s crucial is grasping the shape of the function and the key parameters that shape it. These parameters dictate whether the bell curve is narrow or wide, giving you a clear picture of how the data is spread out.",
+        value: "Let’s talk about the Probability Density Function, or PDF, which is key when we say the Standard Normal Distribution. No need to stress over memorizing the complicated formula, what’s crucial is grasping the shape of the function and the key parameters that shape it. These parameters dictate whether the bell curve is narrow or wide, giving you a clear picture of how the data is spread out.",
         image: "src/assets/chapter_three/ndistrib_pdf.jpeg",
         content: [
           { id: 1, 
@@ -89,7 +81,7 @@ export default [
       },
       { id: 2,
         name: "2.2 Cumulative Distribution Function (CDF)", 
-        value: "The CDF is visualized as the shaded area under the curve to the left of a specific point, which we’ll call x. It represents the probability that the random variable X will take on a value less than or equal to x.",
+        value: "The CDF is visualized as the shaded area under the PDF curve to the left of a specific point, which we’ll call x. It represents the probability that the random variable X will take on a value less than or equal to x.",
         image: "src/assets/chapter_three/ndistrib_cdf.jpeg",
         content: [
           { id: 1, 

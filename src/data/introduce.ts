@@ -6,7 +6,7 @@ export default [
     content: [
       { id: 0,
         title: "",
-        value: "The main goal of this book is to help beginners clearly understand Transformer architecture - the magic behind ChatGPT. I've built five deep learning models, starting simple (like a straight-line model) and gradually moving to more complex ones, following a general PyTorch workflow. By the end, we'll be building a language translation model using the Transformer. As we code together step by step, I'll break down the key concepts in math and computer science that power each model."
+        value: "The main goal of this book is to help beginners clearly understand Transformer architecture - the magic behind ChatGPT. I've built five deep learning models, starting simple (like a linear model) and gradually moving to more complex ones, following a general PyTorch workflow. By the end, we'll be building a language translation model using the Transformer. As we code together step by step, I'll break down the key concepts in math and computer science that power each model."
       },
     ]
   },
@@ -25,7 +25,7 @@ export default [
       },
       { id: 2, 
         title: "",
-        value: "When ChatGPT-3.5 came out on November 30, 2022, it was the first time AI truely impressed me with its human-like responses. When I asked ChatGPT questions, there were moments - just for a second - when I felt like who I wasn’t talking to a machine, but to a real person who understood what I was saying and gave suitable answers. Sometimes, though, it would provide responses that sounded convincing but were still wrong, delivered with a tone of certainty. It. Was almost like a person giving a wrong answer but insisting they were right."
+        value: "When ChatGPT-3.5 came out on November 30, 2022, it was the first time AI truly impressed me with its human-like responses. When I asked ChatGPT questions, there were moments - just for a second - when I felt like who I wasn’t talking to a machine, but to a real person who understood what I was saying and gave suitable answers. Sometimes, though, it would provide responses that sounded convincing but were still wrong, delivered with a tone of certainty. It. Was almost like a person giving a wrong answer but insisting they were right."
       },
       { id: 3, 
         title: "",
@@ -52,11 +52,11 @@ export default [
     content: [
       { id: 0, 
         title: "",
-        value: "You can think of this book as a training course, the main goal is to guide you through building a language translation model based on the Transformer architecure. Once you’ve mastered this skill, you’ll be able to create many other models, like a words recognition model, other language translation models."
+        value: "You can think of this book as a training course, the main goal is to guide you through building a language translation model based on the Transformer architecture. Once you’ve mastered this skill, you’ll be able to create many other models, like a words recognition model, other language translation models."
       },
       { id: 1, 
         title: "",
-        value: "You can also push the boundaries and explore some new ideas. Imagine creating a model that translates a cat’s meow into human language, allowing us to understand what a cat is really saying. It would be a big project, and you might need a team for something like that. But the point is, as more people understand deep learning and know how to build a model, train a model, fine-tune a model, I beleve we’ll find partners to work together and create even more amazing models, doing somethings that seem almost like magic."
+        value: "You can also push the boundaries and explore some new ideas. Imagine creating a model that translates a cat’s meow into human language, allowing us to understand what a cat is really saying. It would be a big project, and you might need a team for something like that. But the point is, as more people understand deep learning and know how to build a model, train a model, fine-tune a model, I believe we’ll find partners to work together and create even more amazing models, doing somethings that seem almost like magic."
       },
       { id: 2, 
         title: "",
@@ -75,7 +75,7 @@ export default [
     content: [
       { id: 0, 
         title: "",
-        value: "In this part, we’ll explore the history of artificial intelligence and how it evolved into ChatGPT, starting from early ideas like the Turning Test. As the field progressed, concepts like machine learing, deep learning, and neural network emerged. Since ChatGPT is a large language model based on deep learning, we’ll focus on understanding deep learning architecture and the essential knowledges surrounding it."
+        value: "In this part, we’ll explore the history of artificial intelligence and how it evolved into ChatGPT, starting from early ideas like the Turning Test. As the field progressed, concepts like machine learning, deep learning, and neural network emerged. Since ChatGPT is a large language model based on deep learning, we’ll focus on understanding deep learning architecture and the essential knowledges surrounding it."
       },
       { id: 1, 
         title: "",
@@ -90,11 +90,11 @@ export default [
     content: [
       { id: 0,
         title: "",
-        value: "Before building a deep learning model, we need to understand how to manipulate data, because data is like ingredients for a cook - essential for creating anything. In computere science , data represents everything in our world, from words, voices to images and videos. A tensor is a powerful tool for representing any kind of data with the complexity.",
+        value: "Before building a deep learning model, we need to understand how to manipulate data, because data is like ingredients for a cook - essential for creating anything. In computer science , data represents everything in our world, from words, voices to images and videos. A tensor is a powerful tool for representing any kind of data with the complexity.",
       },
       { id: 1,
         title: "",
-        value: "In this part, we’ll start by introducing tensors. A tensor is essentially a multi-dimentional array, and we’ll discuss important attributes, like its shape, number of dimensions, data type and the device it runs on. Next, we’ll dive into basic tensor operations, such as addition, subtraction, division, multiplication, and the slightly more complex matrix multiplication (which we’ll explain in detail). We’ll also explore aggregation operations, like finding the maximum or minimum value in a tensor.",
+        value: "In this part, we’ll start by introducing tensors. A tensor is essentially a multi-dimension array, and we’ll discuss important attributes, like its shape, number of dimensions, data type and the device it runs on. Next, we’ll dive into basic tensor operations, such as addition, subtraction, division, multiplication, and the slightly more complex matrix multiplication (which we’ll explain in detail). We’ll also explore aggregation operations, like finding the maximum or minimum value in a tensor.",
       },
       { id: 2, 
         title: "",
@@ -102,7 +102,7 @@ export default [
       },
       { id: 3, 
         title: "",
-        value: "We’ll also cover tensor indexing, which allows us to access any element, column, columns, row, rows or specific subset of data using filters. Additionally, we’ll touch on randomness, or more sepecifically, pseudorandomness in computer science. For reproducibility we can use a parameter called a random seed, which is an integer. Finally, we’ll discuss the device on which tensors run. By default, tensor urn on cpu, but if available, we can also use GPUs to speed up operations."
+        value: "We’ll also cover tensor indexing, which allows us to access any element, column, columns, row, rows or specific subset of data using filters. Additionally, we’ll touch on randomness, or more specifically, pseudo-randomness in computer science. For reproducibility we can use a parameter called a random seed, which is an integer. Finally, we’ll discuss the device on which tensors run. By default, tensor urn on cpu, but if available, we can also use GPUs to speed up operations."
       },
     ]
   },
@@ -117,19 +117,19 @@ export default [
       },
       { id: 1, 
         title: "",
-        value: "Well, if I asked you to build a language tanslation model from the start, most of you would likely drop out. Complex tasks require a gradual approach, so we’ll begin with something simple. First, we’ll kick things off with a basic linear regression model, where the goal is to find a line that closely fit our target data. This will lay the groundwork.",
+        value: "Well, if I asked you to build a language translation model from the start, most of you would likely drop out. Complex tasks require a gradual approach, so we’ll begin with something simple. First, we’ll kick things off with a basic linear regression model, where the goal is to find a line that closely fit our target data. This will lay the groundwork.",
       },
       { id: 2, 
         title: "",
-        value: "Next, we’ll move on to a slightly more complex model - a binary classification model. This model will help us distingush between two different groups of data points with a nested circular shape. In this project, we’ll introduce a non-linear function, which is crucial for understanding deep learning models.",
+        value: "Next, we’ll move on to a slightly more complex model - a binary classification model. This model will help us distinguish between two different groups of data points with a nested circular shape. In this project, we’ll introduce a non-linear function, which is crucial for understanding deep learning models.",
       },
       { id: 3, 
         title: "",
-        value: "The 3rd one is a hnadwritten digit recoginiton model. We’ll build a convolutional neural network (CNN) to recogonize digits from 0 to 9. The key takeaway here is the CNN architecture, which is fundemental in computer vision tasks.",
+        value: "The 3rd one is a handwritten digit recognition model. We’ll build a convolutional neural network (CNN) to recognize digits from 0 to 9. The key takeaway here is the CNN architecture, which is fundamental in computer vision tasks.",
       },
       { id: 4, 
         title: "",
-        value: "Then we’ll create a Vision Transformer model, use to classfy images into 10 different categories. This will introduce you to the Transformer encoder, a groundbreaking architecture in deep learning.",
+        value: "Then we’ll create a Vision Transformer model, use to classify images into 10 different categories. This will introduce you to the Transformer encoder, a groundbreaking architecture in deep learning.",
       },
       { id: 5, 
         title: "",
@@ -144,15 +144,15 @@ export default [
     content: [
       { id: 0,
         title: "",
-        value: "In this book, I introduce artificial intelligence from scratch with four main part, they are the basic concepts of artificial intelligence, tensor: a power tool to manimpulate data, then is about five deep learning models, and the the maths behind these models.",
+        value: "In this book, I introduce artificial intelligence from scratch with four main part, they are the basic concepts of artificial intelligence, tensor: a power tool to manipulate data, then is about five deep learning models, and the the maths behind these models.",
       },
       { id: 1,
         title: "",
-        value: "As we build thses models, we’ll use some important mathematical functions. After each model-building chaapter, we’ll explore the math behind the model, because understaning the math is key to truly grasping how the model works. We’ll also cover some basic computer sceince concepts along the way. I believe this is the best approach to learn the necessary mathematical concepts - when we encounter them in a project, we explore and understand them.",
+        value: "As we build these models, we’ll use some important mathematical functions. After each model-building chapter, we’ll explore the math behind the model, because understanding the math is key to truly grasping how the model works. We’ll also cover some basic computer science concepts along the way. I believe this is the best approach to learn the necessary mathematical concepts - when we encounter them in a project, we explore and understand them.",
       },
       { id: 2,
         title: "",
-        value: "Of course, you could choose to study the math beforehand, but I prefere learning it as we go. There is so much math out there, so it’s more efficient to learn what you need  when you need it.",
+        value: "Of course, you could choose to study the math beforehand, but I prefer learning it as we go. There is so much math out there, so it’s more efficient to learn what you need  when you need it.",
       },
     ]
   },
@@ -163,11 +163,11 @@ export default [
     content: [
       { id: 0,
         title: "",
-        value: "After building all five deep learning models, what I want to empasize one thing: the shape. As we've seen,  the shape of tensors is a key attribute in machine learning, and it plays a critical role in how models process data. So throughout this book, whenever I build a model, I always draw the shape of the data at every stage, from the input, through the hidden layers, all the way to the output. This helps clarify how data flows and transforms within the model."
+        value: "After building all five deep learning models, what I want to emphasize one thing: the shape. As we've seen,  the shape of tensors is a key attribute in machine learning, and it plays a critical role in how models process data. So throughout this book, whenever I build a model, I always draw the shape of the data at every stage, from the input, through the hidden layers, all the way to the output. This helps clarify how data flows and transforms within the model."
       },
       { id: 1, 
         title: "",
-        value: "The reason I do this is simple: I want to visualize the model's architecture so we can clearly see what the model is doing at each step. And this becomes pretty important as our model grow more complex. Computers love data, while people prefer pictures. By assigning a shape to the data, we can gain a more intuitive understanding for the entire architecture. It makes it easier to grasp the ideas behind the model, compared tojust looking at raw numbers and technical descriptions."
+        value: "The reason I do this is simple: I want to visualize the model's architecture so we can clearly see what the model is doing at each step. And this becomes pretty important as our model grow more complex. Computers love data, while people prefer pictures. By assigning a shape to the data, we can gain a more intuitive understanding for the entire architecture. It makes it easier to grasp the ideas behind the model, compared to just looking at raw numbers and technical descriptions."
       },
       { id: 2, 
         title: "",
@@ -175,11 +175,11 @@ export default [
       },
       { id: 3, 
         title: "",
-        value: "Well, now we already known that math is the key to the door of machine learnig, so how do we learn and master it? Do we need to remember all those fancy formulas? No, it's the worthest approach, and even you rember the formulas, you don't understand the meaning behind those formulas, you still cannot use them properly. Instead, you should focus on how to understand them, Here I think we don't need to rembember the fancy formulas, you just need to know it, like known the key parameters how to influence the formula. In today's AI-drive world, especially with tools like ChatGPT,  memorizing formulas isn't as important. What truely matters is understanding the meaning behind these functions and knowing how to apply them to specific tasks, like building a deep learning model, that's the real point."
+        value: "Well, now we already known that math is the key to the door of machine learning, so how do we learn and master it? Do we need to remember all those fancy formulas? No, it's the worst approach, and even you remember the formulas, you don't understand the meaning behind those formulas, you still cannot use them properly. Instead, you should focus on how to understand them, Here I think we don't need to remember the fancy formulas, you just need to know it, like known the key parameters how to influence the formula. In today's AI-drive world, especially with tools like ChatGPT,  memorizing formulas isn't as important. What truly matters is understanding the meaning behind these functions and knowing how to apply them to specific tasks, like building a deep learning model, that's the real point."
       },
       { id: 4, 
         title: "",
-        value: "So in our maths course, I visualize each formula with a shape. These shapes might be a bell-shaped, S-shaped, downhill and so on. It's easy to visualize these shapes, and when you associate the key parameters of the formulas with their shapes, you can quicky grasp the meaning behind them. For example, consider the normal distribution, often represented by a bell-shape, or as I prefer, a mountain-shape. One parameter, the mean, determines the location of the mountain, while the variance shapes it. Imagine a steep, narrow mountain with a small variance compare to something like Mount Fuji, which has a broadeer, smoother slope due to a large variance."
+        value: "So in our maths course, I visualize each formula with a shape. These shapes might be a bell-shaped, S-shaped, downhill and so on. It's easy to visualize these shapes, and when you associate the key parameters of the formulas with their shapes, you can quickly grasp the meaning behind them. For example, consider the normal distribution, often represented by a bell-shape, or as I prefer, a mountain-shape. One parameter, the mean, determines the location of the mountain, while the variance shapes it. Imagine a steep, narrow mountain with a small variance compare to something like Mount Fuji, which has a broader, smoother slope due to a large variance."
       },
     ]
   },

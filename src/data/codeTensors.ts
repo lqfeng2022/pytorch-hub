@@ -211,7 +211,7 @@ X + 10`,
       },
       { id: 18, 
         input: 
-`# We can alse use add()
+`# We can also use add()
 # X.add(10)
 torch.add(X, 10)`,
         output: 
@@ -519,7 +519,7 @@ Squeezed tensor:
         input: 
 `import torch
 
-# Create 2 tensors and matrix multiplicate them
+# Create 2 tensors and matrix Multiplication
 A = torch.tensor([[1., 2., 1.], 
                   [0., 1., 0.]])
 B = torch.tensor([[1., 2., 3.],
@@ -549,7 +549,7 @@ print(f"Transposed B shape: {B.T.shape}\\n")
 # A @ B.T
 C = torch.matmul(A, B.T)
 
-print(f"Matrix Multiplicate :\\n {A.shape} * {B.T.shape} <- inner dim match")
+print(f"Matrix Multiplication :\\n {A.shape} * {B.T.shape} <- inner dim match")
 print(f"Output:")
 print(f"C shape: {C.shape}")`,
         output: 
@@ -559,7 +559,7 @@ Shape of B: torch.Size([2, 3])
 Original B shape: torch.Size([2, 3])
 Transposed B shape: torch.Size([3, 2])
 
-Matrix Multiplicate :
+Matrix Multiplication :
 torch.Size([2, 3]) * torch.Size([3, 2]) <- inner dim match
 Output:
 C shape: torch.Size([2, 2])`,
@@ -573,14 +573,14 @@ print(f"Original B shape: {B.shape}")
 print(f"Transposed B shape: {B_transposed.shape}\\n")
 
 result = A @ B_transposed
-print(f"Matrix Multiplicate :\\n {A.shape} * {B_transposed.shape} <- inner dim match")
+print(f"Matrix Multiplication :\\n {A.shape} * {B_transposed.shape} <- inner dim match")
 print(f"Output:")
 print(f"result shape: {result.shape}")`,
         output: 
 `Original B shape: torch.Size([2, 3])
 Transposed B shape: torch.Size([3, 2])
 
-Matrix Multiplicate :
+Matrix Multiplication :
 torch.Size([2, 3]) * torch.Size([3, 2]) <- inner dim match
 Output:
 result shape: torch.Size([2, 2])`,
@@ -829,7 +829,7 @@ P.reshape(5, 3, 4)
       { id: 62, 
         input: 
 `# 3d -> 2d, 
-# in deep learing, we ofthen use to flatten a tensor
+# in deep learning, we often use to flatten a tensor
 P.reshape(5, 12)
 # P.view(5, 12)`,
         output:
@@ -841,7 +841,7 @@ P.reshape(5, 12)
       },
       { id: 63, 
         input: 
-`# 3d -> 4d, also often used in deep learing model
+`# 3d -> 4d, also often used in deep learning model
 P.reshape(2, 2, 3, 5)
 # P.view(2, 2, 3, 5)`,
         output:
@@ -882,7 +882,7 @@ print(f"{B,B.dtype}")`,
       },
       { id: 65, 
         input: 
-`# Changet data type of B
+`# Change data type of B
 C =B.type(torch.float16)
 
 print(B, B.dtype)
@@ -1244,9 +1244,9 @@ tensor([[0.9012, 0.0164],
         [0.8460, 0.0056]])
 
 Does Tensor A equal Tensor B?
-tensor([[False, False],
-        [False, False],
-        [False, False]])`,
+tensor([[Falso, Falso],
+        [Falso, Falso],
+        [Falso, Falso]])`,
        },
     ]
   },
@@ -1259,7 +1259,7 @@ tensor([[False, False],
 import torch
 
 # Set random seed fro reproducibility
-RANDOM_SEED = 42 # you could choose any number here
+RANDOM_SEED = 69 # you could choose any number here
 
 torch.manual_seed(RANDOM_SEED)
 A = torch.rand(3, 4)

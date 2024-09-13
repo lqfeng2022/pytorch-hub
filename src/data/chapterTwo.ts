@@ -82,7 +82,7 @@ export default [
           },
           { id: 2,
             title: "",
-            value: "To generate the corresponding output data, we apply a simple linear formula:  y = 0.6x + 0.1 . This equation produces the target values that our model will learn to predict, creating a clear linear relationship between the input and output."
+            value: "To generate the corresponding output data, we apply a simple linear formula:  y = 0.6x + 0.1 . This equation produces the target values that our model will learn to predict."
           }
         ]
       },
@@ -200,7 +200,7 @@ export default [
         content: [
           { id: 1,
             title: "Pick Up a Loss Function",
-            value: "This is the first crucial step in model training, as the loss function quantifies how well the model’s predictions match the actual labels. It serves as the objective function that the model seeks to minimize."
+            value: "This is the first crucial step in model training, as the loss function quantifies how well the model’s predictions match the actual labels."
           },
           { id: 2,
             title: "Pick Up an Optimizer",
@@ -221,7 +221,7 @@ export default [
         ]
       },
       { id: 2, 
-        name: ":: Visualize the Model before training", 
+        name: ":: Visualize the Training Model", 
         value: "",
         image: "src/assets/chapter_two/train_visual_before.jpeg",
         content: [
@@ -290,10 +290,6 @@ export default [
             title: "",
             value: "The saved model includes the learned parameters (weights and biases) and sometimes the model’s architecture, making it possible to reload and use the model immediately for making predictions."
           },
-          { id: 3,
-            title: "",
-            value: "Saving a model ensures that the time and resources spent on training aren’t lost, and it also makes it easier to deploy the model in production environments where it can be used to make predictions on new data. Additionally, saved models can be shared with others or reused in different projects."
-          },
         ]
       },
       { id: 1, 
@@ -314,7 +310,7 @@ export default [
         content: [
           { id: 1,
             title: "",
-            value: " Later, when we need to use this model, we simply load the state dictionary back into the model using the load_state_dict() method."
+            value: " Later, when we need to use this model, we simply load the state dictionary back into a new model (initial with random weight) using the load_state_dict() method."
           }
         ]
       },

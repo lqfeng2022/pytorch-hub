@@ -151,7 +151,7 @@ export default [
         ]
       },
       { id: 1,
-        name: "2.1 Machine Learing vs. Traditional Programming",
+        name: "2.1 Machine Learning vs. Traditional Programming",
         value: "",
         image: "src/assets/chapter_zero/mlcomparing.jpeg",
         content: [
@@ -240,7 +240,7 @@ export default [
         ]
       },
       { id: 1, 
-        name: "3.1 Deep Learing < Machine Learing < AI",
+        name: "3.1 Deep Learning < Machine Learning < AI",
         value: "In summary,  AI is the overall goal of creating intelligent systems. ML is a way to achieve AI by enabling machines to learn from data. DL is a more advanced technique within ML that uses layered neural networks to learn from large amounts of data.",
         image: "src/assets/chapter_zero/relationships.jpeg",
         content: [
@@ -288,7 +288,7 @@ export default [
           },
           { id: 2, 
             title: "",
-            value: "The neural network learns through backpropagation, adjusting its parameters based on the errors it makes during training on a labeled dataset (images labeled as “cat” or “not a cat”). The model gets better over time at identifying the features that distinguish a cat from other objects."
+            value: "The neural network learns through backPropagation, adjusting its parameters based on the errors it makes during training on a labeled dataset (images labeled as “cat” or “not a cat”). The model gets better over time at identifying the features that distinguish a cat from other objects."
           },
           { id: 3, 
             title: "",
@@ -401,7 +401,7 @@ export default [
           },
           { id: 4, 
             title: "Hidden Layers",
-            value: "These are the layers between the input and output layers. Hidden layers perform computations and extract features from the input data. The term “deep learning” refers to networks with many hidden layers. The number of neurons and hidden layers can vary depending on the complexity of the task and are often fine-tuned as hyperparameters."
+            value: "These are the layers between the input and output layers. Hidden layers perform computations and extract features from the input data. The term “deep learning” refers to networks with many hidden layers. The number of neurons and hidden layers can vary depending on the complexity of the task and are often fine-tuned as hyperParameters."
           },
           { id: 5, 
             title: "Output",
@@ -569,10 +569,6 @@ export default [
             title: "",
             value: "This graph shows the trends in the usage of different machine learning frameworks based on the share of paper implementations from June 2020 to June 2024. These frameworks are marked with different color, and PyTorch is the most attractive one."
           },
-          { id: 2, 
-            title: "",
-            value: "The red area (representing PyTorch) shows significant growth over time. Starting from March 2020, PyTorch's share of implementations steadily increased, eventually becoming the dominant framework by the middle of 2021. This trend continues with PyTorch maintaining the largest share through to June 2024."
-          }
         ]
       },
       { id: 3,
@@ -632,7 +628,7 @@ export default [
           { 
             id: 2, 
             title: "Calculus",
-            value: "Familiarity with derivatives and integrals is crucial, especially when it comes to understanding how backpropagation and gradient descent optimize neural networks during training."
+            value: "Familiarity with derivatives and integrals is crucial, especially when it comes to understanding how backPropagation and gradient descent optimize neural networks during training."
           },
           { id: 3, 
             title: "Probability and Statistics",
@@ -652,7 +648,7 @@ export default [
         content: [
           { id: 1, 
             title: "Watch all Lessons from A to Z",
-            value: "First and foremost, I recommend watching the entire course from beginning to end, even if you're already familiar with PyTorch. Throughout the course, I'll be sharing numerous tips and tricks to deepen your understanding, and I don't want you to miss out on any of them. I've designed the course to be concise and focused, so you won't waste time on repetitive or irrelevant content. Make sure to watch every lesson."
+            value: "First and foremost, I recommend watching the entire course from beginning to the end, even if you're already familiar with PyTorch. I've designed this course to be concise and focused, so I won't waste our time on repetitive or irrelevant content. Make sure to watch every lesson."
           },
           { 
             id: 2, 
@@ -661,7 +657,7 @@ export default [
           },
           { id: 3, 
             title: "Replicate the Models",
-            value: "Replicating models helps solidify the entire workflow, from building to improving, through hands-on practice. Once mastered, this skill not only enhances problem-solving but also builds confidence in replicating and implementing new models from research papers."
+            value: "Replicating models helps solidify the entire workflow, from building to training, through hands-on practice. Once mastered, this skill not only enhances problem-solving but also builds confidence in replicating and implementing new models from research papers."
           },
           { id: 4, 
             title: "Share your Work",

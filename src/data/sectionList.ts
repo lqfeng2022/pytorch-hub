@@ -74,7 +74,7 @@ export default [
     ]
    },
   { id: 3, 
-    name: "2. A Line Model", 
+    name: "2. A Linear Model", 
     link: "/a-line-model",
     items: [
       { id: 1, name: "PyTorch Workflow", link: "pytorch-workflow" },
