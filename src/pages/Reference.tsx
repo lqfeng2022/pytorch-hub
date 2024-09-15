@@ -16,9 +16,9 @@ const Reference = () => {
         {'Reference'}
       </Heading>
       <ReferGrid section={paper}/>
-      <Stack pt={3} pb={5} spacing={4}>
+      <Stack py={5} spacing={0}>
         <Heading as='b' fontSize='lg' color='gray.600' mt={3}>
-          {'Videos'}
+          {'VIDEOs:'}
         </Heading>
         <ReferGrid section={statQuest}/>
         <ReferGrid section={blueBrown}/>

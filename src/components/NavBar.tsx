@@ -22,7 +22,7 @@ const NavBar = () => {
             color='tomato'
             _hover={{ color: '#E53E3E' }}
           >
-            AI &nbsp;WITH &nbsp;PYTORCH
+            AI &nbsp;<Text as='span' fontWeight='thin'>WITH</Text> &nbsp;PYTORCH
           </Text>
         </Link>
         <Text as='b' fontSize='xl' color='gray.500'>SIMON LEE</Text>

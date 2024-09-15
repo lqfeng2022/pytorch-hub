@@ -3,7 +3,7 @@ export default [
     name: "TENSORs ?",
     sections: [
       { id: 0,
-        name: "What's a Tensor", 
+        name: "1. What's a Tensor ?", 
         value: "A TENSOR is a multi-dimensional array with a single data type.",
         image: "",
         content: [
@@ -153,8 +153,8 @@ export default [
         ]
       },
       { id: 1,
-        name: "3.1 the SHAPE", 
-        value: "Working with the shape attribute in PyTorch can sometimes be tricky, especially when you're manipulating tensors or performing operations that involve reshaping, matrix multiplication. To help visualize and understand the shape, let's look at an example.",
+        name: ":: A Tensor", 
+        value: "",
         image: "src/assets/chapter_one/attributes_shape.jpeg",
         content: [
           { id: 1, 
@@ -603,7 +603,7 @@ export default [
         content: [
           { id: 1, 
             title: "Unpredictability", 
-            value: "In a random process, future outcomes cannot be determined based on past events. For example, when flipping a fair coin, each flip is independent, and there's a 50% chance of getting heads or tails each time, regardless of previous results."
+            value: "In a random process, future outcomes cannot be determined based on past events. For example, when flipping a fair coin, each flip is independent, and there's a 50% chance of getting heads or tails each time, regardless of previous resultss."
           }, 
           { id: 2, 
             title: "True Randomness",

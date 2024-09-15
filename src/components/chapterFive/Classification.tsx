@@ -5,8 +5,7 @@ import LeftGrid from '../LeftGrid'
 import RightGrid from '../RightGrid'
 
 const BinaryClassification = () => {
-  const [ 
-    defin, classific, bClassific, binaryLinear, binaryNonlinear 
+  const [ defin, classific, bClassific, binaryLinear, binaryNonlinear 
   ] = chapterFive[0].sections
 
   return (

@@ -29,7 +29,7 @@ function HomePage() {
       <Stack spacing={5} pb={5}>
         { showContent && <>
           <Image src={bookImage} alt='Book Cover'/>
-          <Text>What's up! I built this web for a PyTorch training course, and it's designed for beginners who're interested in deep learning. You can explore all the deep lerning content here,  If this course sparks your curiosity and leaves you wanting more, don't miss my YouTube channel, where we dive even deeper into exciting <Text as='b'>deep learning models</Text>. Let's hit the road!</Text>
+          <Text>What's up! I built this web for a PyTorch training course, and it's designed for beginners who're interested in deep learning. You can explore all the deep learning content here,  If this course sparks your curiosity and leaves you wanting more, don't miss my YouTube channel, where we dive even deeper into exciting <Text as='b'>deep learning models</Text>. Let's hit the road!</Text>
           {!isLargeScreen && 
             <Button 
               bg='tomato'

@@ -5,12 +5,13 @@ import Code from '../entities/code';
 
 function CodeDisplay({ codes }: { codes: Code[] }) {
   return (
-    <Box py={5}>
+    <Box pt={5} pb={2}>
       <Box 
         bg='gray.50' 
         minWidth='0' 
         py={2} 
         borderLeft='1px solid red'
+        borderTop='5px solid pink'
       >
         {codes.map((code: Code) => <Stack key={code.id} p={3}>
           <Flex>

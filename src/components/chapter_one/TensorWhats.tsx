@@ -10,7 +10,7 @@ const TensorWhats = () => {
 
   return (
     <>
-      <Definition title={"1. What's a Tensor"} definition={whats}/>
+      <Definition title={whats.name} definition={whats}/>
       <BaseGrid section={how}/>
       <CodeDisplay codes={tensorCode}/>
     </>

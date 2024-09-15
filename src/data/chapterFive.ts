@@ -4,7 +4,7 @@ export default [
     sections: [
       { id: 0,
         name: "1. Classification Probelem", 
-        value: "A classification problem involves categorizing a object into one of n distinct classes.",
+        value: "A classification problem involves categorizing an object into one of n distinct classes.",
         image: "",
         content: [
           { id: 1, 
@@ -41,19 +41,19 @@ export default [
         value: "Binary classification is a fundamental task that assigns inputs to one of two distinct categories.",
         image: "",
         content: [
-          { id: 2, 
+          { id: 1, 
             title: "Simplicity",
             value: "Binary classification is the simplest form of classification, involving just two classes. This simplicity makes it easier to understand and implement compared to more complex tasks."
           },
-          { id: 3, 
+          { id: 2, 
             title: "Building Block",
             value: "Many complex machine learning tasks, like multi-class and multi-label classification, can be viewed as extensions or combinations or combinations of binary classification problems. For example, multi-class classification can often be broken down into several binary classification tasks."
           },
-          { id: 4, 
+          { id: 3, 
             title: "Wide Application",
             value: "Binary classification has numerous real-world applications, including spam detection, disease diagnosis, and sentiment analysis. These tasks are common across various industries, making binary classification a key component of many machine learning systems."
           },
-          { id: 5, 
+          { id: 4, 
             title: "Algorithm Foundation",
             value: "Many machine learning algorithms are initially developed and tested on binary classification tasks before being extended to handle more complex scenarios. Understanding binary classification is essential for grasping the core concepts of these algorithms."
           },
@@ -176,7 +176,7 @@ export default [
             title: "",
             value: "The sigmoid function is useful because it converts any input into a probability-like output, making it ideal for classification tasks."
           },
-          { id: 1, 
+          { id: 2, 
             title: "",
             value: "In our binary classification model, we use the sigmoid function in conjunction binary cross-entropy. First, we convert the input values into a range between 0 and 1 using the sigmoid function. We then pass these values into the binary cross-entropy function to calculate the loss. We do this because binary cross-entropy is designed to work with probability-like values, which fall between 0 and 1."
           },
@@ -230,65 +230,11 @@ export default [
       },
     ],
   },
-  { id: 3, 
-    name: "ReLU Function",
-    sections: [
-      { id: 0,
-        name: "4. ReLU Function", 
-        value: "ReLU (Rectified Linear Unit) is a non-linear activation function commonly used in deep learning.",
-        image: "",
-        content: [
-          { id: 1, 
-            title: "",
-            value: "The ReLU function is widely used in deep learning, especially in convolutional neural networks (CNNs) and various other neural network architectures."
-          },
-        ]
-      },
-      { id: 1,
-        name: ":: ReLU Function Formula", 
-        value: "",
-        image: "src/assets/chapter_five/reluFormula.jpeg",
-        content: [
-          { id: 1, 
-            title: "Output: (0, x)",
-            value: "The ReLU function has a staightforward formula: it outputs the maximum value between 0 and input value x. As a result, the output of ReLU is always non-negative, ranging from 0 to infinity. The function is linear for positive inputs and outputs 0 for negative inputs."
-          },
-          { id: 2, 
-            title: "Overall",
-            value: "ReLU is favored in many deep learning models because of its simplicity, efficiency, and its ability to enable faster and more effective training of deep neural networks."
-          },
-        ]
-      },
-      { id: 2,
-        name: ":: ReLU Function Features", 
-        value: "",
-        image: "src/assets/chapter_five/reluFeature.jpeg",
-        content: [
-          { id: 1, 
-            title: "Non-linearity",
-            value: "Although ReLU is simple and piecewise linear, it introduces non-linearity into the network, which is essential for learning complex patterns."
-          },
-          { id: 2, 
-            title: "Computationally Efficient",
-            value: "ReLU activates only neurons with positive inputs, resulting in sparse activations. This sparsity can enhance computational efficiency."
-          },
-          { id: 3, 
-            title: "No Vanishing Gradient Issue",
-            value: "Unlike sigmoid or tanh functions, ReLU avoid the vanishing gradient problem for positive inputs, enabling faster training and better performance in deep networks."
-          },
-          { id: 4, 
-            title: "Dying ReLU issue",
-            value: "However, if too many inputs are negative, neurons can become inactive and output 0, effectively ceasing to learn. This issue is known as the “dying ReLU” problem."
-          },
-        ]
-      },
-    ],
-  },
-  { id: 4,
+  { id: 3,
     name: "BackPropagation",
     sections: [
       { id: 0,
-        name: "5. BackPropagation",
+        name: "4. BackPropagation",
         value: "Backpropagation is a key algorithm for training neural networks, which involves the 'backward propagation of errors' to adjust weights and minimize loss.",
         image: "",
         content: [
@@ -349,5 +295,59 @@ export default [
         ]
       },
     ]
+  },
+  { id: 4, 
+    name: "ReLU Function",
+    sections: [
+      { id: 0,
+        name: "5. ReLU Function", 
+        value: "ReLU (Rectified Linear Unit) is a non-linear activation function commonly used in deep learning.",
+        image: "",
+        content: [
+          { id: 1, 
+            title: "",
+            value: "The ReLU function is widely used in deep learning, especially in convolutional neural networks (CNNs) and various other neural network architectures."
+          },
+        ]
+      },
+      { id: 1,
+        name: ":: ReLU Function Formula", 
+        value: "",
+        image: "src/assets/chapter_five/reluFormula.jpeg",
+        content: [
+          { id: 1, 
+            title: "Output: (0, x)",
+            value: "The ReLU function has a staightforward formula: it outputs the maximum value between 0 and input value x. As a result, the output of ReLU is always non-negative, ranging from 0 to infinity. The function is linear for positive inputs and outputs 0 for negative inputs."
+          },
+          { id: 2, 
+            title: "Overall",
+            value: "ReLU is favored in many deep learning models because of its simplicity, efficiency, and its ability to enable faster and more effective training of deep neural networks."
+          },
+        ]
+      },
+      { id: 2,
+        name: ":: ReLU Function Features", 
+        value: "",
+        image: "src/assets/chapter_five/reluFeature.jpeg",
+        content: [
+          { id: 1, 
+            title: "Non-linearity",
+            value: "Although ReLU is simple and piecewise linear, it introduces non-linearity into the network, which is essential for learning complex patterns."
+          },
+          { id: 2, 
+            title: "Computationally Efficient",
+            value: "ReLU activates only neurons with positive inputs, resulting in sparse activations. This sparsity can enhance computational efficiency."
+          },
+          { id: 3, 
+            title: "No Vanishing Gradient Issue",
+            value: "Unlike sigmoid or tanh functions, ReLU avoid the vanishing gradient problem for positive inputs, enabling faster training and better performance in deep networks."
+          },
+          { id: 4, 
+            title: "Dying ReLU issue",
+            value: "However, if too many inputs are negative, neurons can become inactive and output 0, effectively ceasing to learn. This issue is known as the “dying ReLU” problem."
+          },
+        ]
+      },
+    ],
   },
 ]
