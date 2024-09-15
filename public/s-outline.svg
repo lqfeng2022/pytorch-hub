@@ -1,3 +1,10 @@
+<!-- <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="35" font-family="Arial" font-size="43" fill="none" stroke="black" stroke-width="2">S</text>
+</svg> -->
+
 <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="35" font-family="Arial" font-size="45" fill="none" stroke="black" stroke-width="2">S</text>
+  <!-- White circle background -->
+  <circle cx="25" cy="25" r="23" fill="#FFF5F5" stroke="gray" stroke-width="2"/>
+  <!-- Letter S -->
+  <text x="10" y="40" font-family="Arial" font-size="43" fill="none" stroke="#F56565" stroke-width="2">S</text>
 </svg>
