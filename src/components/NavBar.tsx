@@ -20,12 +20,14 @@ const NavBar = () => {
             whiteSpace='nowrap' 
             fontSize='2xl' 
             color='tomato'
-            _hover={{ color: '#E53E3E' }}
+            _hover={{ color: '#718096' }}
           >
             AI &nbsp;<Text as='span' fontWeight='thin'>WITH</Text> &nbsp;PYTORCH
           </Text>
         </Link>
-        <Text as='b' fontSize='xl' color='gray.500'>SIMON LEE</Text>
+        <Text as='b' fontSize='xl' color='gray.500'>SIMON
+          <Text as='span' fontWeight='thin'> LEE</Text>
+        </Text>
       </HStack>
     </Container>
   );

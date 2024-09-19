@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Center, 
+  HStack, 
   Image, 
   Stack, 
   Text,
@@ -26,41 +27,41 @@ function HomePage() {
   
   return (
     <Center>
-      <Stack spacing={5} pb={5}>
+      <Stack spacing={3} pb={5}>
         { showContent && <>
-          <Image src={bookImage} alt='Book Cover'/>
-          <Text>What's up! I built this web for a PyTorch training course, and it's designed for beginners who're interested in deep learning. You can explore all the deep learning content here,  If this course sparks your curiosity and leaves you wanting more, don't miss my YouTube channel, where we dive even deeper into exciting <Text as='b'>deep learning models</Text>. Let's hit the road!</Text>
-          {!isLargeScreen && 
+          <Text>
+            What's up! I built this web for a PyTorch training course, and it's designed for beginners who're interested in Artificial Intelligence.
+          </Text>
+          <Text fontWeight='bold'>Let's hit the road!</Text>
+          { !isLargeScreen && 
             <Button 
-              bg='tomato'
-              color='white'
-              w='100px' 
-              h='35px' 
-              onClick={handleShow}
-              _hover={{ bg: '#E53E3E' }}
-            >
-              SHALL WE
-            </Button>
+            bg='tomato'
+            color='white'
+            w='100px' 
+            h='35px' 
+            onClick={handleShow}
+            _hover={{ bg: '#E53E3E' }}
+            >SHALL WE</Button>
           }
+          <Image src={bookImage} alt='Book Cover'/>
         </>}
-        {useBreakpointValue({base: show, lg: false}) && 
+        { useBreakpointValue({base: show, lg: false}) && 
           <Box 
             w={{ base: '350px', sm: '450px', md: '700px' }}
             position='relative'
             pb='70px'
           >
+            <HStack justifyContent='space-between'>
+              <Text fontWeight='bold' color='gray.500' borderBottom='1px solid red'>BOOK LIST:</Text>
+              <Button
+                colorScheme='gray'
+                color='gray.500'
+                w='80px'
+                h='35px'
+                onClick={handleHide}
+              >CLOSE</Button>
+            </HStack>
             <BookList/>
-            <Button 
-              colorScheme='gray' 
-              w='80px' 
-              h='35px' 
-              onClick={handleHide}
-              position='absolute'
-              right='0'
-              bottom='30px'
-            >
-              CLOSE
-            </Button>
           </Box>
         }
       </Stack>
