@@ -1,5 +1,5 @@
 import { Heading, Center, Stack, Text, Image, AspectRatio } from '@chakra-ui/react'
-import Cover from '../entities/ChapterCover-temp'
+import Cover from '../entities/chapterCover'
 
 const Header = ({ cover }: { cover: Cover }) => {
   return (
