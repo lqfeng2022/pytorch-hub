@@ -1,4 +1,4 @@
-import Content from "./Content-temp";
+import Content from "./content";
 
 export default interface Section {
   id: number,
