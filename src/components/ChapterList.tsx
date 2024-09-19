@@ -1,6 +1,6 @@
 import { Box, List, ListItem, Stack, Text } from '@chakra-ui/react'
 import Content from '../entities/content'
-import SectionItem from '../entities/sectionItem'
+import SectionItem from '../entities/SectionItem-temp'
 import Lists from './Lists'
 
 interface Props {

@@ -1,7 +1,7 @@
 import { Box, List, ListItem, SimpleGrid, Stack, Text } from '@chakra-ui/react'
 import Lists from '../components/Lists'
 import Content from '../entities/content'
-import SectionItem from '../entities/sectionItem'
+import SectionItem from '../entities/SectionItem-temp'
 
 interface Props {
   leftItems: SectionItem[],
