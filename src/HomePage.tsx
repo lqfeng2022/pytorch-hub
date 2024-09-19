@@ -32,17 +32,21 @@ function HomePage() {
           <Text>
             What's up! I built this site for a PyTorch Model Building course, and it's perfect for beginners interested in Artificial Intelligence.
           </Text>
-          <Text fontWeight='bold' color='gray.500'>Let's hit the road!</Text>
-          { !isLargeScreen && 
-            <Button 
-            bg='tomato'
-            color='white'
-            w='100px' 
-            h='35px' 
-            onClick={handleShow}
-            _hover={{ bg: '#718096' }}
-            >SHALL WE</Button>
-          }
+          <HStack justifyContent='space-between'>
+            <Text fontSize='xl' color='gray.500' borderBottom='1px solid #FEB2B2'>
+              Let's hit the road!
+            </Text>
+            { !isLargeScreen &&
+              <Button
+              bg='tomato'
+              color='white'
+              w='100px'
+              h='35px'
+              onClick={handleShow}
+              _hover={{ bg: '#718096' }}
+              >SHALL WE</Button>
+            }
+          </HStack>
           <Image src={bookImage} alt='Book Cover'/>
         </>}
         { useBreakpointValue({base: show, lg: false}) && 
