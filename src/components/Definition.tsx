@@ -11,7 +11,7 @@ const Definition = ({ title, definition }: Props) => {
       <Text as='b' fontSize='xl' color='gray.600'>{title}</Text>
       <Center my={5} minH='250px' bg='red.50'>
         <Box maxW='600px' px={5}>
-          <Text textAlign='center' fontSize='2xl' color='tomato'>
+          <Text textAlign='center' fontSize={{base: 'xl', lg: '2xl'}} color='tomato'>
             {definition.value}
           </Text>
         </Box>
