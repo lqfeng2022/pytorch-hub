@@ -7,8 +7,8 @@ import {
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react';
-import book_img from '../src/assets/book_cover.jpeg';
-import book_img_2 from '../src/assets/book_cover_2.jpeg';
+import book_img from '../public/covers/book_cover.jpeg';
+import book_img_2 from '../public/covers/book_cover_2.jpeg';
 import { useState } from 'react';
 import BookList from './components/BookList';
 
