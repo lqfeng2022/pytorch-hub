@@ -12,7 +12,7 @@ const ReferGrid = ({ section }: { section: Reference }) => {
       <Text as='b' fontSize='lg' color='gray.600'>
         {section.name}
       </Text>
-      <Stack spacing={1} pt={3}>
+      <Stack spacing={1} pt={2}>
         {section.values.map((p) => 
           <HStack key={p.id} alignItems='flex-start'>
             <Text as="span" color="gray.400" mr={2} fontSize='xl'>
@@ -23,7 +23,7 @@ const ReferGrid = ({ section }: { section: Reference }) => {
                 <Link
                   href={p.link}
                   textDecoration='underline'
-                  textUnderlineOffset='4px'
+                  textUnderlineOffset='3px'
                   target='_blank'
                   _hover={{ textColor: 'tomato' }}
                 >

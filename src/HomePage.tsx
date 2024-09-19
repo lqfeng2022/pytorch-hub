@@ -12,6 +12,7 @@ import book_img from './assets/book_cover.jpeg';
 import book_img_2 from './assets/book_cover_2.jpeg';
 import { useState } from 'react';
 import BookList from './components/BookList';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [show, setShow] = useState(false)
@@ -33,18 +34,21 @@ function HomePage() {
             What's up! I built this site for a PyTorch Model Building course, and it's perfect for beginners interested in Artificial Intelligence.
           </Text>
           <HStack justifyContent='space-between'>
-            <Text fontSize='xl' color='gray.500' borderBottom='1px solid #FEB2B2'>
-              Let's hit the road!
-            </Text>
             { !isLargeScreen &&
-              <Button
-              bg='tomato'
-              color='white'
-              w='100px'
-              h='35px'
-              onClick={handleShow}
-              _hover={{ bg: '#718096' }}
-              >SHALL WE</Button>
+              <Text 
+                fontSize='xl' 
+                color='gray.500' 
+                borderBottom='1px solid #FEB2B2'
+                onClick={handleShow}
+                _hover={{ 
+                  color: 'tomato', 
+                  cursor: 'pointer',
+                  transform: 'translateX(5px)',
+                  transition: 'transform .15s ease-in',
+                }}
+              >
+                Let's hit the road:
+              </Text>
             }
           </HStack>
           <Image src={bookImage} alt='Book Cover'/>
