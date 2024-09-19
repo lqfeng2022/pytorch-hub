@@ -1,5 +1,5 @@
 import { Box, Text, Stack } from '@chakra-ui/react'
-import Section from '../entities/section'
+import Section from '../entities/Section-temp'
 
 const IntroduceGrid = ({ section }: { section: Section }) => {
   return (
