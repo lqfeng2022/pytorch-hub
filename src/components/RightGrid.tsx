@@ -1,5 +1,5 @@
 import { Box, Image, Stack, Text, Flex, HStack, Grid } from '@chakra-ui/react'
-import Section from '../entities/Section-temp'
+import Section from '../entities/section'
 
 const RightGrid = ({ section }: { section: Section }) => {
   return (

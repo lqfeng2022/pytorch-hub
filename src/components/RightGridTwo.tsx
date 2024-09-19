@@ -1,5 +1,5 @@
 import { Box, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react'
-import Section from '../entities/Section-temp'
+import Section from '../entities/section'
 
 const RightGridTwo = ({ section }: { section: Section }) => {
   return (
