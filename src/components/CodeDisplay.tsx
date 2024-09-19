@@ -10,8 +10,8 @@ function CodeDisplay({ codes }: { codes: Code[] }) {
         bg='gray.50' 
         minWidth='0' 
         py={2} 
-        borderLeft='1px solid red'
         borderTop='5px solid pink'
+        borderBottom='1px solid red'
       >
         {codes.map((code: Code) => <Stack key={code.id} p={3}>
           <Flex>

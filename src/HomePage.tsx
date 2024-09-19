@@ -30,9 +30,9 @@ function HomePage() {
       <Stack spacing={3} pb={5}>
         { showContent && <>
           <Text>
-            What's up! I built this web for a PyTorch training course, and it's designed for beginners who're interested in Artificial Intelligence.
+            What's up! I built this site for a PyTorch Model Building course, and it's perfect for beginners interested in Artificial Intelligence.
           </Text>
-          <Text fontWeight='bold'>Let's hit the road!</Text>
+          <Text fontWeight='bold' color='gray.500'>Let's hit the road!</Text>
           { !isLargeScreen && 
             <Button 
             bg='tomato'
@@ -40,7 +40,7 @@ function HomePage() {
             w='100px' 
             h='35px' 
             onClick={handleShow}
-            _hover={{ bg: '#E53E3E' }}
+            _hover={{ bg: '#718096' }}
             >SHALL WE</Button>
           }
           <Image src={bookImage} alt='Book Cover'/>
@@ -58,6 +58,7 @@ function HomePage() {
                 color='gray.500'
                 w='80px'
                 h='35px'
+                _hover={{ bg: '#FF6347', color: '#FFFFFF' }}
                 onClick={handleHide}
               >CLOSE</Button>
             </HStack>
