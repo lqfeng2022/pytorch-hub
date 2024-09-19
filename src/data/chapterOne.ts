@@ -1,3 +1,44 @@
+import {
+  tensor_what, 
+  tensor_create,
+  tensor_create_random,
+  tensor_create_zerosOnes,
+  tensor_create_range,
+  tensor_create_likes,
+  tensor_attrib,
+  tensor_attrib_shape,
+  tensor_oper,
+  tensor_oper_addsub,
+  tensor_oper_matmul,
+  tensor_oper_matmul_work,
+  tensor_oper_matmul_rules,
+  tensor_oper_matmul_webs,
+  tensor_oper_matmul_dot,
+  tensor_oper_matmul_dot_mha,
+  tensor_oper_aggreg,
+  tensor_manipul,
+  tensor_manipul_shape,
+  tensor_manipul_shape_t,
+  tensor_manipul_shape_perm,
+  tensor_manipul_shape_reshape,
+  tensor_manipul_dtype,
+  tensor_manipul_concat_stack, 
+  tensor_manipul_stack,
+  tensor_manipul_concat_v, 
+  tensor_manipul_concat_h, 
+  tensor_index_basic,
+  tensor_index_slice_boolean,
+  randomness, 
+  randomness_features,
+  pseudorandomness_features, 
+  random_seed,
+  gpu_run,
+  gpu_features, 
+  gpu_cuda_whats, 
+  gpu_cuda_features, 
+  gpu_gets,
+} from '../assets/chapter_one'
+
 export default [
   { id: 1, 
     name: "TENSORs ?",
@@ -20,7 +61,7 @@ export default [
       { id: 1,
         name: ":: scalar, vector, MATRIX, TENSOR", 
         value: "",
-        image: "src/assets/chapter_one/tensors.jpeg",
+        image: tensor_what,
         content: [
           { id: 1, 
             title: "scalar",
@@ -48,7 +89,7 @@ export default [
       { id: 0,
         name: "2. Tensor Creating", 
         value: "",
-        image: "src/assets/chapter_one/create.jpeg",
+        image: tensor_create,
         content: [
           { id: 1, 
             title: "",
@@ -59,7 +100,7 @@ export default [
       { id: 1,
         name: "2.1 Random Tensor", 
         value: "",
-        image: "src/assets/chapter_one/create_random.jpeg",
+        image: tensor_create_random,
         content: [
           { id: 1, 
             title: "What's a random tensor?",
@@ -78,7 +119,7 @@ export default [
       { id: 2,
         name: "2.2 Zeros Tensor & Ones Tensor", 
         value: "",
-        image: "src/assets/chapter_one/create_zerosOnes.jpeg",
+        image: tensor_create_zerosOnes,
         content: [
           { id: 1, 
             title: "What are zeros ones tensors?",
@@ -97,7 +138,7 @@ export default [
       { id: 3,
         name: "2.3 Range Tensor", 
         value: "",
-        image: "src/assets/chapter_one/create_range.jpeg",
+        image: tensor_create_range,
         content: [
           { id: 1, 
             title: "What's a range tensor?",
@@ -116,7 +157,7 @@ export default [
       { id: 4,
         name: "2.4 Tensor Like", 
         value: "",
-        image: "src/assets/chapter_one/create_like.jpeg",
+        image: tensor_create_likes,
         content: [
           { id: 1, 
             title: "",
@@ -132,7 +173,7 @@ export default [
       { id: 0,
         name: "3. Tensor Attributes", 
         value: "In PyTorch, a tensor comes with several important attributes that give you information about their structure, data type, and where they are stored (CPU or GPU). The main attributes you'll often work with are 'shape', 'ndim', 'dtype', and 'device'. Here's a brief overview of each:",
-        image: "src/assets/chapter_one/attributes.jpeg",
+        image: tensor_attrib,
         content: [
           { id: 1, 
             title: "shape",
@@ -155,7 +196,7 @@ export default [
       { id: 1,
         name: ":: A Tensor", 
         value: "",
-        image: "src/assets/chapter_one/attributes_shape.jpeg",
+        image: tensor_attrib_shape,
         content: [
           { id: 1, 
             title: "",
@@ -183,7 +224,7 @@ export default [
       { id: 0,
         name: "4. Tensor Operations", 
         value: "",
-        image: "src/assets/chapter_one/operats.jpeg",
+        image: tensor_oper,
         content: [
           { id: 1, 
             title: "",
@@ -194,7 +235,7 @@ export default [
       { id: 1,
         name: "4.1 Basic Operations", 
         value: "",
-        image: "src/assets/chapter_one/operats_addsub.jpeg",
+        image: tensor_oper_addsub,
         content: [
           { id: 1, 
             title: "",
@@ -209,7 +250,7 @@ export default [
       { id: 2,
         name: "4.2 Matrix Multiplication", 
         value: "",
-        image: "src/assets/chapter_one/operats_matmul.jpeg",
+        image: tensor_oper_matmul,
         content: [
           { id: 1, 
             title: "",
@@ -224,7 +265,7 @@ export default [
       { id: 3,
         name: ":: How it Works", 
         value: "",
-        image: "src/assets/chapter_one/operats_matmul_work.jpeg",
+        image: tensor_oper_matmul_work,
         content: [
           { id: 1, 
             title: "",
@@ -235,7 +276,7 @@ export default [
       { id: 4,
         name: ":: Two Rules", 
         value: "",
-        image: "src/assets/chapter_one/operats_matmul_rules.jpeg",
+        image: tensor_oper_matmul_rules,
         content: [
           { id: 1, 
             title: "",
@@ -246,7 +287,7 @@ export default [
       { id: 5,
         name: ":: Learning Webs", 
         value: "If you want to dive deeper into matrix multiplication, I recommend checking out these two websites. They offer valuable insights that can enhance your understanding of both matrix multiplication and the dot product.",
-        image: "src/assets/chapter_one/operats_matmul_webs.jpeg",
+        image: tensor_oper_matmul_webs,
         content: [
           { id: 1, 
             title: "mathisfun.com",
@@ -261,7 +302,7 @@ export default [
       { id: 6,
         name: ":: Dot-Product", 
         value: "",
-        image: "src/assets/chapter_one/operats_matmul_dot.jpeg",
+        image: tensor_oper_matmul_dot,
         content: [
           { id: 1, 
             title: "",
@@ -272,7 +313,7 @@ export default [
       { id: 7,
         name: ":: Dot-Product in Transformer", 
         value: "The dot product is a fundamental operation in the Transformer architecture, enabling the model to weigh the importance of different parts of the input efficiently and effectively, which is why it has become so powerful in tasks like translation, summarization, and more.",
-        image: "src/assets/chapter_one/operats_matmul_dot_mha.jpeg",
+        image: tensor_oper_matmul_dot_mha,
         content: [
           { id: 1, 
             title: "Measuring Similarity",
@@ -291,7 +332,7 @@ export default [
       { id: 8,
         name: "4.3 Aggregating Operations", 
         value: "Aggregating tensors refers to the process of reducing a tensor along one or more dimensions to produce a tensor with a lower rank. Aggregation is commonly used in deep learning to summarize or compress the information contained in a tensor, making it more manageable for further processing.",
-        image: "src/assets/chapter_one/operats_aggregate.jpeg",
+        image: tensor_oper_aggreg,
         content: [
           { id: 1, 
             title: "max()/min()",
@@ -315,7 +356,7 @@ export default [
       { id: 0,
         name: "5. Tensor Manipulation", 
         value: "",
-        image: "src/assets/chapter_one/manipul.jpeg",
+        image: tensor_manipul,
         content: [
           { id: 1, 
             title: "",
@@ -330,7 +371,7 @@ export default [
       { id: 1,
         name: "5.1 Reshaping a Tensor", 
         value: "",
-        image: "src/assets/chapter_one/manipul_shape.jpeg",
+        image: tensor_manipul_shape,
         content: [
           { id: 1, 
             title: "Squeeze or unsqueeze a Tensor",
@@ -353,7 +394,7 @@ export default [
       { id: 2,
         name: ":: Transpose a Tensor", 
         value: "Transposing a tensor in PyTorch is all about swapping two of its dimensions. This operation is commonly used in mathematical computations, especially in linear algebra, where you need to switch the rows and columns of matrices. But it's not just for matrices — you can use transposition on any tensor, no matter how many dimensions it has.",
-        image: "src/assets/chapter_one/manipul_shape_trans.jpeg",
+        image: tensor_manipul_shape_t,
         content: [
           { id: 1, 
             title: "",
@@ -372,7 +413,7 @@ export default [
       { id: 3,
         name: ":: Permute a Tensor", 
         value: "",
-        image: "src/assets/chapter_one/manipul_shape_permute.jpeg",
+        image: tensor_manipul_shape_perm,
         content: [
           { id: 1, 
             title: "",
@@ -383,7 +424,7 @@ export default [
       { id: 4,
         name: ":: Reshape a Tensor", 
         value: "",
-        image: "src/assets/chapter_one/manipul_shape_reshape.jpeg",
+        image: tensor_manipul_shape_reshape,
         content: [
           { id: 1, 
             title: "",
@@ -410,7 +451,7 @@ export default [
       { id: 5,
         name: "5.2 Changing Data Type", 
         value: "PyTorch tensors can easily interact with NumPy arrays, making it simple to convert between the two. This seamless interoperability is super useful when you want to take advantage of both PyTorch's capabilities and NumPy's strengths in your workflow. Here's how you can implement this interaction:",
-        image: "src/assets/chapter_one/manipul_dtype.jpeg",
+        image: tensor_manipul_dtype,
         content: [
           { id: 0, 
             title: "",
@@ -435,7 +476,7 @@ export default [
       { id: 6,
         name: "5.3 Concatenate and Stack Tensors", 
         value: "",
-        image: "src/assets/chapter_one/manipul_catstack.jpeg",
+        image: tensor_manipul_concat_stack,
         content: [
           { id: 1, 
             title: "Concatenate Tensors",
@@ -450,7 +491,7 @@ export default [
       { id: 7,
         name: ":: Stack tensors", 
         value: "",
-        image: "src/assets/chapter_one/manipul_stack.jpeg",
+        image: tensor_manipul_stack,
         content: [
           { id: 1, 
             title: "",
@@ -465,7 +506,7 @@ export default [
       { id: 8,
         name: ":: Concatenate tensors vertically", 
         value: "",
-        image: "src/assets/chapter_one/manipul_shape_cat_vstack.jpeg",
+        image: tensor_manipul_concat_v,
         content: [
           { id: 1, 
             title: "",
@@ -480,7 +521,7 @@ export default [
       { id: 9,
         name: ":: Concatenate tensors horizontally", 
         value: "",
-        image: "src/assets/chapter_one/manipul_shape_cat_hstack.jpeg",
+        image: tensor_manipul_concat_h,
         content: [
           { id: 1, 
             title: "",
@@ -511,7 +552,7 @@ export default [
       { id: 1,
         name: "6.1 Basic Indexing", 
         value: "",
-        image: "src/assets/chapter_one/indexing_one.jpeg",
+        image: tensor_index_basic,
         content: [
           { id: 1, 
             title: "Single Element",
@@ -526,7 +567,7 @@ export default [
       { id: 2,
         name: "6.2 Slicing and Boolean Indexing", 
         value: "",
-        image: "src/assets/chapter_one/indexing_two.jpeg",
+        image: tensor_index_slice_boolean,
         content: [
           { id: 1, 
             title: "Slicing Indexing",
@@ -580,7 +621,7 @@ export default [
       { id: 2, 
         name: ":: Randomness in PyTorch",
         value: "",
-        image: "src/assets/chapter_one/randpy.jpeg", 
+        image: randomness, 
         content: [
           { id: 1, 
             title: "", 
@@ -599,7 +640,7 @@ export default [
       { id: 3, 
         name: ":: Randomness Features",
         value: "",
-        image: "src/assets/chapter_one/randfeat.jpeg", 
+        image: randomness_features, 
         content: [
           { id: 1, 
             title: "Unpredictability", 
@@ -629,7 +670,7 @@ export default [
       { id: 5, 
         name: ":: pseudo-randomness Features",
         value: "",
-        image: "src/assets/chapter_one/pseudorandf.jpeg", 
+        image: pseudorandomness_features, 
         content: [
           { id: 1, 
             title: "Deterministic", 
@@ -667,7 +708,7 @@ export default [
       { id: 7, 
         name: ":: RANDOM SEED in PyTorch",
         value: "",
-        image: "src/assets/chapter_one/randseedpy.jpeg", 
+        image: random_seed, 
         content: [
           { id: 1, 
             title: "69 - No Special Significance!", 
@@ -698,7 +739,7 @@ export default [
       { id: 1, 
         name: "8.1 Run Tensor on GPUs", 
         value: "To run tensors on GPUs with PyTorch, you need to move your tensor data to the GPU and then perform operations using GPU acceleration. This can really speed up computation, especially when working with large tensors and deep learning models.", 
-        image: "src/assets/chapter_one/gpu_run.jpeg", 
+        image: gpu_run, 
         content: [
           { id: 1, 
             title: "Check if GPU is Available", 
@@ -732,7 +773,7 @@ export default [
       { id: 3, 
         name: ":: GPU Features",
         value: "",
-        image: "src/assets/chapter_one/gpu_feature.jpeg", 
+        image: gpu_features, 
         content: [
           { id: 1, 
             title: "Parallel Processing", 
@@ -755,7 +796,7 @@ export default [
       { id: 4, 
         name: "8.3 CUDA",
         value: "",
-        image: "src/assets/chapter_one/gpu_cuda.jpg", 
+        image: gpu_cuda_whats, 
         content: [
           { id: 1, 
             title: "", 
@@ -766,7 +807,7 @@ export default [
       { id: 5, 
         name: ":: CUDA Features",
         value: "", 
-        image: "src/assets/chapter_one/gpu_cuda_feature.jpeg", 
+        image: gpu_cuda_features, 
         content: [
           { id: 1, 
             title: "Parallel Computing Framework", 
@@ -789,7 +830,7 @@ export default [
       { id: 6, 
         name: "8.4 Get GPUs",
         value: "",
-        image: "src/assets/chapter_one/gpu_get.jpeg", 
+        image: gpu_gets, 
         content: [
           { id: 1, 
             title: "Check if Your Local Machine Has a GPU", 

@@ -1,5 +1,5 @@
 import { Box, Image, Text } from '@chakra-ui/react';
-import aihistory from '../../assets/chapter_zero/aihistory.jpeg';
+import { ai_history } from '../../assets/chapter_zero';
 import BaseGrid from '../BaseGrid';
 import Definition from '../Definition';
 import LeftGrid from '../LeftGrid';
@@ -18,7 +18,7 @@ const AISection = () => {
       <BaseGrid section={reason}/>
       <Box py={5}>
         <Text as='b' fontSize='lg' color='gray.600'>1.2 The History of AI</Text>
-        <Image py={5} src={aihistory}/>
+        <Image py={5} src={ai_history}/>
         <LeftGrid section={turningTest}/>
         <RightGridTwo section={expertSystem}/>
         <LeftGrid section={connectionism}/>

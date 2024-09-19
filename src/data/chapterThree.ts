@@ -1,3 +1,24 @@
+import {
+  linear,
+  distribut_pdf,
+  distribut_cdf,
+  loss_mse_one,
+  loss_mse_two,
+  loss_curves,
+  gd_one,
+  gd_one_mse,
+  gd_one_table,
+  gd_two,
+  gd_two_table,
+  sgd_vs_gd_table,
+  sgd_vs_gd_image,
+  lr,
+  lr_low,
+  lr_high,
+  lr_right
+} from '../assets/chapter_three'
+import { coverThree } from '../assets/covers'
+
 export default [
   { id: 0, 
     name: "Linear Regression",
@@ -20,7 +41,7 @@ export default [
       { id: 1,
         name: ":: Linear Relationship", 
         value: "",
-        image: "src/assets/chapter_three/linear.jpeg",
+        image: linear,
         content: [
           { id: 1, 
             title: "",
@@ -55,7 +76,7 @@ export default [
       { id: 1,
         name: "2.1 Probability Density Function (PDF)", 
         value: "Let’s talk about the Probability Density Function, or PDF, which is key when we say the Standard Normal Distribution. No need to stress over memorizing the complicated formula, what’s crucial is grasping the shape of the function and the key parameters that shape it. These parameters dictate whether the bell curve is narrow or wide, giving you a clear picture of how the data is spread out.",
-        image: "src/assets/chapter_three/ndistrib_pdf.jpeg",
+        image: distribut_pdf,
         content: [
           { id: 1, 
             title: "Bell-shaped:",
@@ -82,7 +103,7 @@ export default [
       { id: 2,
         name: "2.2 Cumulative Distribution Function (CDF)", 
         value: "The CDF is visualized as the shaded area under the PDF curve to the left of a specific point, which we’ll call x. It represents the probability that the random variable X will take on a value less than or equal to x.",
-        image: "src/assets/chapter_three/ndistrib_cdf.jpeg",
+        image: distribut_cdf,
         content: [
           { id: 1, 
             title: "S-shaped:",
@@ -144,7 +165,7 @@ export default [
       { id: 2,
         name: ":: MSE in straight-line model (part.1)",
         value: "",
-        image: "src/assets/chapter_three/mse_one.jpeg",
+        image: loss_mse_one,
         content: [
           { id: 1,
             title: "Graph Explanation:",
@@ -159,7 +180,7 @@ export default [
       { id: 3,
         name: ":: MSE in straight-line model (part.2)",
         value: "",
-        image: "src/assets/chapter_three/mse_two.jpeg",
+        image: loss_mse_two,
         content: [
           { id: 1,
             title: "MSE Calculation:",
@@ -193,7 +214,7 @@ export default [
       { id: 5,
         name: ":: Three kinds of Loss Curves",
         value: "",
-        image: "src/assets/chapter_three/losscurves.jpg",
+        image: loss_curves,
         content: [
           { id: 1,
             title: "Underfitting: Falling short",
@@ -232,7 +253,7 @@ export default [
       { id: 1,
         name: "4.1 GD SIMULATION (1 parameter)",
         value: "",
-        image: "src/assets/chapter_three/gd_one.jpeg",
+        image: gd_one,
         content: [
           { id: 0,
             title: "",
@@ -255,7 +276,7 @@ export default [
       { id: 2,
         name: ":: GD SIMULATION Table",
         value: "",
-        image: "src/assets/chapter_three/gd_one_table.jpeg",
+        image: gd_one_table,
         content: [
           { id: 1,
             title: "",
@@ -274,7 +295,7 @@ export default [
       { id: 3,
         name: ":: GD SIMULATION on MSE Curve",
         value: "",
-        image: "src/assets/chapter_three/gd_one_mse.jpeg",
+        image: gd_one_mse,
         content: [
           { id: 1,
             title: "MSE curve",
@@ -289,7 +310,7 @@ export default [
       { id: 4,
         name: "4.2 GD SIMULATION (2 parameters)",
         value: "Let’s visualize the 2 parameters Gradient Descent. This 3D surface plot visually represents the process of Gradient Descent in a multi-parameter scenario, where two parameters θ1 and θ2 are being optimized to minimize a loss function, denoted as  Loss(θ1, θ2).",
-        image: "src/assets/gradient_descent.jpeg",
+        image: coverThree,
         content: [
           { id: 1,
             title: "Surface Plot:",
@@ -312,7 +333,7 @@ export default [
       { id: 5,
         name: ":: GD SIMULATION Table",
         value: "",
-        image: "src/assets/chapter_three/gd_two_table.jpeg",
+        image: gd_two_table,
         content: [
           { id: 1,
             title: "",
@@ -327,7 +348,7 @@ export default [
       { id: 6,
         name: ":: GD SIMULATION Visualization",
         value: "",
-        image: "src/assets/chapter_three/gd_two.jpeg",
+        image: gd_two,
         content: [
           { id: 1,
             title: "",
@@ -370,7 +391,7 @@ export default [
       { id: 1,
         name: ":: SGD vs. GD",
         value: "",
-        image: "src/assets/chapter_three/sgd_one.jpeg",
+        image: sgd_vs_gd_table,
         content: [
           { id: 1,
             title: "Large dataset",
@@ -401,7 +422,7 @@ export default [
       { id: 2,
         name: ":: Visualize the Difference",
         value: "The graph effectively illustrates the key differences between Gradient Descent (GD) and Stochastic Gradient Descent (SGD) in the context of how each algorithm updates parameters to minimize a loss function.",
-        image: "src/assets/chapter_three/sgd_two.jpeg",
+        image: sgd_vs_gd_image,
         content: [
           { id: 1,
             title: "Gradient Descent:",
@@ -436,7 +457,7 @@ export default [
       { id: 1,
         name: ":: Learing Rate curves",
         value: "This graph illustrates the relationship between the learning rate and the training loss. Here’s a summary:",
-        image: "src/assets/chapter_three/lr.jpeg",
+        image: lr,
         content: [
           { id: 1,
             title: "Flat Region:",
@@ -459,7 +480,7 @@ export default [
       { id: 2,
         name: ":: Too Low (lr=0.05)",
         value: "",
-        image: "src/assets/chapter_three/lr_low.jpeg",
+        image: lr_low,
         content: [
           { id: 1,
             title: "",
@@ -474,7 +495,7 @@ export default [
       { id: 3,
         name: ":: Too High (lr=0.8)",
         value: "",
-        image: "src/assets/chapter_three/lr_high.jpeg",
+        image: lr_high,
         content: [
           { id: 1,
             title: "",
@@ -485,7 +506,7 @@ export default [
       { id: 4,
         name: ":: Just Right (lr=0.2)",
         value: "",
-        image: "src/assets/chapter_three/lr_right.jpeg",
+        image: lr_right,
         content: [
           { id: 1,
             title: "",

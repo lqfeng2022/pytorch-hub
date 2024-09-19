@@ -1,3 +1,29 @@
+import { 
+  ai_why, 
+  ai_turningTest,
+  ai_expertSystem,
+  ai_connectionism,
+  ai_convolutinal,
+  ai_alphgo,
+  ai_openai,
+  ml_vs_traditonal,
+  ml_svms,
+  ml_decisionTree,
+  ml_anns,
+  dl_vs_ml_ai,
+  dl_cat_ml,
+  dl_cat_dl,
+  dl_vs_ml,
+  dl_apps,
+  nn_model,
+  nn_neurons,
+  pt_features,
+  pt_trends,
+  pt_companies,
+  how_take_course
+ } from '../assets/chapter_zero'
+
+
 export default [
   { id: 1, 
     name: "Artificial Intelligence",
@@ -24,7 +50,7 @@ export default [
       { id: 2, 
         name: "1.1 Why we should know about AI?",
         value: "",
-        image: "src/assets/chapter_zero/aiwhy.jpeg",
+        image: ai_why,
         content: [
           { id: 1, 
             title: "ChatGPT", 
@@ -47,7 +73,7 @@ export default [
       { id: 3,
         name: ":: Turning Test", 
         value: "",
-        image: "src/assets/chapter_zero/turingtest.jpeg",
+        image: ai_turningTest,
         content: [
           { id: 1, 
             title: "",
@@ -62,7 +88,7 @@ export default [
       { id: 4, 
         name: ":: Expert System", 
         value: "",
-        image: "src/assets/chapter_zero/expertsystem.jpeg",
+        image: ai_expertSystem,
         content: [
           { id: 1, 
             title: "",
@@ -73,7 +99,7 @@ export default [
       { id: 5, 
         name: ":: Connectionism + Neural Network", 
         value: "",
-        image: "src/assets/chapter_zero/connectionism.jpeg",
+        image: ai_connectionism,
         content: [
           { id: 1, 
             title: "",
@@ -88,7 +114,7 @@ export default [
       { id: 6, 
         name: ":: Convolutional Neural Network", 
         value: "",
-        image: "src/assets/chapter_zero/cnn.jpeg",
+        image: ai_convolutinal,
         content: [
           { id: 1, 
             title: "",
@@ -99,7 +125,7 @@ export default [
       { id: 7, 
         name: ":: AlphaGo", 
         value: "",
-        image: "src/assets/chapter_zero/alphago.jpeg",
+        image: ai_alphgo,
         content: [
           { id: 1,
             title: "",
@@ -114,7 +140,7 @@ export default [
       { id: 8, 
         name: ":: ChatGPT", 
         value: "",
-        image: "src/assets/chapter_zero/openai.jpeg",
+        image: ai_openai,
         content: [
           { id: 1, 
             title: "",
@@ -153,7 +179,7 @@ export default [
       { id: 1,
         name: "2.1 Machine Learning vs. Traditional Programming",
         value: "",
-        image: "src/assets/chapter_zero/mlcomparing.jpeg",
+        image: ml_vs_traditonal,
         content: [
           { id: 1, 
             title: "Traditional Programming", 
@@ -168,7 +194,7 @@ export default [
       { id: 2, 
         name: ":: Support-vector machines (SVMs)", 
         value: "",
-        image: "src/assets/chapter_zero/svms.jpeg",
+        image: ml_svms,
         content: [
           { id: 1, 
             title: "",
@@ -182,7 +208,7 @@ export default [
       { id: 3, 
         name: ":: Decision Tree",
         value: "",
-        image: "src/assets/chapter_zero/decisiontree.jpeg",
+        image: ml_decisionTree,
         content: [
           { id: 1, 
             title: "",
@@ -192,7 +218,7 @@ export default [
       { id: 4, 
         name: ":: Artificial Neural Networks (ANNs)", 
         value: "",
-        image: "src/assets/chapter_zero/anns.jpeg",
+        image: ml_anns,
         content: [
           { id: 1, 
             title: "",
@@ -242,7 +268,7 @@ export default [
       { id: 1, 
         name: "3.1 Deep Learning < Machine Learning < AI",
         value: "In summary,  AI is the overall goal of creating intelligent systems. ML is a way to achieve AI by enabling machines to learn from data. DL is a more advanced technique within ML that uses layered neural networks to learn from large amounts of data.",
-        image: "src/assets/chapter_zero/relationships.jpeg",
+        image: dl_vs_ml_ai,
         content: [
           { id: 1, 
             title: "", 
@@ -261,7 +287,7 @@ export default [
       { id: 2, 
         name: ":: Machine Learning Model (Decision Tree)",
         value: "",
-        image: "src/assets/chapter_zero/mlcat.jpeg",
+        image: dl_cat_ml,
         content: [
           { id: 1, 
             title: "",
@@ -280,7 +306,7 @@ export default [
       { id: 3, 
         name: ":: Deep Learning Model (Neural Network)",
         value: "",
-        image: "src/assets/chapter_zero/dlcat.jpeg",
+        image: dl_cat_dl,
         content: [
           { id: 1, 
             title: "",
@@ -299,7 +325,7 @@ export default [
       { id: 4, 
         name: "3.3 Differences between Machine Learnig and Deep Learning",
         value: "",
-        image: "src/assets/chapter_zero/mldl.jpeg",
+        image: dl_vs_ml,
         content: [
           { id: 1, 
             title: "Structure Data",
@@ -330,7 +356,7 @@ export default [
       { id: 5,
         name: "3.4 Deep Learning Applications",
         value: "",
-        image: "src/assets/chapter_zero/dlapps.jpeg",
+        image: dl_apps,
         content: [
           { id: 1, 
             title: "Image Recognition",
@@ -385,7 +411,7 @@ export default [
       { id: 1,
         name: "4.1 Neural Network Architecture",
         value: "A neural network consists of layers of interconnected units called neurons or nodes. Here's a breakdown of its basic components:",
-        image: "src/assets/chapter_zero/nnmodel.jpeg",
+        image: nn_model,
         content: [
           { id: 1, 
             title: "Neurons",
@@ -412,7 +438,7 @@ export default [
       { id: 2,
         name: "4.2 What is Neurons in Brain?",
         value: "",
-        image: "src/assets/chapter_zero/neurons.jpeg",
+        image: nn_neurons,
         content: [
           { id: 1, 
             title: "Neurons",
@@ -535,7 +561,7 @@ export default [
       { id: 1,
         name: "6.1 PyTorch Features",
         value: "",
-        image: "src/assets/chapter_zero/ptfeatures.jpeg",
+        image: pt_features,
         content: [
           { id: 1, 
             title: "Dynamic Computational Graphs",
@@ -563,7 +589,7 @@ export default [
       { id: 2,
         name: "6.2 Framework Trends",
         value: "",
-        image: "src/assets/chapter_zero/pttrends.jpeg",
+        image: pt_trends,
         content: [
           { id: 1, 
             title: "",
@@ -574,7 +600,7 @@ export default [
       { id: 3,
         name: "6.3 Companies with PyTorch",
         value: "PyTorch has become one of the most popular deep learning frameworks, and many leading companies across various industries are using it for their AI and machine learning applications. Here are some well-known companies that use PyTorch:",
-        image: "src/assets/chapter_zero/ptcompanies.jpeg",
+        image: pt_companies,
         content: [
           { id: 1, 
             title: "Tesla",
@@ -644,7 +670,7 @@ export default [
       { id: 0, 
         name: "8. How to take this course?",
         value: "",
-        image: "src/assets/chapter_zero/takecourse.jpeg",
+        image: how_take_course,
         content: [
           { id: 1, 
             title: "Watch all Lessons from A to Z",

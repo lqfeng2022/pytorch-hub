@@ -1,3 +1,21 @@
+import {
+  workflow, 
+  workflow_explain,
+  prepare_create,
+  prepare_split,
+  prepare_visual,
+  build_model,
+  build_architecture,
+  build_visual,
+  train_model,
+  train_visual_before,
+  train_visual_after,
+  train_loss_curves,
+  train_visual_test,
+  save_model,
+  save_model_load
+} from '../assets/chapter_two'
+
 export default [
   { id: 0, 
     name: "PyTorch Workflow",
@@ -20,7 +38,7 @@ export default [
       { id: 1,
         name: ":: Workflow Overview", 
         value: "",
-        image: "src/assets/chapter_two/workflow.jpeg",
+        image: workflow,
         content: [
           { id: 1, 
             title: "",
@@ -31,7 +49,7 @@ export default [
       { id: 2,
         name: ":: Workflow Details", 
         value: "",
-        image: "src/assets/chapter_two/workflow_explain.jpeg",
+        image: workflow_explain,
         content: [
           { id: 1, 
             title: "Prepare DATA",
@@ -74,7 +92,7 @@ export default [
       { id: 1, 
         name: "1.1 Create DATA", 
         value: "",
-        image: "src/assets/chapter_two/prepare_create.jpeg",
+        image: prepare_create,
         content: [
           { id: 1,
             title: "",
@@ -89,7 +107,7 @@ export default [
       { id: 2, 
         name: "1.2 Split DATA", 
         value: "",
-        image: "src/assets/chapter_two/prepare_split.jpeg",
+        image: prepare_split,
         content: [
           { id: 1,
             title: "",
@@ -104,7 +122,7 @@ export default [
       { id: 3, 
         name: ":: DATA Visualization ", 
         value: "",
-        image: "src/assets/chapter_two/prepare_visual.png",
+        image: prepare_visual,
         content: [
           { id: 1,
             title: "",
@@ -139,7 +157,7 @@ export default [
       { id: 1, 
         name: ":: Build a Model class", 
         value: "",
-        image: "src/assets/chapter_two/build_model.jpeg",
+        image: build_model,
         content: [
           { id: 1,
             title: "",
@@ -154,7 +172,7 @@ export default [
       { id: 2, 
         name: ":: Model Architecture", 
         value: "",
-        image: "src/assets/chapter_two/build_architecture.jpeg",
+        image: build_architecture,
         content: [
           { id: 1,
             title: "",
@@ -165,7 +183,7 @@ export default [
       { id: 3, 
         name: ":: Model Visualization", 
         value: "",
-        image: "src/assets/chapter_two/build_visual.png",
+        image: build_visual,
         content: [
           { id: 1,
             title: "",
@@ -196,7 +214,7 @@ export default [
       { id: 1, 
         name: "3.1 Build a train loop", 
         value: "",
-        image: "src/assets/chapter_two/train_model.jpeg",
+        image: train_model,
         content: [
           { id: 1,
             title: "Pick Up a Loss Function",
@@ -223,7 +241,7 @@ export default [
       { id: 2, 
         name: ":: Visualize the Training Model", 
         value: "",
-        image: "src/assets/chapter_two/train_visual_before.jpeg",
+        image: train_visual_before,
         content: [
           { id: 1,
             title: "",
@@ -234,7 +252,7 @@ export default [
       { id: 3, 
         name: ":: Visualize the Trained Model", 
         value: "",
-        image: "src/assets/chapter_two/train_visual_after.jpeg",
+        image: train_visual_after,
         content: [
           { id: 1,
             title: "",
@@ -245,7 +263,7 @@ export default [
       { id: 4, 
         name: ":: Test the trained Model", 
         value: "",
-        image: "src/assets/chapter_two/train_visual_testd.jpeg",
+        image: train_visual_test,
         content: [
           { id: 1,
             title: "",
@@ -256,7 +274,7 @@ export default [
       { id: 5, 
         name: ":: Check loss curves", 
         value: "Loss curves display how the model’s error decreases over time during training, with separate lines for training and testing data. Ideally, both curves should show a downward trend, indicating that the model is learning and generalizing well.",
-        image: "src/assets/chapter_two/train_loss_curves.jpeg",
+        image: train_loss_curves,
         content: [
           { id: 1,
             title: "Train Loss (Blue Line)",
@@ -295,7 +313,7 @@ export default [
       { id: 1, 
         name: "4.1 Save a Model", 
         value: "",
-        image: "src/assets/chapter_two/save_model.jpeg",
+        image: save_model,
         content: [
           { id: 1,
             title: "",
@@ -306,7 +324,7 @@ export default [
       { id: 2, 
         name: "4.2 Load a Model", 
         value: "",
-        image: "src/assets/chapter_two/save_model_load.jpeg",
+        image: save_model_load,
         content: [
           { id: 1,
             title: "",

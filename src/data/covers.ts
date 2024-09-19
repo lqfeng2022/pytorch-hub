@@ -1,15 +1,17 @@
-import coverZero from '../assets/cover_0.webp'
-import coverOne from '../assets/tesseract.jpg'
-import coverTwo from '../assets/straight_lines.jpg'
-import coverThree from '../assets/gradient_descent.jpeg'
-import coverFour from '../assets/classification.webp'
-import coverFive from '../assets/backpropagation.webp'
-import coverSix from '../assets/generated_girl.webp'
-import coverSeven from '../assets/naushika.jpg'
-import coverEight from '../assets/patch_embedding.jpg'
-import coverNine from '../assets/yamatanoorochi.jpeg'
-import coverTen from '../assets/languages.webp'
-import coverEleven from '../assets/llms.jpg'
+import {
+  coverZero,
+  coverOne,
+  coverTwo,
+  coverThree,
+  coverFour,
+  coverFive,
+  coverSix,
+  coverSeven,
+  coverEight,
+  coverNine,
+  coverTen,
+  coverEleven,
+} from '../assets/covers'
 
 export default [
   { id: 0,

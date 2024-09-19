@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Image } from '@chakra-ui/react'
-import libraries from '../../assets/chapter_zero/libraries.jpeg'
+import { libs_img } from '../../assets/chapter_zero'
 import chapterZero from '../../data/chapterZero'
 
 const Libraries = () => {
@@ -8,7 +8,7 @@ const Libraries = () => {
   return (
     <Box py={3}>
       <Text as='b' fontSize='lg' color='gray.600'>5. FRAMEWORKs and LIBRARIES</Text>
-      <Image py={3} src={libraries}/>
+      <Image py={3} src={libs_img}/>
       <Stack spacing={4}>
         {libs.map((p) => 
           <div key={p.id}>
