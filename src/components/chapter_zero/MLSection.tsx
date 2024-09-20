@@ -13,17 +13,17 @@ const MLSection = () => {
   const [whats, compare, svms, detree, anns] = chapterZero[1].sections
 
   return (
-    <>
+    <Box pt={5}>
       <Definition title={whats.name} definition={whats}/>
       <BaseGrid section={compare}/>
-      <Box py={5}>
+      <Box pt={5}>
         <Text as='b' fontSize='lg' color='gray.600'>{models.title}</Text>
-        <Text py={3} fontSize='lg'>{models.value}</Text>
+        <Text pt={3} fontSize='lg'>{models.value}</Text>
         <BaseGrid section={svms}/>
         <RightGrid section={detree}/>
         <LeftGrid section={anns}/>
       </Box>
-    </>
+    </Box>
   )
 }
 

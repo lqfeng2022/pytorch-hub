@@ -6,7 +6,7 @@ const Prerequisites = () => {
   const preres = chapterZero[6].sections
 
   return (
-    <Box py={5}>
+    <Box pt={10} pb={5}>
       <Text as='b' fontSize='lg' color='gray.600'>7. Prerequisites</Text>
       <Image py={3} src={prerequisites}/>
       <Stack spacing={4}>

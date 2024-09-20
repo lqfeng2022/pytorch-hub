@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import chapterFour from '../../data/chapterFour'
 import codeBinaryModel from '../../data/codeBinaryModel'
 import BaseGrid from '../BaseGrid'
@@ -20,7 +21,7 @@ const ImproveModel = () => {
   ] = codeBinaryModel.slice(13, 16).map(obj => obj.code)
 
   return (
-    <div>
+    <Box pt={5}>
       <Definition title={defin.name} definition={defin}/>
       <BaseGrid section={improve}/>
       <div id='model_one'>
@@ -51,7 +52,7 @@ const ImproveModel = () => {
         <RightGrid section={three_loss}/>
         <CodeDisplay codes={three_loss_code}/>
       </div>
-    </div>
+    </Box>
   )
 }
 

@@ -8,17 +8,16 @@ import RightGridTwo from '../RightGridTwo';
 import chapterZero from '../../data/chapterZero';
 
 const AISection = () => {
-  const [
-    whats, reason, turningTest, expertSystem, connectionism, cnn, alphago, openai
+  const [ whats, reason, turningTest, expertSystem, connectionism, cnn, alphago, openai
   ] =  chapterZero[0].sections
 
   return (
-    <>
+    <Box pt={5}>
       <Definition title={whats.name} definition={whats}/>
       <BaseGrid section={reason}/>
-      <Box py={5}>
+      <Box pt={5}>
         <Text as='b' fontSize='lg' color='gray.600'>1.2 The History of AI</Text>
-        <Image py={5} src={ai_history}/>
+        <Image pt={5} src={ai_history}/>
         <LeftGrid section={turningTest}/>
         <RightGridTwo section={expertSystem}/>
         <LeftGrid section={connectionism}/>
@@ -26,7 +25,7 @@ const AISection = () => {
         <LeftGrid section={alphago}/>
         <RightGrid section={openai}/>
       </Box>
-    </>
+    </Box>
   )
 }
 

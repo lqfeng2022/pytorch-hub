@@ -9,10 +9,10 @@ const DLSection = () => {
   ] = chapterZero[2].sections
   
   return (
-    <>
+    <Box pt={5}>
       <Definition title={whats.name} definition={whats}/>
       <LeftGrid section={comparing}/>
-      <Box py={5}>
+      <Box pt={5}>
         <Text as='b' fontSize='lg' color='gray.600'>
           3.2 Deep Learing V.S. Machine Learing
         </Text>
@@ -21,7 +21,7 @@ const DLSection = () => {
         <BaseGrid section={mldl}/>
       </Box>
       <BaseGrid section={dlapps}/>
-    </>
+    </Box>
   )
 }
 

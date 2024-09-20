@@ -6,15 +6,15 @@ import CodeDisplay from '../CodeDisplay'
 import LeftGrid from '../LeftGrid'
 
 const TensorManipulate = () => {
-  const [ 
-    manipul, changeshape, transpose, permute, reshape, numpy, concat_stack, stack, vstack, hstack
+  const [ manipul, changeshape, transpose, permute, reshape, numpy, 
+    concat_stack, stack, vstack, hstack
   ] = chapterOne[4].sections
-  const [
-    squeezeCode, transposeCode, permuteCode, reshapeCode, numpyCode, concatStackCode, stackCode, vstackCode, hstackCode
+  const [ squeezeCode, transposeCode, permuteCode, reshapeCode, numpyCode, 
+    concatStackCode, stackCode, vstackCode, hstackCode
   ] = pythonCode.slice(9, 18).map(obj => obj.code);
 
   return (
-    <Box py={2}>
+    <Box pt={5}>
       <BaseGrid section={manipul}/>
       <BaseGrid section={changeshape}/>
       <CodeDisplay codes={squeezeCode}/>

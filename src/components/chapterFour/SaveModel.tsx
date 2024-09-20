@@ -5,6 +5,7 @@ import chapterFour from '../../data/chapterFour'
 import codeBinaryModel from '../../data/codeBinaryModel'
 import LeftGrid from '../LeftGrid'
 import RightGrid from '../RightGrid'
+import { Box } from '@chakra-ui/react'
 
 const SaveModel = () => {
   const [ define, choose, save, load ] = chapterFour[7].sections
@@ -12,7 +13,7 @@ const SaveModel = () => {
   ] = codeBinaryModel.slice(16, 19).map(obj => obj.code)
 
   return (
-    <div>
+    <Box pt={5}>
       <Definition title={define.name} definition={define}/>
       <BaseGrid section={choose}/>
       <CodeDisplay codes={code_choose}/>
@@ -20,7 +21,7 @@ const SaveModel = () => {
       <CodeDisplay codes={code_save}/>
       <RightGrid section={load}/>
       <CodeDisplay codes={code_load}/>
-    </div>
+    </Box>
   )
 }
 

@@ -10,7 +10,7 @@ const TensorAttributs = () => {
 
   return (
     <>
-      <Box py={2}>
+      <Box pt={5}>
         <BaseGrid section={attributes}/>
         <BaseGrid section={shape}/>
       </Box>

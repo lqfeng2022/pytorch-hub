@@ -7,15 +7,13 @@ import LeftGrid from '../LeftGrid'
 import RightGrid from '../RightGrid'
 
 const TensorOperations = () => {
-  const [ 
-    operations, addSub, matmul, mmWork, twoRule, mmWebs, dot,  dotTransf, aggre
+  const [ operations, addSub, matmul, mmWork, twoRule, mmWebs, dot,  dotTransf, aggre
   ] = chapterOne[3].sections
-  const [ 
-    addSubCode, matmulCode, aggreCode 
+  const [ addSubCode, matmulCode, aggreCode 
   ] = pythonCode.slice(6, 9).map(obj => obj.code)
 
   return (
-    <Box py={2}>
+    <Box pt={5}>
       <BaseGrid section={operations}/>
       <LeftGrid section={addSub}/>
       <CodeDisplay codes={addSubCode}/>

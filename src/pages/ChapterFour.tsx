@@ -1,5 +1,10 @@
 import { Container, Divider, Flex } from '@chakra-ui/react'
-import { BuildModel, ImproveModel, PrepareData, SaveModel, TrainModel
+import { 
+  BuildModel, 
+  ImproveModel, 
+  PrepareData, 
+  SaveModel, 
+  TrainModel
 } from '../components/chapterFour'
 import ChapterList from '../components/ChapterList'
 import FootLinks from '../components/FootLinks'

@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import chapterFour from '../../data/chapterFour'
 import codeBinaryModel from '../../data/codeBinaryModel'
 import CodeDisplay from '../CodeDisplay'
@@ -10,12 +11,12 @@ const BuildModel = () => {
   const buildCode = codeBinaryModel[3].code
 
   return (
-    <div>
+    <Box pt={5}>
       <Definition title={defin.name} definition={defin}/>
       <RightGrid section={architect}/>
       <LeftGrid section={model}/>
       <CodeDisplay codes={buildCode}/>
-    </div>
+    </Box>
   )
 }
 
