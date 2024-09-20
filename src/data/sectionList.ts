@@ -78,10 +78,10 @@ export default [
     link: "/a-line-model",
     items: [
       { id: 1, name: "PyTorch Workflow", link: "pytorch-workflow" },
-      { id: 2, name: "i. Prepare Data", link: "prepare-data" },
-      { id: 3, name: "ii. Build a Model", link: "build-a-model" },
-      { id: 4, name: "iii. Train a Model", link: "train-model" },
-      { id: 5, name: "iv. Save a Model", link: "save-model" },
+      { id: 2, name: "- Prepare Data", link: "prepare-data" },
+      { id: 3, name: "- Build a Model", link: "build-a-model" },
+      { id: 4, name: "- Train a Model", link: "train-model" },
+      { id: 5, name: "- Save a Model", link: "save-model" },
     ],
     description: [
       { id: 1, 
@@ -124,11 +124,14 @@ export default [
     name: "4. A Classification Model", 
     link: "/a-classification-model",
     items: [
-      { id: 1, name: "i. Prepare Data", link: "prepare-data" },
-      { id: 2, name: "ii. Build a Model", link: "build-a-model" },
-      { id: 3, name: "iii. Train a Model", link: "train-a-model" },
-      { id: 4, name: "iv. Improve a Model", link: "improve-a-model" },
-      { id: 5, name: "v. Save a Model", link: "save-a-model" },
+      { id: 1, name: "Prepare Data", link: "prepare-data" },
+      { id: 2, name: "Build a Model", link: "build-a-model" },
+      { id: 3, name: "Train a Model", link: "train-a-model" },
+      { id: 4, name: "Improve a Model", link: "improve-a-model" },
+      { id: 5, name: "- The 1st Model", link: "the-1st-model" },
+      { id: 6, name: "- The 2nd Model", link: "the-2nd-model" },
+      { id: 7, name: "- The 3rd Model", link: "the-3rd-model" },
+      { id: 8, name: "Save a Model", link: "save-a-model" },
     ],
     description: [
       { id: 1, 
@@ -251,7 +254,7 @@ export default [
       { id: 9, name: "- Residual Connection (+)", link: "residual-connection" },
       { id: 10, name: "- Multi-Layer Perceptron (MLP)", link: "multi-layer-perceptron" },
       { id: 11, name: "- Dropout Layer", link: "dropout-layer" },
-      { id: 12, name: "Classifier (Block 3)", link: "classifier" },
+      { id: 12, name: "Classifier (Block 4)", link: "classifier" },
       { id: 13, name: "GeLU Function", link: "activation-function" },
     ],
     description: [
