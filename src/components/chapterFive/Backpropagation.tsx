@@ -4,7 +4,7 @@ import BaseGrid from '../BaseGrid'
 import { Box } from '@chakra-ui/react'
 
 const Backpropagation = () => {
-  const [ defin, implem, calcul ] = chapterFive[4].sections
+  const [ defin, implem, calcul ] = chapterFive[3].sections
 
   return (
     <Box pt={5}>

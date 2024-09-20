@@ -159,8 +159,8 @@ export default [
       { id: 1, name: "Classification Task", link: "classification-task" },
       { id: 2, name: "Loss Function (BCE)", link: "loss-function-bce" },
       { id: 3, name: "Sigmoid Function", link: "sigmoid-function" },
-      { id: 4, name: "BackPropagation", link: "backpropagation" },
-      { id: 5, name: "Activation Function (ReLU)", link: "activation-function-relu" }
+      { id: 4, name: "Activation Function (ReLU)", link: "activation-function-relu" },
+      { id: 5, name: "BackPropagation", link: "backpropagation" },
     ],
     description: [
       { id: 1, 

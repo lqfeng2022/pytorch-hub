@@ -5,7 +5,7 @@ import Definition from '../Definition'
 import LeftGrid from '../LeftGrid'
 
 const ReLUfunction = () => {
-  const [ defin, formula, features ]= chapterFive[3].sections
+  const [ defin, formula, features ]= chapterFive[4].sections
 
   return (
     <Box pt={5}>
