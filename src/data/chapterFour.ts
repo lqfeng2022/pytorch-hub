@@ -218,7 +218,7 @@ export default [
     name: "The 1st Model (+ReLU)",
     sections: [
       { id: 0, 
-        name: "4.1 The First Model (+ReLU)", 
+        name: "5. The First Model (+ReLU)", 
         value: "",
         image: improve_one,
         content: [
@@ -282,7 +282,7 @@ export default [
     name: "The 2nd Model (+epochs)",
     sections: [
       { id: 0, 
-        name: "4.2 The Second Model (+epochs)", 
+        name: "6. The Second Model (+epochs)", 
         value: "",
         image: improve_two,
         content: [
@@ -335,7 +335,7 @@ export default [
     name: "The 3rd Model (->lr)",
     sections: [
       { id: 0, 
-        name: "4.3 The Third Model (->lr)", 
+        name: "7. The Third Model (->lr)", 
         value: "",
         image: improve_three,
         content: [
@@ -384,7 +384,7 @@ export default [
     name: "Save a Model",
     sections: [
       { id: 0, 
-        name: "5. Save a Model", 
+        name: "8. Save a Model", 
         value: "Before we save the model, we need to choose the best one.",
         image: "",
         content: [

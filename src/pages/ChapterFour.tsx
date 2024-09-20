@@ -12,6 +12,9 @@ import useScrollToHash from '../components/useScrollToHash'
 import covers from '../data/covers'
 import sectionList from '../data/sectionList'
 import ChapterListTwo from '../components/ChapterListTwo'
+import TheFirstModel from '../components/chapterFour/TheFirstModel'
+import TheSecondModel from '../components/chapterFour/TheSecondModel'
+import TheThirdModel from '../components/chapterFour/TheThirdModel'
 
 const ChapterFour = () => {
   const cover = covers[4]
@@ -19,7 +22,8 @@ const ChapterFour = () => {
   const { description: descript, items: lists } = sectionList[5];
   const lItems = lists.slice(0, 4)
   const rItems = lists.slice(-4)
-  const [ pre, build, train, improve, save ] = lists.slice(0, 5)
+  const [ pre, build, train, improve, modelOne, modelTwo, modelThree, save 
+  ] = lists.slice(0, 8)
 
   const { name: l, link: ll } = sectionList[4]
   const { name: r, link: rl } = sectionList[6]
@@ -37,6 +41,9 @@ const ChapterFour = () => {
       <div id={build.link}><BuildModel/></div>
       <div id={train.link}><TrainModel/></div>
       <div id={improve.link}><ImproveModel/></div>
+      <div id={modelOne.link}><TheFirstModel/></div>
+      <div id={modelTwo.link}><TheSecondModel/></div>
+      <div id={modelThree.link}><TheThirdModel/></div>
       <div id={save.link}><SaveModel/></div>
       <Flex align='center' h='80px'>
         <Divider variant='thick'/>
